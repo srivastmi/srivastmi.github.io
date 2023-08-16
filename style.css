@@ -44,13 +44,22 @@ body {
 }
 
 
-.main-img img{
+/* .main-img img{
     height: auto; 
     max-width: 15%;
     display: block;
     margin-left: auto;
     margin-right: auto;
-}
+} */
+.main-img img {
+    max-width: 15%;
+    height: auto;
+    border-radius: 20%;
+    border: 1px solid;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
 
 .main-desc {
     font-size: 1.5rem;
