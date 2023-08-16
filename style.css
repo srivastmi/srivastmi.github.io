@@ -1,7 +1,8 @@
 :root {
-    --brown: rgb(99, 87, 81);
+    /* --brown: rgb(99, 87, 81); */
+    --brown: rgb(131, 103, 123);
     --light-blue: #add8e6;
-    --lightBlack: rgb(51, 46, 46)
+    --lightBlack: rgb(51, 46, 46);
 }
 
 * {
@@ -21,19 +22,20 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-
+    align-items: flex-start; /* Align items to the left */
+    padding-left: 20px; /* Add left padding for gap from the left */
 }
 
 .main-section {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start; /* Align items to the left */
     margin: 0 auto;
     width: 100%;
     height: 100vh;
     background-color: rgb(230, 230, 230);
+    padding-left: 20px; /* Add left padding for gap from the left */
 }
 
 .main-title {
@@ -43,32 +45,28 @@ body {
     margin-bottom: 1rem;
 }
 
+.main-desc-section {
+    display: flex;
+    flex-direction: row; /* Display image and text side by side */
+    align-items: center; /* Vertically align items in the center */
+}
 
-/* .main-img img{
-    height: auto; 
-    max-width: 15%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-} */
 .main-img img {
-    max-width: 15%;
+    max-width: 110%;
     height: auto;
     border-radius: 20%;
     border: 1px solid;
-    margin-left: auto;
-    margin-right: auto;
     display: block;
-  }
+    /* margin-right: 1rem; Add some spacing between image and text */
+}
 
 .main-desc {
     font-size: 1.5rem;
     font-weight: 500;
     color: var(--lightBlack);
     margin-bottom: 1rem;
-    margin-left: 250px;
-    margin-right: 250px;
-    margin-top: 1rem;
+    /* margin-top: 1rem; */
+    margin-left: 5rem;
 }
 
 /*----------link-----------------*/
@@ -78,7 +76,6 @@ a {
     color: var(--brown);
     font-weight: bold;
 }
-
 
 a:hover {
     background-color: var(--brown);
