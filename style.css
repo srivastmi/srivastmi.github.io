@@ -45,6 +45,23 @@ body {
     margin-bottom: 1rem;
 }
 
+.resume-pdf {
+    margin-top: 20px;
+    padding: 0.7rem 1.75rem;
+    border: 1px solid var(--brown);
+    border-radius: 0.75rem;
+}
+
+.resume-pdf:hover {
+    background-color: var(--brown); /* Change the background color on hover */
+    /* You can also change other properties on hover if needed */
+}
+
+/* Social Icons  */
+.social-icons {
+    margin-bottom: 30px;
+}
+
 .main-desc-section {
     display: flex;
     flex-direction: row; /* Display image and text side by side */
@@ -81,3 +98,33 @@ a:hover {
     background-color: var(--brown);
     color: var(--light-blue);
 }
+
+/* Nav Bar Styling  */
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color: #333;
+    overflow: hidden;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  /* Add a color to the active/current link */
+  .topnav a.active {
+    background-color: --brown;
+    color: white;
+  }
+  
