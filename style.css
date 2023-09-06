@@ -18,26 +18,24 @@ body {
 
 .page-wrap {
     width: 100%;
-    min-height: 100vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    padding: 0 20px;
-    box-sizing: border-box;
+    align-items: flex-start; /* Align items to the left */
+    padding-left: 20px; /* Add left padding for gap from the left */
 }
 
 .main-section {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start; /* Align items to the left */
     margin: 0 auto;
     width: 100%;
-    min-height: 100vh;
+    height: 100vh;
     background-color: rgb(230, 230, 230);
-    padding: 0 20px;
-    box-sizing: border-box;
+    padding-left: 20px; /* Add left padding for gap from the left */
 }
 
 .main-title {
@@ -45,33 +43,47 @@ body {
     font-weight: 700;
     color: var(--brown);
     margin-bottom: 1rem;
-    text-align: center;
+}
+
+.resume-pdf {
+    margin-top: 20px;
+    padding: 0.7rem 1.75rem;
+    border: 1px solid var(--brown);
+    border-radius: 0.75rem;
+}
+
+.resume-pdf:hover {
+    background-color: var(--brown); /* Change the background color on hover */
+    /* You can also change other properties on hover if needed */
+}
+
+/* Social Icons  */
+.social-icons {
+    margin-bottom: 30px;
 }
 
 .main-desc-section {
     display: flex;
-    flex-direction: row;
-    align-items: flex-start; /* Align items to the top */
-    justify-content: space-between; /* Add space between image and text */
-    margin-top: 1rem;
-    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    flex-direction: row; /* Display image and text side by side */
+    align-items: center; /* Vertically align items in the center */
 }
 
-.main_img {
-    width: 33%;
-}
 .main-img img {
-    width: 33%; /* Image takes half of the width */
+    max-width: 110%;
     height: auto;
     border-radius: 20%;
     border: 1px solid;
+    display: block;
+    /* margin-right: 1rem; Add some spacing between image and text */
 }
 
 .main-desc {
     font-size: 1.5rem;
     font-weight: 500;
     color: var(--lightBlack);
-    width: 67%; /* Text takes the other half of the width */
+    margin-bottom: 1rem;
+    /* margin-top: 1rem; */
+    margin-left: 5rem;
 }
 
 /*----------link-----------------*/
@@ -87,10 +99,32 @@ a:hover {
     color: var(--light-blue);
 }
 
-/* Media Query for Small Screens */
-@media (max-width: 768px) {
-    .main-img img,
-    .main-desc {
-        width: 100%; /* Both image and text take full width on small screens */
-    }
-}
+/* Nav Bar Styling  */
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color: #333;
+    overflow: hidden;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  /* Add a color to the active/current link */
+  .topnav a.active {
+    background-color: --brown;
+    color: white;
+  }
+  
