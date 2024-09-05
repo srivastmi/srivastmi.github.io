@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="keywords" content="Mihir Srivastava, mihir srivastava, mihir, srivastava">
+      <meta name="author" content="Mihir Srivastava">
+      <meta name="description" content="Mihir Srivastava's personal portfolio website.">
+      <meta name="audience" content="Everyone">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- For Mobile Responsiveness -->
+      <title>Mihir's Site</title>
+      <link rel="stylesheet" href="style.css">
+      <!-- Create a Favicon -->
+    <link rel="icon" href="images/favicon.ico" />
+    <!-- <title>Home</title> -->
+  </head>
+  <body>
+    <div class="page-wrap">
+      <div class="topnav">
+        <a href="/index.html">Home</a>
+        <a class="active" href="/calc.html">Blog</a>
+      </div>
+      <div class="main-section">
+        <div class="header">
+        <h1 class="main-title">Portion Calculator</h1>
+      </div>
+      <div>
+        <input type="number" id="num" placeholder="Enter the subtotal">
+        <input type="number" id="price" placeholder="Enter the price of your dish">
+        <input type="number" id="tip" placeholder="Enter the tip amount">
+        <input type="number" id="tax" placeholder="Enter the tax amount">
+        <button onclick="calculate()">Calculate</button>
+        <p id="result"></p>
+      </div>
+        <script>
+          function calculate() {
+            var num = document.getElementById("num").value;
+            var price = document.getElementById("price").value;
+            var tip = document.getElementById("tip").value;
+            var tax = document.getElementById("tax").value;
+            if (num == "" || price == "" || tip == "" || tax == "") {
+              alert("Please enter all the values");
+              return;
+            }
+            if (num <= 0 || price <= 0 || tip < 0 || tax < 0) {
+              alert("Please enter valid values");
+              return;
+            }
+            if (num < price || tax > num) {
+                alert("Please enter valid values");
+                return; 
+            }
+            var total = (parseFloat(price)/parseFloat(num)) * (parseFloat(tip) + parseFloat(tax)) + parseFloat(price)
+            // print the total rounded to 3 decimal places
+            document.getElementById("result").innerHTML = "Your Portion: " + total.toFixed(3);
+          }
+        </script>
+    </div>
+  </body>
+</html>
