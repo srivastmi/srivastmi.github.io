@@ -27,7 +27,7 @@
         <h1 class="main-title">Portion Calculator</h1>
       </div>
       <div>
-        <input type="number" id="num" placeholder="Enter the subtotal">
+        <input type="number" id="subtotal" placeholder="Enter the subtotal">
         <input type="number" id="price" placeholder="Enter the price of your dish">
         <input type="number" id="tip" placeholder="Enter the tip amount">
         <input type="number" id="tax" placeholder="Enter the tax amount">
@@ -36,23 +36,32 @@
       </div>
         <script>
           function calculate() {
-            var num = document.getElementById("num").value;
-            var price = document.getElementById("price").value;
-            var tip = document.getElementById("tip").value;
-            var tax = document.getElementById("tax").value;
-            if (num == "" || price == "" || tip == "" || tax == "") {
-              alert("Please enter all the values");
-              return;
-            }
-            if (num <= 0 || price <= 0 || tip < 0 || tax < 0) {
-              alert("Please enter valid values");
-              return;
-            }
-            if (num < price || tax > num) {
-                alert("Please enter valid values");
-                return; 
-            }
-            var total = (parseFloat(price)/parseFloat(num)) * (parseFloat(tip) + parseFloat(tax)) + parseFloat(price)
+            var subtotal = parseFloat(document.getElementById("subtotal").value);
+            var price = parseFloat(document.getElementById("price").value);
+            var tip = parseFloat(document.getElementById("tip").value) || 0;
+            var tax = parseFloat(document.getElementById("tax").value) || 0;
+            console.log(subtotal)
+            console.log(price)
+            console.log(tip)
+            console.log(tax)
+        if (isNaN(subtotal) || isNaN(price)) {
+          alert("Please enter valid numbers for subtotal and price.");
+          return;
+        }
+        if (subtotal <= 0 || price <= 0) {
+          alert("Subtotal and price must be over 0.");
+          return;
+        }
+        if (price > subtotal) {
+          alert("Price of dish can't be higher than subtotal.");
+          return;
+        }
+        if (tax > subtotal) {
+          alert("Tax can't be higher than subtotal.");
+          return;
+        }
+
+            var total = parseFloat(price) + (parseFloat(price) / parseFloat(subtotal)) * (parseFloat(tip) + parseFloat(tax));
             // print the total rounded to 3 decimal places
             document.getElementById("result").innerHTML = "Your Portion: " + total.toFixed(3);
           }
