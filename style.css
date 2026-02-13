@@ -19,24 +19,24 @@ body {
 .content-page {
     max-width: 900px;
     margin: 0 auto;
-    padding: 48px 20px 80px;
+    padding: 56px 20px 96px;
 }
 
 .content-page h1 {
     font-size: 2.5rem;
     color: var(--brown);
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 .content-page h2 {
-    margin-top: 1.75rem;
+    margin-top: 1.25rem;
     margin-bottom: 0.5rem;
     color: var(--lightBlack);
 }
 
 .content-page h3 {
-    margin-top: 1rem;
-    margin-bottom: 0.25rem;
+    margin-top: 0.85rem;
+    margin-bottom: 0.35rem;
     color: var(--lightBlack);
 }
 
@@ -52,16 +52,69 @@ body {
 
 .muted {
     color: rgba(51, 46, 46, 0.7);
-    margin-bottom: 1rem;
+    margin-bottom: 1.25rem;
+}
+
+.credi-body {
+    background-color: #f2f2f7;
+    color: #1c1c1e;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.credi-body * {
+    background-color: transparent;
+}
+
+.credi-header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e5e5ea;
+    padding: 28px 20px;
+}
+
+.credi-header-inner {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.credi-brand {
+    background-color: #EAF1FD;
+    color: #1E4FA1;
+    font-weight: 700;
+    font-size: 1.15rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    padding: 10px 16px;
+    border-radius: 10px;
+}
+
+.credi-title {
+    font-size: 2rem;
+    margin: 0 0 0.35rem;
+    color: #1E4FA1;
+}
+
+.credi-subtitle {
+    color: #3a3a3c;
+    margin: 0;
+    font-size: 1rem;
 }
 
 .credi-page h1 {
     color: #1E4FA1;
+    letter-spacing: -0.02em;
 }
 
 .credi-page h2,
 .credi-page h3 {
     color: #163A78;
+}
+
+.credi-page p,
+.credi-page li {
+    color: #1c1c1e;
 }
 
 .credi-page .muted {
@@ -75,6 +128,43 @@ body {
 .credi-page a:hover {
     background-color: #EAF1FD;
     color: #163A78;
+}
+
+.credi-page .section-card {
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 20px 22px;
+    margin-top: 16px;
+    box-shadow: 0 8px 20px rgba(30, 79, 161, 0.08);
+    border: 1px solid #e5e5ea;
+}
+
+.credi-page .section-card h2:first-child {
+    margin-top: 0;
+}
+
+.credi-page .section-card h3:first-child {
+    margin-top: 0.25rem;
+}
+
+.credi-page .section-card ul {
+    margin-bottom: 0;
+}
+
+.credi-footer {
+    border-top: 1px solid #e5e5ea;
+    background-color: #ffffff;
+    padding: 20px;
+    margin-top: 32px;
+}
+
+.credi-footer-inner {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.95rem;
+    color: #3a3a3c;
 }
 
 .page-wrap {
