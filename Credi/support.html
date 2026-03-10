@@ -1,51 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Credi Support</title>
-    <link rel="stylesheet" href="../style.css">
-    <link rel="icon" href="../images/favicon.ico" />
-  </head>
-  <body class="credi-body">
-    <header class="credi-header">
-      <div class="credi-header-inner">
-        <div class="credi-brand">Credi</div>
-        <div class="credi-header-text">
-          <h1 class="credi-title">Support</h1>
-          <p class="credi-subtitle">We're here to help with account and app issues.</p>
-        </div>
-      </div>
-    </header>
-    <div class="content-page credi-page">
-      <div class="section-card">
-        <p>If you need help, contact us at crediresolution@gmail.com.</p>
-      </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Credi Support</title>
+  <meta name="description" content="Get help with Credi — the credit card optimizer for iPhone." />
+  <link rel="stylesheet" href="credi.css" />
+  <link rel="icon" href="app-icon.png" />
+</head>
+<body>
 
-      <div class="section-card">
-        <h2>FAQ</h2>
-        <h3>I can't sign in.</h3>
-        <p>Check your phone number and try again. Make sure SMS is available on your device.</p>
-
-        <h3>Location isn't working.</h3>
-        <p>Go to iOS Settings -> Credi -> Location -> "While Using the App."</p>
-
-        <h3>I want to delete my account.</h3>
-        <p>Email us at crediresolution@gmail.com from the phone number used to sign in.</p>
-      </div>
-
-      <div class="section-card">
-        <h2>Privacy Policy</h2>
-        <p><a href="/Credi/privacy.html">Privacy Policy</a></p>
+  <nav class="c-nav">
+    <div class="c-nav-inner">
+      <a class="c-nav-brand" href="/Credi/">
+        <img src="app-icon.png" alt="Credi" />
+        <span>Credi</span>
+      </a>
+      <div class="c-nav-links">
+        <a href="/Credi/support.html" class="active">Support</a>
+        <a href="/Credi/privacy.html">Privacy</a>
       </div>
     </div>
-    <footer class="credi-footer">
-      <div class="credi-footer-inner">
-        <span>Credi</span>
-        <span>Support: crediresolution@gmail.com</span>
-      </div>
-    </footer>
-  </body>
-</html>
+  </nav>
 
+  <header class="c-page-header">
+    <div class="c-page-header-inner">
+      <div class="c-page-header-brand">
+        <img src="app-icon.png" alt="Credi" />
+        <span>Credi</span>
+      </div>
+      <h1>Support</h1>
+      <p>We're here to help. Most questions are answered below.</p>
+    </div>
+  </header>
+
+  <div class="c-content">
+
+    <!-- Contact -->
+    <div class="c-block">
+      <div class="c-contact">
+        <div class="c-contact-icon">✉️</div>
+        <div>
+          <h3>Email Support</h3>
+          <p>Can't find your answer below? Reach us at <a href="mailto:crediresolution@gmail.com">crediresolution@gmail.com</a> and we'll get back to you.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sign In & Account -->
+    <div class="c-block">
+      <h2>Sign In & Account</h2>
+
+      <details class="c-faq">
+        <summary>I can't sign in.</summary>
+        <div class="c-faq-body">
+          <p>Credi uses phone number sign-in via SMS code. Make sure your phone number is entered correctly with the country code, and that SMS is available on your device. If the code doesn't arrive within 60 seconds, tap "Resend" and check that you haven't blocked messages from unknown senders.</p>
+        </div>
+      </details>
+
+      <details class="c-faq">
+        <summary>How do I delete my account?</summary>
+        <div class="c-faq-body">
+          <p>Email us at <a href="mailto:crediresolution@gmail.com">crediresolution@gmail.com</a> from the phone number used to sign in. We'll delete your account and all associated data within 30 days.</p>
+        </div>
+      </details>
+
+      <details class="c-faq">
+        <summary>I got a new phone number. Can I transfer my account?</summary>
+        <div class="c-faq-body">
+          <p>Contact us at <a href="mailto:crediresolution@gmail.com">crediresolution@gmail.com</a> with your old and new phone numbers and we'll help transfer your cards and data.</p>
+        </div>
+      </details>
+    </div>
+
+    <!-- Cards -->
+    <div class="c-block">
+      <h2>Managing Cards</h2>
+
+      <details class="c-faq">
+        <summary>How do I add a card?</summary>
+        <div class="c-faq-body">
+          <p>Tap the Wallet tab, then the + button in the top right. Select your card from the list or search by name. You'll be asked to confirm the reward rates for each category — Credi pre-fills known rates, but you can adjust them to match your card's current terms.</p>
+        </div>
+      </details>
+
+      <details class="c-faq">
+        <summary>Does Credi store my card number or account details?</summary>
+        <div class="c-faq-body">
+          <p>No. Credi never asks for your card number, CVV, expiration date, or any account credentials. We only store the card name and the reward rates you enter. There is nothing financial to steal.</p>
+        </div>
+      </details>
+
+      <details class="c-faq">
+        <summary>How do I edit or remove a card?</summary>
+        <div class="c-faq-body">
+          <p>In the Wallet tab, tap on any card to open its detail view. From there you can edit reward rates or delete the card entirely.</p>
+        </div>
+      </details>
+
+      <details class="c-faq">
+        <summary>My card has rotating reward categories. How does that work?</summary>
+        <div class="c-faq-body">
+          <p>Cards like Chase Freedom and Discover It rotate their 5% categories each quarter. Credi has a Rotating Rewards section where you can set the current quarter's category so recommendations stay accurate. Update it at the start of each quarter when your card issuer announces the new category.</p>
+        </div>
+      </details>
+    </div>
+
+    <!-- Location -->
+    <div class="c-block">
+      <h2>Location & Recommendations</h2>
+
+      <details class="c-faq">
+        <summary>Location isn't being detected.</summary>
+        <div class="c-faq-body">
+          <p>Go to <strong>Settings → Privacy & Security → Location Services → Credi</strong> and make sure it's set to <strong>"While Using the App."</strong> Credi needs precise location to identify nearby merchants — "Approximate" location is not sufficient.</p>
+          <p>Also make sure you're not in an area with poor GPS signal, such as indoors in a large building.</p>
+        </div>
+      </details>
+
+      <details class="c-faq">
+        <summary>The wrong merchant is showing up for my location.</summary>
+        <div class="c-faq-body">
+          <p>Merchant detection is based on your GPS location and nearby business data. If you're in a shopping center with multiple stores close together, the detection may sometimes pick the wrong one. You can tap the refresh button to retry, or use the Search tab to look up the correct merchant manually.</p>
+        </div>
+      </details>
+
+      <details class="c-faq">
+        <summary>Does Credi track my location in the background?</summary>
+        <div class="c-faq-body">
+          <p>No. Credi only accesses your location while the app is open and visible on screen. We don't use background location tracking or geofencing. Your location is used solely to find nearby merchants and is never stored on our servers.</p>
+        </div>
+      </details>
+    </div>
+
+    <!-- Privacy link -->
+    <div class="c-block">
+      <div class="c-contact">
+        <div class="c-contact-icon">🔒</div>
+        <div>
+          <h3>Privacy Policy</h3>
+          <p>Read about what data Credi collects, how it's used, and your rights. <a href="/Credi/privacy.html">View Privacy Policy →</a></p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer class="c-footer">
+    <div class="c-footer-inner">
+      <div class="c-footer-brand">
+        <img src="app-icon.png" alt="Credi" />
+        <span>Credi</span>
+      </div>
+      <div class="c-footer-links">
+        <a href="/Credi/">Home</a>
+        <a href="/Credi/privacy.html">Privacy Policy</a>
+        <a href="mailto:crediresolution@gmail.com">Contact</a>
+      </div>
+      <p class="c-footer-copy">© 2026 Mihir Srivastava. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
