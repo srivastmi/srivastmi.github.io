@@ -1,0 +1,325 @@
+:root {
+    /* --brown: rgb(99, 87, 81); */
+    --brown: rgb(131, 103, 123);
+    --light-blue: #add8e6;
+    --lightBlack: rgb(51, 46, 46);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(230, 230, 230);
+}
+
+body {
+    font-family: "Computer Modern Serif", sans-serif;
+}
+
+.content-page {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 56px 20px 96px;
+}
+
+.content-page h1 {
+    font-size: 2.5rem;
+    color: var(--brown);
+    margin-bottom: 0.5rem;
+}
+
+.content-page h2 {
+    margin-top: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: var(--lightBlack);
+}
+
+.content-page h3 {
+    margin-top: 0.85rem;
+    margin-bottom: 0.35rem;
+    color: var(--lightBlack);
+}
+
+.content-page p,
+.content-page li {
+    line-height: 1.6;
+    color: var(--lightBlack);
+}
+
+.content-page ul {
+    margin-left: 1.25rem;
+}
+
+.muted {
+    color: rgba(51, 46, 46, 0.7);
+    margin-bottom: 1.25rem;
+}
+
+.credi-body {
+    background-color: #f2f2f7;
+    color: #1c1c1e;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.credi-body * {
+    background-color: transparent;
+}
+
+.credi-header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e5e5ea;
+    padding: 28px 20px;
+}
+
+.credi-header-inner {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.credi-brand {
+    background-color: #EAF1FD;
+    color: #1E4FA1;
+    font-weight: 700;
+    font-size: 1.15rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    padding: 10px 16px;
+    border-radius: 10px;
+}
+
+.credi-title {
+    font-size: 2rem;
+    margin: 0 0 0.35rem;
+    color: #1E4FA1;
+}
+
+.credi-subtitle {
+    color: #3a3a3c;
+    margin: 0;
+    font-size: 1rem;
+}
+
+.credi-page h1 {
+    color: #1E4FA1;
+    letter-spacing: -0.02em;
+}
+
+.credi-page h2,
+.credi-page h3 {
+    color: #163A78;
+}
+
+.credi-page p,
+.credi-page li {
+    color: #1c1c1e;
+}
+
+.credi-page .muted {
+    color: rgba(30, 79, 161, 0.7);
+}
+
+.credi-page a {
+    color: #1E4FA1;
+}
+
+.credi-page a:hover {
+    background-color: #EAF1FD;
+    color: #163A78;
+}
+
+.credi-page .section-card {
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 20px 22px;
+    margin-top: 16px;
+    box-shadow: 0 8px 20px rgba(30, 79, 161, 0.08);
+    border: 1px solid #e5e5ea;
+}
+
+.credi-page .section-card h2:first-child {
+    margin-top: 0;
+}
+
+.credi-page .section-card h3:first-child {
+    margin-top: 0.25rem;
+}
+
+.credi-page .section-card ul {
+    margin-bottom: 0;
+}
+
+.credi-footer {
+    border-top: 1px solid #e5e5ea;
+    background-color: #ffffff;
+    padding: 20px;
+    margin-top: 32px;
+}
+
+.credi-footer-inner {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.95rem;
+    color: #3a3a3c;
+}
+
+.page-wrap {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; /* Align items to the left */
+    padding-left: 20px; /* Add left padding for gap from the left */
+}
+
+.main-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; /* Align items to the left */
+    margin: 0 auto;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(230, 230, 230);
+    padding-left: 20px; /* Add left padding for gap from the left */
+}
+
+.main-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--brown);
+    margin-bottom: 1rem;
+}
+
+.resume-pdf {
+    margin-top: 20px;
+    padding: 0.7rem 1.75rem;
+    border: 1px solid var(--brown);
+    border-radius: 0.75rem;
+}
+
+.resume-pdf:hover {
+    background-color: var(--brown); /* Change the background color on hover */
+    /* You can also change other properties on hover if needed */
+}
+
+/* Social Icons  */
+.social-icons {
+    margin-bottom: 30px;
+}
+
+.main-desc-section {
+    display: flex;
+    flex-direction: row; /* Display image and text side by side */
+    align-items: center; /* Vertically align items in the center */
+}
+
+.main-img img {
+    max-width: 110%;
+    height: auto;
+    border-radius: 20%;
+    border: 1px solid;
+    display: block;
+    /* margin-right: 1rem; Add some spacing between image and text */
+}
+
+.main-desc {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--lightBlack);
+    margin-bottom: 1rem;
+    /* margin-top: 1rem; */
+    margin-left: 5rem;
+}
+
+/*----------link-----------------*/
+
+a {
+    text-decoration: none;
+    color: var(--brown);
+    font-weight: bold;
+}
+
+a:hover {
+    background-color: var(--brown);
+    color: var(--light-blue);
+}
+
+/* Nav Bar Styling  */
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color: #333;
+    overflow: hidden;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  /* Add a color to the active/current link */
+  .topnav a.active {
+    background-color: --brown;
+    color: white;
+  }
+
+/* Media Queries  */
+@media screen and (max-width: 768px) {
+    .main-section {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        width: 100%;
+        height: 100vh;
+        background-color: rgb(230, 230, 230);
+        padding-left: 20px; /* Add left padding for gap from the left */
+    }
+
+    .main-title {
+        font-size: 3rem;
+        font-weight: 700;
+        color: var(--brown);
+        margin-bottom: 1rem;
+    }
+    
+    .main-desc-section {
+        display: flex;
+        flex-direction: column; /* Display image and text side by side */
+        align-items: center; /* Vertically align items in the center */
+    }
+
+    .main-img img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 20%;
+        border: 1px solid;
+        display: block;
+        /* margin-right: 1rem; Add some spacing between image and text */
+    }
+
+    .main-desc {
+        font-size: 1.5rem;
+        font-weight: 500;
+        color: var(--lightBlack);
+        margin-bottom: 1rem;
+        /* margin-top: 1rem; */
+        margin-left: 0rem;
+    }
+}

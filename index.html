@@ -1,60 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <head>
-      <meta charset="UTF-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="keywords" content="Mihir Srivastava, mihir srivastava, mihir, srivastava">
-      <meta name="author" content="Mihir Srivastava">
-      <meta name="description" content="Mihir Srivastava's personal portfolio website.">
-      <meta name="audience" content="Everyone">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- For Mobile Responsiveness -->
-      <title>Mihir's Site</title>
-      <link rel="stylesheet" href="style.css">
-      <!-- Create a Favicon -->
-    <link rel="icon" href="images/favicon.ico" />
-    <!-- <title>Home</title> -->
-  </head>
-  <body>
-    <div class="page-wrap">
-      <!-- nav bar -->
-      <!-- <div class="topnav">
-        <a class="active" href="/index.html">Home</a>
-        <a href="/blog.html">Blog</a>
-      </div> -->
-      <div class="main-section">
-        <div class="header">
-        <h1 class="main-title">Mihir Srivastava</h1>
-        <div class="social-icons">
-          <a class="resume-pdf" href="/Mihir_Srivastava_Resume.pdf" download><img>Resume</a>
-          <a class="resume-pdf" href="https://www.linkedin.com/in/mihir-srivastava-/">Linkedin</a>
-          <a class="resume-pdf" href="https://github.com/srivastmi">Github</a>
-          <a class="resume-pdf" href="mailto:mihirsrivastava@g.ucla.edu">Email</a>
-          <!-- <a class="github-logo" href="https://github.com/srivastmi"><img src="images/github-icon.png" alt="GitHub"></a> -->
-      </div>
-      </div>
-      <div class="main-desc-section">
-        <div class="main-img">
-          <img src="images/mihirpfp.jpeg" alt="Mihir Srivastava" title="tie may be misleading but im probably not slytherin">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mihir Srivastava — software engineer at One Medical (Amazon).">
+  <meta name="author" content="Mihir Srivastava">
+  <title>Mihir Srivastava</title>
+  <link rel="icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <header>
+      <div class="header-row">
+        <div>
+          <h1>Mihir Srivastava</h1>
+          <nav>
+            <a href="/Mihir_Srivastava_Resume.pdf">CV</a>
+            <a href="https://www.linkedin.com/in/mihir-srivastava-/">LinkedIn</a>
+            <a href="https://github.com/srivastmi">GitHub</a>
+            <a href="mailto:mihirsrivastava@g.ucla.edu">Email</a>
+          </nav>
         </div>
-        <div class="main-desc">
-        <p >Hi! :) My name is Mihir and I am a fourth year student at UCLA studying Linguistics and Computer Science.
-          Currently I am working in the field of Cybersecurity but my other interests include natural language processing, full stack development, 
-          and exploring different areas of Computer Science. I am currently looking for a job in the computer science field.
+        <img src="images/mihirpfp.jpeg" alt="Mihir Srivastava" class="portrait">
+      </div>
+    </header>
 
-          <br><br>
-          Outside of class I enjoy teaching as part of the <a href="https://www.uclaacm.com/">ACM Teach LA</a> program and performing
-          research with the <a href="http://www.seas.ucla.edu/spapl/">Speech Processing and Auditory Perception Lab</a>.
+    <section>
+      <p>
+        I'm a software engineer at <a href="https://www.onemedical.com/">One Medical</a> (Amazon Health),
+        where I work on making healthcare more accessible. Before that I was on Amazon's Android Player
+        architecture team, building features like client-side multiview.
+      </p>
+      <p>
+        I studied Linguistics &amp; Computer Science at UCLA, where I got interested in the intersection
+        of language and technology. I did research with the
+        <a href="http://www.seas.ucla.edu/spapl/">Speech Processing and Auditory Perception Lab</a>
+        and taught with <a href="https://www.uclaacm.com/">ACM Teach LA</a>.
+      </p>
+      <p>
+        Outside of work I play saxophone, do calisthenics, read, and occasionally ship side projects.
+      </p>
+    </section>
 
-          <br><br>
-          In my free time I enjoy playing saxophone (for the past 9 years), relearning gymnastics (also learning calisthenics), reading, playing video games, and as of late
-          running.
+    <section>
+      <h2>Projects</h2>
 
-
+      <div class="project">
+        <div class="project-header">
+          <span class="project-name">Credi</span>
+          <span class="project-links">
+            <a href="/Credi/">Site</a>
+            <a href="https://apps.apple.com/us/app/credi/id6759146346">App Store</a>
+          </span>
+        </div>
+        <p>
+          iOS app that tells you the best credit card to use based on your location and the merchant category.
+          Location-aware recommendations, merchant search, rotating reward tracking, and home screen widgets.
+          Built with SwiftUI, Firebase, and MapKit.
         </p>
       </div>
+
+      <div class="project">
+        <div class="project-header">
+          <span class="project-name">Split</span>
+          <span class="project-links">
+            <a href="/calc.html">Try it</a>
+          </span>
+        </div>
+        <p>
+          A simple tool for splitting shared meal bills by what each person actually ordered.
+        </p>
       </div>
-    </div>
-  </body>
+    </section>
+
+    <section>
+      <h2>Misc</h2>
+      <ul>
+        <li>9 years of saxophone — tenor and alto</li>
+        <li>Formerly competitive gymnastics, now calisthenics</li>
+        <li>I keep a <a href="/blog.html">blog</a> that I keep meaning to write in</li>
+      </ul>
+    </section>
+
+    <footer>
+      <p><a href="/historic/">Old site</a></p>
+    </footer>
+  </main>
+</body>
 </html>
