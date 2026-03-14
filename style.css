@@ -82,8 +82,8 @@ body {
     top: 1.25rem;
     right: 1.5rem;
     z-index: 101;
-    background: none;
-    border: 1px solid var(--border);
+    background: var(--accent-dim);
+    border: 1px solid var(--accent);
     border-radius: 50%;
     width: 36px;
     height: 36px;
@@ -91,14 +91,15 @@ body {
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    color: var(--text-muted);
-    transition: color 0.2s, border-color 0.2s, background 0.2s;
+    color: var(--accent);
+    transition: color 0.2s, border-color 0.2s, background 0.2s, opacity 0.2s;
 }
 
 .theme-toggle:hover {
     color: var(--accent);
     border-color: var(--accent);
     background: var(--accent-dim);
+    opacity: 0.8;
 }
 
 /* Show sun in dark mode, moon in light mode */
