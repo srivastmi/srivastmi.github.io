@@ -12,9 +12,10 @@ img {
     display: block;
 }
 
-/* ── Tokens ──────────────────────────────────────────────────────────────── */
+/* ── Tokens — dark (default) ─────────────────────────────────────────────── */
 
-:root {
+:root,
+[data-theme="dark"] {
     --bg: #0a0a0a;
     --surface: #141414;
     --border: #222;
@@ -24,9 +25,31 @@ img {
     --text-muted: #888;
     --accent: #d4a054;
     --accent-dim: rgba(212, 160, 84, 0.15);
+    --portrait-filter: grayscale(20%) brightness(0.95);
+    --portrait-filter-hover: grayscale(0%) brightness(1);
+}
+
+/* ── Tokens — light ──────────────────────────────────────────────────────── */
+
+[data-theme="light"] {
+    --bg: #fafaf8;
+    --surface: #fff;
+    --border: #e8e4df;
+    --border-hover: rgba(180, 130, 60, 0.35);
+    --text: #2a2a2a;
+    --text-bright: #111;
+    --text-muted: #777;
+    --accent: #a07830;
+    --accent-dim: rgba(160, 120, 48, 0.1);
+    --portrait-filter: grayscale(10%) brightness(1);
+    --portrait-filter-hover: grayscale(0%) brightness(1.02);
 }
 
 /* ── Page ─────────────────────────────────────────────────────────────────── */
+
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
@@ -37,6 +60,7 @@ body {
     background: var(--bg);
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
+    transition: background 0.35s ease, color 0.35s ease;
 }
 
 /* ── Top accent bar ──────────────────────────────────────────────────────── */
@@ -51,6 +75,38 @@ body {
     z-index: 100;
 }
 
+/* ── Theme toggle ────────────────────────────────────────────────────────── */
+
+.theme-toggle {
+    position: fixed;
+    top: 1.25rem;
+    right: 1.5rem;
+    z-index: 101;
+    background: none;
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--text-muted);
+    transition: color 0.2s, border-color 0.2s, background 0.2s;
+}
+
+.theme-toggle:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+    background: var(--accent-dim);
+}
+
+/* Show sun in dark mode, moon in light mode */
+[data-theme="dark"] .icon-sun { display: block; }
+[data-theme="dark"] .icon-moon { display: none; }
+[data-theme="light"] .icon-sun { display: none; }
+[data-theme="light"] .icon-moon { display: block; }
+
 /* ── Cursor glow ─────────────────────────────────────────────────────────── */
 
 .glow {
@@ -58,6 +114,7 @@ body {
     inset: 0;
     pointer-events: none;
     z-index: 0;
+    transition: opacity 0.35s ease;
 }
 
 /* ── Container ───────────────────────────────────────────────────────────── */
@@ -76,7 +133,7 @@ body {
     display: flex;
     gap: 3rem;
     align-items: flex-start;
-    margin-bottom: 4rem;
+    margin-bottom: 3.5rem;
 }
 
 .hero-text {
@@ -104,6 +161,7 @@ h1 {
     text-decoration: underline;
     text-decoration-color: var(--border);
     text-underline-offset: 3px;
+    transition: color 0.15s, text-decoration-color 0.15s;
 }
 
 .role a:hover {
@@ -125,7 +183,6 @@ nav a {
     color: var(--accent);
     text-decoration: none;
     letter-spacing: 0.01em;
-    transition: opacity 0.15s;
 }
 
 nav a:hover {
@@ -164,15 +221,19 @@ nav a:hover {
 .portrait {
     width: 180px;
     border-radius: 10px;
-    filter: grayscale(20%) brightness(0.95);
+    filter: var(--portrait-filter);
     transition: filter 0.4s ease;
 }
 
 .portrait:hover {
-    filter: grayscale(0%) brightness(1);
+    filter: var(--portrait-filter-hover);
 }
 
 /* ── Section headers ─────────────────────────────────────────────────────── */
+
+section {
+    margin-bottom: 3.5rem;
+}
 
 h2 {
     font-size: 0.8rem;
@@ -183,11 +244,49 @@ h2 {
     margin-bottom: 1.25rem;
 }
 
-/* ── Project cards ───────────────────────────────────────────────────────── */
+/* ── Experience ──────────────────────────────────────────────────────────── */
 
-#projects {
-    margin-bottom: 4rem;
+.exp-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
+
+.exp-item {
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.exp-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.exp-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.15rem;
+}
+
+.exp-row strong {
+    color: var(--text-bright);
+    font-size: 0.95rem;
+}
+
+.exp-date {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    white-space: nowrap;
+}
+
+.exp-item p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin: 0;
+}
+
+/* ── Project cards ───────────────────────────────────────────────────────── */
 
 .project-card {
     display: block;
@@ -204,7 +303,7 @@ h2 {
 .project-card:hover {
     transform: translateY(-2px);
     border-color: var(--border-hover);
-    box-shadow: 0 4px 24px rgba(212, 160, 84, 0.08);
+    box-shadow: 0 4px 24px var(--accent-dim);
     text-decoration: none;
 }
 
@@ -313,6 +412,23 @@ footer a:hover {
     .project-top {
         flex-direction: column;
         gap: 0.2rem;
+    }
+
+    .exp-row {
+        flex-direction: column;
+        gap: 0.1rem;
+    }
+
+    .theme-toggle {
+        top: 1rem;
+        right: 1rem;
+        width: 32px;
+        height: 32px;
+    }
+
+    .theme-toggle svg {
+        width: 15px;
+        height: 15px;
     }
 }
 

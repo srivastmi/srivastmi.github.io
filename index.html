@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Mihir Srivastava — software engineer at One Medical (Amazon).">
+  <meta name="description" content="Mihir Srivastava — software engineer at Amazon One Medical.">
   <meta name="author" content="Mihir Srivastava">
   <title>Mihir Srivastava</title>
   <link rel="icon" href="images/favicon.ico">
@@ -12,15 +12,24 @@
 <body>
 
   <div class="top-bar"></div>
-
   <div class="glow" id="glow"></div>
+
+  <!-- Theme toggle -->
+  <button class="theme-toggle" id="theme-toggle" aria-label="Toggle light/dark mode">
+    <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+      <circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+    </svg>
+    <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+    </svg>
+  </button>
 
   <div class="container">
 
     <header class="hero">
       <div class="hero-text">
         <h1>Mihir Srivastava</h1>
-        <p class="role">Software Engineer at <a href="https://www.onemedical.com/">One Medical</a></p>
+        <p class="role">Software Engineer at <a href="https://www.onemedical.com/">Amazon One Medical</a></p>
         <nav>
           <a href="/Mihir_Srivastava_Resume.pdf">CV</a>
           <a href="https://www.linkedin.com/in/mihir-srivastava-/">LinkedIn</a>
@@ -29,8 +38,8 @@
         </nav>
         <div class="bio">
           <p>
-            I build software that makes things easier for people. Right now that means healthcare at
-            One Medical (Amazon Health). Before that I worked on Android Player architecture at Amazon,
+            I build software that makes things easier for people. Right now that means healthcare
+            at Amazon One Medical. Before that I worked on Android Player architecture at Amazon,
             shipping features like client-side multiview to millions of devices.
           </p>
           <p>
@@ -47,9 +56,28 @@
       </div>
     </header>
 
+    <section id="experience">
+      <h2>Experience</h2>
+      <div class="exp-list">
+        <div class="exp-item">
+          <div class="exp-row">
+            <strong>Amazon One Medical</strong>
+            <span class="exp-date">2025 &ndash; Present</span>
+          </div>
+          <p>Software Engineer &mdash; making healthcare more accessible</p>
+        </div>
+        <div class="exp-item">
+          <div class="exp-row">
+            <strong>Amazon</strong>
+            <span class="exp-date">2024 &ndash; 2025</span>
+          </div>
+          <p>Software Engineer &mdash; Android Player architecture, client-side multiview</p>
+        </div>
+      </div>
+    </section>
+
     <section id="projects">
       <h2>Projects</h2>
-
       <a href="/Credi/" class="project-card">
         <div class="project-top">
           <strong class="project-name">Credi</strong>
@@ -63,7 +91,6 @@
           View project <span class="arrow">&rarr;</span>
         </span>
       </a>
-
     </section>
 
     <footer>
@@ -74,7 +101,25 @@
   </div>
 
   <script>
-    // Ambient cursor glow
+    // ── Theme toggle ──────────────────────────────────────────────────────
+    const toggle = document.getElementById('theme-toggle');
+    const root = document.documentElement;
+
+    function setTheme(mode) {
+      root.setAttribute('data-theme', mode);
+      localStorage.setItem('theme', mode);
+    }
+
+    // Load saved preference, fall back to dark
+    const saved = localStorage.getItem('theme') || 'dark';
+    setTheme(saved);
+
+    toggle.addEventListener('click', () => {
+      const current = root.getAttribute('data-theme');
+      setTheme(current === 'dark' ? 'light' : 'dark');
+    });
+
+    // ── Ambient cursor glow ───────────────────────────────────────────────
     const glow = document.getElementById('glow');
     let mouseX = 0, mouseY = 0, glowX = 0, glowY = 0;
     let animating = false;
@@ -84,8 +129,10 @@
     function animate() {
       glowX = lerp(glowX, mouseX, 0.08);
       glowY = lerp(glowY, mouseY, 0.08);
+      const isDark = root.getAttribute('data-theme') === 'dark';
+      const color = isDark ? 'rgba(212,160,84,0.06)' : 'rgba(212,160,84,0.045)';
       glow.style.background =
-        `radial-gradient(600px circle at ${glowX}px ${glowY}px, rgba(212,160,84,0.06), transparent 60%)`;
+        `radial-gradient(600px circle at ${glowX}px ${glowY}px, ${color}, transparent 60%)`;
       requestAnimationFrame(animate);
     }
 
@@ -95,7 +142,6 @@
       if (!animating) { animating = true; animate(); }
     });
 
-    // Static subtle glow for touch devices
     if ('ontouchstart' in window) {
       glow.style.background =
         'radial-gradient(600px circle at 50% 20%, rgba(212,160,84,0.04), transparent 60%)';
