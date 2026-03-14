@@ -1,4 +1,4 @@
-/* ── Reset & Base ─────────────────────────────────────────────────────────── */
+/* ── Reset ────────────────────────────────────────────────────────────────── */
 
 *, *::before, *::after {
     margin: 0;
@@ -12,78 +12,45 @@ img {
     display: block;
 }
 
-:root {
-    --text: #222;
-    --text-muted: #666;
-    --accent: #2563eb;
-    --accent-hover: #1d4ed8;
-    --bg: #fafafa;
-    --rule: #ddd;
-}
+/* ── Page ─────────────────────────────────────────────────────────────────── */
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    font-size: 15px;
-    line-height: 1.65;
-    color: var(--text);
-    background: var(--bg);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                 "Helvetica Neue", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #1a1a1a;
+    background: #fff;
     -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
 }
 
-/* ── Layout ──────────────────────────────────────────────────────────────── */
-
-main {
-    max-width: 600px;
+.container {
+    max-width: 650px;
     margin: 0 auto;
-    padding: 3.5rem 1.5rem 2.5rem;
+    padding: 5rem 2rem 3rem;
 }
 
-/* ── Header ──────────────────────────────────────────────────────────────── */
-
-.header-row {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-}
-
-.portrait {
-    width: 80px;
-    height: 80px;
-    min-width: 80px;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
-.header-text {
-    min-width: 0;
-}
+/* ── Name ─────────────────────────────────────────────────────────────────── */
 
 h1 {
-    font-size: 1.4rem;
+    font-size: 2rem;
     font-weight: 700;
-    letter-spacing: -0.02em;
-    line-height: 1.3;
-    color: var(--text);
+    letter-spacing: -0.03em;
+    line-height: 1.2;
+    margin-bottom: 0.75rem;
 }
 
-.tagline {
-    font-size: 0.9rem;
-    color: var(--text-muted);
-    margin-top: 0.2rem;
-    margin-bottom: 0.5rem;
-}
+/* ── Nav ──────────────────────────────────────────────────────────────────── */
 
 nav {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
-    gap: 0.35rem;
-    font-size: 0.85rem;
+    gap: 1.25rem;
+    font-size: 0.95rem;
 }
 
 nav a {
-    color: var(--accent);
+    color: #2563eb;
     text-decoration: none;
 }
 
@@ -91,45 +58,58 @@ nav a:hover {
     text-decoration: underline;
 }
 
-.sep {
-    color: var(--rule);
-    user-select: none;
+/* ── Divider ─────────────────────────────────────────────────────────────── */
+
+.divider {
+    height: 1px;
+    background: #e5e5e5;
+    margin: 2.5rem 0;
+}
+
+/* ── About (photo + bio) ─────────────────────────────────────────────────── */
+
+.about {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+.portrait {
+    width: 160px;
+    min-width: 160px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.bio p {
+    margin-bottom: 0.75rem;
+}
+
+.bio p:last-child {
+    margin-bottom: 0;
 }
 
 /* ── Sections ────────────────────────────────────────────────────────────── */
 
-hr {
-    border: none;
-    border-top: 1px solid var(--rule);
-    margin: 1.75rem 0;
-}
-
 section {
-    /* no extra margin needed — hr handles spacing */
+    /* spacing handled by surrounding dividers */
 }
 
 h2 {
-    font-size: 0.85rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    color: var(--text-muted);
-    margin-bottom: 0.75rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #1a1a1a;
 }
 
 p {
-    margin-bottom: 0.75rem;
-    color: var(--text);
+    color: #333;
 }
 
-p:last-child {
-    margin-bottom: 0;
-}
-
-/* ── Links ───────────────────────────────────────────────────────────────── */
+/* ── Links (global) ──────────────────────────────────────────────────────── */
 
 a {
-    color: var(--accent);
+    color: #2563eb;
     text-decoration: none;
 }
 
@@ -140,84 +120,77 @@ a:hover {
 /* ── Projects ────────────────────────────────────────────────────────────── */
 
 .project {
-    margin-bottom: 1.25rem;
+    margin-bottom: 1.5rem;
 }
 
 .project:last-child {
     margin-bottom: 0;
 }
 
-.project-row {
+.project-title {
     display: flex;
+    flex-wrap: wrap;
     align-items: baseline;
-    gap: 0.6rem;
-    margin-bottom: 0.25rem;
+    gap: 0.4rem;
+    margin-bottom: 0.3rem;
+    font-size: 0.95rem;
 }
 
-.project-name {
-    font-weight: 700;
+.project-title strong {
     font-size: 1rem;
 }
 
-.project-meta {
-    font-size: 0.8rem;
-    color: var(--text-muted);
+.dot {
+    color: #bbb;
 }
 
 .project p {
-    font-size: 0.92rem;
-    color: var(--text-muted);
-    line-height: 1.55;
-}
-
-.project-links {
-    display: flex;
-    gap: 0.75rem;
-    margin-top: 0.4rem;
-    font-size: 0.85rem;
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.6;
 }
 
 /* ── Footer ──────────────────────────────────────────────────────────────── */
 
 footer {
-    margin-top: 2.5rem;
-    padding-top: 1.25rem;
-    border-top: 1px solid var(--rule);
-    font-size: 0.8rem;
-    color: var(--text-muted);
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid #e5e5e5;
+    font-size: 0.85rem;
+    color: #999;
 }
 
-/* ── Responsive ──────────────────────────────────────────────────────────── */
+footer a {
+    color: #999;
+}
 
-@media screen and (max-width: 480px) {
-    main {
-        padding: 2rem 1.25rem 2rem;
-    }
+footer a:hover {
+    color: #666;
+}
 
-    .header-row {
-        gap: 1rem;
-    }
+/* ── Mobile ──────────────────────────────────────────────────────────────── */
 
-    .portrait {
-        width: 64px;
-        height: 64px;
-        min-width: 64px;
+@media screen and (max-width: 600px) {
+    .container {
+        padding: 3rem 1.5rem 2rem;
     }
 
     h1 {
-        font-size: 1.2rem;
+        font-size: 1.6rem;
     }
 
-    .tagline {
-        font-size: 0.82rem;
+    .about {
+        flex-direction: column;
+        gap: 1.25rem;
     }
 
-    nav {
-        font-size: 0.8rem;
+    .portrait {
+        width: 120px;
+        min-width: 120px;
     }
 }
 
-/* ── Credi subsite (preserved for /Credi/ support & privacy pages) ───────── */
+/* ── Credi subsite (preserved) ───────────────────────────────────────────── */
 
 .content-page {
     max-width: 900px;
@@ -234,22 +207,19 @@ footer {
 .content-page h2 {
     margin-top: 1.25rem;
     margin-bottom: 0.5rem;
-    color: var(--text);
-    text-transform: none;
-    letter-spacing: normal;
-    font-size: 1.25rem;
+    color: #1a1a1a;
 }
 
 .content-page h3 {
     margin-top: 0.85rem;
     margin-bottom: 0.35rem;
-    color: var(--text);
+    color: #1a1a1a;
 }
 
 .content-page p,
 .content-page li {
     line-height: 1.6;
-    color: var(--text);
+    color: #1a1a1a;
 }
 
 .content-page ul {
@@ -257,14 +227,15 @@ footer {
 }
 
 .muted {
-    color: var(--text-muted);
+    color: #666;
     margin-bottom: 1.25rem;
 }
 
 .credi-body {
     background-color: #f2f2f7;
     color: #1c1c1e;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                 Helvetica, Arial, sans-serif;
 }
 
 .credi-body * {
@@ -316,9 +287,6 @@ footer {
 .credi-page h2,
 .credi-page h3 {
     color: #163A78;
-    text-transform: none;
-    letter-spacing: normal;
-    font-size: inherit;
 }
 
 .credi-page h2 { font-size: 1.25rem; }
