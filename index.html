@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Mihir Srivastava — software engineer.">
+  <meta name="description" content="Mihir Srivastava — software engineer at One Medical (Amazon).">
   <meta name="author" content="Mihir Srivastava">
   <title>Mihir Srivastava</title>
   <link rel="icon" href="images/favicon.ico">
@@ -11,71 +11,96 @@
 </head>
 <body>
 
+  <div class="top-bar"></div>
+
+  <div class="glow" id="glow"></div>
+
   <div class="container">
 
-    <h1>Mihir Srivastava</h1>
-
-    <nav>
-      <a href="/Mihir_Srivastava_Resume.pdf">CV</a>
-      <a href="https://www.linkedin.com/in/mihir-srivastava-/">LinkedIn</a>
-      <a href="https://github.com/srivastmi">GitHub</a>
-      <a href="mailto:mihirsrivastava@g.ucla.edu">Email</a>
-    </nav>
-
-    <div class="divider"></div>
-
-    <div class="about">
-      <img src="images/mihirpfp.jpeg" alt="Mihir Srivastava" class="portrait">
-      <div class="bio">
-        <p>
-          I'm a software engineer at <a href="https://www.onemedical.com/">One Medical</a> (Amazon Health),
-          working on making healthcare more accessible. Previously I worked on Android Player architecture
-          at Amazon, building features like client-side multiview.
-        </p>
-        <p>
-          I studied Linguistics & Computer Science at UCLA, where I did research with the
-          <a href="http://www.seas.ucla.edu/spapl/">Speech Processing and Auditory Perception Lab</a>
-          and taught with <a href="https://www.uclaacm.com/">ACM Teach LA</a>.
-        </p>
+    <header class="hero">
+      <div class="hero-text">
+        <h1>Mihir Srivastava</h1>
+        <p class="role">Software Engineer at <a href="https://www.onemedical.com/">One Medical</a></p>
+        <nav>
+          <a href="/Mihir_Srivastava_Resume.pdf">CV</a>
+          <a href="https://www.linkedin.com/in/mihir-srivastava-/">LinkedIn</a>
+          <a href="https://github.com/srivastmi">GitHub</a>
+          <a href="mailto:mihirsrivastava@g.ucla.edu">Email</a>
+        </nav>
+        <div class="bio">
+          <p>
+            I build software that makes things easier for people. Right now that means healthcare at
+            One Medical (Amazon Health). Before that I worked on Android Player architecture at Amazon,
+            shipping features like client-side multiview to millions of devices.
+          </p>
+          <p>
+            I studied Linguistics & Computer Science at UCLA, did research with the
+            <a href="http://www.seas.ucla.edu/spapl/">Speech Processing and Auditory Perception Lab</a>,
+            and taught with <a href="https://www.uclaacm.com/">ACM Teach LA</a>.
+            Outside of work I play saxophone, do calisthenics, and occasionally ship
+            <a href="#projects">side projects</a>.
+          </p>
+        </div>
       </div>
-    </div>
+      <div class="hero-photo">
+        <img src="images/mihirpfp.jpeg" alt="Mihir Srivastava" class="portrait">
+      </div>
+    </header>
 
-    <div class="divider"></div>
-
-    <section>
+    <section id="projects">
       <h2>Projects</h2>
 
-      <div class="project">
-        <div class="project-title">
-          <strong>Credi</strong>
-          <span class="dot">&middot;</span>
-          <a href="/Credi/">Website</a>
-          <span class="dot">&middot;</span>
-          <a href="https://apps.apple.com/us/app/credi/id6759146346">App Store</a>
+      <a href="/Credi/" class="project-card">
+        <div class="project-top">
+          <strong class="project-name">Credi</strong>
+          <span class="project-tech">SwiftUI &middot; Firebase &middot; MapKit</span>
         </div>
         <p>
-          iOS app that tells you the best credit card to use based on your location and merchant.
-          Built with SwiftUI, Firebase, and MapKit.
+          iOS app that recommends the best credit card to use based on your location and merchant.
+          Location-aware rankings, merchant search, rotating reward tracking, and home screen widgets.
         </p>
-      </div>
+        <span class="project-cta">
+          View project <span class="arrow">&rarr;</span>
+        </span>
+      </a>
 
-    </section>
-
-    <div class="divider"></div>
-
-    <section>
-      <h2>Miscellaneous</h2>
-      <p>
-        I've played saxophone for 9 years (tenor and alto), used to compete in gymnastics and now do calisthenics,
-        and keep a <a href="/blog.html">blog</a> that I keep meaning to write in.
-      </p>
     </section>
 
     <footer>
-      <a href="/historic/">Previous version of this site</a>
+      <span>&copy; 2026</span>
+      <a href="/historic/">Previous site</a>
     </footer>
 
   </div>
+
+  <script>
+    // Ambient cursor glow
+    const glow = document.getElementById('glow');
+    let mouseX = 0, mouseY = 0, glowX = 0, glowY = 0;
+    let animating = false;
+
+    function lerp(a, b, t) { return a + (b - a) * t; }
+
+    function animate() {
+      glowX = lerp(glowX, mouseX, 0.08);
+      glowY = lerp(glowY, mouseY, 0.08);
+      glow.style.background =
+        `radial-gradient(600px circle at ${glowX}px ${glowY}px, rgba(212,160,84,0.06), transparent 60%)`;
+      requestAnimationFrame(animate);
+    }
+
+    document.addEventListener('mousemove', (e) => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+      if (!animating) { animating = true; animate(); }
+    });
+
+    // Static subtle glow for touch devices
+    if ('ontouchstart' in window) {
+      glow.style.background =
+        'radial-gradient(600px circle at 50% 20%, rgba(212,160,84,0.04), transparent 60%)';
+    }
+  </script>
 
 </body>
 </html>
