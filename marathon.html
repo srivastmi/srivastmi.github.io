@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mihir's SF Marathon Training Plan — 16 weeks to race day.">
+  <meta name="author" content="Mihir Srivastava">
+  <title>SF Marathon Training — Mihir Srivastava</title>
+  <link rel="icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* ── Marathon page styles ─────────────────────────────────────────────── */
+    .marathon-header {
+      margin-bottom: 2.5rem;
+    }
+    .marathon-header h1 {
+      font-size: 2rem;
+      margin-bottom: 0.25rem;
+    }
+    .marathon-header .subtitle {
+      color: var(--text-muted);
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    .goal-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin-bottom: 2.5rem;
+    }
+    .goal-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.25rem;
+      text-align: center;
+    }
+    .goal-card .label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      margin-bottom: 0.35rem;
+    }
+    .goal-card .value {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--text-bright);
+    }
+    .goal-card .detail {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-top: 0.2rem;
+    }
+    .goal-card.reach { border-color: var(--accent); }
+
+    /* Phase labels */
+    .phase-banner {
+      background: var(--accent-dim);
+      border-left: 3px solid var(--accent);
+      padding: 0.6rem 1rem;
+      margin: 2rem 0 1rem;
+      border-radius: 0 8px 8px 0;
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: var(--text-bright);
+    }
+    .phase-banner span {
+      font-weight: 400;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      margin-left: 0.5rem;
+    }
+
+    /* Week cards */
+    .week-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 0.75rem;
+      transition: border-color 0.2s;
+    }
+    .week-card:hover {
+      border-color: var(--border-hover);
+    }
+    .week-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 0.6rem;
+    }
+    .week-title h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text-bright);
+      margin: 0;
+    }
+    .week-miles {
+      font-size: 0.85rem;
+      color: var(--accent);
+      font-weight: 600;
+    }
+    .runs {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 0.5rem;
+    }
+    .run {
+      font-size: 0.88rem;
+      color: var(--text);
+      line-height: 1.5;
+    }
+    .run .run-label {
+      font-weight: 600;
+      color: var(--text-muted);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .run-note {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-top: 0.5rem;
+      font-style: italic;
+    }
+
+    /* Key race */
+    .week-card.race-week {
+      border-color: var(--accent);
+      background: var(--accent-dim);
+    }
+
+    /* Info sections */
+    .info-section {
+      margin-bottom: 2.5rem;
+    }
+    .info-section h2 {
+      margin-bottom: 0.75rem;
+    }
+    .info-section p, .info-section li {
+      font-size: 0.92rem;
+      color: var(--text);
+      line-height: 1.65;
+    }
+    .info-section ul {
+      padding-left: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+    .info-section li {
+      margin-bottom: 0.3rem;
+    }
+
+    /* Pace chart */
+    .pace-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.88rem;
+      margin-top: 0.75rem;
+    }
+    .pace-table th, .pace-table td {
+      padding: 0.5rem 0.75rem;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+    .pace-table th {
+      color: var(--text-muted);
+      font-weight: 600;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .pace-table td {
+      color: var(--text);
+    }
+
+    /* Back link */
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1.5rem;
+      font-size: 0.88rem;
+      color: var(--accent);
+    }
+
+    /* Progress tracker */
+    .progress-bar-container {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1rem 1.25rem;
+      margin-bottom: 2rem;
+    }
+    .progress-label {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-bottom: 0.5rem;
+    }
+    .progress-bar {
+      height: 8px;
+      background: var(--border);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .progress-fill {
+      height: 100%;
+      background: var(--accent);
+      border-radius: 4px;
+      transition: width 0.5s ease;
+    }
+
+    @media screen and (max-width: 680px) {
+      .goal-cards { grid-template-columns: 1fr; }
+      .runs { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="top-bar"></div>
+  <div class="glow" id="glow"></div>
+
+  <button class="theme-toggle" id="theme-toggle" aria-label="Toggle light/dark mode">
+    <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+      <circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+    </svg>
+    <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+    </svg>
+  </button>
+
+  <div class="container">
+
+    <a href="/" class="back-link">&larr; Back</a>
+
+    <div class="marathon-header">
+      <h1>SF Marathon 2026</h1>
+      <p class="subtitle">July 27, 2026 &mdash; 16-week training plan</p>
+    </div>
+
+    <!-- Goals -->
+    <div class="goal-cards">
+      <div class="goal-card">
+        <div class="label">Safety Goal</div>
+        <div class="value">3:59</div>
+        <div class="detail">~9:08/mi</div>
+      </div>
+      <div class="goal-card reach">
+        <div class="label">A Goal</div>
+        <div class="value">3:45</div>
+        <div class="detail">~8:35/mi</div>
+      </div>
+      <div class="goal-card">
+        <div class="label">Reach Goal</div>
+        <div class="value">3:30</div>
+        <div class="detail">~8:00/mi</div>
+      </div>
+    </div>
+
+    <!-- Progress bar — update week manually -->
+    <div class="progress-bar-container">
+      <div class="progress-label">
+        <span id="progress-week">Training starts April 7</span>
+        <span id="progress-pct"></span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress-fill" id="progress-fill"></div>
+      </div>
+    </div>
+
+    <!-- Pace guide -->
+    <section class="info-section">
+      <h2>Pace Zones</h2>
+      <p>All paces are flexible — use perceived effort on hilly or hot days. Assign runs to any days you want; just keep at least one easy/rest day between the Quality session and the Long Run.</p>
+      <table class="pace-table">
+        <thead>
+          <tr><th>Zone</th><th>Pace</th><th>Feel</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Easy</td><td>9:30 – 10:15/mi</td><td>Conversational, nose-breathing</td></tr>
+          <tr><td>Long Run</td><td>9:15 – 9:45/mi</td><td>Easy but steady, last miles can push</td></tr>
+          <tr><td>Tempo</td><td>8:00 – 8:20/mi</td><td>Comfortably hard, could talk in phrases</td></tr>
+          <tr><td>Interval</td><td>7:15 – 7:40/mi</td><td>Hard, 1-3 min reps with recovery jogs</td></tr>
+          <tr><td>Marathon Pace</td><td>8:00 – 8:35/mi</td><td>Goal race pace, used in specific workouts</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- How to use -->
+    <section class="info-section">
+      <h2>How This Plan Works</h2>
+      <ul>
+        <li><strong>4 runs per week.</strong> If you can only do 3, drop the optional easy run — never skip the long run.</li>
+        <li><strong>Days are flexible.</strong> The runs are labeled Run 1–4. Slot them into any days that work. Just separate hard efforts by at least one easy/rest day.</li>
+        <li><strong>Strength training:</strong> Keep push/pull. Scale back leg day intensity as weekly miles climb past 30 — shift to bodyweight/mobility work for legs.</li>
+        <li><strong>Missed a run?</strong> Don't double up. Just continue with the next scheduled run. Consistency over perfection.</li>
+        <li><strong>Shin/knee/ankle check:</strong> If pain appears during a run, cut it short. Ice, rest, resume when pain-free. Shin splints recurrence = take 3 days off running entirely.</li>
+        <li><strong>Shoe note:</strong> If your current shoes cause ankle pain, get fitted at a running store before week 3. You need reliable shoes for 16 weeks.</li>
+      </ul>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════ -->
+    <!--  PHASE 1: BASE BUILDING  (Weeks 1-4)                              -->
+    <!-- ═══════════════════════════════════════════════════════════════════ -->
+
+    <div class="phase-banner">Phase 1 — Base Building <span>Weeks 1–4 &middot; Build aerobic foundation</span></div>
+
+    <div class="week-card">
+      <div class="week-title">
+        <h3>Week 1 — Apr 7</h3>
+        <span class="week-miles">18 mi</span>
+      </div>
+      <div class="runs">
+        <div class="run"><div class="run-label">Run 1 — Easy</div>4 mi easy</div>
+        <div class="run"><div class="run-label">Run 2 — Quality</div>4 mi w/ 4×1 min pickup to tempo, 2 min jog between</div>
+        <div class="run"><div class="run-label">Run 3 — Easy</div>3 mi easy (optional)</div>
+        <div class="run"><div class="run-label">Run 4 — Long</div>7 mi easy</div>
+      </div>
+    </div>
+
+    <div class="week-card">
+      <div class="week-title">
+        <h3>Week 2 — Apr 14</h3>
+        <span class="week-miles">20 mi</span>
+      </div>
+      <div class="runs">
+        <div class="run"><div class="run-label">Run 1 — Easy</div>4 mi easy</div>
+        <div class="run"><div class="run-label">Run 2 — Quality</div>5 mi w/ 2 mi continuous tempo (8:15 pace)</div>
+        <div class="run"><div class="run-label">Run 3 — Easy</div>3 mi easy (optional)</div>
+        <div class="run"><div class="run-label">Run 4 — Long</div>8 mi easy</div>
+      </div>
+    </div>
+
+    <div class="week-card">
+      <div class="week-title">
+        <h3>Week 3 — Apr 21</h3>
+        <span class="week-miles">23 mi</span>
+      </div>
+      <div class="runs">
+        <div class="run"><div class="run-label">Run 1 — Easy</div>4 mi easy</div>
+        <div class="run"><div class="run-label">Run 2 — Quality</div>5 mi w/ 5×2 min at tempo, 90s jog between</div>
+        <div class="run"><div class="run-label">Run 3 — Easy</div>4 mi easy (optional)</div>
+        <div class="run"><div class="run-label">Run 4 — Long</div>10 mi easy</div>
+      </div>
+    </div>
+
+    <div class="week-card">
+      <div class="week-title">
+        <h3>Week 4 — Apr 28</h3>
+        <span class="week-miles">19 mi</span>
+      </div>
+      <div class="runs">
+        <div class="run"><div class="run-label">Run 1 — Easy</div>4 mi easy</div>
+        <div class="run"><div class="run-label">Run 2 — Quality</div>4 mi w/ 3 mi tempo (8:10 pace)</div>
+        <div class="run"><div class="run-label">Run 3 — Easy</div>3 mi easy (optional)</div>
+        <div class="run"><div class="run-label">Run 4 — Long</div>8 mi easy</div>
+      </div>
+      <div class="run-note">Recovery week — absorb the base you've built.</div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════════════════ -->
+    <!--  PHASE 2: BUILDING  (Weeks 5-8)                                    -->
+    <!-- ═══════════════════════════════════════════════════════════════════ -->
+
+    <div class="phase-banner">Phase 2 — Building <span>Weeks 5–8 &middot; Increase volume + introduce marathon pace</span></div>
+
+    <div class="week-card">
+      <div class="week-title">
+        <h3>Week 5 — May 5</h3>
+        <span class="week-miles">27 mi</span>
+      </div>
+      <div class="runs">
+        <div class="run"><div class="run-label">Run 1 — Easy</div>5 mi easy</div>
+        <div class="run"><div class="run-label">Run 2 — Quality</div>6 mi w/ 6×800m at interval pace, 400m jog between</div>
+        <div class="run"><div class="run-label">Run 3 — Easy</div>4 mi easy</div>
+        <div class="run"><div class="run-label">Run 4 — Long</div>12 mi easy</div>
+      </div>
+    </div>
+
+    <div class="week-card">
+      <div class="week-title">
+        <h3>Week 6 — May 12</h3>
+        <span class="week-miles">29 mi</span>
+      </div>
+      <div class="runs">
+        <div class="run"><div class="run-label">Run 1 — Easy</div>5 mi easy</div>
+        <div class="run"><div class="run-label">Run 2 — Quality</div>7 mi w/ 4 mi tempo (8:05 pace)</div>
+        <div class="run"><div class="run-label">Run 3 — Easy</div>4 mi easy</div>
+        <div class="run"><div class="run-label">Run 4 — Long</div>13 mi — last 3 mi at marathon pace</div>
+      </div>
+      <div class="run-note">First marathon-pace miles in the long run. Don't force it — ease into 8:30ish.</div>
+    </div>
+
+    <div class="week-card">
+      <div class="week-title">
+        <h3>Week 7 — May 19</h3>
+        <span class="week-miles">32 mi</span>
+      </div>
+      <div class="runs">
+        <div class="run"><div class="run-label">Run 1 — Easy</div>5 mi easy</div>
+        <div class="run"><div class="run-label">Run 2 — Quality</div>7 mi w/ 3×1 mi at tempo (8:00), 3 min jog between</div>
+        <div class="run"><div class="run-label">Run 3 — Easy</div>5 mi easy</div>
+        <div class="run"><div class="run-label">Run 4 — Long</div>15 mi easy</div>
+      </div>
+      <div class="run-note">Biggest week yet. Practice fueling on the long run — start testing gels/chews.</div>
+    </div>
+
+    <div class="week-card">
+      <div class="week-title">
+        <h3>Week 8 — May 26</h3>
+        <span class="week-miles">24 mi</span>
+      </div>
+      <div class="runs">
+        <div class="run"><div class="run-label">Run 1 — Easy</div>4 mi easy</div>
+        <div class="run"><div class="run-label">Run 2 — Quality</div>5 mi w/ 3 mi marathon pace</div>
+        <div class="run"><div class="run-label">Run 3 — Easy</div>4 mi easy (optional)</div>
+        <div class="run"><div class="run-label">Run 4 — Long</div>11 mi easy</div>
+      </div>
+      <div class="run-note">Recovery week. Consider a 10K race this weekend to benchmark fitness.</div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════════════════ -->
+    <!--  PHASE 3: PEAK  (Weeks 9-12)                                       -->
+    <!-- ═══════════════════════════════════════════════════════════════════ -->
+
+    <div class="phase-banner">Phase 3 — Peak Training <span>Weeks 9–12 &middot; Highest mileage + race-specific work</span></div>
+
+    <div class="week-card">
+      <div class="week-title">
+        <h3>Week 9 — Jun 2</h3>
+        <span class="week-miles">35 mi</span>
+      </div>
+      <div class="runs">
+        <div class="run"><div class="run-label">Run 1 — Easy</div>5 mi easy</div>
+        <div class="run"><div class="run-label">Run 2 — Quality</div>8 mi w/ 5 mi tempo (8:00 pace)</div>
+        <div class="run"><div class="run-label">Run 3 — Easy</div>5 mi easy</div>
+        <div class="run"><div class="run-label">Run 4 — Long</div>17 mi — last 4 at marathon pace</div>
+      </div>
+      <div class="run-note">Long run marathon pace segments are key. This is where 3:45 vs 3:30 gets decided.</div>
+    </div>
+
+    <div class="week-card">
+      <div class="week-title">
+        <h3>Week 10 — Jun 9</h3>
+        <span class="week-miles">37 mi</span>
+      </div>
+      <div class="runs">
+        <div class="run"><div class="run-label">Run 1 — Easy</div>5 mi easy</div>
+        <div class="run"><div class="run-label">Run 2 — Quality</div>8 mi w/ 4×1 mi at interval, 2 min jog between</div>
+        <div class="run"><div class="run-label">Run 3 — Easy</div>5 mi easy</div>
+        <div class="run"><div class="run-label">Run 4 — Long</div>19 mi easy — practice full race-day fueling</div>
+      </div>
+      <div class="run-note">Scale back leg day in the gym this week. Your legs need recovery for these miles.</div>
+    </div>
+
+    <div class="week-card">
+      <div class="week-title">
+        <h3>Week 11 — Jun 16</h3>
+        <span class="week-miles">39 mi</span>
+      </div>
+      <div class="runs">
+        <div class="run"><div class="run-label">Run 1 — Easy</div>5 mi easy</div>
+        <div class="run"><div class="run-label">Run 2 — Quality</div>8 mi w/ 6 mi at marathon pace</div>
+        <div class="run"><div class="run-label">Run 3 — Easy</div>6 mi easy</div>
+        <div class="run"><div class="run-label">Run 4 — Long</div>20 mi — last 5 at marathon pace</div>
+      </div>
+      <div class="run-note">Peak week. Your longest run ever. Respect the distance — walk aid stations if needed.</div>
+    </div>
+
+    <div class="week-card">
+      <div class="week-title">
+        <h3>Week 12 — Jun 23</h3>
+        <span class="week-miles">28 mi</span>
+      </div>
+      <div class="runs">
+        <div class="run"><div class="run-label">Run 1 — Easy</div>4 mi easy</div>
+        <div class="run"><div class="run-label">Run 2 — Quality</div>6 mi w/ 4 mi tempo</div>
+        <div class="run"><div class="run-label">Run 3 — Easy</div>4 mi easy (optional)</div>
+        <div class="run"><div class="run-label">Run 4 — Long</div>14 mi easy</div>
+      </div>
+      <div class="run-note">Recovery week after peak. Trust the fitness. Don't chase extra miles.</div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════════════════ -->
+    <!--  PHASE 4: SHARPENING  (Weeks 13-14)                                -->
+    <!-- ═══════════════════════════════════════════════════════════════════ -->
+
+    <div class="phase-banner">Phase 4 — Sharpening <span>Weeks 13–14 &middot; Maintain fitness, build confidence</span></div>
+
+    <div class="week-card">
+      <div class="week-title">
+        <h3>Week 13 — Jun 30</h3>
+        <span class="week-miles">33 mi</span>
+      </div>
+      <div class="runs">
+        <div class="run"><div class="run-label">Run 1 — Easy</div>5 mi easy</div>
+        <div class="run"><div class="run-label">Run 2 — Quality</div>8 mi w/ 5 mi at marathon pace</div>
+        <div class="run"><div class="run-label">Run 3 — Easy</div>4 mi easy</div>
+        <div class="run"><div class="run-label">Run 4 — Long</div>16 mi — last 3 at marathon pace</div>
+      </div>
+      <div class="run-note">Marathon pace should feel controlled now. If 8:00 feels smooth, 3:30 is on the table.</div>
+    </div>
+
+    <div class="week-card">
+      <div class="week-title">
+        <h3>Week 14 — Jul 7</h3>
+        <span class="week-miles">30 mi</span>
+      </div>
+      <div class="runs">
+        <div class="run"><div class="run-label">Run 1 — Easy</div>5 mi easy</div>
+        <div class="run"><div class="run-label">Run 2 — Quality</div>7 mi w/ 3×1 mi at tempo, 2 min jog between</div>
+        <div class="run"><div class="run-label">Run 3 — Easy</div>4 mi easy</div>
+        <div class="run"><div class="run-label">Run 4 — Long</div>14 mi easy</div>
+      </div>
+      <div class="run-note">Last hard long run. After this, it's all about arriving fresh to the start line.</div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════════════════ -->
+    <!--  PHASE 5: TAPER  (Weeks 15-16)                                     -->
+    <!-- ═══════════════════════════════════════════════════════════════════ -->
+
+    <div class="phase-banner">Phase 5 — Taper <span>Weeks 15–16 &middot; Rest, sharpen, race</span></div>
+
+    <div class="week-card">
+      <div class="week-title">
+        <h3>Week 15 — Jul 14</h3>
+        <span class="week-miles">22 mi</span>
+      </div>
+      <div class="runs">
+        <div class="run"><div class="run-label">Run 1 — Easy</div>4 mi easy</div>
+        <div class="run"><div class="run-label">Run 2 — Quality</div>5 mi w/ 3 mi at marathon pace</div>
+        <div class="run"><div class="run-label">Run 3 — Easy</div>3 mi easy</div>
+        <div class="run"><div class="run-label">Run 4 — Long</div>10 mi easy</div>
+      </div>
+      <div class="run-note">Legs may feel heavy and sluggish. This is normal during taper — trust the plan.</div>
+    </div>
+
+    <div class="week-card race-week">
+      <div class="week-title">
+        <h3>Week 16 — Jul 21 (RACE WEEK)</h3>
+        <span class="week-miles">12 mi + 26.2</span>
+      </div>
+      <div class="runs">
+        <div class="run"><div class="run-label">Mon — Shakeout</div>3 mi easy</div>
+        <div class="run"><div class="run-label">Tue/Wed — Quality</div>4 mi w/ 4×30s strides</div>
+        <div class="run"><div class="run-label">Thu — Shakeout</div>2 mi very easy</div>
+        <div class="run"><div class="run-label">Fri/Sat — Rest</div>Complete rest. Hydrate, eat carbs, sleep.</div>
+      </div>
+      <div class="run-note">Sunday July 27 — Race Day. Go get it.</div>
+    </div>
+
+    <!-- Race day strategy -->
+    <section class="info-section" style="margin-top: 2rem;">
+      <h2>Race Day Strategy</h2>
+      <ul>
+        <li><strong>Miles 1–6:</strong> Start at 8:40–8:50/mi. You will feel amazing. Do not speed up. Bank patience, not time.</li>
+        <li><strong>Miles 7–13:</strong> Settle into 8:20–8:35. Take a gel at mile 7 and every 5 miles after.</li>
+        <li><strong>Miles 14–20:</strong> This is the real race. Hold 8:15–8:35. Stay mentally engaged, one mile at a time.</li>
+        <li><strong>Miles 21–26.2:</strong> Everything you have left. If you went out conservative, you'll have legs here. Push to 8:00 or under if you can.</li>
+        <li><strong>SF hills:</strong> Don't fight the uphills — shorten stride, maintain effort (not pace). Recover on downhills.</li>
+        <li><strong>Fueling:</strong> Gel every ~45 min. Water at every aid station. Don't try anything new on race day.</li>
+      </ul>
+    </section>
+
+    <!-- Nutrition & recovery -->
+    <section class="info-section">
+      <h2>Nutrition &amp; Recovery</h2>
+      <ul>
+        <li><strong>Long run fueling:</strong> Start practicing gels/chews by week 7. Take one every 45 min during runs over 13 mi.</li>
+        <li><strong>Daily protein:</strong> At 170 lbs, aim for 130–150g protein daily to support both running and lifting.</li>
+        <li><strong>Carb loading:</strong> 3 days before race, increase carbs to ~3.5g per lb bodyweight (~600g/day).</li>
+        <li><strong>Sleep:</strong> 7–8 hours minimum during peak weeks. Sleep is where adaptation happens.</li>
+        <li><strong>Foam roll / stretch:</strong> 10 min after every run, especially calves, quads, IT band.</li>
+      </ul>
+    </section>
+
+    <footer>
+      <span>&copy; 2026</span>
+    </footer>
+
+  </div>
+
+  <script>
+    // Theme toggle (same as main site)
+    const toggle = document.getElementById('theme-toggle');
+    const root = document.documentElement;
+    function setTheme(mode) {
+      root.setAttribute('data-theme', mode);
+      localStorage.setItem('theme', mode);
+    }
+    const saved = localStorage.getItem('theme') || 'dark';
+    setTheme(saved);
+    toggle.addEventListener('click', () => {
+      const current = root.getAttribute('data-theme');
+      setTheme(current === 'dark' ? 'light' : 'dark');
+    });
+
+    // Cursor glow
+    const glow = document.getElementById('glow');
+    let mouseX = 0, mouseY = 0, glowX = 0, glowY = 0;
+    let animating = false;
+    function lerp(a, b, t) { return a + (b - a) * t; }
+    function animate() {
+      glowX = lerp(glowX, mouseX, 0.08);
+      glowY = lerp(glowY, mouseY, 0.08);
+      const isDark = root.getAttribute('data-theme') === 'dark';
+      const color = isDark ? 'rgba(212,160,84,0.06)' : 'rgba(212,160,84,0.045)';
+      glow.style.background =
+        `radial-gradient(600px circle at ${glowX}px ${glowY}px, ${color}, transparent 60%)`;
+      requestAnimationFrame(animate);
+    }
+    document.addEventListener('mousemove', (e) => {
+      mouseX = e.clientX; mouseY = e.clientY;
+      if (!animating) { animating = true; animate(); }
+    });
+    if ('ontouchstart' in window) {
+      glow.style.background =
+        'radial-gradient(600px circle at 50% 20%, rgba(212,160,84,0.04), transparent 60%)';
+    }
+
+    // Auto-calculate progress
+    (function() {
+      const start = new Date('2026-04-07');
+      const race = new Date('2026-07-27');
+      const now = new Date();
+      const total = race - start;
+      const elapsed = now - start;
+      const pct = Math.max(0, Math.min(100, Math.round((elapsed / total) * 100)));
+      const weeksIn = Math.max(0, Math.ceil(elapsed / (7 * 24 * 60 * 60 * 1000)));
+
+      const fill = document.getElementById('progress-fill');
+      const weekLabel = document.getElementById('progress-week');
+      const pctLabel = document.getElementById('progress-pct');
+
+      if (now < start) {
+        weekLabel.textContent = 'Training starts April 7';
+        pctLabel.textContent = '';
+        fill.style.width = '0%';
+      } else if (now >= race) {
+        weekLabel.textContent = 'Race complete!';
+        pctLabel.textContent = '100%';
+        fill.style.width = '100%';
+      } else {
+        weekLabel.textContent = `Week ${Math.min(weeksIn, 16)} of 16`;
+        pctLabel.textContent = `${pct}%`;
+        fill.style.width = `${pct}%`;
+      }
+    })();
+  </script>
+
+</body>
+</html>
