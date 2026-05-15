@@ -3,535 +3,380 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Mihir's SF Marathon Training Plan — 16 weeks to race day, based on Hal Higdon Novice 2.">
+  <meta name="description" content="Mihir's SF Marathon training — plan, calendar, and run log.">
   <meta name="author" content="Mihir Srivastava">
   <title>SF Marathon Training — Mihir Srivastava</title>
   <link rel="icon" href="images/favicon.ico">
   <link rel="stylesheet" href="style.css">
   <style>
-    /* ── Marathon page styles ─────────────────────────────────────────────── */
-    .marathon-header { margin-bottom: 2.5rem; }
-    .marathon-header h1 { font-size: 2rem; margin-bottom: 0.25rem; }
-    .marathon-header .subtitle { color: var(--text-muted); font-size: 1rem; margin-bottom: 0.5rem; }
-    .marathon-header .based-on { color: var(--text-muted); font-size: 0.85rem; }
-    .marathon-header .based-on a { color: var(--accent); }
-    .goal-cards {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1rem;
-      margin: 1.5rem 0 2.5rem;
-    }
-    .goal-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 1.25rem;
-      text-align: center;
-    }
-    .goal-card .label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); margin-bottom: 0.35rem; }
-    .goal-card .value { font-size: 1.5rem; font-weight: 700; color: var(--text-bright); }
-    .goal-card .detail { font-size: 0.8rem; color: var(--text-muted); margin-top: 0.2rem; }
+    .mh { margin-bottom: 1.5rem; }
+    .mh h1 { font-size: 2rem; margin-bottom: 0.25rem; }
+    .mh .sub { color: var(--text-muted); font-size: 1rem; }
+    .mh .based { color: var(--text-muted); font-size: 0.82rem; margin-top: 0.4rem; }
+    .back-link { display: inline-block; margin-bottom: 1.25rem; font-size: 0.88rem; color: var(--accent); }
+
+    .goal-cards { display: grid; grid-template-columns: repeat(3,1fr); gap: 1rem; margin: 1.25rem 0 1.5rem; }
+    .goal-card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 1rem; text-align: center; }
     .goal-card.primary { border-color: var(--accent); }
+    .goal-card .label { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); }
+    .goal-card .value { font-size: 1.4rem; font-weight: 700; color: var(--text-bright); }
+    .goal-card .detail { font-size: 0.78rem; color: var(--text-muted); }
 
-    .phase-banner {
-      background: var(--accent-dim);
-      border-left: 3px solid var(--accent);
-      padding: 0.6rem 1rem;
-      margin: 2rem 0 1rem;
-      border-radius: 0 8px 8px 0;
-      font-weight: 600;
-      font-size: 0.95rem;
-      color: var(--text-bright);
-    }
-    .phase-banner span { font-weight: 400; color: var(--text-muted); font-size: 0.85rem; margin-left: 0.5rem; }
-
-    .week-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 1.25rem 1.5rem;
-      margin-bottom: 0.75rem;
-      transition: border-color 0.2s;
-    }
-    .week-card:hover { border-color: var(--border-hover); }
-    .week-card.stepback { border-left: 3px solid var(--text-muted); }
-    .week-card.race-week { border-color: var(--accent); background: var(--accent-dim); }
-    .week-title { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.6rem; }
-    .week-title h3 { font-size: 1rem; font-weight: 600; color: var(--text-bright); margin: 0; }
-    .week-miles { font-size: 0.85rem; color: var(--accent); font-weight: 600; }
-    .runs { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 0.5rem; }
-    .run { font-size: 0.88rem; color: var(--text); line-height: 1.5; }
-    .run .run-label { font-weight: 600; color: var(--text-muted); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; }
-    .run-note { font-size: 0.82rem; color: var(--text-muted); margin-top: 0.5rem; font-style: italic; }
-
-    .info-section { margin-bottom: 2.5rem; }
-    .info-section h2 { margin-bottom: 0.75rem; }
-    .info-section p, .info-section li { font-size: 0.92rem; color: var(--text); line-height: 1.65; }
-    .info-section ul { padding-left: 1.25rem; margin-bottom: 0.5rem; }
-    .info-section li { margin-bottom: 0.3rem; }
-
-    .pace-table { width: 100%; border-collapse: collapse; font-size: 0.88rem; margin-top: 0.75rem; }
-    .pace-table th, .pace-table td { padding: 0.5rem 0.75rem; text-align: left; border-bottom: 1px solid var(--border); }
-    .pace-table th { color: var(--text-muted); font-weight: 600; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; }
-    .pace-table td { color: var(--text); }
-
-    .back-link { display: inline-block; margin-bottom: 1.5rem; font-size: 0.88rem; color: var(--accent); }
-
-    .progress-bar-container {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 1rem 1.25rem;
-      margin-bottom: 2rem;
-    }
-    .progress-label { display: flex; justify-content: space-between; font-size: 0.82rem; color: var(--text-muted); margin-bottom: 0.5rem; }
+    .progress-box { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 0.9rem 1.1rem; margin-bottom: 1.5rem; }
+    .progress-label { display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.45rem; }
     .progress-bar { height: 8px; background: var(--border); border-radius: 4px; overflow: hidden; }
-    .progress-fill { height: 100%; background: var(--accent); border-radius: 4px; transition: width 0.5s ease; }
+    .progress-fill { height: 100%; background: var(--accent); border-radius: 4px; transition: width .5s; }
+
+    /* Tabs */
+    .tabs { display: flex; gap: 0.5rem; margin-bottom: 1.5rem; border-bottom: 1px solid var(--border); }
+    .tab { background: none; border: none; color: var(--text-muted); font-size: 0.9rem; padding: 0.6rem 0.9rem; cursor: pointer; border-bottom: 2px solid transparent; font-family: inherit; }
+    .tab:hover { color: var(--text); }
+    .tab.active { color: var(--accent); border-bottom-color: var(--accent); font-weight: 600; }
+    .view { display: none; }
+    .view.active { display: block; }
+
+    /* Phase banner */
+    .phase-banner { background: var(--accent-dim); border-left: 3px solid var(--accent); padding: 0.55rem 1rem; margin: 1.75rem 0 0.9rem; border-radius: 0 8px 8px 0; font-weight: 600; font-size: 0.92rem; color: var(--text-bright); }
+    .phase-banner span { font-weight: 400; color: var(--text-muted); font-size: 0.82rem; margin-left: 0.4rem; }
+
+    /* Week card */
+    .week-card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 1.1rem 1.3rem; margin-bottom: 0.7rem; }
+    .week-card.stepback { border-left: 3px solid var(--text-muted); }
+    .week-card.race { border-color: var(--accent); background: var(--accent-dim); }
+    .week-card.current { border-color: var(--accent); }
+    .wk-top { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.5rem; flex-wrap: wrap; gap: 0.4rem; }
+    .wk-top h3 { font-size: 0.98rem; color: var(--text-bright); margin: 0; }
+    .wk-miles { font-size: 0.82rem; color: var(--accent); font-weight: 600; }
+    .wk-adher { font-size: 0.76rem; color: var(--text-muted); }
+    .wk-adher .ok { color: #5fb96b; }
+    .wk-adher .miss { color: #d98a4a; }
+    .day-row { display: grid; grid-template-columns: 42px 1fr; gap: 0.5rem; font-size: 0.85rem; padding: 0.28rem 0; border-top: 1px solid var(--border); }
+    .day-row:first-of-type { border-top: none; }
+    .day-row .dow { color: var(--text-muted); font-size: 0.78rem; font-weight: 600; }
+    .day-row .lbl { color: var(--text); }
+    .day-row .lbl .det { color: var(--text-muted); font-size: 0.82rem; }
+    .day-row.opt .lbl { color: var(--text-muted); }
+    .gym-pill { display: inline-block; font-size: 0.68rem; background: var(--accent-dim); color: var(--accent); padding: 1px 6px; border-radius: 4px; margin-left: 6px; }
+    .wk-note { font-size: 0.8rem; color: var(--text-muted); font-style: italic; margin-top: 0.5rem; }
+
+    /* Calendar */
+    .cal-month { margin-bottom: 1.75rem; }
+    .cal-month h3 { font-size: 0.95rem; color: var(--text-bright); margin-bottom: 0.6rem; }
+    .cal-grid { display: grid; grid-template-columns: repeat(7,1fr); gap: 4px; }
+    .cal-dow { font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); text-align: center; padding-bottom: 4px; }
+    .cal-cell { background: var(--surface); border: 1px solid var(--border); border-radius: 6px; min-height: 74px; padding: 4px 5px; font-size: 0.72rem; cursor: pointer; transition: border-color .15s; overflow: hidden; }
+    .cal-cell:hover { border-color: var(--border-hover); }
+    .cal-cell.empty { background: transparent; border: none; cursor: default; }
+    .cal-cell.today { border-color: var(--accent); border-width: 2px; }
+    .cal-cell .cnum { color: var(--text-muted); font-weight: 600; }
+    .cal-cell .plan { color: var(--text-muted); font-size: 0.68rem; line-height: 1.25; margin-top: 2px; }
+    .cal-cell .act { font-size: 0.68rem; font-weight: 600; margin-top: 3px; line-height: 1.2; }
+    .k-long { color: var(--accent); }
+    .k-workout { color: #d98a4a; }
+    .k-easy { color: #6fa8c7; }
+    .k-medium-long { color: #8a9b6f; }
+    .k-race { color: var(--accent); font-weight: 700; }
+    .cal-cell .gym-tag { font-size: 0.62rem; color: var(--accent); margin-top: 2px; }
+    .cal-legend { display: flex; flex-wrap: wrap; gap: 0.9rem; font-size: 0.74rem; color: var(--text-muted); margin: 0.5rem 0 1.25rem; }
+    .cal-legend span::before { content: "\25CF"; margin-right: 4px; }
+
+    .detail-panel { background: var(--surface); border: 1px solid var(--accent); border-radius: 10px; padding: 1.1rem 1.3rem; margin-top: 1rem; display: none; }
+    .detail-panel.show { display: block; }
+    .detail-panel h4 { color: var(--text-bright); font-size: 0.95rem; margin-bottom: 0.5rem; }
+    .detail-panel .row { font-size: 0.86rem; color: var(--text); margin-bottom: 0.3rem; }
+    .detail-panel .muted { color: var(--text-muted); }
+    .detail-panel .note { font-size: 0.84rem; color: var(--text-muted); font-style: italic; margin-top: 0.5rem; border-top: 1px solid var(--border); padding-top: 0.5rem; }
+
+    /* Log */
+    .log-item { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 1rem 1.2rem; margin-bottom: 0.6rem; }
+    .log-top { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 0.3rem; }
+    .log-date { font-size: 0.82rem; color: var(--text-muted); }
+    .log-kind { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 700; padding: 1px 7px; border-radius: 4px; background: var(--accent-dim); }
+    .log-stats { font-size: 0.9rem; color: var(--text-bright); margin-top: 0.35rem; }
+    .log-stats .sep { color: var(--text-muted); margin: 0 0.4rem; }
+    .seg-table { width: 100%; border-collapse: collapse; margin-top: 0.55rem; font-size: 0.82rem; }
+    .seg-table th, .seg-table td { text-align: left; padding: 0.3rem 0.5rem; border-bottom: 1px solid var(--border); }
+    .seg-table th { color: var(--text-muted); font-size: 0.72rem; text-transform: uppercase; }
+    .log-note { font-size: 0.82rem; color: var(--text-muted); font-style: italic; margin-top: 0.5rem; }
+
+    .info-section { margin: 2rem 0; }
+    .info-section h2 { margin-bottom: 0.7rem; }
+    .info-section p, .info-section li { font-size: 0.9rem; color: var(--text); line-height: 1.6; }
+    .info-section ul { padding-left: 1.2rem; }
+    .info-section li { margin-bottom: 0.3rem; }
+    .gym-day { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 0.8rem 1rem; margin-bottom: 0.6rem; }
+    .gym-day h4 { color: var(--text-bright); font-size: 0.9rem; margin-bottom: 0.15rem; }
+    .gym-day .gf { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.4rem; }
+    .gym-day ul { margin: 0; padding-left: 1.1rem; }
+    .gym-day li { font-size: 0.84rem; color: var(--text); margin-bottom: 0.15rem; }
+
+    .pace-table { width: 100%; border-collapse: collapse; font-size: 0.86rem; margin-top: 0.6rem; }
+    .pace-table th, .pace-table td { padding: 0.45rem 0.7rem; text-align: left; border-bottom: 1px solid var(--border); }
+    .pace-table th { color: var(--text-muted); font-size: 0.74rem; text-transform: uppercase; }
+    .loading { color: var(--text-muted); font-size: 0.9rem; padding: 1rem 0; }
 
     @media screen and (max-width: 680px) {
       .goal-cards { grid-template-columns: 1fr; }
-      .runs { grid-template-columns: 1fr; }
+      .cal-cell { min-height: 58px; font-size: 0.62rem; }
+      .cal-cell .plan { display: none; }
     }
   </style>
 </head>
 <body>
-
   <div class="top-bar"></div>
   <div class="glow" id="glow"></div>
-
   <button class="theme-toggle" id="theme-toggle" aria-label="Toggle light/dark mode">
-    <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-      <circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
-    </svg>
-    <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
-    </svg>
+    <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+    <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
   </button>
 
   <div class="container">
-
     <a href="/" class="back-link">&larr; Back</a>
-
-    <div class="marathon-header">
+    <div class="mh">
       <h1>SF Marathon 2026</h1>
-      <p class="subtitle">July 27, 2026 &mdash; 16-week training plan</p>
-      <p class="based-on">Based on <a href="https://www.halhigdon.com/training-programs/marathon-training/novice-2-marathon/" target="_blank">Hal Higdon Novice 2</a>, adapted to 16 weeks with pacing from Daniels &amp; Pfitzinger</p>
+      <p class="sub">July 27, 2026 &mdash; 16-week training</p>
+      <p class="based">Moderate hybrid &mdash; Higdon Novice 2 base with Pfitzinger sessions phased in. Live data from Strava.</p>
     </div>
 
-    <!-- Goals -->
     <div class="goal-cards">
-      <div class="goal-card">
-        <div class="label">Safety Goal</div>
-        <div class="value">3:59</div>
-        <div class="detail">~9:08/mi</div>
-      </div>
-      <div class="goal-card primary">
-        <div class="label">A Goal</div>
-        <div class="value">3:45</div>
-        <div class="detail">~8:35/mi</div>
-      </div>
-      <div class="goal-card">
-        <div class="label">Reach Goal</div>
-        <div class="value">3:30</div>
-        <div class="detail">~8:00/mi</div>
-      </div>
+      <div class="goal-card"><div class="label">Safety</div><div class="value">3:59</div><div class="detail">9:08/mi</div></div>
+      <div class="goal-card primary"><div class="label">A Goal</div><div class="value">3:45</div><div class="detail">8:35/mi</div></div>
+      <div class="goal-card"><div class="label">Reach</div><div class="value">3:30</div><div class="detail">8:00/mi</div></div>
     </div>
 
-    <!-- Progress bar -->
-    <div class="progress-bar-container">
-      <div class="progress-label">
-        <span id="progress-week">Training starts April 7</span>
-        <span id="progress-pct"></span>
-      </div>
-      <div class="progress-bar">
-        <div class="progress-fill" id="progress-fill"></div>
-      </div>
+    <div class="progress-box">
+      <div class="progress-label"><span id="pweek">&nbsp;</span><span id="ppct"></span></div>
+      <div class="progress-bar"><div class="progress-fill" id="pfill"></div></div>
     </div>
 
-    <!-- Pace guide -->
-    <section class="info-section">
-      <h2>Pace Zones</h2>
-      <p>Assign runs to any days you want. Keep at least one easy/rest day between the Pace run and the Long Run. On hot or hilly days, go by effort, not pace.</p>
-      <table class="pace-table">
-        <thead>
-          <tr><th>Zone</th><th>Pace</th><th>Feel</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>Easy</td><td>9:30 – 10:15/mi</td><td>Conversational, nose-breathing</td></tr>
-          <tr><td>Long Run</td><td>9:15 – 9:45/mi</td><td>Easy but steady</td></tr>
-          <tr><td>Pace (Higdon)</td><td>8:15 – 8:35/mi</td><td>Marathon goal effort &mdash; comfortably hard</td></tr>
-          <tr><td>Tempo</td><td>7:50 – 8:10/mi</td><td>Harder than pace, sustainable 20-40 min</td></tr>
-          <tr><td>Interval</td><td>7:15 – 7:40/mi</td><td>Hard, 800m–1mi reps with jog recovery</td></tr>
-        </tbody>
-      </table>
-    </section>
-
-    <!-- How to use -->
-    <section class="info-section">
-      <h2>How This Plan Works</h2>
-      <ul>
-        <li><strong>4 runs per week.</strong> Higdon programs 3 runs + cross-training. This plan adds a 4th easy run. If you can only do 3, drop Run 3 (the short easy) &mdash; never skip the long run.</li>
-        <li><strong>Days are flexible.</strong> Runs are labeled 1&ndash;4. Slot them into any days. Just separate the Pace run and Long Run by at least one rest/easy day.</li>
-        <li><strong>Stepback weeks</strong> (marked with a gray border) reduce mileage every 3rd week. These are built into Higdon's plan &mdash; don't skip them, they prevent overtraining.</li>
-        <li><strong>Cross-training:</strong> Higdon prescribes cross-training 1x/week. Your push/pull gym days count. Scale back leg day intensity once weekly miles pass 30.</li>
-        <li><strong>Missed a run?</strong> Don't double up. Continue with the next run. Consistency beats perfection.</li>
-        <li><strong>Injury check:</strong> If shin/knee/ankle pain appears during a run, cut it short. If it persists across 2+ runs, take 3&ndash;4 days fully off.</li>
-        <li><strong>Shoes:</strong> If your current pair causes ankle pain, get fitted at a running store before Week 3.</li>
-      </ul>
-    </section>
-
-    <!-- ═══════════════════════════════════════════════════════════════════ -->
-    <!--  PHASE 1: BASE (Weeks 1-4)                                        -->
-    <!-- ═══════════════════════════════════════════════════════════════════ -->
-
-    <div class="phase-banner">Phase 1 &mdash; Base <span>Weeks 1&ndash;4 &middot; Aerobic foundation + stepback pattern</span></div>
-
-    <!-- Higdon W2-equivalent: 3,5,3,9 -->
-    <div class="week-card">
-      <div class="week-title">
-        <h3>Week 1 &mdash; Apr 7</h3>
-        <span class="week-miles">20 mi</span>
-      </div>
-      <div class="runs">
-        <div class="run"><div class="run-label">Run 1 &mdash; Easy</div>3 mi easy</div>
-        <div class="run"><div class="run-label">Run 2 &mdash; Pace</div>5 mi with middle 3 at pace (8:30)</div>
-        <div class="run"><div class="run-label">Run 3 &mdash; Easy</div>3 mi easy</div>
-        <div class="run"><div class="run-label">Run 4 &mdash; Long</div>9 mi easy</div>
-      </div>
+    <div class="tabs">
+      <button class="tab active" data-view="calendar">Calendar</button>
+      <button class="tab" data-view="plan">Plan</button>
+      <button class="tab" data-view="log">Run Log</button>
+      <button class="tab" data-view="info">Guide</button>
     </div>
 
-    <!-- Higdon W3-equivalent (stepback): 3,5p,3,6 -->
-    <div class="week-card stepback">
-      <div class="week-title">
-        <h3>Week 2 &mdash; Apr 14 (stepback)</h3>
-        <span class="week-miles">17 mi</span>
+    <div class="view active" id="view-calendar">
+      <div class="cal-legend">
+        <span class="k-long">Long</span>
+        <span class="k-workout">Workout</span>
+        <span class="k-medium-long">Medium-long</span>
+        <span class="k-easy">Easy</span>
       </div>
-      <div class="runs">
-        <div class="run"><div class="run-label">Run 1 &mdash; Easy</div>3 mi easy</div>
-        <div class="run"><div class="run-label">Run 2 &mdash; Pace</div>5 mi with middle 3 at pace</div>
-        <div class="run"><div class="run-label">Run 3 &mdash; Easy</div>3 mi easy</div>
-        <div class="run"><div class="run-label">Run 4 &mdash; Long</div>6 mi easy</div>
-      </div>
-      <div class="run-note">Stepback week. Shorter long run lets your body absorb Week 1.</div>
+      <div id="cal-root"><div class="loading">Loading calendar&hellip;</div></div>
+      <div class="detail-panel" id="detail"></div>
     </div>
 
-    <!-- Higdon W4: 3,6p,3,11 -->
-    <div class="week-card">
-      <div class="week-title">
-        <h3>Week 3 &mdash; Apr 21</h3>
-        <span class="week-miles">23 mi</span>
-      </div>
-      <div class="runs">
-        <div class="run"><div class="run-label">Run 1 &mdash; Easy</div>3 mi easy</div>
-        <div class="run"><div class="run-label">Run 2 &mdash; Pace</div>6 mi with middle 4 at pace (8:25)</div>
-        <div class="run"><div class="run-label">Run 3 &mdash; Easy</div>3 mi easy</div>
-        <div class="run"><div class="run-label">Run 4 &mdash; Long</div>11 mi easy</div>
-      </div>
-      <div class="run-note">First double-digit long run. Stay easy &mdash; 9:30+ pace.</div>
+    <div class="view" id="view-plan"><div id="plan-root"><div class="loading">Loading plan&hellip;</div></div></div>
+
+    <div class="view" id="view-log"><div id="log-root"><div class="loading">Loading run log&hellip;</div></div></div>
+
+    <div class="view" id="view-info">
+      <section class="info-section">
+        <h2>Pace Zones (3:30 target)</h2>
+        <table class="pace-table">
+          <thead><tr><th>Zone</th><th>Pace</th><th>Feel</th></tr></thead>
+          <tbody>
+            <tr><td>Easy</td><td>9:15&ndash;9:45</td><td>Conversational</td></tr>
+            <tr><td>Medium-long</td><td>9:00&ndash;9:30</td><td>Steady, relaxed</td></tr>
+            <tr><td>Marathon Pace</td><td>8:00</td><td>Goal race pace</td></tr>
+            <tr><td>Threshold (LT)</td><td>7:35&ndash;7:45</td><td>Comfortably hard, ~1hr max</td></tr>
+            <tr><td>VO2max</td><td>6:55&ndash;7:05</td><td>Hard 1000m reps</td></tr>
+          </tbody>
+        </table>
+      </section>
+      <section class="info-section">
+        <h2>Strength Routine</h2>
+        <p>Maintain upper/lower mass, build resilient marathon legs, support speed. Run-priority scheduling: gym never the day before the long run or a hard session.</p>
+        <div id="gym-root"></div>
+        <p style="margin-top:0.6rem; font-size:0.82rem; color:var(--text-muted);" id="gym-periodization"></p>
+      </section>
+      <section class="info-section">
+        <h2>Fueling (modern carb strategy)</h2>
+        <ul>
+          <li><strong>During long runs &amp; race:</strong> 60&ndash;90g carbs/hour. A GU is ~22g &mdash; that's <strong>3 gels/hour</strong>, not 1 every 45 min.</li>
+          <li><strong>Train the gut:</strong> ramp from 1 gel/30min now to 3/hour by Week 12. If stomach revolts, scale back and retry.</li>
+          <li><strong>Race day:</strong> gel every ~20&ndash;25 min with water. Glucose-fructose blend gels (Maurten/SiS) absorb better than pure glucose.</li>
+          <li><strong>Carb load:</strong> Thu&ndash;Sun before race, ~3.5g carbs per lb bodyweight on the final 2 days.</li>
+          <li><strong>Daily protein:</strong> 130&ndash;150g to hold muscle while running + lifting.</li>
+        </ul>
+      </section>
+      <section class="info-section">
+        <h2>Race Day</h2>
+        <ul>
+          <li><strong>Mi 1&ndash;6:</strong> 8:10&ndash;8:15. Feel held back. Bank patience.</li>
+          <li><strong>Mi 7&ndash;20:</strong> Settle to 8:00. Gel every 20&ndash;25 min, water each station.</li>
+          <li><strong>Mi 21&ndash;26.2:</strong> Hold 8:00 or push if legs are there.</li>
+          <li><strong>SF hills:</strong> Effort over pace uphill; recover on the downs.</li>
+        </ul>
+      </section>
     </div>
 
-    <!-- Higdon W5: 3,6,3,12 -->
-    <div class="week-card">
-      <div class="week-title">
-        <h3>Week 4 &mdash; Apr 28</h3>
-        <span class="week-miles">24 mi</span>
-      </div>
-      <div class="runs">
-        <div class="run"><div class="run-label">Run 1 &mdash; Easy</div>3 mi easy</div>
-        <div class="run"><div class="run-label">Run 2 &mdash; Easy</div>6 mi easy</div>
-        <div class="run"><div class="run-label">Run 3 &mdash; Easy</div>3 mi easy</div>
-        <div class="run"><div class="run-label">Run 4 &mdash; Long</div>12 mi easy</div>
-      </div>
-      <div class="run-note">No pace work this week (Higdon pattern). Just easy volume.</div>
-    </div>
-
-    <!-- ═══════════════════════════════════════════════════════════════════ -->
-    <!--  PHASE 2: BUILD (Weeks 5-8)                                        -->
-    <!-- ═══════════════════════════════════════════════════════════════════ -->
-
-    <div class="phase-banner">Phase 2 &mdash; Build <span>Weeks 5&ndash;8 &middot; Volume up, longer pace runs</span></div>
-
-    <!-- Higdon W6 (stepback): 3,6p,3,9 -->
-    <div class="week-card stepback">
-      <div class="week-title">
-        <h3>Week 5 &mdash; May 5 (stepback)</h3>
-        <span class="week-miles">21 mi</span>
-      </div>
-      <div class="runs">
-        <div class="run"><div class="run-label">Run 1 &mdash; Easy</div>3 mi easy</div>
-        <div class="run"><div class="run-label">Run 2 &mdash; Pace</div>6 mi with middle 4 at pace</div>
-        <div class="run"><div class="run-label">Run 3 &mdash; Easy</div>3 mi easy</div>
-        <div class="run"><div class="run-label">Run 4 &mdash; Long</div>9 mi easy</div>
-      </div>
-      <div class="run-note">Stepback. Recover before the big jump next week.</div>
-    </div>
-
-    <!-- Higdon W7: 4,7p,4,14 -->
-    <div class="week-card">
-      <div class="week-title">
-        <h3>Week 6 &mdash; May 12</h3>
-        <span class="week-miles">29 mi</span>
-      </div>
-      <div class="runs">
-        <div class="run"><div class="run-label">Run 1 &mdash; Easy</div>4 mi easy</div>
-        <div class="run"><div class="run-label">Run 2 &mdash; Pace</div>7 mi with middle 5 at pace (8:20)</div>
-        <div class="run"><div class="run-label">Run 3 &mdash; Easy</div>4 mi easy</div>
-        <div class="run"><div class="run-label">Run 4 &mdash; Long</div>14 mi easy</div>
-      </div>
-      <div class="run-note">Big jump in volume. Start testing gels/chews on the long run (Pfitzinger: practice fueling early).</div>
-    </div>
-
-    <!-- Higdon W8: 4,7,4,15 -->
-    <div class="week-card">
-      <div class="week-title">
-        <h3>Week 7 &mdash; May 19</h3>
-        <span class="week-miles">30 mi</span>
-      </div>
-      <div class="runs">
-        <div class="run"><div class="run-label">Run 1 &mdash; Easy</div>4 mi easy</div>
-        <div class="run"><div class="run-label">Run 2 &mdash; Easy</div>7 mi easy</div>
-        <div class="run"><div class="run-label">Run 3 &mdash; Easy</div>4 mi easy</div>
-        <div class="run"><div class="run-label">Run 4 &mdash; Long</div>15 mi &mdash; last 2 mi at pace</div>
-      </div>
-      <div class="run-note">No midweek pace run (Higdon pattern). Added pace finish to long run (Pfitzinger technique).</div>
-    </div>
-
-    <!-- Higdon W9 (stepback + HM race): 4,7p,4,HM -->
-    <div class="week-card stepback">
-      <div class="week-title">
-        <h3>Week 8 &mdash; May 26 (stepback)</h3>
-        <span class="week-miles">22 mi</span>
-      </div>
-      <div class="runs">
-        <div class="run"><div class="run-label">Run 1 &mdash; Easy</div>4 mi easy</div>
-        <div class="run"><div class="run-label">Run 2 &mdash; Pace</div>7 mi with middle 5 at pace</div>
-        <div class="run"><div class="run-label">Run 3 &mdash; Easy</div>4 mi easy</div>
-        <div class="run"><div class="run-label">Run 4 &mdash; Long</div>10 mi easy</div>
-      </div>
-      <div class="run-note">Higdon suggests racing a half marathon around now. If you find one, replace the long run with a 13.1 race &mdash; great fitness check.</div>
-    </div>
-
-    <!-- ═══════════════════════════════════════════════════════════════════ -->
-    <!--  PHASE 3: PEAK (Weeks 9-13)                                        -->
-    <!-- ═══════════════════════════════════════════════════════════════════ -->
-
-    <div class="phase-banner">Phase 3 &mdash; Peak <span>Weeks 9&ndash;13 &middot; Highest mileage, race-specific long runs</span></div>
-
-    <!-- Higdon W10: 4,8p,4,17 -->
-    <div class="week-card">
-      <div class="week-title">
-        <h3>Week 9 &mdash; Jun 2</h3>
-        <span class="week-miles">33 mi</span>
-      </div>
-      <div class="runs">
-        <div class="run"><div class="run-label">Run 1 &mdash; Easy</div>4 mi easy</div>
-        <div class="run"><div class="run-label">Run 2 &mdash; Pace</div>8 mi with middle 5 at pace (8:15)</div>
-        <div class="run"><div class="run-label">Run 3 &mdash; Easy</div>4 mi easy</div>
-        <div class="run"><div class="run-label">Run 4 &mdash; Long</div>17 mi &mdash; last 3 at pace</div>
-      </div>
-      <div class="run-note">Scale back gym leg day from here on. Your legs need recovery for these miles.</div>
-    </div>
-
-    <!-- Higdon W11: 5,8,5,18 -->
-    <div class="week-card">
-      <div class="week-title">
-        <h3>Week 10 &mdash; Jun 9</h3>
-        <span class="week-miles">36 mi</span>
-      </div>
-      <div class="runs">
-        <div class="run"><div class="run-label">Run 1 &mdash; Easy</div>5 mi easy</div>
-        <div class="run"><div class="run-label">Run 2 &mdash; Easy</div>8 mi easy</div>
-        <div class="run"><div class="run-label">Run 3 &mdash; Easy</div>5 mi easy</div>
-        <div class="run"><div class="run-label">Run 4 &mdash; Long</div>18 mi &mdash; practice full race-day fueling</div>
-      </div>
-      <div class="run-note">No pace pressure midweek. Just easy volume. Practice your exact race-day gel/water routine on the long run.</div>
-    </div>
-
-    <!-- Higdon W12 (stepback): 5,8p,5,13 -->
-    <div class="week-card stepback">
-      <div class="week-title">
-        <h3>Week 11 &mdash; Jun 16 (stepback)</h3>
-        <span class="week-miles">31 mi</span>
-      </div>
-      <div class="runs">
-        <div class="run"><div class="run-label">Run 1 &mdash; Easy</div>5 mi easy</div>
-        <div class="run"><div class="run-label">Run 2 &mdash; Pace</div>8 mi with middle 5 at pace</div>
-        <div class="run"><div class="run-label">Run 3 &mdash; Easy</div>5 mi easy</div>
-        <div class="run"><div class="run-label">Run 4 &mdash; Long</div>13 mi easy</div>
-      </div>
-      <div class="run-note">Stepback before the two biggest weeks. Trust the recovery.</div>
-    </div>
-
-    <!-- Higdon W13: 5,5p,5,19 -->
-    <div class="week-card">
-      <div class="week-title">
-        <h3>Week 12 &mdash; Jun 23</h3>
-        <span class="week-miles">34 mi</span>
-      </div>
-      <div class="runs">
-        <div class="run"><div class="run-label">Run 1 &mdash; Easy</div>5 mi easy</div>
-        <div class="run"><div class="run-label">Run 2 &mdash; Pace</div>5 mi all at pace (8:15&ndash;8:30)</div>
-        <div class="run"><div class="run-label">Run 3 &mdash; Easy</div>5 mi easy</div>
-        <div class="run"><div class="run-label">Run 4 &mdash; Long</div>19 mi &mdash; last 4 at pace</div>
-      </div>
-      <div class="run-note">If pace (8:15&ndash;8:30) feels controlled on the long run, 3:45 is locked in. If 8:00 feels smooth, 3:30 is on the table.</div>
-    </div>
-
-    <!-- Higdon W15: 5,5p,5,20 (peak) -->
-    <div class="week-card">
-      <div class="week-title">
-        <h3>Week 13 &mdash; Jun 30</h3>
-        <span class="week-miles">35 mi</span>
-      </div>
-      <div class="runs">
-        <div class="run"><div class="run-label">Run 1 &mdash; Easy</div>5 mi easy</div>
-        <div class="run"><div class="run-label">Run 2 &mdash; Pace</div>5 mi all at pace</div>
-        <div class="run"><div class="run-label">Run 3 &mdash; Easy</div>5 mi easy</div>
-        <div class="run"><div class="run-label">Run 4 &mdash; Long</div>20 mi &mdash; last 4 at pace</div>
-      </div>
-      <div class="run-note">Peak week. Longest run of the plan. Respect the distance &mdash; walk aid stations if needed. After this, it's all about arriving fresh.</div>
-    </div>
-
-    <!-- ═══════════════════════════════════════════════════════════════════ -->
-    <!--  PHASE 4: TAPER (Weeks 14-16)                                      -->
-    <!-- ═══════════════════════════════════════════════════════════════════ -->
-
-    <div class="phase-banner">Phase 4 &mdash; Taper <span>Weeks 14&ndash;16 &middot; Reduce volume, stay sharp, race</span></div>
-
-    <!-- Higdon W16: 5,4p,5,12 -->
-    <div class="week-card">
-      <div class="week-title">
-        <h3>Week 14 &mdash; Jul 7</h3>
-        <span class="week-miles">26 mi</span>
-      </div>
-      <div class="runs">
-        <div class="run"><div class="run-label">Run 1 &mdash; Easy</div>5 mi easy</div>
-        <div class="run"><div class="run-label">Run 2 &mdash; Pace</div>4 mi at pace</div>
-        <div class="run"><div class="run-label">Run 3 &mdash; Easy</div>5 mi easy</div>
-        <div class="run"><div class="run-label">Run 4 &mdash; Long</div>12 mi easy</div>
-      </div>
-      <div class="run-note">Volume drops 25%. You may feel sluggish or restless &mdash; this is normal during taper.</div>
-    </div>
-
-    <!-- Higdon W17: 4,3,4,8 -->
-    <div class="week-card">
-      <div class="week-title">
-        <h3>Week 15 &mdash; Jul 14</h3>
-        <span class="week-miles">19 mi</span>
-      </div>
-      <div class="runs">
-        <div class="run"><div class="run-label">Run 1 &mdash; Easy</div>4 mi easy</div>
-        <div class="run"><div class="run-label">Run 2 &mdash; Easy</div>3 mi with 4&times;30s strides</div>
-        <div class="run"><div class="run-label">Run 3 &mdash; Easy</div>4 mi easy</div>
-        <div class="run"><div class="run-label">Run 4 &mdash; Long</div>8 mi easy</div>
-      </div>
-      <div class="run-note">Trust the fitness you&rsquo;ve built. No new workouts, no extra miles. Sleep 8+ hours.</div>
-    </div>
-
-    <!-- Higdon W18: 3,2,rest,2,marathon -->
-    <div class="week-card race-week">
-      <div class="week-title">
-        <h3>Week 16 &mdash; Jul 21 (RACE WEEK)</h3>
-        <span class="week-miles">7 mi + 26.2</span>
-      </div>
-      <div class="runs">
-        <div class="run"><div class="run-label">Mon/Tue &mdash; Shakeout</div>3 mi easy</div>
-        <div class="run"><div class="run-label">Wed &mdash; Shakeout</div>2 mi very easy + 2&times;20s strides</div>
-        <div class="run"><div class="run-label">Thu/Fri &mdash; Rest</div>Complete rest. Hydrate. Eat carbs. Sleep.</div>
-        <div class="run"><div class="run-label">Sat &mdash; Shakeout</div>2 mi very easy (optional, Higdon keeps it)</div>
-      </div>
-      <div class="run-note">Sunday July 27 &mdash; Race Day. Go get it.</div>
-    </div>
-
-    <!-- Race day strategy -->
-    <section class="info-section" style="margin-top: 2rem;">
-      <h2>Race Day Strategy</h2>
-      <ul>
-        <li><strong>Miles 1&ndash;6:</strong> Start at 8:50&ndash;9:00/mi. You will feel amazing. Do not speed up. Bank patience, not time.</li>
-        <li><strong>Miles 7&ndash;13:</strong> Settle into 8:30&ndash;8:45. Take a gel at mile 7 and every 45 min after.</li>
-        <li><strong>Miles 14&ndash;20:</strong> This is the real race. Hold 8:20&ndash;8:40. Stay mentally engaged, one mile at a time.</li>
-        <li><strong>Miles 21&ndash;26.2:</strong> Everything you have left. If you went out conservative, you&rsquo;ll have legs here. Push toward 8:00 if you can.</li>
-        <li><strong>SF hills:</strong> Don&rsquo;t fight uphills &mdash; shorten stride, maintain effort (not pace). Recover on downhills.</li>
-        <li><strong>Fueling:</strong> Gel every ~45 min. Water at every aid station. Don&rsquo;t try anything new on race day.</li>
-      </ul>
-    </section>
-
-    <!-- Nutrition & recovery -->
-    <section class="info-section">
-      <h2>Nutrition &amp; Recovery</h2>
-      <ul>
-        <li><strong>Long run fueling:</strong> Start practicing gels/chews by Week 6. Take one every 45 min during runs over 13 mi.</li>
-        <li><strong>Daily protein:</strong> At 170 lbs, aim for 130&ndash;150g protein daily to support both running and lifting.</li>
-        <li><strong>Carb loading:</strong> 3 days before race, increase carbs to ~3.5g per lb bodyweight (~600g/day).</li>
-        <li><strong>Sleep:</strong> 7&ndash;8 hours minimum during peak weeks. Sleep is where adaptation happens.</li>
-        <li><strong>Foam roll / stretch:</strong> 10 min after every run, especially calves, quads, IT band.</li>
-      </ul>
-    </section>
-
-    <footer>
-      <span>&copy; 2026</span>
-    </footer>
-
+    <footer><span>&copy; 2026</span></footer>
   </div>
 
   <script>
-    // Theme toggle
-    const toggle = document.getElementById('theme-toggle');
-    const root = document.documentElement;
-    function setTheme(mode) { root.setAttribute('data-theme', mode); localStorage.setItem('theme', mode); }
-    const saved = localStorage.getItem('theme') || 'dark';
-    setTheme(saved);
-    toggle.addEventListener('click', () => {
-      setTheme(root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
-    });
+    // Theme + glow
+    const toggle=document.getElementById('theme-toggle'),root=document.documentElement;
+    const setTheme=m=>{root.setAttribute('data-theme',m);localStorage.setItem('theme',m);};
+    setTheme(localStorage.getItem('theme')||'dark');
+    toggle.addEventListener('click',()=>setTheme(root.getAttribute('data-theme')==='dark'?'light':'dark'));
+    const glow=document.getElementById('glow');let mx=0,my=0,gx=0,gy=0,an=false;
+    const lerp=(a,b,t)=>a+(b-a)*t;
+    function animate(){gx=lerp(gx,mx,.08);gy=lerp(gy,my,.08);const dk=root.getAttribute('data-theme')==='dark';glow.style.background=`radial-gradient(600px circle at ${gx}px ${gy}px, ${dk?'rgba(212,160,84,0.06)':'rgba(212,160,84,0.045)'}, transparent 60%)`;requestAnimationFrame(animate);}
+    document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;if(!an){an=true;animate();}});
+    if('ontouchstart' in window)glow.style.background='radial-gradient(600px circle at 50% 20%, rgba(212,160,84,0.04), transparent 60%)';
 
-    // Cursor glow
-    const glow = document.getElementById('glow');
-    let mouseX = 0, mouseY = 0, glowX = 0, glowY = 0, animating = false;
-    function lerp(a, b, t) { return a + (b - a) * t; }
-    function animate() {
-      glowX = lerp(glowX, mouseX, 0.08);
-      glowY = lerp(glowY, mouseY, 0.08);
-      const isDark = root.getAttribute('data-theme') === 'dark';
-      const color = isDark ? 'rgba(212,160,84,0.06)' : 'rgba(212,160,84,0.045)';
-      glow.style.background = `radial-gradient(600px circle at ${glowX}px ${glowY}px, ${color}, transparent 60%)`;
-      requestAnimationFrame(animate);
-    }
-    document.addEventListener('mousemove', (e) => {
-      mouseX = e.clientX; mouseY = e.clientY;
-      if (!animating) { animating = true; animate(); }
-    });
-    if ('ontouchstart' in window) {
-      glow.style.background = 'radial-gradient(600px circle at 50% 20%, rgba(212,160,84,0.04), transparent 60%)';
-    }
+    // Tabs
+    document.querySelectorAll('.tab').forEach(t=>t.addEventListener('click',()=>{
+      document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));
+      document.querySelectorAll('.view').forEach(x=>x.classList.remove('active'));
+      t.classList.add('active');
+      document.getElementById('view-'+t.dataset.view).classList.add('active');
+    }));
 
-    // Progress
-    (function() {
-      const start = new Date('2026-04-07');
-      const race = new Date('2026-07-27');
-      const now = new Date();
-      const total = race - start;
-      const elapsed = now - start;
-      const pct = Math.max(0, Math.min(100, Math.round((elapsed / total) * 100)));
-      const weeksIn = Math.max(0, Math.ceil(elapsed / (7 * 24 * 60 * 60 * 1000)));
-      const fill = document.getElementById('progress-fill');
-      const weekLabel = document.getElementById('progress-week');
-      const pctLabel = document.getElementById('progress-pct');
-      if (now < start) {
-        weekLabel.textContent = 'Training starts April 7';
-        pctLabel.textContent = '';
-        fill.style.width = '0%';
-      } else if (now >= race) {
-        weekLabel.textContent = 'Race complete!';
-        pctLabel.textContent = '100%';
-        fill.style.width = '100%';
-      } else {
-        weekLabel.textContent = `Week ${Math.min(weeksIn, 16)} of 16`;
-        pctLabel.textContent = `${pct}%`;
-        fill.style.width = `${pct}%`;
+    const TODAY = new Date('2026-05-14T12:00:00');
+    const fmtPace=s=>s?`${Math.floor(s/60)}:${String(Math.round(s%60)).padStart(2,'0')}`:'–';
+    const iso=d=>d.toISOString().slice(0,10);
+    const addDays=(d,n)=>{const x=new Date(d);x.setDate(x.getDate()+n);return x;};
+
+    Promise.all([
+      fetch('training_plan.json').then(r=>r.json()),
+      fetch('running_data.json').then(r=>r.json()).catch(()=>({runs:[],week_summary:[]}))
+    ]).then(([plan,data])=>{
+      const runsByDate={};
+      data.runs.forEach(r=>{(runsByDate[r.date]=runsByDate[r.date]||[]).push(r);});
+      const wsumByWeek={};
+      (data.week_summary||[]).forEach(w=>wsumByWeek[w.week]=w);
+
+      // Progress bar
+      const start=new Date('2026-04-06T12:00:00'),race=new Date('2026-07-27T12:00:00');
+      const pct=Math.max(0,Math.min(100,Math.round((TODAY-start)/(race-start)*100)));
+      const wkIn=Math.max(1,Math.min(16,Math.ceil((TODAY-start)/(7*864e5))));
+      document.getElementById('pfill').style.width=pct+'%';
+      document.getElementById('pweek').textContent=`Week ${wkIn} of 16 · ${plan.meta.model.split('—')[0].trim()}`;
+      document.getElementById('ppct').textContent=pct+'%';
+
+      // Plan-day lookup by date
+      const planByDate={};
+      plan.weeks.forEach(wk=>{
+        const mon=new Date(wk.monday+'T12:00:00');
+        wk.days.forEach(day=>{
+          const off=plan.meta.day_order.indexOf(day.d);
+          planByDate[iso(addDays(mon,off))]={wk,day};
+        });
+      });
+
+      // ---- CALENDAR ----
+      const calRoot=document.getElementById('cal-root');
+      calRoot.innerHTML='';
+      const months=[[2026,3],[2026,4],[2026,5],[2026,6]]; // Apr-Jul (0-idx)
+      const mNames=['January','February','March','April','May','June','July'];
+      months.forEach(([yr,mo])=>{
+        const wrap=document.createElement('div');wrap.className='cal-month';
+        wrap.innerHTML=`<h3>${mNames[mo]} ${yr}</h3>`;
+        const grid=document.createElement('div');grid.className='cal-grid';
+        ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'].forEach(d=>{
+          const h=document.createElement('div');h.className='cal-dow';h.textContent=d;grid.appendChild(h);
+        });
+        const first=new Date(yr,mo,1);
+        let lead=(first.getDay()+6)%7; // Mon=0
+        for(let i=0;i<lead;i++){const e=document.createElement('div');e.className='cal-cell empty';grid.appendChild(e);}
+        const dim=new Date(yr,mo+1,0).getDate();
+        for(let dn=1;dn<=dim;dn++){
+          const date=new Date(yr,mo,dn,12),ds=iso(date);
+          const cell=document.createElement('div');cell.className='cal-cell';
+          if(ds===iso(TODAY))cell.classList.add('today');
+          let html=`<div class="cnum">${dn}</div>`;
+          const pd=planByDate[ds];
+          if(pd){
+            const dd=pd.day;
+            html+=`<div class="plan">${dd.label}${dd.gym?`<span class="gym-tag"> · Gym ${dd.gym}</span>`:''}</div>`;
+          }
+          const acts=runsByDate[ds];
+          if(acts){acts.forEach(a=>{html+=`<div class="act k-${a.kind}">${a.distance_mi.toFixed(1)}mi ${fmtPace(a.pace_s)}</div>`;});}
+          cell.innerHTML=html;
+          cell.addEventListener('click',()=>showDetail(ds,pd,acts));
+          grid.appendChild(cell);
+        }
+        wrap.appendChild(grid);calRoot.appendChild(wrap);
+      });
+
+      const dp=document.getElementById('detail');
+      function showDetail(ds,pd,acts){
+        let h=`<h4>${new Date(ds+'T12:00:00').toLocaleDateString('en-US',{weekday:'long',month:'long',day:'numeric'})}</h4>`;
+        if(pd){h+=`<div class="row"><span class="muted">Planned:</span> ${pd.day.label}${pd.day.detail?' — '+pd.day.detail:''}${pd.day.optional?' (optional)':''}</div>`;
+          if(pd.day.gym){const g=plan.gym[pd.day.gym];h+=`<div class="row"><span class="muted">Gym ${pd.day.gym}:</span> ${g.name}</div>`;}}
+        if(acts){acts.forEach(a=>{
+          h+=`<div class="row"><span class="muted">Ran:</span> <span class="k-${a.kind}">${a.kind}</span> &middot; ${a.distance_mi.toFixed(2)} mi @ ${fmtPace(a.pace_s)}/mi${a.avg_hr?` &middot; HR ${Math.round(a.avg_hr)}`:''}${a.elev_ft?` &middot; ${a.elev_ft}ft`:''}</div>`;
+          if(a.segments){const s=a.segments;['warmup','work','cooldown'].forEach(k=>{const v=s[k];if(v)h+=`<div class="row" style="padding-left:1rem;font-size:0.82rem;"><span class="muted">${k}:</span> ${v.miles}mi @ ${fmtPace(v.pace_s)}${v.hr?` HR ${v.hr}`:''}</div>`;});}
+          if(a.coach_note)h+=`<div class="note">${a.coach_note}</div>`;
+        });}else if(pd&&new Date(ds+'T12:00:00')<TODAY&&pd.day.type!=='rest'){h+=`<div class="note">No run logged.</div>`;}
+        dp.innerHTML=h;dp.classList.add('show');dp.scrollIntoView({behavior:'smooth',block:'nearest'});
       }
-    })();
-  </script>
 
+      // ---- PLAN ----
+      const pr=document.getElementById('plan-root');pr.innerHTML='';
+      let lastPhase='';
+      plan.weeks.forEach(wk=>{
+        if(wk.phase!==lastPhase){
+          lastPhase=wk.phase;
+          const b=document.createElement('div');b.className='phase-banner';
+          b.innerHTML=`${wk.phase}`;pr.appendChild(b);
+        }
+        const mon=new Date(wk.monday+'T12:00:00'),end=addDays(mon,6);
+        const isCur=TODAY>=mon&&TODAY<=addDays(mon,7);
+        const card=document.createElement('div');
+        card.className='week-card'+(wk.stepback?' stepback':'')+(wk.race?' race':'')+(isCur?' current':'');
+        const ws=wsumByWeek[wk.n];
+        let adher='';
+        if(ws&&ws.actual_runs>0){
+          const tl=ws.actual_total_mi,tp=ws.planned_total_mi;
+          const lg=ws.actual_long_mi,lp=ws.planned_long_mi;
+          const lgOk=lg>=lp-0.5;
+          adher=`<div class="wk-adher">actual ${tl}mi / plan ${tp}mi &middot; long <span class="${lgOk?'ok':'miss'}">${lg}mi</span>/${lp}mi &middot; ${ws.actual_runs} runs, ${ws.actual_quality} quality</div>`;
+        }
+        const mNm=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug'];
+        const dr=`${mNm[mon.getMonth()]} ${mon.getDate()}–${mNm[end.getMonth()]} ${end.getDate()}`;
+        let rows='';
+        wk.days.forEach(d=>{
+          if(d.type==='rest'&&!d.gym){rows+=`<div class="day-row"><span class="dow">${d.d}</span><span class="lbl muted" style="color:var(--text-muted)">Rest</span></div>`;return;}
+          rows+=`<div class="day-row${d.optional?' opt':''}"><span class="dow">${d.d}</span><span class="lbl">${d.label}${d.detail?` <span class="det">&mdash; ${d.detail}</span>`:''}${d.gym?`<span class="gym-pill">Gym ${d.gym}</span>`:''}</span></div>`;
+        });
+        card.innerHTML=`<div class="wk-top"><h3>Week ${wk.n} &middot; ${dr}${wk.stepback?' (stepback)':''}${isCur?' &middot; now':''}</h3><span class="wk-miles">${ws?ws.planned_total_mi:''}${ws?' mi':''}</span></div>${adher}${rows}${wk.note?`<div class="wk-note">${wk.note}</div>`:''}`;
+        pr.appendChild(card);
+      });
+
+      // ---- LOG ----
+      const lr=document.getElementById('log-root');lr.innerHTML='';
+      const sorted=[...data.runs].sort((a,b)=>b.date.localeCompare(a.date));
+      if(!sorted.length)lr.innerHTML='<div class="loading">No runs logged yet.</div>';
+      let curWk=null;
+      sorted.forEach(r=>{
+        if(r.week!==curWk){curWk=r.week;const b=document.createElement('div');b.className='phase-banner';b.innerHTML=`Week ${r.week} <span>${r.phase}</span>`;lr.appendChild(b);}
+        const it=document.createElement('div');it.className='log-item';
+        const dt=new Date(r.date+'T12:00:00').toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric'});
+        let seg='';
+        if(r.segments){const s=r.segments;seg='<table class="seg-table"><tr><th>Segment</th><th>Miles</th><th>Pace</th><th>HR</th></tr>';
+          ['warmup','work','cooldown'].forEach(k=>{const v=s[k];if(v)seg+=`<tr><td>${k}</td><td>${v.miles}</td><td>${fmtPace(v.pace_s)}</td><td>${v.hr||'–'}</td></tr>`;});seg+='</table>';}
+        it.innerHTML=`<div class="log-top"><span class="log-date">${dt}</span><span class="log-kind k-${r.kind}">${r.kind}</span></div>
+          <div class="log-stats">${r.distance_mi.toFixed(2)} mi<span class="sep">/</span>${fmtPace(r.pace_s)}/mi${r.avg_hr?`<span class="sep">/</span>HR ${Math.round(r.avg_hr)}`:''}${r.elev_ft?`<span class="sep">/</span>${r.elev_ft} ft`:''}</div>
+          ${seg}${r.coach_note?`<div class="log-note">${r.coach_note}</div>`:''}`;
+        lr.appendChild(it);
+      });
+
+      // ---- GYM ----
+      const gr=document.getElementById('gym-root');
+      ['A','B','C'].forEach(k=>{
+        const g=plan.gym[k];if(!g)return;
+        const d=document.createElement('div');d.className='gym-day';
+        d.innerHTML=`<h4>Day ${k} &mdash; ${g.name}</h4><div class="gf">${g.focus}</div><ul>${g.lifts.map(l=>`<li>${l}</li>`).join('')}</ul>`;
+        gr.appendChild(d);
+      });
+      document.getElementById('gym-periodization').textContent=plan.gym.periodization;
+    }).catch(e=>{
+      document.getElementById('cal-root').innerHTML='<div class="loading">Could not load data: '+e+'</div>';
+    });
+  </script>
 </body>
 </html>

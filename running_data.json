@@ -1,0 +1,649 @@
+{
+  "generated_at": "2026-05-14T21:07:56.597852",
+  "athlete": "Mihir Srivastava",
+  "hr_zones": {
+    "custom_zones": false,
+    "zones": [
+      {
+        "min": 0,
+        "max": 128
+      },
+      {
+        "min": 128,
+        "max": 160
+      },
+      {
+        "min": 160,
+        "max": 175
+      },
+      {
+        "min": 175,
+        "max": 191
+      },
+      {
+        "min": 191,
+        "max": -1
+      }
+    ]
+  },
+  "runs": [
+    {
+      "date": "2026-04-06",
+      "name": "Afternoon Run",
+      "distance_mi": 9.02,
+      "pace_s": 535.0,
+      "avg_hr": 154.6,
+      "max_hr": 192.0,
+      "elev_ft": 344,
+      "week": 1,
+      "phase": "Base",
+      "kind": "long",
+      "auto_kind": "medium-long",
+      "coach_note": "W1 long run (9 mi as planned). HR 155 slightly warm but solid."
+    },
+    {
+      "date": "2026-04-08",
+      "name": "Afternoon Run",
+      "distance_mi": 5.04,
+      "pace_s": 508.0,
+      "avg_hr": 152.9,
+      "max_hr": 184.0,
+      "elev_ft": 138,
+      "week": 1,
+      "phase": "Base",
+      "segments": {
+        "warmup": {
+          "miles": 1,
+          "pace_s": 589,
+          "hr": 120
+        },
+        "work": {
+          "miles": 3,
+          "pace_s": 458,
+          "hr": 167
+        },
+        "cooldown": {
+          "miles": 2,
+          "pace_s": 586,
+          "hr": 158
+        }
+      },
+      "kind": "workout",
+      "auto_kind": "workout",
+      "coach_note": "Pace run \u2014 middle 3 mi at 7:38. Ran faster than the 8:30 target; closer to LT effort."
+    },
+    {
+      "date": "2026-04-10",
+      "name": "Afternoon Run",
+      "distance_mi": 3.12,
+      "pace_s": 597.0,
+      "avg_hr": 132.8,
+      "max_hr": 174.0,
+      "elev_ft": 187,
+      "week": 1,
+      "phase": "Base",
+      "kind": "easy",
+      "auto_kind": "easy",
+      "coach_note": "Recovery run, well controlled at HR 133."
+    },
+    {
+      "date": "2026-04-13",
+      "name": "Afternoon Run",
+      "distance_mi": 6.03,
+      "pace_s": 557.0,
+      "avg_hr": 144.5,
+      "max_hr": 177.0,
+      "elev_ft": 305,
+      "week": 2,
+      "phase": "Base",
+      "kind": "long",
+      "auto_kind": "easy",
+      "coach_note": "Stepback long run (6 mi). Correctly easy."
+    },
+    {
+      "date": "2026-04-16",
+      "name": "Afternoon Run",
+      "distance_mi": 5.04,
+      "pace_s": 514.0,
+      "avg_hr": 162.1,
+      "max_hr": 184.0,
+      "elev_ft": 108,
+      "week": 2,
+      "phase": "Base",
+      "segments": {
+        "warmup": {
+          "miles": 1,
+          "pace_s": 580,
+          "hr": 134
+        },
+        "work": {
+          "miles": 3,
+          "pace_s": 481,
+          "hr": 175
+        },
+        "cooldown": {
+          "miles": 2,
+          "pace_s": 590,
+          "hr": 158
+        }
+      },
+      "kind": "workout",
+      "auto_kind": "workout",
+      "coach_note": "Pace run \u2014 3 mi at 8:01, HR 175. Hard effort, slightly hot HR for the pace."
+    },
+    {
+      "date": "2026-04-17",
+      "name": "Evening Run",
+      "distance_mi": 3.02,
+      "pace_s": 557.0,
+      "avg_hr": 149.7,
+      "max_hr": 193.0,
+      "elev_ft": 151,
+      "week": 2,
+      "phase": "Base",
+      "kind": "easy",
+      "auto_kind": "easy",
+      "coach_note": "Easy run, on target."
+    },
+    {
+      "date": "2026-04-18",
+      "name": "nob hill run club",
+      "distance_mi": 3.2,
+      "pace_s": 586.0,
+      "avg_hr": 138.4,
+      "max_hr": 163.0,
+      "elev_ft": 13,
+      "week": 2,
+      "phase": "Base",
+      "kind": "easy",
+      "auto_kind": "easy",
+      "coach_note": "Run-club easy run."
+    },
+    {
+      "date": "2026-04-20",
+      "name": "Afternoon Run",
+      "distance_mi": 11.07,
+      "pace_s": 561.0,
+      "avg_hr": 156.0,
+      "max_hr": 183.0,
+      "elev_ft": 1040,
+      "week": 3,
+      "phase": "Base",
+      "kind": "long",
+      "auto_kind": "long",
+      "coach_note": "Long run 11 mi as planned. HR 156 \u2014 keep long runs nearer 148."
+    },
+    {
+      "date": "2026-04-22",
+      "name": "Evening Run",
+      "distance_mi": 3.11,
+      "pace_s": 632.0,
+      "avg_hr": 139.1,
+      "max_hr": 174.0,
+      "elev_ft": 197,
+      "week": 3,
+      "phase": "Base",
+      "kind": "easy",
+      "auto_kind": "easy",
+      "coach_note": "Recovery, HR 139. Good."
+    },
+    {
+      "date": "2026-04-23",
+      "name": "Afternoon Run",
+      "distance_mi": 6.01,
+      "pace_s": 516.0,
+      "avg_hr": 145.4,
+      "max_hr": 182.0,
+      "elev_ft": 194,
+      "week": 3,
+      "phase": "Base",
+      "segments": {
+        "warmup": {
+          "miles": 1,
+          "pace_s": 614,
+          "hr": 126
+        },
+        "work": {
+          "miles": 4,
+          "pace_s": 477,
+          "hr": 147
+        },
+        "cooldown": {
+          "miles": 2,
+          "pace_s": 612,
+          "hr": 158
+        }
+      },
+      "kind": "workout",
+      "auto_kind": "workout",
+      "coach_note": "Pace run \u2014 4 mi at 7:57, HR only 147. Excellent: goal-fast pace at controlled HR."
+    },
+    {
+      "date": "2026-04-28",
+      "name": "Afternoon Run",
+      "distance_mi": 12.03,
+      "pace_s": 577.0,
+      "avg_hr": 152.8,
+      "max_hr": 188.0,
+      "elev_ft": 499,
+      "week": 4,
+      "phase": "Base",
+      "segments": {
+        "warmup": {
+          "miles": 11,
+          "pace_s": 589,
+          "hr": 152
+        },
+        "work": {
+          "miles": 2,
+          "pace_s": 442,
+          "hr": 170
+        },
+        "cooldown": null
+      },
+      "kind": "long",
+      "auto_kind": "workout",
+      "coach_note": "Long run 12 mi with a fast 2-mi finish (7:22). This is a long run with a pace finish, not a separate workout."
+    },
+    {
+      "date": "2026-04-29",
+      "name": "Evening Run",
+      "distance_mi": 3.01,
+      "pace_s": 628.0,
+      "avg_hr": 121.0,
+      "max_hr": 140.0,
+      "elev_ft": 164,
+      "week": 4,
+      "phase": "Base",
+      "kind": "easy",
+      "auto_kind": "easy",
+      "coach_note": "Recovery, HR 121. Textbook easy."
+    },
+    {
+      "date": "2026-05-02",
+      "name": "Afternoon Run",
+      "distance_mi": 6.04,
+      "pace_s": 566.0,
+      "avg_hr": 151.4,
+      "max_hr": 184.0,
+      "elev_ft": 272,
+      "week": 4,
+      "phase": "Base",
+      "kind": "easy",
+      "auto_kind": "easy",
+      "coach_note": "Easy 6 mi, on target."
+    },
+    {
+      "date": "2026-05-04",
+      "name": "Afternoon Run",
+      "distance_mi": 9.02,
+      "pace_s": 490.0,
+      "avg_hr": 170.3,
+      "max_hr": 201.0,
+      "elev_ft": 92,
+      "week": 5,
+      "phase": "Base",
+      "kind": "long",
+      "auto_kind": "medium-long",
+      "coach_note": "Stepback long run run far too hard \u2014 8:10 avg, HR 170. This was a fitness probe, not a recovery long run. Don't repeat on stepback weeks."
+    },
+    {
+      "date": "2026-05-06",
+      "name": "Afternoon Run",
+      "distance_mi": 3.13,
+      "pace_s": 700.0,
+      "avg_hr": 123.6,
+      "max_hr": 137.0,
+      "elev_ft": 72,
+      "week": 5,
+      "phase": "Base",
+      "kind": "easy",
+      "auto_kind": "easy",
+      "coach_note": "Recovery, HR 124. Perfect after the hard May 4."
+    },
+    {
+      "date": "2026-05-08",
+      "name": "Afternoon Run",
+      "distance_mi": 6.04,
+      "pace_s": 530.0,
+      "avg_hr": 163.7,
+      "max_hr": 192.0,
+      "elev_ft": 522,
+      "week": 5,
+      "phase": "Base",
+      "segments": {
+        "warmup": {
+          "miles": 1,
+          "pace_s": 648,
+          "hr": 142
+        },
+        "work": {
+          "miles": 4,
+          "pace_s": 502,
+          "hr": 172
+        },
+        "cooldown": {
+          "miles": 2,
+          "pace_s": 587,
+          "hr": 166
+        }
+      },
+      "kind": "workout",
+      "auto_kind": "workout",
+      "coach_note": "Pace run \u2014 4 mi at 8:22, HR 172. HR high for the pace; was likely still fatigued from May 4."
+    },
+    {
+      "date": "2026-05-09",
+      "name": "Morning Run",
+      "distance_mi": 3.14,
+      "pace_s": 589.0,
+      "avg_hr": 135.2,
+      "max_hr": 160.0,
+      "elev_ft": 16,
+      "week": 5,
+      "phase": "Base",
+      "kind": "easy",
+      "auto_kind": "easy",
+      "coach_note": "Easy, on target."
+    },
+    {
+      "date": "2026-05-11",
+      "name": "Afternoon Run",
+      "distance_mi": 14.05,
+      "pace_s": 554.0,
+      "avg_hr": 148.5,
+      "max_hr": 181.0,
+      "elev_ft": 289,
+      "week": 6,
+      "phase": "Transition",
+      "kind": "long",
+      "auto_kind": "long",
+      "coach_note": "W6 long run 14 mi, HR 148. Best-executed long run yet \u2014 exactly the right effort."
+    },
+    {
+      "date": "2026-05-13",
+      "name": "Evening Run",
+      "distance_mi": 7.02,
+      "pace_s": 502.0,
+      "avg_hr": 164.6,
+      "max_hr": 190.0,
+      "elev_ft": 52,
+      "week": 6,
+      "phase": "Transition",
+      "segments": {
+        "warmup": {
+          "miles": 1,
+          "pace_s": 592,
+          "hr": 135
+        },
+        "work": {
+          "miles": 5,
+          "pace_s": 467,
+          "hr": 172
+        },
+        "cooldown": {
+          "miles": 2,
+          "pace_s": 617,
+          "hr": 160
+        }
+      },
+      "kind": "workout",
+      "auto_kind": "workout",
+      "coach_note": "Planned MP pace run; ran middle 5 at 7:47 (LT pace, faster than 8:00 goal). Good session but that's threshold, not MP."
+    },
+    {
+      "date": "2026-05-14",
+      "name": "Afternoon Run",
+      "distance_mi": 4.02,
+      "pace_s": 594.0,
+      "avg_hr": 136.1,
+      "max_hr": 166.0,
+      "elev_ft": 66,
+      "week": 6,
+      "phase": "Transition",
+      "kind": "easy",
+      "auto_kind": "easy",
+      "coach_note": "Easy 4 mi, HR 136. Good recovery."
+    }
+  ],
+  "week_summary": [
+    {
+      "week": 1,
+      "phase": "Base",
+      "monday": "2026-04-06",
+      "stepback": false,
+      "planned_long_mi": 9.0,
+      "planned_quality": 1,
+      "planned_total_mi": 17.0,
+      "note": "",
+      "actual_total_mi": 17.2,
+      "actual_long_mi": 9.0,
+      "actual_quality": 1,
+      "actual_runs": 3
+    },
+    {
+      "week": 2,
+      "phase": "Base",
+      "monday": "2026-04-13",
+      "stepback": true,
+      "planned_long_mi": 6.0,
+      "planned_quality": 1,
+      "planned_total_mi": 14.0,
+      "note": "",
+      "actual_total_mi": 17.3,
+      "actual_long_mi": 6.0,
+      "actual_quality": 1,
+      "actual_runs": 4
+    },
+    {
+      "week": 3,
+      "phase": "Base",
+      "monday": "2026-04-20",
+      "stepback": false,
+      "planned_long_mi": 11.0,
+      "planned_quality": 1,
+      "planned_total_mi": 20.0,
+      "note": "",
+      "actual_total_mi": 20.2,
+      "actual_long_mi": 11.1,
+      "actual_quality": 1,
+      "actual_runs": 3
+    },
+    {
+      "week": 4,
+      "phase": "Base",
+      "monday": "2026-04-27",
+      "stepback": false,
+      "planned_long_mi": 12.0,
+      "planned_quality": 0,
+      "planned_total_mi": 21.0,
+      "note": "",
+      "actual_total_mi": 21.1,
+      "actual_long_mi": 12.0,
+      "actual_quality": 0,
+      "actual_runs": 3
+    },
+    {
+      "week": 5,
+      "phase": "Base",
+      "monday": "2026-05-04",
+      "stepback": true,
+      "planned_long_mi": 9.0,
+      "planned_quality": 1,
+      "planned_total_mi": 18.0,
+      "note": "",
+      "actual_total_mi": 21.3,
+      "actual_long_mi": 9.0,
+      "actual_quality": 1,
+      "actual_runs": 4
+    },
+    {
+      "week": 6,
+      "phase": "Transition",
+      "monday": "2026-05-11",
+      "stepback": false,
+      "planned_long_mi": 14.0,
+      "planned_quality": 1,
+      "planned_total_mi": 33.0,
+      "note": "Pfitzinger transition begins \u2014 add medium-long midweek run.",
+      "actual_total_mi": 25.1,
+      "actual_long_mi": 14.1,
+      "actual_quality": 1,
+      "actual_runs": 3
+    },
+    {
+      "week": 7,
+      "phase": "Transition",
+      "monday": "2026-05-18",
+      "stepback": false,
+      "planned_long_mi": 15.0,
+      "planned_quality": 1,
+      "planned_total_mi": 36.0,
+      "note": "",
+      "actual_total_mi": 0,
+      "actual_long_mi": 0,
+      "actual_quality": 0,
+      "actual_runs": 0
+    },
+    {
+      "week": 8,
+      "phase": "Transition",
+      "monday": "2026-05-25",
+      "stepback": true,
+      "planned_long_mi": 12.0,
+      "planned_quality": 1,
+      "planned_total_mi": 30.0,
+      "note": "Stepback week \u2014 absorb the transition load.",
+      "actual_total_mi": 0,
+      "actual_long_mi": 0,
+      "actual_quality": 0,
+      "actual_runs": 0
+    },
+    {
+      "week": 9,
+      "phase": "Peak",
+      "monday": "2026-06-01",
+      "stepback": false,
+      "planned_long_mi": 17.0,
+      "planned_quality": 1,
+      "planned_total_mi": 42.0,
+      "note": "Peak phase \u2014 marathon-pace long runs are the key sessions.",
+      "actual_total_mi": 0,
+      "actual_long_mi": 0,
+      "actual_quality": 0,
+      "actual_runs": 0
+    },
+    {
+      "week": 10,
+      "phase": "Peak",
+      "monday": "2026-06-08",
+      "stepback": false,
+      "planned_long_mi": 18.0,
+      "planned_quality": 1,
+      "planned_total_mi": 43.0,
+      "note": "",
+      "actual_total_mi": 0,
+      "actual_long_mi": 0,
+      "actual_quality": 0,
+      "actual_runs": 0
+    },
+    {
+      "week": 11,
+      "phase": "Peak",
+      "monday": "2026-06-15",
+      "stepback": true,
+      "planned_long_mi": 14.0,
+      "planned_quality": 1,
+      "planned_total_mi": 36.0,
+      "note": "Stepback before the two biggest weeks.",
+      "actual_total_mi": 0,
+      "actual_long_mi": 0,
+      "actual_quality": 0,
+      "actual_runs": 0
+    },
+    {
+      "week": 12,
+      "phase": "Peak",
+      "monday": "2026-06-22",
+      "stepback": false,
+      "planned_long_mi": 20.0,
+      "planned_quality": 1,
+      "planned_total_mi": 44.0,
+      "note": "Gym drops to 2 days (A,B), no plyometrics \u2014 legs are taxed.",
+      "actual_total_mi": 0,
+      "actual_long_mi": 0,
+      "actual_quality": 0,
+      "actual_runs": 0
+    },
+    {
+      "week": 13,
+      "phase": "Peak",
+      "monday": "2026-06-29",
+      "stepback": false,
+      "planned_long_mi": 20.0,
+      "planned_quality": 1,
+      "planned_total_mi": 43.0,
+      "note": "Biggest week. The 20-miler with 10 @ MP is your dress rehearsal.",
+      "actual_total_mi": 0,
+      "actual_long_mi": 0,
+      "actual_quality": 0,
+      "actual_runs": 0
+    },
+    {
+      "week": 14,
+      "phase": "Taper",
+      "monday": "2026-07-06",
+      "stepback": false,
+      "planned_long_mi": 13.0,
+      "planned_quality": 1,
+      "planned_total_mi": 31.0,
+      "note": "Taper begins. Volume drops, intensity stays. Light bodyweight gym only.",
+      "actual_total_mi": 0,
+      "actual_long_mi": 0,
+      "actual_quality": 0,
+      "actual_runs": 0
+    },
+    {
+      "week": 15,
+      "phase": "Taper",
+      "monday": "2026-07-13",
+      "stepback": false,
+      "planned_long_mi": 10.0,
+      "planned_quality": 1,
+      "planned_total_mi": 19.0,
+      "note": "Deep taper. Legs may feel heavy \u2014 normal. Trust the work.",
+      "actual_total_mi": 0,
+      "actual_long_mi": 0,
+      "actual_quality": 0,
+      "actual_runs": 0
+    },
+    {
+      "week": 16,
+      "phase": "Race",
+      "monday": "2026-07-20",
+      "stepback": false,
+      "planned_long_mi": 0.0,
+      "planned_quality": 1,
+      "planned_total_mi": 18.0,
+      "note": "Race week. Stay loose, hydrate, carb-load Thu-Sat. Race Mon Jul 27.",
+      "actual_total_mi": 0,
+      "actual_long_mi": 0,
+      "actual_quality": 0,
+      "actual_runs": 0
+    },
+    {
+      "week": 17,
+      "phase": "Race",
+      "monday": "2026-07-27",
+      "stepback": false,
+      "planned_long_mi": 0.0,
+      "planned_quality": 0,
+      "planned_total_mi": 26.2,
+      "note": "",
+      "actual_total_mi": 0,
+      "actual_long_mi": 0,
+      "actual_quality": 0,
+      "actual_runs": 0
+    }
+  ]
+}

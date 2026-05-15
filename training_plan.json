@@ -1,0 +1,268 @@
+{
+  "meta": {
+    "race": "SF Marathon",
+    "race_date": "2026-07-27",
+    "week1_monday": "2026-04-06",
+    "goal_primary": "3:45",
+    "goal_reach": "3:30",
+    "goal_safety": "3:59",
+    "mp_3_30": "8:00",
+    "mp_3_45": "8:35",
+    "model": "Moderate hybrid — Higdon Novice 2 base, Pfitzinger sessions phased in",
+    "paces": {
+      "easy": "9:15-9:45",
+      "medium_long": "9:00-9:30",
+      "long": "9:15-9:45",
+      "marathon_pace": "8:00",
+      "lactate_threshold": "7:35-7:45",
+      "vo2max": "6:55-7:05"
+    },
+    "day_order": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
+  },
+  "gym": {
+    "A": {
+      "name": "Push + Posterior Chain",
+      "focus": "Maintain upper-body mass, build hamstring/glute resilience",
+      "lifts": [
+        "Bench or DB press 3x6-8",
+        "Overhead press 3x8",
+        "Romanian deadlift 3x6-8",
+        "Single-leg calf raise 3x12-15",
+        "Anti-rotation core (Pallof) 3 sets"
+      ]
+    },
+    "B": {
+      "name": "Pull + Single-Leg Strength",
+      "focus": "Maintain back/arms, fix knee tweaks via single-leg stability",
+      "lifts": [
+        "Pull-ups or lat pulldown 3x6-8",
+        "Barbell or DB row 3x8",
+        "Bulgarian split squat 3x8/leg",
+        "Walking lunge 2x10/leg",
+        "Hanging leg raise 3 sets"
+      ]
+    },
+    "C": {
+      "name": "Power + Plyometrics (speed)",
+      "focus": "Running economy and leg speed — base/transition phases only",
+      "lifts": [
+        "Trap-bar deadlift or goblet squat 3x5",
+        "Box jumps 4x5",
+        "Single-leg hops 3x8/leg",
+        "Nordic hamstring curl 3x6",
+        "Core circuit 3 sets"
+      ]
+    },
+    "periodization": "Weeks 6-11: 3 days (A,B,C). Weeks 12-13 peak: 2 days (A,B), no plyo. Weeks 14-15 taper: 1-2 light bodyweight. Week 16: none."
+  },
+  "weeks": [
+    {
+      "n": 1, "phase": "Base", "monday": "2026-04-06", "stepback": false,
+      "days": [
+        {"d": "Mon", "type": "long", "label": "Long Run", "detail": "9 mi easy"},
+        {"d": "Tue", "type": "rest", "label": "Rest / Gym A", "gym": "A"},
+        {"d": "Wed", "type": "quality", "label": "Pace Run", "detail": "5 mi, middle 3 @ 8:30"},
+        {"d": "Thu", "type": "easy", "label": "Easy", "detail": "3 mi easy", "gym": "B"},
+        {"d": "Fri", "type": "rest", "label": "Rest"},
+        {"d": "Sat", "type": "easy", "label": "Easy (optional)", "detail": "3 mi easy", "optional": true},
+        {"d": "Sun", "type": "rest", "label": "Rest"}
+      ]
+    },
+    {
+      "n": 2, "phase": "Base", "monday": "2026-04-13", "stepback": true,
+      "days": [
+        {"d": "Mon", "type": "long", "label": "Long Run", "detail": "6 mi easy (stepback)"},
+        {"d": "Tue", "type": "rest", "label": "Rest / Gym A", "gym": "A"},
+        {"d": "Wed", "type": "quality", "label": "Pace Run", "detail": "5 mi, middle 3 @ 8:30"},
+        {"d": "Thu", "type": "easy", "label": "Easy", "detail": "3 mi easy", "gym": "B"},
+        {"d": "Fri", "type": "rest", "label": "Rest"},
+        {"d": "Sat", "type": "easy", "label": "Easy (optional)", "detail": "3 mi easy", "optional": true},
+        {"d": "Sun", "type": "rest", "label": "Rest"}
+      ]
+    },
+    {
+      "n": 3, "phase": "Base", "monday": "2026-04-20", "stepback": false,
+      "days": [
+        {"d": "Mon", "type": "long", "label": "Long Run", "detail": "11 mi easy"},
+        {"d": "Tue", "type": "rest", "label": "Rest / Gym A", "gym": "A"},
+        {"d": "Wed", "type": "quality", "label": "Pace Run", "detail": "6 mi, middle 4 @ 8:25"},
+        {"d": "Thu", "type": "easy", "label": "Easy", "detail": "3 mi easy", "gym": "B"},
+        {"d": "Fri", "type": "rest", "label": "Rest"},
+        {"d": "Sat", "type": "easy", "label": "Easy (optional)", "detail": "4 mi easy", "optional": true},
+        {"d": "Sun", "type": "rest", "label": "Rest"}
+      ]
+    },
+    {
+      "n": 4, "phase": "Base", "monday": "2026-04-27", "stepback": false,
+      "days": [
+        {"d": "Mon", "type": "long", "label": "Long Run", "detail": "12 mi easy"},
+        {"d": "Tue", "type": "rest", "label": "Rest / Gym A", "gym": "A"},
+        {"d": "Wed", "type": "easy", "label": "Easy", "detail": "6 mi easy"},
+        {"d": "Thu", "type": "easy", "label": "Easy", "detail": "3 mi easy", "gym": "B"},
+        {"d": "Fri", "type": "rest", "label": "Rest"},
+        {"d": "Sat", "type": "easy", "label": "Easy (optional)", "detail": "3 mi easy", "optional": true},
+        {"d": "Sun", "type": "rest", "label": "Rest"}
+      ]
+    },
+    {
+      "n": 5, "phase": "Base", "monday": "2026-05-04", "stepback": true,
+      "days": [
+        {"d": "Mon", "type": "long", "label": "Long Run", "detail": "9 mi easy (stepback)"},
+        {"d": "Tue", "type": "rest", "label": "Rest / Gym A", "gym": "A"},
+        {"d": "Wed", "type": "quality", "label": "Pace Run", "detail": "6 mi, middle 4 @ 8:20"},
+        {"d": "Thu", "type": "easy", "label": "Easy", "detail": "3 mi easy", "gym": "B"},
+        {"d": "Fri", "type": "rest", "label": "Rest"},
+        {"d": "Sat", "type": "easy", "label": "Easy (optional)", "detail": "3 mi easy", "optional": true},
+        {"d": "Sun", "type": "rest", "label": "Rest"}
+      ]
+    },
+    {
+      "n": 6, "phase": "Transition", "monday": "2026-05-11", "stepback": false,
+      "note": "Pfitzinger transition begins — add medium-long midweek run.",
+      "days": [
+        {"d": "Mon", "type": "long", "label": "Long Run", "detail": "14 mi easy"},
+        {"d": "Tue", "type": "rest", "label": "Rest / Gym A", "gym": "A"},
+        {"d": "Wed", "type": "quality", "label": "Pace Run", "detail": "7 mi, middle 5 @ 8:00 (MP)"},
+        {"d": "Thu", "type": "easy", "label": "Easy", "detail": "4 mi easy", "gym": "B"},
+        {"d": "Fri", "type": "medium-long", "label": "Medium-Long", "detail": "8 mi steady @ 9:00-9:30"},
+        {"d": "Sat", "type": "easy", "label": "Easy (optional)", "detail": "3 mi easy", "optional": true, "gym": "C"},
+        {"d": "Sun", "type": "rest", "label": "Rest"}
+      ]
+    },
+    {
+      "n": 7, "phase": "Transition", "monday": "2026-05-18", "stepback": false,
+      "days": [
+        {"d": "Mon", "type": "long", "label": "Long Run", "detail": "15 mi easy"},
+        {"d": "Tue", "type": "rest", "label": "Rest / Gym A", "gym": "A"},
+        {"d": "Wed", "type": "quality", "label": "LT Workout", "detail": "8 mi w/ 4 mi @ 7:40 (threshold)"},
+        {"d": "Thu", "type": "easy", "label": "Easy", "detail": "4 mi easy", "gym": "B"},
+        {"d": "Fri", "type": "medium-long", "label": "Medium-Long", "detail": "9 mi steady"},
+        {"d": "Sat", "type": "easy", "label": "Easy (optional)", "detail": "4 mi easy", "optional": true, "gym": "C"},
+        {"d": "Sun", "type": "rest", "label": "Rest"}
+      ]
+    },
+    {
+      "n": 8, "phase": "Transition", "monday": "2026-05-25", "stepback": true,
+      "note": "Stepback week — absorb the transition load.",
+      "days": [
+        {"d": "Mon", "type": "long", "label": "Long Run + MP", "detail": "12 mi, last 4 @ 8:00 (MP)"},
+        {"d": "Tue", "type": "rest", "label": "Rest / Gym A", "gym": "A"},
+        {"d": "Wed", "type": "quality", "label": "Tempo", "detail": "6 mi w/ 3 mi @ 7:50"},
+        {"d": "Thu", "type": "easy", "label": "Easy", "detail": "4 mi easy", "gym": "B"},
+        {"d": "Fri", "type": "medium-long", "label": "Medium-Long", "detail": "8 mi steady"},
+        {"d": "Sat", "type": "easy", "label": "Easy (optional)", "detail": "3 mi easy", "optional": true},
+        {"d": "Sun", "type": "rest", "label": "Rest"}
+      ]
+    },
+    {
+      "n": 9, "phase": "Peak", "monday": "2026-06-01", "stepback": false,
+      "note": "Peak phase — marathon-pace long runs are the key sessions.",
+      "days": [
+        {"d": "Mon", "type": "long", "label": "Long Run + MP", "detail": "17 mi, last 5 @ 8:00 (MP)"},
+        {"d": "Tue", "type": "rest", "label": "Rest / Gym A", "gym": "A"},
+        {"d": "Wed", "type": "quality", "label": "LT Workout", "detail": "9 mi w/ 5 mi @ 7:40 (threshold)"},
+        {"d": "Thu", "type": "easy", "label": "Easy", "detail": "5 mi easy", "gym": "B"},
+        {"d": "Fri", "type": "medium-long", "label": "Medium-Long", "detail": "11 mi steady"},
+        {"d": "Sat", "type": "easy", "label": "Easy (optional)", "detail": "4 mi easy", "optional": true, "gym": "C"},
+        {"d": "Sun", "type": "rest", "label": "Rest"}
+      ]
+    },
+    {
+      "n": 10, "phase": "Peak", "monday": "2026-06-08", "stepback": false,
+      "days": [
+        {"d": "Mon", "type": "long", "label": "Long Run + MP", "detail": "18 mi, last 8 @ 8:00 (MP)"},
+        {"d": "Tue", "type": "rest", "label": "Rest / Gym A", "gym": "A"},
+        {"d": "Wed", "type": "quality", "label": "VO2max", "detail": "8 mi w/ 5x1000m @ 7:00, jog recovery"},
+        {"d": "Thu", "type": "easy", "label": "Easy", "detail": "5 mi easy", "gym": "B"},
+        {"d": "Fri", "type": "medium-long", "label": "Medium-Long", "detail": "12 mi steady"},
+        {"d": "Sat", "type": "easy", "label": "Easy (optional)", "detail": "5 mi easy", "optional": true, "gym": "C"},
+        {"d": "Sun", "type": "rest", "label": "Rest"}
+      ]
+    },
+    {
+      "n": 11, "phase": "Peak", "monday": "2026-06-15", "stepback": true,
+      "note": "Stepback before the two biggest weeks.",
+      "days": [
+        {"d": "Mon", "type": "long", "label": "Long Run", "detail": "14 mi easy"},
+        {"d": "Tue", "type": "rest", "label": "Rest / Gym A", "gym": "A"},
+        {"d": "Wed", "type": "quality", "label": "LT Workout", "detail": "8 mi w/ 4 mi @ 7:40 (threshold)"},
+        {"d": "Thu", "type": "easy", "label": "Easy", "detail": "5 mi easy", "gym": "B"},
+        {"d": "Fri", "type": "medium-long", "label": "Medium-Long", "detail": "9 mi steady"},
+        {"d": "Sat", "type": "easy", "label": "Easy (optional)", "detail": "4 mi easy", "optional": true, "gym": "C"},
+        {"d": "Sun", "type": "rest", "label": "Rest"}
+      ]
+    },
+    {
+      "n": 12, "phase": "Peak", "monday": "2026-06-22", "stepback": false,
+      "note": "Gym drops to 2 days (A,B), no plyometrics — legs are taxed.",
+      "days": [
+        {"d": "Mon", "type": "long", "label": "Long Run + MP", "detail": "20 mi, last 8 @ 8:00 (MP)"},
+        {"d": "Tue", "type": "rest", "label": "Rest / Gym A", "gym": "A"},
+        {"d": "Wed", "type": "quality", "label": "MP Workout", "detail": "9 mi w/ 6 mi @ 8:00 (MP)"},
+        {"d": "Thu", "type": "easy", "label": "Easy", "detail": "5 mi easy", "gym": "B"},
+        {"d": "Fri", "type": "medium-long", "label": "Medium-Long", "detail": "10 mi steady"},
+        {"d": "Sat", "type": "easy", "label": "Easy (optional)", "detail": "5 mi easy", "optional": true},
+        {"d": "Sun", "type": "rest", "label": "Rest"}
+      ]
+    },
+    {
+      "n": 13, "phase": "Peak", "monday": "2026-06-29", "stepback": false,
+      "note": "Biggest week. The 20-miler with 10 @ MP is your dress rehearsal.",
+      "days": [
+        {"d": "Mon", "type": "long", "label": "Long Run + MP", "detail": "20 mi, last 10 @ 8:00 (MP)"},
+        {"d": "Tue", "type": "rest", "label": "Rest / Gym A", "gym": "A"},
+        {"d": "Wed", "type": "quality", "label": "LT Workout", "detail": "9 mi w/ 5 mi @ 7:40 (threshold)"},
+        {"d": "Thu", "type": "easy", "label": "Easy", "detail": "5 mi easy", "gym": "B"},
+        {"d": "Fri", "type": "medium-long", "label": "Medium-Long", "detail": "9 mi steady"},
+        {"d": "Sat", "type": "easy", "label": "Easy (optional)", "detail": "4 mi easy", "optional": true},
+        {"d": "Sun", "type": "rest", "label": "Rest"}
+      ]
+    },
+    {
+      "n": 14, "phase": "Taper", "monday": "2026-07-06", "stepback": false,
+      "note": "Taper begins. Volume drops, intensity stays. Light bodyweight gym only.",
+      "days": [
+        {"d": "Mon", "type": "long", "label": "Long Run + MP", "detail": "13 mi, last 4 @ 8:00 (MP)"},
+        {"d": "Tue", "type": "rest", "label": "Rest / Gym (light)", "gym": "A"},
+        {"d": "Wed", "type": "quality", "label": "Tempo", "detail": "6 mi w/ 3 mi @ 7:50"},
+        {"d": "Thu", "type": "easy", "label": "Easy", "detail": "4 mi easy"},
+        {"d": "Fri", "type": "medium-long", "label": "Medium-Long", "detail": "8 mi steady"},
+        {"d": "Sat", "type": "rest", "label": "Rest"},
+        {"d": "Sun", "type": "rest", "label": "Rest"}
+      ]
+    },
+    {
+      "n": 15, "phase": "Taper", "monday": "2026-07-13", "stepback": false,
+      "note": "Deep taper. Legs may feel heavy — normal. Trust the work.",
+      "days": [
+        {"d": "Mon", "type": "long", "label": "Long Run", "detail": "10 mi easy"},
+        {"d": "Tue", "type": "rest", "label": "Rest"},
+        {"d": "Wed", "type": "quality", "label": "MP Touch", "detail": "5 mi w/ 3 mi @ 8:00 (MP)"},
+        {"d": "Thu", "type": "easy", "label": "Easy + strides", "detail": "4 mi w/ 4x20s strides"},
+        {"d": "Fri", "type": "rest", "label": "Rest"},
+        {"d": "Sat", "type": "easy", "label": "Easy (optional)", "detail": "3 mi easy", "optional": true},
+        {"d": "Sun", "type": "rest", "label": "Rest"}
+      ]
+    },
+    {
+      "n": 16, "phase": "Race", "monday": "2026-07-20", "stepback": false,
+      "note": "Race week. Stay loose, hydrate, carb-load Thu-Sat. Race Mon Jul 27.",
+      "days": [
+        {"d": "Mon", "type": "easy", "label": "Shakeout", "detail": "5 mi easy"},
+        {"d": "Tue", "type": "easy", "label": "Easy", "detail": "4 mi easy"},
+        {"d": "Wed", "type": "quality", "label": "Sharpener", "detail": "4 mi w/ 4x20s strides at MP"},
+        {"d": "Thu", "type": "easy", "label": "Shakeout", "detail": "3 mi very easy"},
+        {"d": "Fri", "type": "rest", "label": "Rest — carb load"},
+        {"d": "Sat", "type": "easy", "label": "Shakeout", "detail": "2 mi very easy + 2 strides"},
+        {"d": "Sun", "type": "rest", "label": "Rest — carb load, sleep"}
+      ]
+    },
+    {
+      "n": 17, "phase": "Race", "monday": "2026-07-27", "stepback": false,
+      "race": true,
+      "days": [
+        {"d": "Mon", "type": "race", "label": "SF MARATHON", "detail": "26.2 mi — 3:30 = 8:00/mi"}
+      ]
+    }
+  ]
+}
