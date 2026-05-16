@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-14T21:07:56.597852",
+  "generated_at": "2026-05-15T21:46:09.587493",
   "athlete": "Mihir Srivastava",
   "hr_zones": {
     "custom_zones": false,
@@ -404,6 +404,20 @@
       "kind": "easy",
       "auto_kind": "easy",
       "coach_note": "Easy 4 mi, HR 136. Good recovery."
+    },
+    {
+      "date": "2026-05-15",
+      "name": "Afternoon Run",
+      "distance_mi": 8.02,
+      "pace_s": 570.0,
+      "avg_hr": 151.7,
+      "max_hr": 169.0,
+      "elev_ft": 115,
+      "week": 6,
+      "phase": "Transition",
+      "kind": "medium-long",
+      "auto_kind": "medium-long",
+      "coach_note": "W6 medium-long 8 mi @ 9:30, HR 152. New Pfitzinger session executed right \u2014 steady and controlled at the easy end of the range."
     }
   ],
   "week_summary": [
@@ -486,10 +500,10 @@
       "planned_quality": 1,
       "planned_total_mi": 33.0,
       "note": "Pfitzinger transition begins \u2014 add medium-long midweek run.",
-      "actual_total_mi": 25.1,
+      "actual_total_mi": 33.1,
       "actual_long_mi": 14.1,
       "actual_quality": 1,
-      "actual_runs": 3
+      "actual_runs": 4
     },
     {
       "week": 7,
