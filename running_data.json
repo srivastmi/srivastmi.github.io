@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-20T16:53:13.735521",
+  "generated_at": "2026-05-20T18:52:21.621908",
   "athlete": "Mihir Srivastava",
   "hr_zones": {
     "custom_zones": false,
@@ -432,6 +432,37 @@
       "kind": "long",
       "auto_kind": "long",
       "coach_note": "W7 long run 15 mi @ 9:08 HR 158, 531ft elev. Great work adding hills (35 ft/mi vs the 21 ft/mi of May 11). Pace a touch fast and HR 3 bpm above the easy-long target \u2014 the hills explain most of it. Keep the next non-MP long run at HR <155 by easing pace 10-15 sec/mi."
+    },
+    {
+      "date": "2026-05-20",
+      "name": "Afternoon Run",
+      "distance_mi": 8.02,
+      "pace_s": 527.0,
+      "avg_hr": 146.6,
+      "max_hr": 185.0,
+      "elev_ft": 266,
+      "week": 7,
+      "phase": "Transition",
+      "segments": {
+        "warmup": {
+          "miles": 2,
+          "pace_s": 605,
+          "hr": 119
+        },
+        "work": {
+          "miles": 4,
+          "pace_s": 459,
+          "hr": 159
+        },
+        "cooldown": {
+          "miles": 3,
+          "pace_s": 577,
+          "hr": 164
+        }
+      },
+      "kind": "workout",
+      "auto_kind": "workout",
+      "coach_note": "W7 LT workout 8 mi w/ 4 @ 7:39 HR 159 avg \u2014 A+ execution. Hit target 7:40 dead on with even splits and disciplined HR drift (146\u2192172 across the 4). Big fitness jump from May 8 (8:22 @ HR 172) to today (7:39 @ HR 159) \u2014 same effort, much faster pace. Strongest signal yet that 3:30 is realistic. Next LT workout drops target to 7:30."
     }
   ],
   "week_summary": [
@@ -528,10 +559,10 @@
       "planned_quality": 1,
       "planned_total_mi": 36.0,
       "note": "",
-      "actual_total_mi": 15.0,
+      "actual_total_mi": 23.0,
       "actual_long_mi": 15.0,
-      "actual_quality": 0,
-      "actual_runs": 1
+      "actual_quality": 1,
+      "actual_runs": 2
     },
     {
       "week": 8,
