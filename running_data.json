@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-20T18:57:01.489222",
+  "generated_at": "2026-05-21T20:26:03.279472",
   "athlete": "Mihir Srivastava",
   "hr_zones": {
     "custom_zones": false,
@@ -463,6 +463,20 @@
       "kind": "workout",
       "auto_kind": "workout",
       "coach_note": "W7 LT workout 8 mi w/ 4 @ 7:39 HR 159 avg \u2014 A+ execution. Hit target 7:40 dead on with even splits and disciplined HR drift (146\u2192172 across the 4). Modest fitness gain vs Apr 23 (4mi @ 7:57 HR 147 on similar terrain): 18 sec/mi faster at +12 bpm. Real progress but not a giant leap. Next LT workout drops target to 7:30."
+    },
+    {
+      "date": "2026-05-21",
+      "name": "Evening Run",
+      "distance_mi": 3.03,
+      "pace_s": 625.0,
+      "avg_hr": 132.8,
+      "max_hr": 155.0,
+      "elev_ft": 157,
+      "week": 7,
+      "phase": "Transition",
+      "kind": "easy",
+      "auto_kind": "easy",
+      "coach_note": "Stopped at 3 mi (planned 4) \u2014 knee pain. Smoking gun: Mile 1 was a -147 ft descent, and downhill is the highest knee-stress activity in running. Good call stopping early. Rest/cross-train this week; W8 is a stepback so timing is forgiving. Address with glute med work and avoid steep descents 2 weeks."
     }
   ],
   "week_summary": [
@@ -559,10 +573,10 @@
       "planned_quality": 1,
       "planned_total_mi": 36.0,
       "note": "",
-      "actual_total_mi": 23.0,
+      "actual_total_mi": 26.1,
       "actual_long_mi": 15.0,
       "actual_quality": 1,
-      "actual_runs": 2
+      "actual_runs": 3
     },
     {
       "week": 8,
