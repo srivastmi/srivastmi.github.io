@@ -115,6 +115,13 @@
     .pace-table th { color: var(--text-muted); font-size: 0.74rem; text-transform: uppercase; }
     .loading { color: var(--text-muted); font-size: 0.9rem; padding: 1rem 0; }
 
+    /* Return-to-run checklist */
+    .rtr-item { display: flex; align-items: flex-start; gap: 0.6rem; padding: 0.5rem 0; font-size: 0.88rem; color: var(--text); cursor: pointer; line-height: 1.5; border-bottom: 1px solid var(--border); }
+    .rtr-item:last-child { border-bottom: none; }
+    .rtr-item input[type="checkbox"] { margin-top: 0.25rem; accent-color: var(--accent); width: 16px; height: 16px; cursor: pointer; flex-shrink: 0; }
+    .rtr-item input:checked ~ span { color: var(--text-muted); text-decoration: line-through; }
+    #rtr-reset:hover { color: var(--accent); border-color: var(--accent); }
+
     @media screen and (max-width: 680px) {
       .goal-cards { grid-template-columns: 1fr; }
       .cal-cell { min-height: 58px; font-size: 0.62rem; }
@@ -153,6 +160,7 @@
       <button class="tab" data-view="calendar">Calendar</button>
       <button class="tab active" data-view="plan">Plan</button>
       <button class="tab" data-view="log">Run Log</button>
+      <button class="tab" data-view="recovery">Recovery</button>
       <button class="tab" data-view="info">Guide</button>
     </div>
 
@@ -170,6 +178,103 @@
     <div class="view active" id="view-plan"><div id="plan-root"><div class="loading">Loading plan&hellip;</div></div></div>
 
     <div class="view" id="view-log"><div id="log-root"><div class="loading">Loading run log&hellip;</div></div></div>
+
+    <div class="view" id="view-recovery">
+      <section class="info-section">
+        <h2>Active Recovery — Patellofemoral Pain (Runner&rsquo;s Knee)</h2>
+        <p>Front-of-kneecap pain triggered by downhill loading. Underlying cause is mechanical: weak glute medius lets the knee track inward; weak VMO + tight hip flexors compound it. The knee itself isn&rsquo;t damaged &mdash; it&rsquo;s a tracking issue. Fix it upstream.</p>
+      </section>
+
+      <section class="info-section">
+        <h2>Daily Strength Protocol &mdash; 2&times; per day</h2>
+        <p>Do every day until pain-free running has returned for 1 full week. Then drop to 3&ndash;4&times;/week as permanent maintenance.</p>
+        <div class="gym-day">
+          <h4>The Big 3 (highest leverage for PFPS)</h4>
+          <ul>
+            <li><strong>Banded clamshells</strong> &mdash; 3 &times; 15/side, slow, squeeze the glute. The #1 evidence-backed exercise for runner&rsquo;s knee.</li>
+            <li><strong>Wall sit with ball/pillow between knees</strong> &mdash; 3 &times; 30s (build to 60s). The inner-thigh squeeze fires the VMO.</li>
+            <li><strong>Slow eccentric step-downs</strong> &mdash; 3 &times; 8/side from a 4&Prime; step, lower over 4 seconds. <em>Add at day 7+ once acute pain is gone.</em> This is the exact deficit downhills exposed.</li>
+          </ul>
+        </div>
+        <div class="gym-day">
+          <h4>Support work</h4>
+          <ul>
+            <li><strong>Side-lying leg raises</strong> &mdash; 3 &times; 12/side, slow</li>
+            <li><strong>Banded lateral walks (monster walks)</strong> &mdash; 3 &times; 10 steps each direction</li>
+            <li><strong>Single-leg glute bridges</strong> &mdash; 3 &times; 10/side, 2s hold at top</li>
+            <li><strong>Terminal knee extension with band</strong> &mdash; 3 &times; 15/side, VMO-targeted</li>
+          </ul>
+        </div>
+        <div class="gym-day">
+          <h4>Mobility (1&times; daily minimum)</h4>
+          <ul>
+            <li><strong>Couch stretch</strong> &mdash; 60s/side. Tight hip flexors pull the patella off-track.</li>
+            <li><strong>Foam roll quads + lateral hip</strong> &mdash; 2 min each. <em>Never on the kneecap, never directly on the IT band.</em></li>
+            <li><strong>Lacrosse ball on TFL</strong> (just below the front hip bone, outside) &mdash; 1 min/side</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="info-section">
+        <h2>Acute Pain Reducers (first 3&ndash;5 days only)</h2>
+        <ul>
+          <li>Ice 15 min, 3&ndash;4&times;/day</li>
+          <li>Ibuprofen 400mg up to 3&times;/day for 3&ndash;5 days max (longer is counterproductive)</li>
+          <li>Compression sleeve during waking hours</li>
+          <li>Day 4+: switch ice &rarr; heat (15 min) once acute swelling/heat is gone</li>
+          <li>KT tape or McConnell taping for patellar tracking &mdash; meaningful short-term relief during return-to-run</li>
+        </ul>
+      </section>
+
+      <section class="info-section">
+        <h2>Avoid This Week</h2>
+        <ul>
+          <li>Downhill walking, even mild grades</li>
+          <li>Stairs going <strong>down</strong> (up is fine)</li>
+          <li>Sitting with knees deeply bent for long stretches &mdash; straighten the leg periodically (driving, desk, movies)</li>
+          <li>Cross-legged sitting</li>
+          <li>Deep squats, lunges, leg press, pistol squats</li>
+          <li>Plyometrics, jumping, sprints</li>
+          <li>Any movement that loads a bent knee under weight</li>
+        </ul>
+      </section>
+
+      <section class="info-section">
+        <h2>Cross-Training (do daily &mdash; movement heals)</h2>
+        <ul>
+          <li>Stationary bike: 20&ndash;30 min, low resistance, no standing climbs</li>
+          <li>Pool walking or swimming</li>
+          <li>Walking on flat ground, pain-free only</li>
+          <li>Upper-body lifting (push day) is fine</li>
+        </ul>
+      </section>
+
+      <section class="info-section">
+        <h2>Return-to-Run Checklist</h2>
+        <p>Don&rsquo;t run until <strong>all 5</strong> are pain-free. Click each one when you pass it. Progress saves automatically.</p>
+        <div id="rtr-checklist" class="gym-day">
+          <label class="rtr-item"><input type="checkbox" data-rtr="walk48"> <span>Walking pain-free for 48 straight hours (no post-walk soreness or fatigue)</span></label>
+          <label class="rtr-item"><input type="checkbox" data-rtr="stairs"> <span>Walking <strong>down</strong> a full flight of stairs, pain-free</span></label>
+          <label class="rtr-item"><input type="checkbox" data-rtr="sls"> <span>Single-leg squat to ~60&deg; (about 90&deg; knee bend), pain-free, no inward knee collapse</span></label>
+          <label class="rtr-item"><input type="checkbox" data-rtr="stepups"> <span>20 step-ups onto a 6&Prime; surface, pain-free</span></label>
+          <label class="rtr-item"><input type="checkbox" data-rtr="walk1mi"> <span>1-mile flat walk &mdash; no pain during or the next morning</span></label>
+        </div>
+        <p style="font-size:0.82rem;color:var(--text-muted);margin-top:0.6rem;">When all 5 pass: try <strong>1 mile easy on flat ground only</strong>. If pain-free during and the next morning, build by 1 mile every 2 days. Flat only. No MP work. No hills. Once back to ~6 mi easy pain-free for several runs, then re-introduce hills carefully.</p>
+        <button id="rtr-reset" style="margin-top:0.5rem;background:none;border:1px solid var(--border);color:var(--text-muted);padding:0.3rem 0.7rem;border-radius:6px;cursor:pointer;font-size:0.78rem;">Reset checklist</button>
+      </section>
+
+      <section class="info-section">
+        <h2>When to See a Sports PT</h2>
+        <ul>
+          <li>Pain still present after 7 days of full rest &amp; protocol</li>
+          <li>Pain at rest or wakes you at night</li>
+          <li>Swelling that won&rsquo;t reduce with ice over 48 hrs</li>
+          <li>Clicking, locking, or instability in the joint</li>
+          <li>Sharp / shooting pain (vs the dull ache of PFPS)</li>
+        </ul>
+        <p style="font-size:0.82rem;color:var(--text-muted);">With a race in &lt;9 weeks, a $150&ndash;200 PT visit is high-ROI even without red flags &mdash; diagnosis confirmation + targeted plan in one session.</p>
+      </section>
+    </div>
 
     <div class="view" id="view-info">
       <section class="info-section">
@@ -273,6 +378,16 @@
       t.classList.add('active');
       document.getElementById('view-'+t.dataset.view).classList.add('active');
     }));
+
+    // Return-to-run checklist persistence
+    document.querySelectorAll('#rtr-checklist input[type=checkbox]').forEach(cb=>{
+      const k='rtr_'+cb.dataset.rtr;
+      cb.checked=localStorage.getItem(k)==='1';
+      cb.addEventListener('change',()=>localStorage.setItem(k,cb.checked?'1':'0'));
+    });
+    document.getElementById('rtr-reset').addEventListener('click',()=>{
+      document.querySelectorAll('#rtr-checklist input[type=checkbox]').forEach(cb=>{cb.checked=false;localStorage.removeItem('rtr_'+cb.dataset.rtr);});
+    });
 
     const TODAY = new Date();
     const fmtPace=s=>s?`${Math.floor(s/60)}:${String(Math.round(s%60)).padStart(2,'0')}`:'–';
