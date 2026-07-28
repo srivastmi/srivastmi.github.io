@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mihir's multi-goal training system — periodized roadmap, weekly plan, and nutrition framework.">
+  <meta name="author" content="Mihir Srivastava">
+  <title>Training System — Mihir Srivastava</title>
+  <link rel="icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .mh { margin-bottom: 1.25rem; }
+    .mh h1 { font-size: 2rem; margin-bottom: 0.25rem; }
+    .mh .sub { color: var(--text-muted); font-size: 1rem; }
+    .back-link { display: inline-block; margin-bottom: 1.25rem; font-size: 0.88rem; color: var(--accent); }
+
+    /* Thread legend */
+    .threads { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 1rem 0 1.5rem; }
+    .thread-chip { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.78rem; color: var(--text); background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 0.3rem 0.7rem; }
+    .thread-dot { width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0; }
+
+    /* Tabs */
+    .tabs { display: flex; gap: 0.4rem; margin-bottom: 1.5rem; border-bottom: 1px solid var(--border); flex-wrap: wrap; }
+    .tab { background: none; border: none; color: var(--text-muted); font-size: 0.9rem; padding: 0.6rem 0.85rem; cursor: pointer; border-bottom: 2px solid transparent; font-family: inherit; }
+    .tab:hover { color: var(--text); }
+    .tab.active { color: var(--accent); border-bottom-color: var(--accent); font-weight: 600; }
+    .view { display: none; }
+    .view.active { display: block; }
+
+    /* Phase header + progress */
+    .phase-head { background: var(--accent-dim); border: 1px solid var(--accent); border-radius: 12px; padding: 1.3rem 1.5rem; margin-bottom: 1.25rem; }
+    .phase-head .ptag { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent); font-weight: 700; }
+    .phase-head h2 { font-size: 1.5rem; margin: 0.2rem 0 0.15rem; color: var(--text-bright); }
+    .phase-head .pdates { font-size: 0.82rem; color: var(--text-muted); }
+    .phase-head .ptagline { font-size: 0.92rem; color: var(--text); margin-top: 0.6rem; line-height: 1.5; }
+    .phase-head .ppriority { font-size: 0.84rem; color: var(--accent); margin-top: 0.5rem; font-weight: 600; }
+    .pbar { height: 7px; background: var(--border); border-radius: 4px; overflow: hidden; margin-top: 0.9rem; }
+    .pbar > div { height: 100%; background: var(--accent); border-radius: 4px; }
+    .pbar-label { display: flex; justify-content: space-between; font-size: 0.74rem; color: var(--text-muted); margin-top: 0.4rem; }
+
+    .block { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 1.1rem 1.3rem; margin-bottom: 1rem; }
+    .block h3 { font-size: 0.95rem; color: var(--text-bright); margin: 0 0 0.6rem; }
+    .block ul { margin: 0; padding-left: 1.15rem; }
+    .block li { font-size: 0.88rem; color: var(--text); line-height: 1.55; margin-bottom: 0.35rem; }
+
+    /* Week template */
+    .wk-row { display: grid; grid-template-columns: 46px 1fr; gap: 0.6rem; padding: 0.5rem 0; border-top: 1px solid var(--border); }
+    .wk-row:first-of-type { border-top: none; }
+    .wk-row .dow { font-size: 0.78rem; font-weight: 700; color: var(--text-muted); padding-top: 0.15rem; }
+    .wk-items { display: flex; flex-direction: column; gap: 0.35rem; }
+    .wk-item { display: flex; align-items: baseline; gap: 0.5rem; font-size: 0.86rem; }
+    .wk-item .idot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; position: relative; top: 5px; }
+    .wk-item .ilbl { color: var(--text); font-weight: 500; }
+    .wk-item .idet { color: var(--text-muted); font-size: 0.82rem; }
+
+    .kv { font-size: 0.88rem; color: var(--text); line-height: 1.55; }
+    .kv strong { color: var(--text-bright); }
+    .note-line { font-size: 0.82rem; color: var(--text-muted); font-style: italic; margin-top: 0.6rem; line-height: 1.5; }
+
+    /* Roadmap */
+    .rm-block { border-left: 3px solid var(--accent); padding: 0.2rem 0 0.2rem 1.1rem; margin-bottom: 1.4rem; }
+    .rm-period { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); font-weight: 700; }
+    .rm-title { font-size: 1.1rem; color: var(--text-bright); margin: 0.15rem 0 0.4rem; }
+    .rm-block ul { margin: 0; padding-left: 1.1rem; }
+    .rm-block li { font-size: 0.87rem; color: var(--text); line-height: 1.55; margin-bottom: 0.25rem; }
+
+    /* Marathon ladder */
+    .ladder { margin-top: 0.5rem; }
+    .ladder-row { display: grid; grid-template-columns: 1fr auto auto; gap: 0.6rem; align-items: center; padding: 0.55rem 0.8rem; border: 1px solid var(--border); border-radius: 8px; margin-bottom: 0.4rem; background: var(--surface); }
+    .ladder-row.done { border-color: var(--accent); background: var(--accent-dim); }
+    .ladder-row .lt { font-weight: 700; color: var(--text-bright); font-size: 0.95rem; }
+    .ladder-row .lp { font-size: 0.8rem; color: var(--text-muted); }
+    .ladder-row .lw { font-size: 0.78rem; color: var(--text-muted); text-align: right; }
+    .ladder-row.done .lt::after { content: " ✓"; color: var(--accent); }
+
+    /* Goals */
+    .goal-group { margin-bottom: 1.5rem; }
+    .goal-group h3 { display: flex; align-items: center; gap: 0.5rem; font-size: 0.9rem; color: var(--text-bright); margin-bottom: 0.6rem; }
+    .goal-item { background: var(--surface); border: 1px solid var(--border); border-radius: 9px; border-left-width: 3px; padding: 0.75rem 1rem; margin-bottom: 0.5rem; }
+    .goal-top { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 0.3rem; }
+    .goal-name { font-weight: 600; color: var(--text-bright); font-size: 0.92rem; }
+    .goal-when { font-size: 0.78rem; color: var(--text-muted); }
+    .goal-target { font-size: 0.82rem; color: var(--accent); margin-top: 0.15rem; }
+    .goal-note { font-size: 0.8rem; color: var(--text-muted); margin-top: 0.3rem; line-height: 1.45; }
+    .status-pill { font-size: 0.64rem; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 700; padding: 1px 7px; border-radius: 4px; }
+    .status-active { background: var(--accent-dim); color: var(--accent); }
+    .status-confirmed { background: rgba(95,185,107,0.18); color: #5fb96b; }
+    .status-queued { background: var(--border); color: var(--text-muted); }
+    .status-northstar { background: rgba(229,181,60,0.18); color: #e5b53c; }
+
+    .nut-principles li { margin-bottom: 0.4rem; }
+    .loading { color: var(--text-muted); font-size: 0.9rem; padding: 1rem 0; }
+
+    @media screen and (max-width: 680px) {
+      .ladder-row { grid-template-columns: 1fr auto; }
+      .ladder-row .lw { grid-column: 1 / -1; text-align: left; }
+    }
+  </style>
+</head>
+<body>
+  <div class="top-bar"></div>
+  <div class="glow" id="glow"></div>
+  <button class="theme-toggle" id="theme-toggle" aria-label="Toggle light/dark mode">
+    <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+    <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+  </button>
+
+  <div class="container">
+    <a href="/" class="back-link">&larr; Back</a>
+    <div class="mh">
+      <h1>Training System</h1>
+      <p class="sub" id="mh-sub">One system, many goals &mdash; periodized so they support each other.</p>
+    </div>
+
+    <div class="threads" id="threads"></div>
+
+    <div class="tabs">
+      <button class="tab active" data-view="current">Current Phase</button>
+      <button class="tab" data-view="roadmap">Roadmap</button>
+      <button class="tab" data-view="plan">Full Plan</button>
+      <button class="tab" data-view="nutrition">Nutrition</button>
+      <button class="tab" data-view="goals">Goals</button>
+    </div>
+
+    <div class="view active" id="view-current"><div id="current-root"><div class="loading">Loading current phase&hellip;</div></div></div>
+    <div class="view" id="view-roadmap"><div id="roadmap-root"><div class="loading">Loading roadmap&hellip;</div></div></div>
+    <div class="view" id="view-plan"><div id="plan-root"><div class="loading">Loading plan&hellip;</div></div></div>
+    <div class="view" id="view-nutrition"><div id="nutrition-root"><div class="loading">Loading nutrition&hellip;</div></div></div>
+    <div class="view" id="view-goals"><div id="goals-root"><div class="loading">Loading goals&hellip;</div></div></div>
+
+    <footer><span>&copy; 2026</span></footer>
+  </div>
+
+  <script>
+    // Theme + glow (shared with the marathon page)
+    const toggle=document.getElementById('theme-toggle'),root=document.documentElement;
+    const setTheme=m=>{root.setAttribute('data-theme',m);localStorage.setItem('theme',m);};
+    setTheme(localStorage.getItem('theme')||'dark');
+    toggle.addEventListener('click',()=>setTheme(root.getAttribute('data-theme')==='dark'?'light':'dark'));
+    const glow=document.getElementById('glow');let mx=0,my=0,gx=0,gy=0,an=false;
+    const lerp=(a,b,t)=>a+(b-a)*t;
+    function animate(){gx=lerp(gx,mx,.08);gy=lerp(gy,my,.08);const dk=root.getAttribute('data-theme')==='dark';glow.style.background=`radial-gradient(600px circle at ${gx}px ${gy}px, ${dk?'rgba(212,160,84,0.06)':'rgba(212,160,84,0.045)'}, transparent 60%)`;requestAnimationFrame(animate);}
+    document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;if(!an){an=true;animate();}});
+    if('ontouchstart' in window)glow.style.background='radial-gradient(600px circle at 50% 20%, rgba(212,160,84,0.04), transparent 60%)';
+
+    // Tabs
+    document.querySelectorAll('.tab').forEach(t=>t.addEventListener('click',()=>{
+      document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));
+      document.querySelectorAll('.view').forEach(x=>x.classList.remove('active'));
+      t.classList.add('active');
+      document.getElementById('view-'+t.dataset.view).classList.add('active');
+    }));
+
+    const TODAY=new Date();
+    const esc=s=>(s==null?'':String(s)).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+    const fmtDate=s=>new Date(s+'T12:00:00').toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'});
+
+    fetch('training_data.json').then(r=>r.json()).then(data=>{
+      const threadColor={}; (data.threads||[]).forEach(t=>threadColor[t.id]=t.color);
+
+      // Header sub
+      if(data.meta&&data.meta.tagline)document.getElementById('mh-sub').textContent=data.meta.tagline;
+
+      // Thread legend
+      document.getElementById('threads').innerHTML=(data.threads||[]).map(t=>
+        `<span class="thread-chip"><span class="thread-dot" style="background:${t.color}"></span>${esc(t.label)}</span>`).join('');
+
+      // Week template renderer
+      const renderWeek=ph=>`<div class="block"><h3>Weekly Template</h3>${ph.week.map(d=>
+        `<div class="wk-row"><div class="dow">${esc(d.d)}</div><div class="wk-items">${d.items.map(it=>
+          `<div class="wk-item"><span class="idot" style="background:${threadColor[it.thread]||'#888'}"></span><span><span class="ilbl">${esc(it.label)}</span>${it.detail?` <span class="idet">— ${esc(it.detail)}</span>`:''}</span></div>`
+        ).join('')}</div></div>`).join('')}</div>`;
+
+      const renderPhaseBody=ph=>{
+        let h='';
+        h+=`<div class="block"><h3>Focus</h3><ul>${ph.focus.map(f=>`<li>${esc(f)}</li>`).join('')}</ul></div>`;
+        h+=renderWeek(ph);
+        h+=`<div class="block"><h3>Lifting</h3><div class="kv">${esc(ph.lifting)}</div></div>`;
+        h+=`<div class="block"><h3>Nutrition</h3><div class="kv"><strong>Mindset:</strong> ${esc(ph.nutrition.mindset)}</div><ul style="margin-top:0.5rem">${ph.nutrition.macros.map(m=>`<li>${esc(m)}</li>`).join('')}</ul></div>`;
+        if(ph.notes)h+=`<div class="note-line">${esc(ph.notes)}</div>`;
+        return h;
+      };
+
+      // ---- CURRENT PHASE ----
+      const cur=(data.phases||[]).find(p=>{const s=new Date(p.start+'T00:00:00'),e=new Date(p.end+'T23:59:59');return TODAY>=s&&TODAY<=e;})||data.phases[0];
+      (function(){
+        const s=new Date(cur.start+'T00:00:00'),e=new Date(cur.end+'T23:59:59');
+        const pct=Math.max(0,Math.min(100,Math.round((TODAY-s)/(e-s)*100)));
+        const daysLeft=Math.max(0,Math.ceil((e-TODAY)/864e5));
+        let h=`<div class="phase-head"><div class="ptag">Current Phase</div><h2>${esc(cur.name)}</h2>`+
+          `<div class="pdates">${fmtDate(cur.start)} → ${fmtDate(cur.end)}</div>`+
+          `<div class="ptagline">${esc(cur.tagline)}</div>`+
+          `<div class="ppriority">Priority: ${esc(cur.priority)}</div>`+
+          `<div class="pbar"><div style="width:${pct}%"></div></div>`+
+          `<div class="pbar-label"><span>${pct}% through</span><span>${daysLeft} days left</span></div></div>`;
+        h+=renderPhaseBody(cur);
+        document.getElementById('current-root').innerHTML=h;
+      })();
+
+      // ---- ROADMAP ----
+      (function(){
+        let h='';
+        h+=(data.roadmap||[]).map(r=>`<div class="rm-block"><div class="rm-period">${esc(r.period)}</div><div class="rm-title">${esc(r.title)}</div><ul>${r.items.map(i=>`<li>${esc(i)}</li>`).join('')}</ul></div>`).join('');
+        if(data.marathon_ladder){
+          h+=`<div class="block"><h3>Marathon Ladder — the north star</h3><div class="ladder">`+
+            data.marathon_ladder.map(m=>`<div class="ladder-row${m.done?' done':''}"><span class="lt">${esc(m.time)}</span><span class="lp">${esc(m.pace)}</span><span class="lw">${esc(m.when)}</span></div>`).join('')+
+            `</div></div>`;
+        }
+        document.getElementById('roadmap-root').innerHTML=h;
+      })();
+
+      // ---- FULL PLAN ----
+      (function(){
+        let h='';
+        (data.phases||[]).forEach(ph=>{
+          const isCur=ph.id===cur.id;
+          h+=`<div class="phase-head" style="${isCur?'':'background:var(--surface);border-color:var(--border);'}"><div class="ptag">${fmtDate(ph.start)} → ${fmtDate(ph.end)}${isCur?' · now':''}</div><h2 style="font-size:1.25rem">${esc(ph.name)}</h2><div class="ptagline">${esc(ph.tagline)}</div><div class="ppriority">Priority: ${esc(ph.priority)}</div></div>`;
+          h+=renderPhaseBody(ph);
+          h+='<div style="height:1.5rem"></div>';
+        });
+        document.getElementById('plan-root').innerHTML=h;
+      })();
+
+      // ---- NUTRITION ----
+      (function(){
+        let h=`<div class="block nut-principles"><h3>Core Principles</h3><ul>${(data.nutrition_principles||[]).map(p=>`<li>${esc(p)}</li>`).join('')}</ul></div>`;
+        h+=`<div class="block"><h3>Durability — the permanent pillar</h3><ul>${(data.durability||[]).map(p=>`<li>${esc(p)}</li>`).join('')}</ul></div>`;
+        h+='<h3 style="margin:1.5rem 0 0.5rem;color:var(--text-bright);font-size:0.95rem">Per-phase fueling</h3>';
+        (data.phases||[]).forEach(ph=>{
+          h+=`<div class="block"><h3>${esc(ph.name)}</h3><div class="kv"><strong>Mindset:</strong> ${esc(ph.nutrition.mindset)}</div><ul style="margin-top:0.5rem">${ph.nutrition.macros.map(m=>`<li>${esc(m)}</li>`).join('')}</ul></div>`;
+        });
+        document.getElementById('nutrition-root').innerHTML=h;
+      })();
+
+      // ---- GOALS ----
+      (function(){
+        const byThread={};
+        (data.goals||[]).forEach(g=>{(byThread[g.thread]=byThread[g.thread]||[]).push(g);});
+        let h='';
+        (data.threads||[]).forEach(t=>{
+          const gs=byThread[t.id]; if(!gs)return;
+          h+=`<div class="goal-group"><h3><span class="thread-dot" style="background:${t.color}"></span>${esc(t.label)}</h3>`;
+          gs.forEach(g=>{
+            h+=`<div class="goal-item" style="border-left-color:${t.color}"><div class="goal-top"><span class="goal-name">${esc(g.name)}</span><span class="goal-when">${esc(g.timeline)}</span></div>`+
+               `<div class="goal-target">${esc(g.target)} <span class="status-pill status-${esc(g.status)}">${esc(g.status)}</span></div>`+
+               (g.note?`<div class="goal-note">${esc(g.note)}</div>`:'')+`</div>`;
+          });
+          h+='</div>';
+        });
+        document.getElementById('goals-root').innerHTML=h;
+      })();
+
+    }).catch(e=>{
+      document.getElementById('current-root').innerHTML='<div class="loading">Could not load training data.</div>';
+      console.error(e);
+    });
+  </script>
+</body>
+</html>
