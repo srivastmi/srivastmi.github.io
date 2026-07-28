@@ -1,0 +1,138 @@
+{
+  "meta": {
+    "race": "Napa Valley 70.3 — Long Course",
+    "date": "2026-10-24",
+    "distances": { "swim": "1.2 mi / 2,000m", "bike": "56 mi", "run": "13.1 mi" },
+    "start_monday": "2026-08-10",
+    "weekly_hours": "7–10 hrs · 6 days",
+    "baseline": "Swim 1–2k continuous · bike 20–40mi · run marathon-fit (locked). Bike is the priority build.",
+    "race_effort": "Swim smooth Z2 · Bike steady Z2 (save the legs) · Run Z2→Z3 off the bike.",
+    "zones": [
+      { "z": "Z1", "name": "Recovery", "feel": "Very easy, floating" },
+      { "z": "Z2", "name": "Endurance", "feel": "Conversational — your all-day & race pace" },
+      { "z": "Z3", "name": "Tempo", "feel": "Comfortably hard, short sentences" },
+      { "z": "Z4", "name": "Threshold", "feel": "Hard, ~1-hr max effort, few words" },
+      { "z": "Z5", "name": "VO2", "feel": "Very hard, short reps" }
+    ]
+  },
+  "weeks": [
+    { "n": 1, "block": "Base", "monday": "2026-08-10", "stepback": false, "hours": "~7.5", "focus": "Establish rhythm across all three. Aerobic base.",
+      "days": [
+        { "d": "Mon", "sessions": [ { "sport": "strength", "title": "Strength — lower/power", "detail": "Squats + low jumps (dunk base)", "effort": "—", "dur": "40 min" }, { "sport": "swim", "title": "Swim — technique", "detail": "1,800m: drills + easy sets", "effort": "Z1–2", "dur": "40 min" } ] },
+        { "d": "Tue", "sessions": [ { "sport": "bike", "title": "Bike — tempo", "detail": "4×5 min Z3, spin between", "effort": "Z3", "dur": "60 min" } ] },
+        { "d": "Wed", "sessions": [ { "sport": "swim", "title": "Swim — endurance", "detail": "2,000m incl 4×300 Z2", "effort": "Z2", "dur": "45 min" }, { "sport": "run", "title": "Run — easy", "detail": "Recovery jog", "effort": "Z2", "dur": "30 min" } ] },
+        { "d": "Thu", "sessions": [ { "sport": "run", "title": "Run — tempo", "detail": "20 min Z3 in the middle", "effort": "Z3", "dur": "45 min" } ] },
+        { "d": "Fri", "sessions": [ { "sport": "strength", "title": "Strength — upper + skills", "detail": "Pull/push + handstand/lever", "effort": "—", "dur": "35 min" }, { "sport": "bike", "title": "Spin — optional", "detail": "Easy legs", "effort": "Z1", "dur": "20 min" } ] },
+        { "d": "Sat", "sessions": [ { "sport": "bike", "title": "Long ride", "detail": "25 mi steady", "effort": "Z2", "dur": "~1:35" } ] },
+        { "d": "Sun", "sessions": [ { "sport": "run", "title": "Long run", "detail": "8 mi easy", "effort": "Z2", "dur": "~1:15" } ] }
+      ] },
+    { "n": 2, "block": "Base", "monday": "2026-08-17", "stepback": false, "hours": "~8", "focus": "Grow long ride + swim volume.",
+      "days": [
+        { "d": "Mon", "sessions": [ { "sport": "strength", "title": "Strength — lower/power", "detail": "Squats + jumps", "effort": "—", "dur": "40 min" }, { "sport": "swim", "title": "Swim — technique", "detail": "2,000m drills + sets", "effort": "Z1–2", "dur": "45 min" } ] },
+        { "d": "Tue", "sessions": [ { "sport": "bike", "title": "Bike — tempo", "detail": "5×5 min Z3", "effort": "Z3", "dur": "70 min" } ] },
+        { "d": "Wed", "sessions": [ { "sport": "swim", "title": "Swim — endurance", "detail": "2,300m incl 3×400 Z2", "effort": "Z2", "dur": "50 min" }, { "sport": "run", "title": "Run — easy", "detail": "", "effort": "Z2", "dur": "35 min" } ] },
+        { "d": "Thu", "sessions": [ { "sport": "run", "title": "Run — tempo", "detail": "25 min Z3", "effort": "Z3", "dur": "50 min" } ] },
+        { "d": "Fri", "sessions": [ { "sport": "strength", "title": "Strength — upper + skills", "detail": "", "effort": "—", "dur": "35 min" }, { "sport": "bike", "title": "Spin", "detail": "Easy", "effort": "Z1", "dur": "20 min" } ] },
+        { "d": "Sat", "sessions": [ { "sport": "bike", "title": "Long ride", "detail": "30 mi steady", "effort": "Z2", "dur": "~1:55" } ] },
+        { "d": "Sun", "sessions": [ { "sport": "run", "title": "Long run", "detail": "9 mi easy", "effort": "Z2", "dur": "~1:25" } ] }
+      ] },
+    { "n": 3, "block": "Base", "monday": "2026-08-24", "stepback": false, "hours": "~8.5", "focus": "Base peak — first continuous 1,500m swim.",
+      "days": [
+        { "d": "Mon", "sessions": [ { "sport": "strength", "title": "Strength — lower/power", "detail": "", "effort": "—", "dur": "40 min" }, { "sport": "swim", "title": "Swim — technique", "detail": "2,200m", "effort": "Z1–2", "dur": "45 min" } ] },
+        { "d": "Tue", "sessions": [ { "sport": "bike", "title": "Bike — tempo/threshold", "detail": "3×8 min Z3–4", "effort": "Z3–4", "dur": "75 min" } ] },
+        { "d": "Wed", "sessions": [ { "sport": "swim", "title": "Swim — endurance", "detail": "2,500m incl continuous 1,500m", "effort": "Z2", "dur": "55 min" }, { "sport": "run", "title": "Run — easy", "detail": "", "effort": "Z2", "dur": "35 min" } ] },
+        { "d": "Thu", "sessions": [ { "sport": "run", "title": "Run — tempo", "detail": "30 min Z3", "effort": "Z3", "dur": "55 min" } ] },
+        { "d": "Fri", "sessions": [ { "sport": "strength", "title": "Strength — upper + skills", "detail": "", "effort": "—", "dur": "35 min" }, { "sport": "bike", "title": "Spin", "detail": "", "effort": "Z1", "dur": "25 min" } ] },
+        { "d": "Sat", "sessions": [ { "sport": "bike", "title": "Long ride", "detail": "35 mi steady", "effort": "Z2", "dur": "~2:15" } ] },
+        { "d": "Sun", "sessions": [ { "sport": "run", "title": "Long run", "detail": "10 mi easy", "effort": "Z2", "dur": "~1:35" } ] }
+      ] },
+    { "n": 4, "block": "Recovery", "monday": "2026-08-31", "stepback": true, "hours": "~5.5", "focus": "Absorb the base. Volume down ~35%.",
+      "days": [
+        { "d": "Mon", "sessions": [ { "sport": "strength", "title": "Strength — light", "detail": "", "effort": "—", "dur": "30 min" }, { "sport": "swim", "title": "Swim — easy", "detail": "1,800m relaxed", "effort": "Z1–2", "dur": "40 min" } ] },
+        { "d": "Tue", "sessions": [ { "sport": "bike", "title": "Bike — easy", "detail": "Spin, few light pickups", "effort": "Z2", "dur": "50 min" } ] },
+        { "d": "Wed", "sessions": [ { "sport": "swim", "title": "Swim — easy", "detail": "2,000m", "effort": "Z2", "dur": "45 min" } ] },
+        { "d": "Thu", "sessions": [ { "sport": "run", "title": "Run — easy + strides", "detail": "4×20s strides", "effort": "Z2", "dur": "40 min" } ] },
+        { "d": "Fri", "sessions": [ { "sport": "rest", "title": "Rest / mobility", "detail": "", "effort": "—", "dur": "—" } ] },
+        { "d": "Sat", "sessions": [ { "sport": "bike", "title": "Ride — easy", "detail": "25 mi relaxed", "effort": "Z2", "dur": "~1:35" } ] },
+        { "d": "Sun", "sessions": [ { "sport": "run", "title": "Run — easy", "detail": "6 mi", "effort": "Z2", "dur": "~55 min" } ] }
+      ] },
+    { "n": 5, "block": "Build", "monday": "2026-09-07", "stepback": false, "hours": "~8.5", "focus": "Add intensity + FIRST brick + open water.",
+      "days": [
+        { "d": "Mon", "sessions": [ { "sport": "strength", "title": "Strength — lower/power", "detail": "", "effort": "—", "dur": "40 min" }, { "sport": "swim", "title": "Swim — open water intro", "detail": "2,400m (OW if possible)", "effort": "Z2", "dur": "50 min" } ] },
+        { "d": "Tue", "sessions": [ { "sport": "bike", "title": "Bike — threshold", "detail": "4×8 min Z4", "effort": "Z4", "dur": "75 min" } ] },
+        { "d": "Wed", "sessions": [ { "sport": "swim", "title": "Swim — endurance", "detail": "2,500m", "effort": "Z2", "dur": "55 min" }, { "sport": "run", "title": "Run — easy", "detail": "", "effort": "Z2", "dur": "35 min" } ] },
+        { "d": "Thu", "sessions": [ { "sport": "run", "title": "Run — threshold", "detail": "2×15 min Z3–4", "effort": "Z3–4", "dur": "55 min" } ] },
+        { "d": "Fri", "sessions": [ { "sport": "strength", "title": "Strength — upper + skills", "detail": "", "effort": "—", "dur": "35 min" }, { "sport": "bike", "title": "Spin", "detail": "", "effort": "Z1", "dur": "25 min" } ] },
+        { "d": "Sat", "sessions": [ { "sport": "brick", "title": "BRICK — bike + run", "detail": "40 mi Z2 → run 15 min Z3 off the bike", "effort": "Z2/Z3", "dur": "~3:00" } ] },
+        { "d": "Sun", "sessions": [ { "sport": "run", "title": "Long run", "detail": "10 mi easy", "effort": "Z2", "dur": "~1:35" } ] }
+      ] },
+    { "n": 6, "block": "Build", "monday": "2026-09-14", "stepback": false, "hours": "~9", "focus": "Race-distance swim. Longer brick.",
+      "days": [
+        { "d": "Mon", "sessions": [ { "sport": "strength", "title": "Strength — lower/power", "detail": "", "effort": "—", "dur": "40 min" }, { "sport": "swim", "title": "Swim — endurance", "detail": "2,600m", "effort": "Z2", "dur": "55 min" } ] },
+        { "d": "Tue", "sessions": [ { "sport": "bike", "title": "Bike — threshold", "detail": "3×10 min Z4", "effort": "Z4", "dur": "80 min" } ] },
+        { "d": "Wed", "sessions": [ { "sport": "swim", "title": "Swim — continuous 2,000m", "detail": "Race distance, smooth", "effort": "Z2", "dur": "50 min" }, { "sport": "run", "title": "Run — easy", "detail": "", "effort": "Z2", "dur": "40 min" } ] },
+        { "d": "Thu", "sessions": [ { "sport": "run", "title": "Run — tempo", "detail": "35 min Z3", "effort": "Z3", "dur": "60 min" } ] },
+        { "d": "Fri", "sessions": [ { "sport": "strength", "title": "Strength — upper + skills", "detail": "", "effort": "—", "dur": "35 min" }, { "sport": "bike", "title": "Spin", "detail": "", "effort": "Z1", "dur": "25 min" } ] },
+        { "d": "Sat", "sessions": [ { "sport": "brick", "title": "BRICK — bike + run", "detail": "44 mi Z2 → run 20 min Z3", "effort": "Z2/Z3", "dur": "~3:20" } ] },
+        { "d": "Sun", "sessions": [ { "sport": "run", "title": "Long run", "detail": "11 mi easy", "effort": "Z2", "dur": "~1:45" } ] }
+      ] },
+    { "n": 7, "block": "Recovery", "monday": "2026-09-21", "stepback": true, "hours": "~6", "focus": "Absorb before the peak. Volume down.",
+      "days": [
+        { "d": "Mon", "sessions": [ { "sport": "strength", "title": "Strength — light", "detail": "", "effort": "—", "dur": "30 min" }, { "sport": "swim", "title": "Swim — easy", "detail": "2,000m", "effort": "Z2", "dur": "45 min" } ] },
+        { "d": "Tue", "sessions": [ { "sport": "bike", "title": "Bike — easy + pickups", "detail": "few 1-min efforts", "effort": "Z2", "dur": "55 min" } ] },
+        { "d": "Wed", "sessions": [ { "sport": "swim", "title": "Swim — easy", "detail": "2,200m", "effort": "Z2", "dur": "48 min" }, { "sport": "run", "title": "Run — easy", "detail": "", "effort": "Z2", "dur": "30 min" } ] },
+        { "d": "Thu", "sessions": [ { "sport": "run", "title": "Run — easy + strides", "detail": "", "effort": "Z2", "dur": "45 min" } ] },
+        { "d": "Fri", "sessions": [ { "sport": "rest", "title": "Rest / mobility", "detail": "", "effort": "—", "dur": "—" } ] },
+        { "d": "Sat", "sessions": [ { "sport": "brick", "title": "BRICK — short", "detail": "32 mi Z2 → run 10 min", "effort": "Z2", "dur": "~2:20" } ] },
+        { "d": "Sun", "sessions": [ { "sport": "run", "title": "Run — easy", "detail": "7 mi", "effort": "Z2", "dur": "~1:05" } ] }
+      ] },
+    { "n": 8, "block": "Peak", "monday": "2026-09-28", "stepback": false, "hours": "~9.5", "focus": "RACE SIMULATION weekend.",
+      "days": [
+        { "d": "Mon", "sessions": [ { "sport": "strength", "title": "Strength — lower/power", "detail": "", "effort": "—", "dur": "35 min" }, { "sport": "swim", "title": "Swim — open water", "detail": "2,600m", "effort": "Z2", "dur": "55 min" } ] },
+        { "d": "Tue", "sessions": [ { "sport": "bike", "title": "Bike — threshold", "detail": "4×10 min Z4", "effort": "Z4", "dur": "80 min" } ] },
+        { "d": "Wed", "sessions": [ { "sport": "swim", "title": "Swim — 2,000m strong", "detail": "", "effort": "Z2–3", "dur": "50 min" }, { "sport": "run", "title": "Run — easy", "detail": "", "effort": "Z2", "dur": "40 min" } ] },
+        { "d": "Thu", "sessions": [ { "sport": "run", "title": "Run — race effort", "detail": "40 min Z3", "effort": "Z3", "dur": "60 min" } ] },
+        { "d": "Fri", "sessions": [ { "sport": "strength", "title": "Strength — upper (light)", "detail": "", "effort": "—", "dur": "30 min" }, { "sport": "bike", "title": "Spin", "detail": "", "effort": "Z1", "dur": "20 min" } ] },
+        { "d": "Sat", "sessions": [ { "sport": "brick", "title": "RACE SIM", "detail": "Swim 2,000m OW → Bike 50 mi Z2 (race nutrition) → Run 20 min Z3", "effort": "Z2/Z3", "dur": "~4:00" } ] },
+        { "d": "Sun", "sessions": [ { "sport": "run", "title": "Long run", "detail": "10 mi easy", "effort": "Z2", "dur": "~1:35" } ] }
+      ] },
+    { "n": 9, "block": "Peak", "monday": "2026-10-05", "stepback": false, "hours": "~10", "focus": "Biggest week — full race-distance bike.",
+      "days": [
+        { "d": "Mon", "sessions": [ { "sport": "strength", "title": "Strength — lower/power", "detail": "", "effort": "—", "dur": "35 min" }, { "sport": "swim", "title": "Swim — endurance", "detail": "2,400m", "effort": "Z2", "dur": "50 min" } ] },
+        { "d": "Tue", "sessions": [ { "sport": "bike", "title": "Bike — threshold", "detail": "3×12 min Z4", "effort": "Z4", "dur": "80 min" } ] },
+        { "d": "Wed", "sessions": [ { "sport": "swim", "title": "Swim — 2,000m", "detail": "Smooth race pace", "effort": "Z2", "dur": "48 min" }, { "sport": "run", "title": "Run — easy", "detail": "", "effort": "Z2", "dur": "40 min" } ] },
+        { "d": "Thu", "sessions": [ { "sport": "run", "title": "Run — tempo", "detail": "30 min Z3", "effort": "Z3", "dur": "55 min" } ] },
+        { "d": "Fri", "sessions": [ { "sport": "strength", "title": "Strength — upper (light)", "detail": "", "effort": "—", "dur": "30 min" }, { "sport": "bike", "title": "Spin", "detail": "", "effort": "Z1", "dur": "20 min" } ] },
+        { "d": "Sat", "sessions": [ { "sport": "brick", "title": "BRICK — full bike", "detail": "54–56 mi Z2 (race dist) → run 25 min Z3", "effort": "Z2/Z3", "dur": "~4:00" } ] },
+        { "d": "Sun", "sessions": [ { "sport": "run", "title": "Long run", "detail": "11 mi easy (or rest if cooked)", "effort": "Z2", "dur": "~1:45" } ] }
+      ] },
+    { "n": 10, "block": "Taper", "monday": "2026-10-12", "stepback": false, "hours": "~6.5", "focus": "Volume down, stay sharp. Legs freshen.",
+      "days": [
+        { "d": "Mon", "sessions": [ { "sport": "strength", "title": "Strength — light (last)", "detail": "", "effort": "—", "dur": "25 min" }, { "sport": "swim", "title": "Swim — 2,000m", "detail": "", "effort": "Z2", "dur": "45 min" } ] },
+        { "d": "Tue", "sessions": [ { "sport": "bike", "title": "Bike — sharpener", "detail": "3×6 min Z4", "effort": "Z4", "dur": "60 min" } ] },
+        { "d": "Wed", "sessions": [ { "sport": "swim", "title": "Swim — 1,800m easy", "detail": "", "effort": "Z2", "dur": "40 min" }, { "sport": "run", "title": "Run — easy", "detail": "", "effort": "Z2", "dur": "30 min" } ] },
+        { "d": "Thu", "sessions": [ { "sport": "run", "title": "Run — short tempo", "detail": "15 min Z3", "effort": "Z3", "dur": "45 min" } ] },
+        { "d": "Fri", "sessions": [ { "sport": "rest", "title": "Rest / mobility", "detail": "", "effort": "—", "dur": "—" } ] },
+        { "d": "Sat", "sessions": [ { "sport": "brick", "title": "BRICK — short race effort", "detail": "35 mi Z2 → run 15 min race effort", "effort": "Z2/Z3", "dur": "~2:20" } ] },
+        { "d": "Sun", "sessions": [ { "sport": "run", "title": "Run — easy", "detail": "8 mi", "effort": "Z2", "dur": "~1:15" } ] }
+      ] },
+    { "n": 11, "block": "Race Week", "monday": "2026-10-19", "stepback": false, "hours": "~4 + race", "focus": "Freshen, sharpen, RACE Saturday.",
+      "days": [
+        { "d": "Mon", "sessions": [ { "sport": "swim", "title": "Swim — 1,500m", "detail": "few race-pace 50s", "effort": "Z2", "dur": "35 min" } ] },
+        { "d": "Tue", "sessions": [ { "sport": "bike", "title": "Bike — openers", "detail": "3×2 min race effort", "effort": "Z3", "dur": "45 min" } ] },
+        { "d": "Wed", "sessions": [ { "sport": "run", "title": "Run — easy + strides", "detail": "4×20s", "effort": "Z2", "dur": "30 min" } ] },
+        { "d": "Thu", "sessions": [ { "sport": "swim", "title": "Swim — 1,200m easy", "detail": "Feel the water", "effort": "Z1–2", "dur": "30 min" } ] },
+        { "d": "Fri", "sessions": [ { "sport": "brick", "title": "Shakeout openers", "detail": "20 min spin + 10 min jog. Rack bike, prep gear, carb-load.", "effort": "Z1–2", "dur": "30 min" } ] },
+        { "d": "Sat", "sessions": [ { "sport": "race", "title": "🏁 NAPA 70.3", "detail": "Swim 2,000m → Bike 56 mi → Run 13.1 mi. Bike Z2 (save legs), run Z2→Z3, fuel 60–90g carb/hr on the bike.", "effort": "Race", "dur": "Race day" } ] },
+        { "d": "Sun", "sessions": [ { "sport": "rest", "title": "Rest / celebrate", "detail": "", "effort": "—", "dur": "—" } ] }
+      ] }
+  ],
+  "guide": {
+    "bricks": "A brick is bike-straight-into-run with no rest. Your legs feel like concrete for the first 5–10 min off the bike — that's normal, and training it is the #1 thing that makes 70.3 race day feel manageable. Run the brick portions at race effort (Z2→Z3), short at first, building to 25 min.",
+    "swim": "You're already a comfortable swimmer, so the swim build is about (1) reaching a smooth continuous 2,000m and (2) open-water reps — sighting, wetsuit feel, and staying calm in a crowd. Get at least 3–4 open-water swims in from Week 5.",
+    "bike": "The bike is your biggest build and the leg where the race is won or lost (~3 hrs, longest leg). The long Saturday ride is the anchor session every week — protect it. Practice race nutrition on every long ride.",
+    "fuel": "On the bike, take in 60–90g carb/hr and sip electrolytes — the bike is where you fuel for the run. Rehearse it in the Week 8 race-sim so nothing's new on race day.",
+    "strength": "2×/wk maintained through the build (Mon power/lower doubles as your dunk base; Fri upper + calisthenics). Cut to light in the taper. Never fully drop — it's your knee insurance.",
+    "knee": "Run volume is kept moderate (long run caps ~11mi) on purpose — the bike/swim carry the aerobic load so the knee stays healthy. Any flare: pull a run before a bike or swim. The durability staples stay in."
+  }
+}

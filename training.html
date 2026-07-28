@@ -243,7 +243,8 @@
           gs.forEach(g=>{
             h+=`<div class="goal-item" style="border-left-color:${t.color}"><div class="goal-top"><span class="goal-name">${esc(g.name)}</span><span class="goal-when">${esc(g.timeline)}</span></div>`+
                `<div class="goal-target">${esc(g.target)} <span class="status-pill status-${esc(g.status)}">${esc(g.status)}</span></div>`+
-               (g.note?`<div class="goal-note">${esc(g.note)}</div>`:'')+`</div>`;
+               (g.note?`<div class="goal-note">${esc(g.note)}</div>`:'')+
+               (g.link?`<div style="margin-top:0.4rem"><a href="${esc(g.link)}" style="color:${t.color};font-size:0.82rem;font-weight:600">View detailed plan →</a></div>`:'')+`</div>`;
           });
           h+='</div>';
         });
