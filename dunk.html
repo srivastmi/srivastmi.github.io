@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mihir's dunk program — vertical jump build with knee-safe plyometrics.">
+  <meta name="author" content="Mihir Srivastava">
+  <title>Dunk Program — Mihir Srivastava</title>
+  <link rel="icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .mh { margin-bottom: 1rem; }
+    .mh h1 { font-size: 1.85rem; margin-bottom: 0.2rem; }
+    .mh .sub { color: var(--text-muted); font-size: 0.95rem; }
+    .back-link { display: inline-block; margin-bottom: 1.1rem; font-size: 0.88rem; color: var(--accent); }
+
+    .stats { display: grid; grid-template-columns: repeat(4,1fr); gap: 0.7rem; margin: 1rem 0 1.25rem; }
+    .st { text-align: center; background: var(--surface); border: 1px solid var(--border); border-radius: 9px; padding: 0.7rem 0.4rem; }
+    .st .v { font-size: 1.1rem; font-weight: 700; color: var(--text-bright); }
+    .st .l { font-size: 0.66rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); margin-top: 0.15rem; }
+
+    .countdown { background: var(--accent-dim); border: 1px solid var(--accent); border-radius: 10px; padding: 0.7rem 1.1rem; margin-bottom: 1rem; font-size: 0.9rem; color: var(--text-bright); text-align: center; }
+    .driver { font-size: 0.85rem; color: var(--text-muted); font-style: italic; line-height: 1.5; margin-bottom: 1.25rem; }
+
+    .tabs { display: flex; gap: 0.4rem; margin-bottom: 1.5rem; border-bottom: 1px solid var(--border); flex-wrap: wrap; }
+    .tab { background: none; border: none; color: var(--text-muted); font-size: 0.9rem; padding: 0.6rem 0.85rem; cursor: pointer; border-bottom: 2px solid transparent; font-family: inherit; }
+    .tab:hover { color: var(--text); }
+    .tab.active { color: var(--accent); border-bottom-color: var(--accent); font-weight: 600; }
+    .view { display: none; }
+    .view.active { display: block; }
+
+    .phase-head { background: var(--accent-dim); border: 1px solid var(--accent); border-radius: 12px; padding: 1.2rem 1.4rem; margin-bottom: 1rem; }
+    .phase-head.dim { background: var(--surface); border-color: var(--border); }
+    .phase-head .ptag { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.09em; color: var(--accent); font-weight: 700; }
+    .phase-head h2 { font-size: 1.3rem; margin: 0.2rem 0 0.15rem; color: var(--text-bright); }
+    .phase-head .pdates { font-size: 0.8rem; color: var(--text-muted); }
+    .phase-head .ptagline { font-size: 0.9rem; color: var(--text); margin-top: 0.5rem; line-height: 1.5; }
+    .phase-head .ppriority { font-size: 0.83rem; color: var(--accent); margin-top: 0.45rem; font-weight: 600; }
+
+    .block { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 1rem 1.2rem; margin-bottom: 0.9rem; }
+    .block h3 { font-size: 0.92rem; color: var(--text-bright); margin: 0 0 0.55rem; }
+    .block ul { margin: 0; padding-left: 1.15rem; }
+    .block li { font-size: 0.87rem; color: var(--text); line-height: 1.55; margin-bottom: 0.35rem; }
+    .kv { font-size: 0.87rem; color: var(--text); line-height: 1.55; }
+    .kv strong { color: var(--text-bright); }
+    .note-line { font-size: 0.82rem; color: var(--text-muted); font-style: italic; margin-top: 0.5rem; line-height: 1.5; }
+
+    .day { display: grid; grid-template-columns: 52px 1fr; gap: 0.5rem; padding: 0.45rem 0; border-top: 1px solid var(--border); }
+    .day:first-of-type { border-top: none; }
+    .day .dow { font-size: 0.76rem; font-weight: 700; color: var(--text-muted); padding-top: 0.1rem; }
+    .sess { display: flex; flex-direction: column; gap: 0.3rem; }
+    .s-row { display: flex; align-items: baseline; gap: 0.5rem; font-size: 0.85rem; flex-wrap: wrap; }
+    .s-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; position: relative; top: 5px; }
+    .s-title { color: var(--text-bright); font-weight: 600; }
+    .s-detail { color: var(--text); }
+    .s-tag { font-size: 0.68rem; color: var(--accent); font-weight: 700; margin-left: auto; white-space: nowrap; }
+
+    .sport-legend { display: flex; flex-wrap: wrap; gap: 0.7rem; font-size: 0.74rem; color: var(--text-muted); margin: 0.3rem 0 1.1rem; }
+    .sport-legend span { display: inline-flex; align-items: center; gap: 0.35rem; }
+    .sport-legend .d { width: 9px; height: 9px; border-radius: 50%; }
+    .loading { color: var(--text-muted); font-size: 0.9rem; padding: 1rem 0; }
+
+    @media screen and (max-width: 680px) { .stats { grid-template-columns: repeat(2,1fr); } }
+  </style>
+</head>
+<body>
+  <div class="top-bar"></div>
+  <div class="glow" id="glow"></div>
+  <button class="theme-toggle" id="theme-toggle" aria-label="Toggle light/dark mode">
+    <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+    <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+  </button>
+
+  <div class="container">
+    <a href="/training" class="back-link">&larr; Training system</a>
+    <div class="mh">
+      <h1>Dunk Program</h1>
+      <p class="sub" id="sub">&nbsp;</p>
+    </div>
+
+    <div class="countdown" id="countdown">&nbsp;</div>
+    <div class="stats" id="stats"></div>
+    <div class="driver" id="driver"></div>
+
+    <div class="tabs">
+      <button class="tab active" data-view="phase">This Phase</button>
+      <button class="tab" data-view="full">Full Program</button>
+      <button class="tab" data-view="guide">Guide</button>
+    </div>
+
+    <div class="view active" id="view-phase"><div id="phase-root"><div class="loading">Loading&hellip;</div></div></div>
+    <div class="view" id="view-full">
+      <div class="sport-legend" id="sport-legend"></div>
+      <div id="full-root"><div class="loading">Loading&hellip;</div></div>
+    </div>
+    <div class="view" id="view-guide"><div id="guide-root"><div class="loading">Loading&hellip;</div></div></div>
+
+    <footer><span>&copy; 2026</span></footer>
+  </div>
+
+  <script>
+    const toggle=document.getElementById('theme-toggle'),root=document.documentElement;
+    const setTheme=m=>{root.setAttribute('data-theme',m);localStorage.setItem('theme',m);};
+    setTheme(localStorage.getItem('theme')||'dark');
+    toggle.addEventListener('click',()=>setTheme(root.getAttribute('data-theme')==='dark'?'light':'dark'));
+    const glow=document.getElementById('glow');let mx=0,my=0,gx=0,gy=0,an=false;
+    const lerp=(a,b,t)=>a+(b-a)*t;
+    function animate(){gx=lerp(gx,mx,.08);gy=lerp(gy,my,.08);const dk=root.getAttribute('data-theme')==='dark';glow.style.background=`radial-gradient(600px circle at ${gx}px ${gy}px, ${dk?'rgba(212,160,84,0.06)':'rgba(212,160,84,0.045)'}, transparent 60%)`;requestAnimationFrame(animate);}
+    document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;if(!an){an=true;animate();}});
+    if('ontouchstart' in window)glow.style.background='radial-gradient(600px circle at 50% 20%, rgba(212,160,84,0.04), transparent 60%)';
+
+    document.querySelectorAll('.tab').forEach(t=>t.addEventListener('click',()=>{
+      document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));
+      document.querySelectorAll('.view').forEach(x=>x.classList.remove('active'));
+      t.classList.add('active');
+      document.getElementById('view-'+t.dataset.view).classList.add('active');
+    }));
+
+    const TODAY=new Date();
+    const esc=s=>(s==null?'':String(s)).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+    const SPORT={ strength:{c:'#d98a4a',l:'Strength'}, plyo:{c:'#e5b53c',l:'Plyo'}, jump:{c:'#d4a054',l:'Jump/Power'}, court:{c:'#6fa8c7',l:'Court'}, mobility:{c:'#5fb96b',l:'Mobility'}, rest:{c:'#8a8a8a',l:'Rest'} };
+    const fmtD=s=>new Date(s+'T12:00:00').toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'});
+
+    fetch('dunk_plan.json').then(r=>r.json()).then(data=>{
+      const m=data.meta;
+      document.getElementById('sub').textContent='Goal: '+m.goal+' by '+new Date(m.deadline+'T12:00:00').toLocaleDateString('en-US',{month:'long',day:'numeric',year:'numeric'});
+      const days=Math.ceil((new Date(m.deadline+'T23:59:59')-TODAY)/864e5);
+      document.getElementById('countdown').innerHTML=`<strong>${days} days</strong> to the deadline · Gap: ${esc(m.gap)}`;
+      document.getElementById('stats').innerHTML=
+        `<div class="st"><div class="v">${esc(m.current)}</div><div class="l">Now</div></div>`+
+        `<div class="st"><div class="v">+6–8&quot;</div><div class="l">Vertical needed</div></div>`+
+        `<div class="st"><div class="v">${esc(m.height)}</div><div class="l">Height</div></div>`+
+        `<div class="st"><div class="v">${esc(m.weight)}</div><div class="l">Weight</div></div>`;
+      document.getElementById('driver').textContent=m.drivers+' '+(m.note||'');
+      document.getElementById('sport-legend').innerHTML=Object.keys(SPORT).map(k=>`<span><span class="d" style="background:${SPORT[k].c}"></span>${SPORT[k].l}</span>`).join('');
+
+      const renderWeek=ph=>`<div class="block"><h3>Weekly Template</h3>${ph.week.map(d=>{
+        return `<div class="day"><div class="dow">${esc(d.d)}</div><div class="sess">${d.sessions.map(s=>{
+          const sp=SPORT[s.sport]||{c:'#888'};
+          return `<div class="s-row"><span class="s-dot" style="background:${sp.c}"></span><span><span class="s-title">${esc(s.title)}</span>${s.detail?` — <span class="s-detail">${esc(s.detail)}</span>`:''}</span>${s.tag?`<span class="s-tag">${esc(s.tag)}</span>`:''}</div>`;
+        }).join('')}</div></div>`;
+      }).join('')}</div>`;
+
+      const renderBody=ph=>{
+        let h=`<div class="block"><h3>Focus</h3><ul>${ph.focus.map(f=>`<li>${esc(f)}</li>`).join('')}</ul></div>`;
+        h+=renderWeek(ph);
+        h+=`<div class="block"><h3>Nutrition</h3><div class="kv"><strong>Mindset:</strong> ${esc(ph.nutrition.mindset)}</div><ul style="margin-top:0.5rem">${ph.nutrition.macros.map(x=>`<li>${esc(x)}</li>`).join('')}</ul></div>`;
+        if(ph.notes)h+=`<div class="note-line">${esc(ph.notes)}</div>`;
+        return h;
+      };
+
+      // Current phase
+      let cur=data.phases.find(p=>{const s=new Date(p.start+'T00:00:00'),e=new Date(p.end+'T23:59:59');return TODAY>=s&&TODAY<=e;});
+      let upcoming=false;
+      if(!cur){ if(TODAY<new Date(data.phases[0].start+'T00:00:00')){cur=data.phases[0];upcoming=true;} else {cur=data.phases[data.phases.length-1];} }
+
+      let ph='';
+      if(upcoming){const ds=Math.ceil((new Date(cur.start+'T00:00:00')-TODAY)/864e5);ph=`<div class="countdown" style="margin-bottom:1rem">Base work starts in <strong>${ds} days</strong> (${fmtD(cur.start)}), alongside the 70.3 build. You're in marathon recovery until then — here's what's coming:</div>`;}
+      ph+=`<div class="phase-head"><div class="ptag">${upcoming?'Up next':'Current phase'}</div><h2>${esc(cur.name)}</h2><div class="pdates">${fmtD(cur.start)} → ${fmtD(cur.end)}</div><div class="ptagline">${esc(cur.tagline)}</div><div class="ppriority">Priority: ${esc(cur.priority)}</div></div>`;
+      ph+=renderBody(cur);
+      document.getElementById('phase-root').innerHTML=ph;
+
+      // Full program
+      let fh='';
+      data.phases.forEach(p=>{
+        const isCur=p.id===cur.id&&!upcoming;
+        fh+=`<div class="phase-head${isCur?'':' dim'}"><div class="ptag">${fmtD(p.start)} → ${fmtD(p.end)}${isCur?' · now':''}</div><h2>${esc(p.name)}</h2><div class="ptagline">${esc(p.tagline)}</div><div class="ppriority">Priority: ${esc(p.priority)}</div></div>`;
+        fh+=renderBody(p);
+        fh+='<div style="height:1.4rem"></div>';
+      });
+      document.getElementById('full-root').innerHTML=fh;
+
+      // Guide
+      const g=data.guide||{};
+      let gh='';
+      gh+=`<div class="block"><h3>The four drivers of vertical</h3><p class="kv">${esc(g.vertical)}</p></div>`;
+      gh+=`<div class="block"><h3>Knee-safe plyometric ladder</h3><ul>${(data.progression||[]).map(p=>`<li>${esc(p)}</li>`).join('')}</ul></div>`;
+      gh+=`<div class="block"><h3>Jump technique — free inches</h3><ul>${(data.technique||[]).map(p=>`<li>${esc(p)}</li>`).join('')}</ul></div>`;
+      if(data.gym){
+        gh+=`<div class="block"><h3>Gym — example splits</h3><p class="kv" style="margin-bottom:0.7rem">${esc(data.gym.note)}</p>`+
+          data.gym.sessions.map(s=>`<div style="margin-bottom:0.8rem"><div style="font-weight:700;color:var(--text-bright);font-size:0.86rem;margin-bottom:0.3rem">${esc(s.name)}</div><ul style="margin:0;padding-left:1.15rem">${s.lifts.map(l=>`<li style="font-size:0.85rem;line-height:1.5">${esc(l)}</li>`).join('')}</ul></div>`).join('')+
+          `</div>`;
+      }
+      gh+=`<div class="block"><h3>Testing &amp; tracking</h3><ul>${(data.testing||[]).map(p=>`<li>${esc(p)}</li>`).join('')}</ul></div>`;
+      gh+=`<div class="block"><h3>Ball control</h3><p class="kv">${esc(g.ballcontrol)}</p></div>`;
+      gh+=`<div class="block"><h3>The knee — most important here</h3><p class="kv">${esc(g.knee)}</p></div>`;
+      gh+=`<div class="block"><h3>Nutrition</h3><p class="kv">${esc(g.nutrition)}</p></div>`;
+      document.getElementById('guide-root').innerHTML=gh;
+
+    }).catch(e=>{document.getElementById('phase-root').innerHTML='<div class="loading">Could not load program.</div>';console.error(e);});
+  </script>
+</body>
+</html>

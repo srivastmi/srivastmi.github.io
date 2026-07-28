@@ -1,0 +1,279 @@
+{
+  "meta": {
+    "goal": "Dunk a basketball",
+    "deadline": "2026-12-31",
+    "current": "Graze the rim",
+    "gap": "~+6–8\" running vertical to control a ball over a 10-ft rim",
+    "height": "5'11\"",
+    "weight": "~170 lb",
+    "drivers": "Vertical = max strength × reactive (elastic) power × jump technique × power-to-weight. We build all four.",
+    "note": "Marathon training likely suppressed your vertical — expect some to return 'for free' as endurance fatigue clears and you train power."
+  },
+  "phases": [
+    {
+      "id": "base",
+      "name": "Vertical Base",
+      "start": "2026-08-11",
+      "end": "2026-10-24",
+      "priority": "Build the strength base — concurrent with the 70.3, done FRESH",
+      "tagline": "Foundational max strength + knee-safe plyo, woven into the tri block. Low volume, high quality, fresh legs.",
+      "focus": [
+        "Build max lower-body strength (squat + hinge) — the foundation under every vertical.",
+        "Start plyometrics at the BOTTOM of the ladder — tendon prep first (PFPS-safe).",
+        "Drill jump technique: approach, penultimate step, arm swing — free inches most people leave on the table.",
+        "Ankle/hip mobility + single-leg strength for landing control and force transfer."
+      ],
+      "week": [
+        {
+          "d": "Mon",
+          "sessions": [
+            {
+              "sport": "strength",
+              "title": "Max strength — lower",
+              "detail": "Back squat 4×5 heavy · RDL 3×6 · Bulgarian split squat · calf raises",
+              "tag": "fresh"
+            },
+            {
+              "sport": "plyo",
+              "title": "Low plyo",
+              "detail": "Pogo + ankle hops 3×20 — build tendon stiffness",
+              "tag": ""
+            }
+          ]
+        },
+        {
+          "d": "Wed",
+          "sessions": [
+            {
+              "sport": "mobility",
+              "title": "Mobility + skills",
+              "detail": "Ankle/hip mobility + handstand (see /tri for endurance)",
+              "tag": ""
+            }
+          ]
+        },
+        {
+          "d": "Fri",
+          "sessions": [
+            {
+              "sport": "jump",
+              "title": "Jump technique + power",
+              "detail": "Box jumps (land soft) · broad jumps · approach-step drills · arm-swing timing",
+              "tag": ""
+            },
+            {
+              "sport": "plyo",
+              "title": "Low plyo",
+              "detail": "Ankle hops, line hops",
+              "tag": ""
+            }
+          ]
+        },
+        {
+          "d": "Daily",
+          "sessions": [
+            {
+              "sport": "mobility",
+              "title": "Ankle/hip mobility",
+              "detail": "5–10 min — plus keep the knee staples (step-downs)",
+              "tag": ""
+            }
+          ]
+        }
+      ],
+      "nutrition": {
+        "mindset": "Fuel the strength work — maintenance/slow recomp, high protein. No cut yet (that's Phase B).",
+        "macros": [
+          "Protein ~150–170g",
+          "Carbs to fuel training",
+          "Eat at ~maintenance"
+        ]
+      },
+      "notes": "These slot into the /tri week (Mon power, Fri plyo). Progress plyo only when the knee is quiet — quality over quantity, land soft, full recovery between reps."
+    },
+    {
+      "id": "peak",
+      "name": "Dunk Peak + Cut",
+      "start": "2026-10-25",
+      "end": "2026-12-31",
+      "priority": "Peak the vertical + win the bet by Dec 31",
+      "tagline": "Endurance drops to maintenance — full explosive focus. Reactive plyo, jump-specific practice, CNS freshness, and the cut for power-to-weight.",
+      "focus": [
+        "Reactive/elastic plyo (depth jumps, bounds) — ONLY once the knee is bulletproof.",
+        "Jump-specific practice: approach dunk attempts, rim touches, ball control.",
+        "Maintain heavy max strength at low volume — keep the force base sharp.",
+        "Cut ~0.5 lb/wk — every pound lost is essentially free vertical."
+      ],
+      "week": [
+        {
+          "d": "Mon",
+          "sessions": [
+            {
+              "sport": "strength",
+              "title": "Max strength — lower",
+              "detail": "Heavy squat / trap-bar 4×3, low volume",
+              "tag": "heavy"
+            }
+          ]
+        },
+        {
+          "d": "Tue",
+          "sessions": [
+            {
+              "sport": "plyo",
+              "title": "Reactive plyo",
+              "detail": "Depth jumps · bounds · approach jumps (knee-ready) + jump technique",
+              "tag": "fresh CNS"
+            }
+          ]
+        },
+        {
+          "d": "Wed",
+          "sessions": [
+            {
+              "sport": "mobility",
+              "title": "Maintain + mobility",
+              "detail": "Easy aerobic + calisthenics + mobility",
+              "tag": ""
+            }
+          ]
+        },
+        {
+          "d": "Thu",
+          "sessions": [
+            {
+              "sport": "jump",
+              "title": "Power",
+              "detail": "Trap-bar jumps · single-leg power · loaded jumps",
+              "tag": ""
+            }
+          ]
+        },
+        {
+          "d": "Fri",
+          "sessions": [
+            {
+              "sport": "rest",
+              "title": "Rest / mobility",
+              "detail": "",
+              "tag": ""
+            }
+          ]
+        },
+        {
+          "d": "Sat",
+          "sessions": [
+            {
+              "sport": "court",
+              "title": "Court practice",
+              "detail": "Approach dunk attempts · rim touches · ball control",
+              "tag": ""
+            }
+          ]
+        },
+        {
+          "d": "Sun",
+          "sessions": [
+            {
+              "sport": "rest",
+              "title": "Rest",
+              "detail": "",
+              "tag": ""
+            }
+          ]
+        }
+      ],
+      "nutrition": {
+        "mindset": "The ONLY hard-cut window in the whole plan. ~0.5 lb/wk, no faster. High protein to hold power. This lean-out also reveals the abs.",
+        "macros": [
+          "Protein ~170g (1g/lb — protects power)",
+          "Carbs moderate, timed around training",
+          "Deficit ~300–400 kcal, gentle"
+        ]
+      },
+      "notes": "Palming is a separate skill — a slightly under-inflated ball or a two-hand dunk counts. Clarify with your friend what wins the bet."
+    }
+  ],
+  "progression": [
+    "1 · Foundation (low intensity): pogo hops, ankle hops, line hops, rope skipping — build tendon stiffness first.",
+    "2 · Eccentric control: slow step-downs (already doing) + low box step-offs, stick the landing — learn to absorb force.",
+    "3 · Bilateral jumps: countermovement jumps, box jumps (jump UP = soft landing), broad jumps.",
+    "4 · Unilateral: single-leg box jumps, short bounds.",
+    "5 · Reactive (HIGH intensity — knee must be bulletproof first): depth jumps, repeated hops, approach jumps.",
+    "Rule: advance a stage only when fully pain-free. Low volume, high intent, land soft, full recovery. Knee talks → drop back a stage."
+  ],
+  "technique": [
+    "One-foot vs two-foot: test both. Most leapers jump higher off ONE foot with a running approach (more elastic); some are two-foot dominant.",
+    "Penultimate step: a long, low second-to-last step converts horizontal speed into vertical lift — the biggest technique lever.",
+    "Arm swing: a big double-arm (two-foot) or hard opposite-arm drive (one-foot) adds real inches. Time it with the jump.",
+    "Approach: 3–5 controlled, accelerating steps. Practice the rhythm, not just max effort.",
+    "Practice the full movement — approach + jump + reach — not just standing jumps."
+  ],
+  "testing": [
+    "Standing reach: flat-footed, one arm fully up against a wall — mark it.",
+    "Max touch: jump and mark the highest point you touch (test both one- and two-foot).",
+    "Vertical = max touch − standing reach. Track monthly.",
+    "Targets: rim = 120\". To control a ball over it, aim to touch ~126\" (rim + ~6\" clearance).",
+    "Re-test the 1st of each month — watch the gap to 126\" shrink."
+  ],
+  "guide": {
+    "vertical": "Your vertical is built from four things: raw max strength (heavy squats), reactive/elastic power (plyometrics — how fast you apply that strength), jump technique (approach + arm swing), and power-to-weight (getting lean). Phase A builds strength + technique + tendon base; Phase B peaks the reactive power and cuts the weight. Both matter — most people only train one.",
+    "ballcontrol": "Getting your hand high enough is half the battle; controlling the ball over the rim is the other half. Palming a full basketball depends on hand size — if you can't, use a slightly under-inflated ball, a smaller ball, or a two-hand dunk. Decide with your friend what counts for the bet, and practice the actual finish, not just rim touches.",
+    "knee": "This is the goal where your PFPS history matters most — plyometrics are the exact eccentric-impact load that flared the knee. Follow the progression ladder strictly, keep the eccentric step-downs in as insurance, and never skip stages. If the knee objects, plyo comes out before anything else. A dunk isn't worth re-breaking the knee that's carrying every other goal.",
+    "nutrition": "Get lean in Phase B (Nov–Dec) — a gentle ~0.5 lb/wk cut. Power-to-weight is one of the fastest ways to add relative vertical, and the same lean-out reveals the abs (goal #3). Keep protein high (~1 g/lb) so you hold the muscle and power while the fat comes off."
+  },
+  "gym": {
+    "note": "Phase A (base): 2× full split — heavy strength + skills. Phase B (peak): 3–4× power-focused — max strength, reactive plyo, and a power day, plus one short upper maintenance session.",
+    "sessions": [
+      {
+        "name": "Phase A · Lower / strength (Mon)",
+        "lifts": [
+          "Back squat — 4×5 (heavy)",
+          "Romanian deadlift — 3×6",
+          "Bulgarian split squat — 3×8/leg",
+          "Standing calf raise — 3×12",
+          "Eccentric step-downs (knee insurance) — 3×8/leg",
+          "Hanging leg raise — 3×10"
+        ]
+      },
+      {
+        "name": "Phase A · Upper / skills (Fri)",
+        "lifts": [
+          "Weighted pull-up — 4×5",
+          "Overhead press — 3×6",
+          "Dip or bench press — 3×8",
+          "Barbell row — 3×10",
+          "Calisthenics skill work (handstand / back-front lever / planche lean) — 10–15 min",
+          "Hollow-body holds — 3×20s"
+        ]
+      },
+      {
+        "name": "Phase B · Max strength (lower)",
+        "lifts": [
+          "Back squat OR trap-bar deadlift — 4×3 (heavy, ~85–90%)",
+          "Bulgarian split squat — 3×6/leg",
+          "Nordic / hamstring curl — 3×6",
+          "Standing calf raise — 4×10"
+        ]
+      },
+      {
+        "name": "Phase B · Reactive plyo (fresh)",
+        "lifts": [
+          "Depth jumps — 4×3 (knee must be bulletproof first)",
+          "Approach (1-foot) jumps to a target — 5×3",
+          "Broad jumps — 3×4",
+          "Pogo series — 3×20"
+        ]
+      },
+      {
+        "name": "Phase B · Power day",
+        "lifts": [
+          "Trap-bar jump — 5×3",
+          "Single-leg box jump — 3×4/leg",
+          "Bounds — 3×20m",
+          "Quick upper maintenance: pull-up / OHP / row — 3×6"
+        ]
+      }
+    ]
+  }
+}

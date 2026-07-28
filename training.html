@@ -224,6 +224,11 @@
       // ---- NUTRITION ----
       (function(){
         let h=`<div class="block nut-principles"><h3>Core Principles</h3><ul>${(data.nutrition_principles||[]).map(p=>`<li>${esc(p)}</li>`).join('')}</ul></div>`;
+        if(data.strength_templates){
+          h+=`<div class="block"><h3>Strength templates — what "gym" means each phase</h3><p class="kv" style="margin-bottom:0.7rem">${esc(data.strength_templates.note)}</p>`+
+            data.strength_templates.splits.map(s=>`<div style="margin-bottom:0.85rem"><div style="font-weight:700;color:var(--text-bright);font-size:0.87rem">${esc(s.name)}</div><div style="font-size:0.76rem;color:var(--text-muted);margin-bottom:0.3rem">${esc(s.when)}</div><ul style="margin:0;padding-left:1.15rem">${s.lifts.map(l=>`<li style="font-size:0.85rem;line-height:1.5">${esc(l)}</li>`).join('')}</ul></div>`).join('')+
+            `</div>`;
+        }
         h+=`<div class="block"><h3>Durability — the permanent pillar</h3><ul>${(data.durability||[]).map(p=>`<li>${esc(p)}</li>`).join('')}</ul></div>`;
         h+='<h3 style="margin:1.5rem 0 0.5rem;color:var(--text-bright);font-size:0.95rem">Per-phase fueling</h3>';
         (data.phases||[]).forEach(ph=>{

@@ -710,7 +710,8 @@
       "target": "Control a ball over the rim",
       "timeline": "End of 2026 (bet)",
       "status": "active",
-      "note": "Need ~+6–8\" vertical from current rim-graze. Peaks in the post-tri power block."
+      "note": "Need ~+6–8\" vertical from current rim-graze. Peaks in the post-tri power block.",
+      "link": "/dunk"
     },
     {
       "name": "Lean + visible abs",
@@ -726,7 +727,7 @@
       "target": "Complete 140.6",
       "timeline": "Fall 2027",
       "status": "confirmed",
-      "note": "Natural step up from the 70.3. Bike-heavy = knee-friendly."
+      "note": "Natural step up from the 70.3. Race chosen at a Dec/Jan checkpoint: IRONMAN Texas (Apr 2027) if ready, else IRONMAN California (Oct 2027, local & flat). Bike-heavy = knee-friendly."
     },
     {
       "name": "Sub-3:29 marathon",
@@ -887,5 +888,61 @@
     "High energy flux (eat a lot, burn a lot) keeps you lean AND recovered — that's the goal.",
     "Get lean before the Ironman year, then maintain by eating-to-fuel — never cut mid-build.",
     "Leanness serves the dunk AND calisthenics (strength-to-weight). One lever, several goals."
-  ]
+  ],
+  "strength_templates": {
+    "note": "Whenever a plan says 'strength' or 'gym', this is what it means for that phase. Lifting never drops to zero — it toggles between build and maintenance.",
+    "splits": [
+      {
+        "name": "Build split — Lower / Power",
+        "when": "Tri build & dunk base · 2×/wk",
+        "lifts": [
+          "Back squat — 4×5 (heavy)",
+          "Romanian deadlift — 3×6",
+          "Bulgarian split squat — 3×8/leg",
+          "Standing calf raise — 3×12",
+          "Eccentric step-downs (knee insurance) — 3×8/leg",
+          "Hanging leg raise — 3×10"
+        ]
+      },
+      {
+        "name": "Build split — Upper / Skills",
+        "when": "Tri build & dunk base · 2×/wk",
+        "lifts": [
+          "Weighted pull-up — 4×5",
+          "Overhead press — 3×6",
+          "Dip or bench press — 3×8",
+          "Barbell row — 3×10",
+          "Calisthenics skill work (handstand / back-front lever / planche lean) — 10–15 min",
+          "Hollow-body holds — 3×20s"
+        ]
+      },
+      {
+        "name": "Dunk peak — power emphasis",
+        "when": "Nov–Dec · 3–4×/wk",
+        "lifts": [
+          "Back squat OR trap-bar deadlift — 4×3 (heavy, ~85–90%)",
+          "Bulgarian split squat — 3×6/leg",
+          "Nordic / hamstring curl — 3×6",
+          "Standing calf raise — 4×10",
+          "—",
+          "Depth jumps — 4×3 (knee must be bulletproof first)",
+          "Approach (1-foot) jumps to a target — 5×3",
+          "Broad jumps — 3×4",
+          "Pogo series — 3×20"
+        ]
+      },
+      {
+        "name": "Endurance maintenance — full body",
+        "when": "IM & marathon builds · 1–2×/wk (heavy-but-brief)",
+        "lifts": [
+          "Back squat — 3×5",
+          "Trap-bar deadlift — 3×5",
+          "Weighted pull-up — 3×6",
+          "Overhead press — 3×6",
+          "Single-leg + glute-med (knee) — 2×10/leg",
+          "Core — planks / hollow holds"
+        ]
+      }
+    ]
+  }
 }
