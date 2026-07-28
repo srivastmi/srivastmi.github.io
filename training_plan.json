@@ -1,14 +1,14 @@
 {
   "meta": {
     "race": "SF Marathon",
-    "race_date": "2026-07-27",
+    "race_date": "2026-07-26",
     "week1_monday": "2026-04-06",
     "goal_primary": "3:45",
     "goal_reach": "3:30",
     "goal_safety": "3:59",
     "mp_3_30": "8:00",
     "mp_3_45": "8:35",
-    "model": "Moderate hybrid — Higdon Novice 2 base, Pfitzinger sessions phased in",
+    "model": "Final 2 weeks \u2014 18 mi peak (Jul 15) off a clean 16 in Spain, then taper; target sub-4:00 (9:09/mi)",
     "paces": {
       "easy": "9:15-9:45",
       "medium_long": "9:00-9:30",
@@ -17,7 +17,18 @@
       "lactate_threshold": "7:35-7:45",
       "vo2max": "6:55-7:05"
     },
-    "day_order": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
+    "day_order": [
+      "Mon",
+      "Tue",
+      "Wed",
+      "Thu",
+      "Fri",
+      "Sat",
+      "Sun"
+    ],
+    "comeback_note": "Knee (PFPS) flared at 2 mi Jun 4; cleared 5K pain-free x2 by Jun 18. Aggressive long-run rebuild at user request (breaks the usual +2 mi/wk rule). KNEE IS THE OVERRIDE: first late-building tug + next-day soreness = HOLD that week long run. Keep slow eccentric step-downs daily; minimize downhill running (eccentric = known trigger).",
+    "goal_current": "3:59",
+    "spain_note": "Spain Jun 27 - ~Jul 11 holds the 14 & 17 mi long runs. If a flat long route is impractical while traveling, run what you can and HOLD that number \u2014 never make up missed long-run mileage with an oversized single jump. Fallback: cap the Spain longs at ~14-15 and peak at 17-18 at home (W15) instead of forcing a 20."
   },
   "gym": {
     "A": {
@@ -44,7 +55,7 @@
     },
     "C": {
       "name": "Power + Plyometrics (speed)",
-      "focus": "Running economy and leg speed — base/transition phases only",
+      "focus": "Running economy and leg speed \u2014 base/transition phases only",
       "lifts": [
         "Trap-bar deadlift or goblet squat 3x5",
         "Box jumps 4x5",
@@ -57,211 +68,820 @@
   },
   "weeks": [
     {
-      "n": 1, "phase": "Base", "monday": "2026-04-06", "stepback": false,
+      "n": 1,
+      "phase": "Base",
+      "monday": "2026-04-06",
+      "stepback": false,
       "days": [
-        {"d": "Mon", "type": "long", "label": "Long Run", "detail": "9 mi easy"},
-        {"d": "Tue", "type": "rest", "label": "Rest / Gym A", "gym": "A"},
-        {"d": "Wed", "type": "quality", "label": "Pace Run", "detail": "5 mi, middle 3 @ 8:30"},
-        {"d": "Thu", "type": "easy", "label": "Easy", "detail": "3 mi easy", "gym": "B"},
-        {"d": "Fri", "type": "rest", "label": "Rest"},
-        {"d": "Sat", "type": "easy", "label": "Easy (optional)", "detail": "3 mi easy", "optional": true},
-        {"d": "Sun", "type": "rest", "label": "Rest"}
+        {
+          "d": "Mon",
+          "type": "long",
+          "label": "Long Run",
+          "detail": "9 mi easy"
+        },
+        {
+          "d": "Tue",
+          "type": "rest",
+          "label": "Rest / Gym A",
+          "gym": "A"
+        },
+        {
+          "d": "Wed",
+          "type": "quality",
+          "label": "Pace Run",
+          "detail": "5 mi, middle 3 @ 8:30"
+        },
+        {
+          "d": "Thu",
+          "type": "easy",
+          "label": "Easy",
+          "detail": "3 mi easy",
+          "gym": "B"
+        },
+        {
+          "d": "Fri",
+          "type": "rest",
+          "label": "Rest"
+        },
+        {
+          "d": "Sat",
+          "type": "easy",
+          "label": "Easy (optional)",
+          "detail": "3 mi easy",
+          "optional": true
+        },
+        {
+          "d": "Sun",
+          "type": "rest",
+          "label": "Rest"
+        }
       ]
     },
     {
-      "n": 2, "phase": "Base", "monday": "2026-04-13", "stepback": true,
+      "n": 2,
+      "phase": "Base",
+      "monday": "2026-04-13",
+      "stepback": true,
       "days": [
-        {"d": "Mon", "type": "long", "label": "Long Run", "detail": "6 mi easy (stepback)"},
-        {"d": "Tue", "type": "rest", "label": "Rest / Gym A", "gym": "A"},
-        {"d": "Wed", "type": "quality", "label": "Pace Run", "detail": "5 mi, middle 3 @ 8:30"},
-        {"d": "Thu", "type": "easy", "label": "Easy", "detail": "3 mi easy", "gym": "B"},
-        {"d": "Fri", "type": "rest", "label": "Rest"},
-        {"d": "Sat", "type": "easy", "label": "Easy (optional)", "detail": "3 mi easy", "optional": true},
-        {"d": "Sun", "type": "rest", "label": "Rest"}
+        {
+          "d": "Mon",
+          "type": "long",
+          "label": "Long Run",
+          "detail": "6 mi easy (stepback)"
+        },
+        {
+          "d": "Tue",
+          "type": "rest",
+          "label": "Rest / Gym A",
+          "gym": "A"
+        },
+        {
+          "d": "Wed",
+          "type": "quality",
+          "label": "Pace Run",
+          "detail": "5 mi, middle 3 @ 8:30"
+        },
+        {
+          "d": "Thu",
+          "type": "easy",
+          "label": "Easy",
+          "detail": "3 mi easy",
+          "gym": "B"
+        },
+        {
+          "d": "Fri",
+          "type": "rest",
+          "label": "Rest"
+        },
+        {
+          "d": "Sat",
+          "type": "easy",
+          "label": "Easy (optional)",
+          "detail": "3 mi easy",
+          "optional": true
+        },
+        {
+          "d": "Sun",
+          "type": "rest",
+          "label": "Rest"
+        }
       ]
     },
     {
-      "n": 3, "phase": "Base", "monday": "2026-04-20", "stepback": false,
+      "n": 3,
+      "phase": "Base",
+      "monday": "2026-04-20",
+      "stepback": false,
       "days": [
-        {"d": "Mon", "type": "long", "label": "Long Run", "detail": "11 mi easy"},
-        {"d": "Tue", "type": "rest", "label": "Rest / Gym A", "gym": "A"},
-        {"d": "Wed", "type": "quality", "label": "Pace Run", "detail": "6 mi, middle 4 @ 8:25"},
-        {"d": "Thu", "type": "easy", "label": "Easy", "detail": "3 mi easy", "gym": "B"},
-        {"d": "Fri", "type": "rest", "label": "Rest"},
-        {"d": "Sat", "type": "easy", "label": "Easy (optional)", "detail": "4 mi easy", "optional": true},
-        {"d": "Sun", "type": "rest", "label": "Rest"}
+        {
+          "d": "Mon",
+          "type": "long",
+          "label": "Long Run",
+          "detail": "11 mi easy"
+        },
+        {
+          "d": "Tue",
+          "type": "rest",
+          "label": "Rest / Gym A",
+          "gym": "A"
+        },
+        {
+          "d": "Wed",
+          "type": "quality",
+          "label": "Pace Run",
+          "detail": "6 mi, middle 4 @ 8:25"
+        },
+        {
+          "d": "Thu",
+          "type": "easy",
+          "label": "Easy",
+          "detail": "3 mi easy",
+          "gym": "B"
+        },
+        {
+          "d": "Fri",
+          "type": "rest",
+          "label": "Rest"
+        },
+        {
+          "d": "Sat",
+          "type": "easy",
+          "label": "Easy (optional)",
+          "detail": "4 mi easy",
+          "optional": true
+        },
+        {
+          "d": "Sun",
+          "type": "rest",
+          "label": "Rest"
+        }
       ]
     },
     {
-      "n": 4, "phase": "Base", "monday": "2026-04-27", "stepback": false,
+      "n": 4,
+      "phase": "Base",
+      "monday": "2026-04-27",
+      "stepback": false,
       "days": [
-        {"d": "Mon", "type": "long", "label": "Long Run", "detail": "12 mi easy"},
-        {"d": "Tue", "type": "rest", "label": "Rest / Gym A", "gym": "A"},
-        {"d": "Wed", "type": "easy", "label": "Easy", "detail": "6 mi easy"},
-        {"d": "Thu", "type": "easy", "label": "Easy", "detail": "3 mi easy", "gym": "B"},
-        {"d": "Fri", "type": "rest", "label": "Rest"},
-        {"d": "Sat", "type": "easy", "label": "Easy (optional)", "detail": "3 mi easy", "optional": true},
-        {"d": "Sun", "type": "rest", "label": "Rest"}
+        {
+          "d": "Mon",
+          "type": "long",
+          "label": "Long Run",
+          "detail": "12 mi easy"
+        },
+        {
+          "d": "Tue",
+          "type": "rest",
+          "label": "Rest / Gym A",
+          "gym": "A"
+        },
+        {
+          "d": "Wed",
+          "type": "easy",
+          "label": "Easy",
+          "detail": "6 mi easy"
+        },
+        {
+          "d": "Thu",
+          "type": "easy",
+          "label": "Easy",
+          "detail": "3 mi easy",
+          "gym": "B"
+        },
+        {
+          "d": "Fri",
+          "type": "rest",
+          "label": "Rest"
+        },
+        {
+          "d": "Sat",
+          "type": "easy",
+          "label": "Easy (optional)",
+          "detail": "3 mi easy",
+          "optional": true
+        },
+        {
+          "d": "Sun",
+          "type": "rest",
+          "label": "Rest"
+        }
       ]
     },
     {
-      "n": 5, "phase": "Base", "monday": "2026-05-04", "stepback": true,
+      "n": 5,
+      "phase": "Base",
+      "monday": "2026-05-04",
+      "stepback": true,
       "days": [
-        {"d": "Mon", "type": "long", "label": "Long Run", "detail": "9 mi easy (stepback)"},
-        {"d": "Tue", "type": "rest", "label": "Rest / Gym A", "gym": "A"},
-        {"d": "Wed", "type": "quality", "label": "Pace Run", "detail": "6 mi, middle 4 @ 8:20"},
-        {"d": "Thu", "type": "easy", "label": "Easy", "detail": "3 mi easy", "gym": "B"},
-        {"d": "Fri", "type": "rest", "label": "Rest"},
-        {"d": "Sat", "type": "easy", "label": "Easy (optional)", "detail": "3 mi easy", "optional": true},
-        {"d": "Sun", "type": "rest", "label": "Rest"}
+        {
+          "d": "Mon",
+          "type": "long",
+          "label": "Long Run",
+          "detail": "9 mi easy (stepback)"
+        },
+        {
+          "d": "Tue",
+          "type": "rest",
+          "label": "Rest / Gym A",
+          "gym": "A"
+        },
+        {
+          "d": "Wed",
+          "type": "quality",
+          "label": "Pace Run",
+          "detail": "6 mi, middle 4 @ 8:20"
+        },
+        {
+          "d": "Thu",
+          "type": "easy",
+          "label": "Easy",
+          "detail": "3 mi easy",
+          "gym": "B"
+        },
+        {
+          "d": "Fri",
+          "type": "rest",
+          "label": "Rest"
+        },
+        {
+          "d": "Sat",
+          "type": "easy",
+          "label": "Easy (optional)",
+          "detail": "3 mi easy",
+          "optional": true
+        },
+        {
+          "d": "Sun",
+          "type": "rest",
+          "label": "Rest"
+        }
       ]
     },
     {
-      "n": 6, "phase": "Transition", "monday": "2026-05-11", "stepback": false,
-      "note": "Pfitzinger transition begins — add medium-long midweek run.",
+      "n": 6,
+      "phase": "Transition",
+      "monday": "2026-05-11",
+      "stepback": false,
+      "note": "Pfitzinger transition begins \u2014 add medium-long midweek run.",
       "days": [
-        {"d": "Mon", "type": "long", "label": "Long Run", "detail": "14 mi easy"},
-        {"d": "Tue", "type": "rest", "label": "Rest / Gym A", "gym": "A"},
-        {"d": "Wed", "type": "quality", "label": "Pace Run", "detail": "7 mi, middle 5 @ 8:00 (MP)"},
-        {"d": "Thu", "type": "easy", "label": "Easy", "detail": "4 mi easy", "gym": "B"},
-        {"d": "Fri", "type": "medium-long", "label": "Medium-Long", "detail": "8 mi steady @ 9:00-9:30"},
-        {"d": "Sat", "type": "easy", "label": "Easy (optional)", "detail": "3 mi easy", "optional": true, "gym": "C"},
-        {"d": "Sun", "type": "rest", "label": "Rest"}
+        {
+          "d": "Mon",
+          "type": "long",
+          "label": "Long Run",
+          "detail": "14 mi easy"
+        },
+        {
+          "d": "Tue",
+          "type": "rest",
+          "label": "Rest / Gym A",
+          "gym": "A"
+        },
+        {
+          "d": "Wed",
+          "type": "quality",
+          "label": "Pace Run",
+          "detail": "7 mi, middle 5 @ 8:00 (MP)"
+        },
+        {
+          "d": "Thu",
+          "type": "easy",
+          "label": "Easy",
+          "detail": "4 mi easy",
+          "gym": "B"
+        },
+        {
+          "d": "Fri",
+          "type": "medium-long",
+          "label": "Medium-Long",
+          "detail": "8 mi steady @ 9:00-9:30"
+        },
+        {
+          "d": "Sat",
+          "type": "easy",
+          "label": "Easy (optional)",
+          "detail": "3 mi easy",
+          "optional": true,
+          "gym": "C"
+        },
+        {
+          "d": "Sun",
+          "type": "rest",
+          "label": "Rest"
+        }
       ]
     },
     {
-      "n": 7, "phase": "Transition", "monday": "2026-05-18", "stepback": false,
+      "n": 7,
+      "phase": "Transition",
+      "monday": "2026-05-18",
+      "stepback": false,
       "days": [
-        {"d": "Mon", "type": "long", "label": "Long Run", "detail": "15 mi easy"},
-        {"d": "Tue", "type": "rest", "label": "Rest / Gym A", "gym": "A"},
-        {"d": "Wed", "type": "quality", "label": "LT Workout", "detail": "8 mi w/ 4 mi @ 7:40 (threshold)"},
-        {"d": "Thu", "type": "easy", "label": "Easy", "detail": "4 mi easy", "gym": "B"},
-        {"d": "Fri", "type": "medium-long", "label": "Medium-Long", "detail": "9 mi steady"},
-        {"d": "Sat", "type": "easy", "label": "Easy (optional)", "detail": "4 mi easy", "optional": true, "gym": "C"},
-        {"d": "Sun", "type": "rest", "label": "Rest"}
+        {
+          "d": "Mon",
+          "type": "long",
+          "label": "Long Run",
+          "detail": "15 mi easy"
+        },
+        {
+          "d": "Tue",
+          "type": "rest",
+          "label": "Rest / Gym A",
+          "gym": "A"
+        },
+        {
+          "d": "Wed",
+          "type": "quality",
+          "label": "LT Workout",
+          "detail": "8 mi w/ 4 mi @ 7:40 (threshold)"
+        },
+        {
+          "d": "Thu",
+          "type": "easy",
+          "label": "Easy",
+          "detail": "4 mi easy",
+          "gym": "B"
+        },
+        {
+          "d": "Fri",
+          "type": "medium-long",
+          "label": "Medium-Long",
+          "detail": "9 mi steady"
+        },
+        {
+          "d": "Sat",
+          "type": "easy",
+          "label": "Easy (optional)",
+          "detail": "4 mi easy",
+          "optional": true,
+          "gym": "C"
+        },
+        {
+          "d": "Sun",
+          "type": "rest",
+          "label": "Rest"
+        }
       ]
     },
     {
-      "n": 8, "phase": "Transition", "monday": "2026-05-25", "stepback": true,
-      "note": "Stepback week — absorb the transition load.",
+      "n": 8,
+      "phase": "Transition",
+      "monday": "2026-05-25",
+      "stepback": true,
+      "note": "Stepback week \u2014 absorb the transition load.",
       "days": [
-        {"d": "Mon", "type": "long", "label": "Long Run + MP", "detail": "12 mi, last 4 @ 8:00 (MP)"},
-        {"d": "Tue", "type": "rest", "label": "Rest / Gym A", "gym": "A"},
-        {"d": "Wed", "type": "quality", "label": "Tempo", "detail": "6 mi w/ 3 mi @ 7:50"},
-        {"d": "Thu", "type": "easy", "label": "Easy", "detail": "4 mi easy", "gym": "B"},
-        {"d": "Fri", "type": "medium-long", "label": "Medium-Long", "detail": "8 mi steady"},
-        {"d": "Sat", "type": "easy", "label": "Easy (optional)", "detail": "3 mi easy", "optional": true},
-        {"d": "Sun", "type": "rest", "label": "Rest"}
+        {
+          "d": "Mon",
+          "type": "long",
+          "label": "Long Run + MP",
+          "detail": "12 mi, last 4 @ 8:00 (MP)"
+        },
+        {
+          "d": "Tue",
+          "type": "rest",
+          "label": "Rest / Gym A",
+          "gym": "A"
+        },
+        {
+          "d": "Wed",
+          "type": "quality",
+          "label": "Tempo",
+          "detail": "6 mi w/ 3 mi @ 7:50"
+        },
+        {
+          "d": "Thu",
+          "type": "easy",
+          "label": "Easy",
+          "detail": "4 mi easy",
+          "gym": "B"
+        },
+        {
+          "d": "Fri",
+          "type": "medium-long",
+          "label": "Medium-Long",
+          "detail": "8 mi steady"
+        },
+        {
+          "d": "Sat",
+          "type": "easy",
+          "label": "Easy (optional)",
+          "detail": "3 mi easy",
+          "optional": true
+        },
+        {
+          "d": "Sun",
+          "type": "rest",
+          "label": "Rest"
+        }
       ]
     },
     {
-      "n": 9, "phase": "Peak", "monday": "2026-06-01", "stepback": false,
-      "note": "Peak phase — marathon-pace long runs are the key sessions.",
+      "n": 9,
+      "phase": "Peak",
+      "monday": "2026-06-01",
+      "stepback": false,
+      "note": "Peak phase \u2014 marathon-pace long runs are the key sessions.",
       "days": [
-        {"d": "Mon", "type": "long", "label": "Long Run + MP", "detail": "17 mi, last 5 @ 8:00 (MP)"},
-        {"d": "Tue", "type": "rest", "label": "Rest / Gym A", "gym": "A"},
-        {"d": "Wed", "type": "quality", "label": "LT Workout", "detail": "9 mi w/ 5 mi @ 7:40 (threshold)"},
-        {"d": "Thu", "type": "easy", "label": "Easy", "detail": "5 mi easy", "gym": "B"},
-        {"d": "Fri", "type": "medium-long", "label": "Medium-Long", "detail": "11 mi steady"},
-        {"d": "Sat", "type": "easy", "label": "Easy (optional)", "detail": "4 mi easy", "optional": true, "gym": "C"},
-        {"d": "Sun", "type": "rest", "label": "Rest"}
+        {
+          "d": "Mon",
+          "type": "long",
+          "label": "Long Run + MP",
+          "detail": "17 mi, last 5 @ 8:00 (MP)"
+        },
+        {
+          "d": "Tue",
+          "type": "rest",
+          "label": "Rest / Gym A",
+          "gym": "A"
+        },
+        {
+          "d": "Wed",
+          "type": "quality",
+          "label": "LT Workout",
+          "detail": "9 mi w/ 5 mi @ 7:40 (threshold)"
+        },
+        {
+          "d": "Thu",
+          "type": "easy",
+          "label": "Easy",
+          "detail": "5 mi easy",
+          "gym": "B"
+        },
+        {
+          "d": "Fri",
+          "type": "medium-long",
+          "label": "Medium-Long",
+          "detail": "11 mi steady"
+        },
+        {
+          "d": "Sat",
+          "type": "easy",
+          "label": "Easy (optional)",
+          "detail": "4 mi easy",
+          "optional": true,
+          "gym": "C"
+        },
+        {
+          "d": "Sun",
+          "type": "rest",
+          "label": "Rest"
+        }
       ]
     },
     {
-      "n": 10, "phase": "Peak", "monday": "2026-06-08", "stepback": false,
+      "n": 10,
+      "phase": "Peak",
+      "monday": "2026-06-08",
+      "stepback": false,
       "days": [
-        {"d": "Mon", "type": "long", "label": "Long Run + MP", "detail": "18 mi, last 8 @ 8:00 (MP)"},
-        {"d": "Tue", "type": "rest", "label": "Rest / Gym A", "gym": "A"},
-        {"d": "Wed", "type": "quality", "label": "VO2max", "detail": "8 mi w/ 5x1000m @ 7:00, jog recovery"},
-        {"d": "Thu", "type": "easy", "label": "Easy", "detail": "5 mi easy", "gym": "B"},
-        {"d": "Fri", "type": "medium-long", "label": "Medium-Long", "detail": "12 mi steady"},
-        {"d": "Sat", "type": "easy", "label": "Easy (optional)", "detail": "5 mi easy", "optional": true, "gym": "C"},
-        {"d": "Sun", "type": "rest", "label": "Rest"}
+        {
+          "d": "Mon",
+          "type": "long",
+          "label": "Long Run + MP",
+          "detail": "18 mi, last 8 @ 8:00 (MP)"
+        },
+        {
+          "d": "Tue",
+          "type": "rest",
+          "label": "Rest / Gym A",
+          "gym": "A"
+        },
+        {
+          "d": "Wed",
+          "type": "quality",
+          "label": "VO2max",
+          "detail": "8 mi w/ 5x1000m @ 7:00, jog recovery"
+        },
+        {
+          "d": "Thu",
+          "type": "easy",
+          "label": "Easy",
+          "detail": "5 mi easy",
+          "gym": "B"
+        },
+        {
+          "d": "Fri",
+          "type": "medium-long",
+          "label": "Medium-Long",
+          "detail": "12 mi steady"
+        },
+        {
+          "d": "Sat",
+          "type": "easy",
+          "label": "Easy (optional)",
+          "detail": "5 mi easy",
+          "optional": true,
+          "gym": "C"
+        },
+        {
+          "d": "Sun",
+          "type": "rest",
+          "label": "Rest"
+        }
       ]
     },
     {
-      "n": 11, "phase": "Peak", "monday": "2026-06-15", "stepback": true,
-      "note": "Stepback before the two biggest weeks.",
+      "n": 11,
+      "phase": "Comeback",
+      "monday": "2026-06-15",
+      "stepback": false,
       "days": [
-        {"d": "Mon", "type": "long", "label": "Long Run", "detail": "14 mi easy"},
-        {"d": "Tue", "type": "rest", "label": "Rest / Gym A", "gym": "A"},
-        {"d": "Wed", "type": "quality", "label": "LT Workout", "detail": "8 mi w/ 4 mi @ 7:40 (threshold)"},
-        {"d": "Thu", "type": "easy", "label": "Easy", "detail": "5 mi easy", "gym": "B"},
-        {"d": "Fri", "type": "medium-long", "label": "Medium-Long", "detail": "9 mi steady"},
-        {"d": "Sat", "type": "easy", "label": "Easy (optional)", "detail": "4 mi easy", "optional": true, "gym": "C"},
-        {"d": "Sun", "type": "rest", "label": "Rest"}
+        {
+          "d": "Mon",
+          "type": "rest",
+          "label": "Rest",
+          "detail": ""
+        },
+        {
+          "d": "Tue",
+          "type": "rest",
+          "label": "Rest / Gym A",
+          "gym": "A",
+          "detail": "Big 3 + slow eccentric step-downs"
+        },
+        {
+          "d": "Wed",
+          "type": "easy",
+          "label": "Easy (done)",
+          "detail": "3 mi \u2014 5K pain-free"
+        },
+        {
+          "d": "Thu",
+          "type": "easy",
+          "label": "Easy (done)",
+          "detail": "3 mi \u2014 5K pain-free"
+        },
+        {
+          "d": "Fri",
+          "type": "long",
+          "label": "Long Run",
+          "detail": "7 mi easy TODAY (6-8 ok) \u2014 comeback long, flat, 9:45-10:15. Cap lower if legs heavy (day 3)."
+        },
+        {
+          "d": "Sat",
+          "type": "rest",
+          "label": "Rest",
+          "detail": ""
+        },
+        {
+          "d": "Sun",
+          "type": "easy",
+          "label": "Easy (optional)",
+          "detail": "3 mi easy",
+          "optional": true
+        }
       ]
     },
     {
-      "n": 12, "phase": "Peak", "monday": "2026-06-22", "stepback": false,
-      "note": "Gym drops to 2 days (A,B), no plyometrics — legs are taxed.",
+      "n": 12,
+      "phase": "Comeback",
+      "monday": "2026-06-22",
+      "stepback": false,
       "days": [
-        {"d": "Mon", "type": "long", "label": "Long Run + MP", "detail": "20 mi, last 8 @ 8:00 (MP)"},
-        {"d": "Tue", "type": "rest", "label": "Rest / Gym A", "gym": "A"},
-        {"d": "Wed", "type": "quality", "label": "MP Workout", "detail": "9 mi w/ 6 mi @ 8:00 (MP)"},
-        {"d": "Thu", "type": "easy", "label": "Easy", "detail": "5 mi easy", "gym": "B"},
-        {"d": "Fri", "type": "medium-long", "label": "Medium-Long", "detail": "10 mi steady"},
-        {"d": "Sat", "type": "easy", "label": "Easy (optional)", "detail": "5 mi easy", "optional": true},
-        {"d": "Sun", "type": "rest", "label": "Rest"}
+        {
+          "d": "Mon",
+          "type": "long",
+          "label": "Long Run",
+          "detail": "11 mi easy \u2014 DO BEFORE Spain (fly Jun 27). Flat, fuel + walk breaks OK."
+        },
+        {
+          "d": "Tue",
+          "type": "rest",
+          "label": "Rest / Gym A",
+          "gym": "A",
+          "detail": "Big 3 + step-downs"
+        },
+        {
+          "d": "Wed",
+          "type": "quality",
+          "label": "Light Tempo",
+          "detail": "5 mi w/ 2 mi @ 8:20 (comfortable, flat)"
+        },
+        {
+          "d": "Thu",
+          "type": "rest",
+          "label": "Rest",
+          "detail": ""
+        },
+        {
+          "d": "Fri",
+          "type": "easy",
+          "label": "Easy",
+          "detail": "4 mi easy"
+        },
+        {
+          "d": "Sat",
+          "type": "rest",
+          "label": "Rest \u2014 travel",
+          "detail": ""
+        },
+        {
+          "d": "Sun",
+          "type": "rest",
+          "label": "Rest",
+          "detail": ""
+        }
       ]
     },
     {
-      "n": 13, "phase": "Peak", "monday": "2026-06-29", "stepback": false,
-      "note": "Biggest week. The 20-miler with 10 @ MP is your dress rehearsal.",
+      "n": 13,
+      "phase": "Spain build",
+      "monday": "2026-06-29",
+      "stepback": false,
       "days": [
-        {"d": "Mon", "type": "long", "label": "Long Run + MP", "detail": "20 mi, last 10 @ 8:00 (MP)"},
-        {"d": "Tue", "type": "rest", "label": "Rest / Gym A", "gym": "A"},
-        {"d": "Wed", "type": "quality", "label": "LT Workout", "detail": "9 mi w/ 5 mi @ 7:40 (threshold)"},
-        {"d": "Thu", "type": "easy", "label": "Easy", "detail": "5 mi easy", "gym": "B"},
-        {"d": "Fri", "type": "medium-long", "label": "Medium-Long", "detail": "9 mi steady"},
-        {"d": "Sat", "type": "easy", "label": "Easy (optional)", "detail": "4 mi easy", "optional": true},
-        {"d": "Sun", "type": "rest", "label": "Rest"}
+        {
+          "d": "Mon",
+          "type": "long",
+          "label": "Long Run",
+          "detail": "14 mi easy \u2014 Spain. Flat route, carry fuel/water (60-90g carb/hr). SPAIN FALLBACK: if a flat 14 is impractical while traveling, run what you can (10-12), do NOT make it up with a bigger jump later \u2014 just hold and continue."
+        },
+        {
+          "d": "Tue",
+          "type": "rest",
+          "label": "Rest / Gym",
+          "gym": "A",
+          "detail": "Big 3 + step-downs"
+        },
+        {
+          "d": "Wed",
+          "type": "quality",
+          "label": "Light Tempo",
+          "detail": "5 mi w/ 2 mi @ 8:20"
+        },
+        {
+          "d": "Thu",
+          "type": "rest",
+          "label": "Rest",
+          "detail": ""
+        },
+        {
+          "d": "Fri",
+          "type": "easy",
+          "label": "Easy",
+          "detail": "4 mi easy"
+        },
+        {
+          "d": "Sat",
+          "type": "rest",
+          "label": "Rest",
+          "detail": ""
+        },
+        {
+          "d": "Sun",
+          "type": "rest",
+          "label": "Rest",
+          "detail": ""
+        }
       ]
     },
     {
-      "n": 14, "phase": "Taper", "monday": "2026-07-06", "stepback": false,
-      "note": "Taper begins. Volume drops, intensity stays. Light bodyweight gym only.",
+      "n": 14,
+      "phase": "Spain build",
+      "monday": "2026-07-06",
+      "stepback": false,
       "days": [
-        {"d": "Mon", "type": "long", "label": "Long Run + MP", "detail": "13 mi, last 4 @ 8:00 (MP)"},
-        {"d": "Tue", "type": "rest", "label": "Rest / Gym (light)", "gym": "A"},
-        {"d": "Wed", "type": "quality", "label": "Tempo", "detail": "6 mi w/ 3 mi @ 7:50"},
-        {"d": "Thu", "type": "easy", "label": "Easy", "detail": "4 mi easy"},
-        {"d": "Fri", "type": "medium-long", "label": "Medium-Long", "detail": "8 mi steady"},
-        {"d": "Sat", "type": "rest", "label": "Rest"},
-        {"d": "Sun", "type": "rest", "label": "Rest"}
+        {
+          "d": "Mon",
+          "type": "long",
+          "label": "Long Run",
+          "detail": "17 mi easy \u2014 Spain, longest abroad. SPAIN FALLBACK: if 17 isn\u2019t feasible (route/heat/travel), cap at 14-15 and peak at 17-18 at home in W15 instead of 20. A 17-18 peak still gets you to the line."
+        },
+        {
+          "d": "Tue",
+          "type": "rest",
+          "label": "Rest / Gym",
+          "gym": "A",
+          "detail": "Big 3 + step-downs"
+        },
+        {
+          "d": "Wed",
+          "type": "quality",
+          "label": "Light Tempo",
+          "detail": "5 mi w/ 2 mi @ 8:20"
+        },
+        {
+          "d": "Thu",
+          "type": "rest",
+          "label": "Rest",
+          "detail": ""
+        },
+        {
+          "d": "Fri",
+          "type": "easy",
+          "label": "Easy",
+          "detail": "4 mi easy"
+        },
+        {
+          "d": "Sat",
+          "type": "rest",
+          "label": "Rest \u2014 travel home",
+          "detail": ""
+        },
+        {
+          "d": "Sun",
+          "type": "rest",
+          "label": "Rest",
+          "detail": ""
+        }
       ]
     },
     {
-      "n": 15, "phase": "Taper", "monday": "2026-07-13", "stepback": false,
-      "note": "Deep taper. Legs may feel heavy — normal. Trust the work.",
+      "n": 15,
+      "phase": "Peak",
+      "monday": "2026-07-13",
+      "stepback": false,
       "days": [
-        {"d": "Mon", "type": "long", "label": "Long Run", "detail": "10 mi easy"},
-        {"d": "Tue", "type": "rest", "label": "Rest"},
-        {"d": "Wed", "type": "quality", "label": "MP Touch", "detail": "5 mi w/ 3 mi @ 8:00 (MP)"},
-        {"d": "Thu", "type": "easy", "label": "Easy + strides", "detail": "4 mi w/ 4x20s strides"},
-        {"d": "Fri", "type": "rest", "label": "Rest"},
-        {"d": "Sat", "type": "easy", "label": "Easy (optional)", "detail": "3 mi easy", "optional": true},
-        {"d": "Sun", "type": "rest", "label": "Rest"}
+        {
+          "d": "Mon",
+          "type": "easy",
+          "label": "Easy",
+          "detail": "5 mi easy \u2014 reactivate legs"
+        },
+        {
+          "d": "Tue",
+          "type": "long",
+          "label": "Long Run + MP",
+          "detail": "18 mi \u2014 PEAK (moved to Tue). Easy 9:30-10:00, last 3-4 mi @ 9:05 (goal pace). Full fuel rehearsal (gel every 35-40 min). Only extend toward 20 if effortless + knee silent at mi 15."
+        },
+        {
+          "d": "Wed",
+          "type": "rest",
+          "label": "Rest",
+          "detail": "Full recovery from long"
+        },
+        {
+          "d": "Thu",
+          "type": "easy",
+          "label": "Easy",
+          "detail": "4 mi very easy (recovery jog) \u2014 or rest if legs need it"
+        },
+        {
+          "d": "Fri",
+          "type": "quality",
+          "label": "MP Tune-up",
+          "detail": "7 mi w/ 4 mi @ 9:05 (goal pace) \u2014 moved to Fri. Should feel easy after Tue's 18."
+        },
+        {
+          "d": "Sat",
+          "type": "easy",
+          "label": "Tandem Bike (cross-train)",
+          "detail": "25-30 mi EASY/social tandem ride. Spin, seated on climbs (knee). Not a workout \u2014 pure taper cross-training."
+        },
+        {
+          "d": "Sun",
+          "type": "rest",
+          "label": "Rest",
+          "detail": "(optional easy 3 mi)"
+        }
       ]
     },
     {
-      "n": 16, "phase": "Race", "monday": "2026-07-20", "stepback": false,
-      "note": "Race week. Stay loose, hydrate, carb-load Thu-Sat. Race Mon Jul 27.",
+      "n": 16,
+      "phase": "Taper & Race",
+      "monday": "2026-07-20",
+      "stepback": false,
       "days": [
-        {"d": "Mon", "type": "easy", "label": "Shakeout", "detail": "5 mi easy"},
-        {"d": "Tue", "type": "easy", "label": "Easy", "detail": "4 mi easy"},
-        {"d": "Wed", "type": "quality", "label": "Sharpener", "detail": "4 mi w/ 4x20s strides at MP"},
-        {"d": "Thu", "type": "easy", "label": "Shakeout", "detail": "3 mi very easy"},
-        {"d": "Fri", "type": "rest", "label": "Rest — carb load"},
-        {"d": "Sat", "type": "easy", "label": "Shakeout", "detail": "2 mi very easy + 2 strides"},
-        {"d": "Sun", "type": "rest", "label": "Rest — carb load, sleep"}
-      ]
-    },
-    {
-      "n": 17, "phase": "Race", "monday": "2026-07-27", "stepback": false,
-      "race": true,
-      "days": [
-        {"d": "Mon", "type": "race", "label": "SF MARATHON", "detail": "26.2 mi — 3:30 = 8:00/mi"}
+        {
+          "d": "Mon",
+          "type": "easy",
+          "label": "Easy",
+          "detail": "5 mi relaxed"
+        },
+        {
+          "d": "Tue",
+          "type": "rest",
+          "label": "Rest",
+          "detail": "Mobility + light step-downs"
+        },
+        {
+          "d": "Wed",
+          "type": "quality",
+          "label": "MP Sharpener",
+          "detail": "6 mi w/ 3 mi @ 9:05 (last quality, 4 days out)"
+        },
+        {
+          "d": "Thu",
+          "type": "easy",
+          "label": "Easy",
+          "detail": "4 mi easy"
+        },
+        {
+          "d": "Fri",
+          "type": "rest",
+          "label": "Rest",
+          "detail": "(optional easy 3 mi)"
+        },
+        {
+          "d": "Sat",
+          "type": "easy",
+          "label": "Shakeout",
+          "detail": "2-3 mi very easy + 3x20s strides. Carb load, hydrate, lay out gear."
+        },
+        {
+          "d": "Sun",
+          "type": "race",
+          "label": "SF MARATHON",
+          "detail": "26.2 \u2014 GOAL sub-4:00 (9:09/mi). Start 9:15-9:20 (mi 1-5, do NOT bank time), settle 9:05-9:10 (mi 6-20), hold to finish. Gel every 35-40 min from mi 4 (60-90g carb/hr). Power-hike the Bridge/Presidio climbs, run the flats. Walk aid stations only if needed."
+        }
       ]
     }
   ]

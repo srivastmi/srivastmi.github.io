@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-21T20:26:03.279472",
+  "generated_at": "2026-06-19T13:52:21.832650",
   "athlete": "Mihir Srivastava",
   "hr_zones": {
     "custom_zones": false,
@@ -70,7 +70,7 @@
       },
       "kind": "workout",
       "auto_kind": "workout",
-      "coach_note": "Pace run \u2014 middle 3 mi at 7:38. Ran faster than the 8:30 target; closer to LT effort."
+      "coach_note": "Pace run — middle 3 mi at 7:38. Ran faster than the 8:30 target; closer to LT effort."
     },
     {
       "date": "2026-04-10",
@@ -129,7 +129,7 @@
       },
       "kind": "workout",
       "auto_kind": "workout",
-      "coach_note": "Pace run \u2014 3 mi at 8:01, HR 175. Hard effort, slightly hot HR for the pace."
+      "coach_note": "Pace run — 3 mi at 8:01, HR 175. Hard effort, slightly hot HR for the pace."
     },
     {
       "date": "2026-04-17",
@@ -171,7 +171,7 @@
       "phase": "Base",
       "kind": "long",
       "auto_kind": "long",
-      "coach_note": "Long run 11 mi as planned. HR 156 \u2014 keep long runs nearer 148."
+      "coach_note": "Long run 11 mi as planned. HR 156 — keep long runs nearer 148."
     },
     {
       "date": "2026-04-22",
@@ -216,7 +216,7 @@
       },
       "kind": "workout",
       "auto_kind": "workout",
-      "coach_note": "Pace run \u2014 4 mi at 7:57, HR only 147. Excellent: goal-fast pace at controlled HR."
+      "coach_note": "Pace run — 4 mi at 7:57, HR only 147. Excellent: goal-fast pace at controlled HR."
     },
     {
       "date": "2026-04-28",
@@ -285,7 +285,7 @@
       "phase": "Base",
       "kind": "long",
       "auto_kind": "medium-long",
-      "coach_note": "Stepback long run run far too hard \u2014 8:10 avg, HR 170. This was a fitness probe, not a recovery long run. Don't repeat on stepback weeks."
+      "coach_note": "Stepback long run run far too hard — 8:10 avg, HR 170. This was a fitness probe, not a recovery long run. Don't repeat on stepback weeks."
     },
     {
       "date": "2026-05-06",
@@ -330,7 +330,7 @@
       },
       "kind": "workout",
       "auto_kind": "workout",
-      "coach_note": "Pace run \u2014 4 mi at 8:22, HR 172. HR high for the pace; was likely still fatigued from May 4."
+      "coach_note": "Pace run — 4 mi at 8:22, HR 172. HR high for the pace; was likely still fatigued from May 4."
     },
     {
       "date": "2026-05-09",
@@ -358,7 +358,7 @@
       "phase": "Transition",
       "kind": "long",
       "auto_kind": "long",
-      "coach_note": "W6 long run 14 mi, HR 148. Best-executed long run yet \u2014 exactly the right effort."
+      "coach_note": "W6 long run 14 mi, HR 148. Best-executed long run yet — exactly the right effort."
     },
     {
       "date": "2026-05-13",
@@ -417,7 +417,7 @@
       "phase": "Transition",
       "kind": "medium-long",
       "auto_kind": "medium-long",
-      "coach_note": "W6 medium-long 8 mi @ 9:30, HR 152. New Pfitzinger session executed right \u2014 steady and controlled at the easy end of the range."
+      "coach_note": "W6 medium-long 8 mi @ 9:30, HR 152. New Pfitzinger session executed right — steady and controlled at the easy end of the range."
     },
     {
       "date": "2026-05-18",
@@ -431,7 +431,7 @@
       "phase": "Transition",
       "kind": "long",
       "auto_kind": "long",
-      "coach_note": "W7 long run 15 mi @ 9:08 HR 158, 531ft elev. Great work adding hills (35 ft/mi vs the 21 ft/mi of May 11). Pace a touch fast and HR 3 bpm above the easy-long target \u2014 the hills explain most of it. Keep the next non-MP long run at HR <155 by easing pace 10-15 sec/mi."
+      "coach_note": "W7 long run 15 mi @ 9:08 HR 158, 531ft elev. Great work adding hills (35 ft/mi vs the 21 ft/mi of May 11). Pace a touch fast and HR 3 bpm above the easy-long target — the hills explain most of it. Keep the next non-MP long run at HR <155 by easing pace 10-15 sec/mi."
     },
     {
       "date": "2026-05-20",
@@ -462,7 +462,7 @@
       },
       "kind": "workout",
       "auto_kind": "workout",
-      "coach_note": "W7 LT workout 8 mi w/ 4 @ 7:39 HR 159 avg \u2014 A+ execution. Hit target 7:40 dead on with even splits and disciplined HR drift (146\u2192172 across the 4). Modest fitness gain vs Apr 23 (4mi @ 7:57 HR 147 on similar terrain): 18 sec/mi faster at +12 bpm. Real progress but not a giant leap. Next LT workout drops target to 7:30."
+      "coach_note": "W7 LT workout 8 mi w/ 4 @ 7:39 HR 159 avg — A+ execution. Hit target 7:40 dead on with even splits and disciplined HR drift (146→172 across the 4). Modest fitness gain vs Apr 23 (4mi @ 7:57 HR 147 on similar terrain): 18 sec/mi faster at +12 bpm. Real progress but not a giant leap. Next LT workout drops target to 7:30."
     },
     {
       "date": "2026-05-21",
@@ -476,7 +476,250 @@
       "phase": "Transition",
       "kind": "easy",
       "auto_kind": "easy",
-      "coach_note": "Stopped at 3 mi (planned 4) \u2014 knee pain. Smoking gun: Mile 1 was a -147 ft descent, and downhill is the highest knee-stress activity in running. Good call stopping early. Rest/cross-train this week; W8 is a stepback so timing is forgiving. Address with glute med work and avoid steep descents 2 weeks."
+      "coach_note": "Stopped at 3 mi (planned 4) — knee pain. Smoking gun: Mile 1 was a -147 ft descent, and downhill is the highest knee-stress activity in running. Good call stopping early. Rest/cross-train this week; W8 is a stepback so timing is forgiving. Address with glute med work and avoid steep descents 2 weeks."
+    },
+    {
+      "date": "2026-05-29",
+      "name": "Afternoon Run",
+      "distance_mi": 0.16,
+      "pace_s": 644.0,
+      "avg_hr": 117.6,
+      "max_hr": 131.0,
+      "elev_ft": 0,
+      "week": 8,
+      "phase": "Transition",
+      "kind": "easy",
+      "auto_kind": "easy"
+    },
+    {
+      "date": "2026-05-30",
+      "name": "Evening Run",
+      "distance_mi": 1.56,
+      "pace_s": 629.0,
+      "avg_hr": 130.6,
+      "max_hr": 148.0,
+      "elev_ft": 16,
+      "week": 8,
+      "phase": "Transition",
+      "kind": "test",
+      "auto_kind": "easy",
+      "coach_note": "Return-to-run test after PFPS layoff. Passed brace-off step-down beforehand, but knee went \"off\"/start-of-pain sub-mile at 10:29 easy pace — stopped at 1.56 mi. Correct call to stop. Verdict: NOT cleared; step-down test insufficient to predict run tolerance. Reset recovery clock; resume Big 3 + easy cycling, re-test only after several consecutive silent days."
+    },
+    {
+      "date": "2026-06-01",
+      "name": "Afternoon Run",
+      "distance_mi": 1.0,
+      "pace_s": 587.0,
+      "avg_hr": 123.7,
+      "max_hr": 146.0,
+      "elev_ft": 33,
+      "week": 9,
+      "phase": "Peak",
+      "kind": "test",
+      "auto_kind": "easy",
+      "coach_note": "Ladder rung 1: 1 mi flat easy @ 9:47. Flat portion symptom-free; downhill triggered early \"coming on\" feeling → walked to flatter ground (correct call). KEY: no pain right after and none next morning — flat easy running now CLEARED. Downhill/eccentric load still not tolerated (textbook PFPS, last capacity to return). Next: advance to 2 mi flat, avoid all descents, build eccentric tolerance via slow step-downs not downhill running."
+    },
+    {
+      "date": "2026-06-02",
+      "name": "Afternoon Run",
+      "distance_mi": 2.02,
+      "pace_s": 585.0,
+      "avg_hr": 152.4,
+      "max_hr": 169.0,
+      "elev_ft": 0,
+      "week": 9,
+      "phase": "Peak",
+      "kind": "easy",
+      "auto_kind": "easy",
+      "coach_note": "Ladder rung 2: 2.02 mi flat treadmill @ 9:45 (0 ft). Mild \"funny\" feeling mile 1 that resolved with warmup — acceptable, not a flare. Run itself clean. Swam afterward; symptoms returned late in swim — likely breaststroke/whip kick (known PFPS aggravator), not the run. Next AM ~90% vs ~100% after the 1-miler = slight regression. HOLD at 2 mi; repeat 2 mi flat, switch swim to flutter kick / pull buoy, advance to 5K only after a fully-quiet morning-after."
+    },
+    {
+      "date": "2026-06-04",
+      "name": "Afternoon Run",
+      "distance_mi": 2.01,
+      "pace_s": 576.0,
+      "avg_hr": 136.2,
+      "max_hr": 144.0,
+      "elev_ft": 10,
+      "week": 9,
+      "phase": "Peak",
+      "kind": "easy",
+      "auto_kind": "easy",
+      "coach_note": "Ladder rung 2 repeat: 2.01 mi flat treadmill @ 9:36 (3 ft). Legs settled and felt great mid-run, but familiar knee tug returned LATE (end of mile 2) and lingered as soreness post-run. Distinct from 6/2 (early-fading=benign); this is late-building+lingering = load ceiling exceeded. 2 mi is currently at/over tolerance. Pattern: 3rd flare around the ~1.5-2 mi mark since 5/21 despite rest cycles. Recommendation logged: pause run ladder, sports PT eval warranted, hold fitness via non-impact cross-training."
+    },
+    {
+      "date": "2026-06-07",
+      "name": "Evening Run",
+      "distance_mi": 2.06,
+      "pace_s": 517.0,
+      "avg_hr": 145.0,
+      "max_hr": 165.0,
+      "elev_ft": 46,
+      "week": 9,
+      "phase": "Peak",
+      "kind": "easy",
+      "auto_kind": "easy"
+    },
+    {
+      "date": "2026-06-13",
+      "name": "Afternoon Run",
+      "distance_mi": 2.35,
+      "pace_s": 593.0,
+      "avg_hr": 142.7,
+      "max_hr": 156.0,
+      "elev_ft": 0,
+      "week": 10,
+      "phase": "Peak",
+      "kind": "easy",
+      "auto_kind": "easy"
+    },
+    {
+      "date": "2026-06-16",
+      "name": "Evening Run",
+      "distance_mi": 0.15,
+      "pace_s": 607.0,
+      "avg_hr": 114.7,
+      "max_hr": 128.0,
+      "elev_ft": 0,
+      "week": 11,
+      "phase": "Peak",
+      "kind": "easy",
+      "auto_kind": "easy"
+    },
+    {
+      "date": "2026-06-16",
+      "name": "Evening Run",
+      "distance_mi": 1.02,
+      "pace_s": 537.0,
+      "avg_hr": 148.8,
+      "max_hr": 186.0,
+      "elev_ft": 0,
+      "week": 11,
+      "phase": "Peak",
+      "kind": "easy",
+      "auto_kind": "easy"
+    },
+    {
+      "date": "2026-06-17",
+      "name": "Night Run",
+      "distance_mi": 3.02,
+      "pace_s": 563.0,
+      "avg_hr": 152.4,
+      "max_hr": 176.0,
+      "elev_ft": 0,
+      "week": 11,
+      "phase": "Peak",
+      "kind": "easy",
+      "auto_kind": "easy"
+    },
+    {
+      "date": "2026-06-18",
+      "name": "Afternoon Run",
+      "distance_mi": 3.19,
+      "pace_s": 501.0,
+      "avg_hr": 150.1,
+      "max_hr": 174.0,
+      "elev_ft": 23,
+      "week": 11,
+      "phase": "Peak",
+      "kind": "easy",
+      "auto_kind": "easy"
+    },
+    {
+      "date": "2026-06-30",
+      "name": "Lisbon Morning",
+      "distance_mi": 6.24,
+      "pace_s": 552.0,
+      "avg_hr": null,
+      "max_hr": null,
+      "elev_ft": 171,
+      "week": 13,
+      "phase": "Spain build",
+      "kind": "easy",
+      "auto_kind": "easy"
+    },
+    {
+      "date": "2026-07-04",
+      "name": "Seville / Plaza de España",
+      "distance_mi": 3.68,
+      "pace_s": 525.0,
+      "avg_hr": null,
+      "max_hr": null,
+      "elev_ft": 49,
+      "week": 13,
+      "phase": "Spain build",
+      "kind": "easy",
+      "auto_kind": "easy"
+    },
+    {
+      "date": "2026-07-06",
+      "name": "Valencia Long Run",
+      "distance_mi": 16.04,
+      "pace_s": 547.0,
+      "avg_hr": 161.0,
+      "max_hr": null,
+      "elev_ft": 164,
+      "week": 14,
+      "phase": "Spain build",
+      "kind": "long",
+      "auto_kind": "long",
+      "coach_note": "First 16 of the block, run in Spanish July heat (HR 161) — dead-even splits, no fade. The run that proved the marathon was on."
+    },
+    {
+      "date": "2026-07-14",
+      "name": "SF 18-miler (peak long)",
+      "distance_mi": 18.03,
+      "pace_s": 579.0,
+      "avg_hr": 147.0,
+      "max_hr": 162.0,
+      "elev_ft": 1217,
+      "week": 15,
+      "phase": "Peak",
+      "kind": "long",
+      "auto_kind": "long",
+      "coach_note": "Peak long run — 1,217 ft of climbing at HR 147, negative-split finish (mi 16-18: 9:03 / 8:51 / 8:33). Cleared the hills AND the knee’s downhill trigger. The dress rehearsal that confirmed sub-4 was real."
+    },
+    {
+      "date": "2026-07-17",
+      "name": "MP Tune-up",
+      "distance_mi": 6.05,
+      "pace_s": 550.0,
+      "avg_hr": 137.0,
+      "max_hr": 149.0,
+      "elev_ft": 128,
+      "week": 15,
+      "phase": "Peak",
+      "kind": "workout",
+      "auto_kind": "workout",
+      "coach_note": "Goal-pace tune-up — closed at 8:35 / 8:43 at HR 142-145. Cut to 6 to protect a reactive knee (smart taper call)."
+    },
+    {
+      "date": "2026-07-22",
+      "name": "Taper shakeout + strides",
+      "distance_mi": 3.05,
+      "pace_s": 540.0,
+      "avg_hr": 138.0,
+      "max_hr": 164.0,
+      "elev_ft": 50,
+      "week": 16,
+      "phase": "Taper",
+      "kind": "workout",
+      "auto_kind": "workout",
+      "coach_note": "Final sharpener — 3 mi easing into 8:16 + strides. Legs snapping into place for race day."
+    },
+    {
+      "date": "2026-07-26",
+      "name": "🏁 SF MARATHON 2026 — 3:53:24",
+      "distance_mi": 26.4,
+      "pace_s": 530.0,
+      "avg_hr": 156.0,
+      "max_hr": 175.0,
+      "elev_ft": 1414,
+      "week": 16,
+      "phase": "Race",
+      "kind": "race",
+      "auto_kind": "race",
+      "coach_note": "RACE DAY. Chip time 3:53:24 — goal was sub-4:00, beat it by 6+ minutes on a 1,414 ft course. Disciplined start (HR 130s, mi 1-6), handled the Bridge & Presidio climbs, then negative-split the back third (mi 21-26: 8:31 / 8:28 / 8:35 / 8:31 / 8:27 / 8:03). Eight weeks earlier a knee flare had capped running at 2 miles. Finished strong, healthy, and accelerating. 🥇"
     }
   ],
   "week_summary": [
@@ -558,7 +801,7 @@
       "planned_long_mi": 14.0,
       "planned_quality": 1,
       "planned_total_mi": 33.0,
-      "note": "Pfitzinger transition begins \u2014 add medium-long midweek run.",
+      "note": "Pfitzinger transition begins — add medium-long midweek run.",
       "actual_total_mi": 33.1,
       "actual_long_mi": 14.1,
       "actual_quality": 1,
@@ -586,11 +829,11 @@
       "planned_long_mi": 12.0,
       "planned_quality": 1,
       "planned_total_mi": 30.0,
-      "note": "Stepback week \u2014 absorb the transition load.",
-      "actual_total_mi": 0,
-      "actual_long_mi": 0,
+      "note": "Stepback week — absorb the transition load.",
+      "actual_total_mi": 1.7,
+      "actual_long_mi": 1.6,
       "actual_quality": 0,
-      "actual_runs": 0
+      "actual_runs": 2
     },
     {
       "week": 9,
@@ -600,11 +843,11 @@
       "planned_long_mi": 17.0,
       "planned_quality": 1,
       "planned_total_mi": 42.0,
-      "note": "Peak phase \u2014 marathon-pace long runs are the key sessions.",
-      "actual_total_mi": 0,
-      "actual_long_mi": 0,
+      "note": "Peak phase — marathon-pace long runs are the key sessions.",
+      "actual_total_mi": 7.1,
+      "actual_long_mi": 2.1,
       "actual_quality": 0,
-      "actual_runs": 0
+      "actual_runs": 4
     },
     {
       "week": 10,
@@ -615,10 +858,10 @@
       "planned_quality": 1,
       "planned_total_mi": 43.0,
       "note": "",
-      "actual_total_mi": 0,
-      "actual_long_mi": 0,
+      "actual_total_mi": 2.4,
+      "actual_long_mi": 2.4,
       "actual_quality": 0,
-      "actual_runs": 0
+      "actual_runs": 1
     },
     {
       "week": 11,
@@ -629,10 +872,10 @@
       "planned_quality": 1,
       "planned_total_mi": 36.0,
       "note": "Stepback before the two biggest weeks.",
-      "actual_total_mi": 0,
-      "actual_long_mi": 0,
+      "actual_total_mi": 7.4,
+      "actual_long_mi": 3.2,
       "actual_quality": 0,
-      "actual_runs": 0
+      "actual_runs": 4
     },
     {
       "week": 12,
@@ -642,7 +885,7 @@
       "planned_long_mi": 20.0,
       "planned_quality": 1,
       "planned_total_mi": 44.0,
-      "note": "Gym drops to 2 days (A,B), no plyometrics \u2014 legs are taxed.",
+      "note": "Gym drops to 2 days (A,B), no plyometrics — legs are taxed.",
       "actual_total_mi": 0,
       "actual_long_mi": 0,
       "actual_quality": 0,
@@ -684,7 +927,7 @@
       "planned_long_mi": 10.0,
       "planned_quality": 1,
       "planned_total_mi": 19.0,
-      "note": "Deep taper. Legs may feel heavy \u2014 normal. Trust the work.",
+      "note": "Deep taper. Legs may feel heavy — normal. Trust the work.",
       "actual_total_mi": 0,
       "actual_long_mi": 0,
       "actual_quality": 0,
