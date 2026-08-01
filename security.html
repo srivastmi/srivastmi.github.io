@@ -26,7 +26,6 @@
     .view { display: none; }
     .view.active { display: block; }
 
-    /* Sections */
     .sec-head { font-size: 1.05rem; color: var(--text-bright); margin: 1.6rem 0 0.6rem; font-weight: 700; letter-spacing: -0.005em; }
     .sec-head:first-child { margin-top: 0.4rem; }
     .sec-head .n { color: var(--accent); font-family: ui-monospace, monospace; font-size: 0.85rem; margin-right: 0.5rem; }
@@ -35,11 +34,21 @@
     .block { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 1rem 1.2rem; margin-bottom: 0.9rem; }
     .block h3 { font-size: 0.95rem; color: var(--text-bright); margin: 0 0 0.55rem; }
     .block .why { font-size: 0.83rem; color: var(--text-muted); font-style: italic; margin-bottom: 0.6rem; line-height: 1.55; }
-    .block ul { margin: 0; padding-left: 1.15rem; }
+    .block ul, .block ol { margin: 0; padding-left: 1.2rem; }
     .block li { font-size: 0.87rem; color: var(--text); line-height: 1.6; margin-bottom: 0.35rem; }
     .block li code { background: var(--accent-dim); color: var(--accent); padding: 1px 5px; border-radius: 3px; font-size: 0.8em; }
     .block a { color: var(--accent); text-decoration: none; border-bottom: 1px dotted var(--accent); }
     .block a:hover { border-bottom-style: solid; }
+    .block p { font-size: 0.88rem; color: var(--text); line-height: 1.6; margin: 0.4rem 0; }
+
+    /* Evidence rows */
+    .ev { display: grid; grid-template-columns: 180px 1fr; gap: 0.6rem 1rem; margin: 0.4rem 0; }
+    .ev .who { color: var(--text-bright); font-weight: 600; font-size: 0.86rem; padding-top: 2px; }
+    .ev .who .role { display: block; color: var(--text-muted); font-weight: 400; font-size: 0.78rem; }
+    .ev .path { color: var(--text); font-size: 0.86rem; line-height: 1.55; padding-bottom: 0.6rem; border-bottom: 1px solid var(--border); }
+    .ev .path a { color: var(--accent); text-decoration: none; border-bottom: 1px dotted var(--accent); }
+    .ev > div:nth-last-child(-n+2) .path, .ev > div:nth-last-child(-n+2).path { border-bottom: none; }
+    @media (max-width: 680px) { .ev { grid-template-columns: 1fr; } .ev .path { padding-bottom: 0.9rem; } }
 
     /* Flagship cards */
     .flagship { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 1.1rem 1.3rem; margin-bottom: 1rem; border-left: 3px solid var(--accent); }
@@ -49,41 +58,45 @@
     .flagship .fmeta span { margin-right: 0.9rem; }
     .flagship .deliverable { font-size: 0.88rem; color: var(--text); line-height: 1.6; margin-bottom: 0.6rem; }
     .flagship .deliverable strong { color: var(--text-bright); }
-    .flagship .steps { margin: 0.4rem 0; padding-left: 1.15rem; }
-    .flagship .steps li { font-size: 0.86rem; color: var(--text); line-height: 1.6; margin-bottom: 0.3rem; }
+    .flagship h4 { font-size: 0.82rem; color: var(--text-bright); margin: 0.7rem 0 0.35rem; text-transform: uppercase; letter-spacing: 0.06em; font-weight: 700; }
+    .flagship ol.steps, .flagship ul.steps { margin: 0.3rem 0 0.5rem; padding-left: 1.2rem; }
+    .flagship .steps li { font-size: 0.85rem; color: var(--text); line-height: 1.6; margin-bottom: 0.3rem; }
     .flagship .steps li code { background: var(--accent-dim); color: var(--accent); padding: 1px 5px; border-radius: 3px; font-size: 0.85em; }
+    .flagship .steps li a { color: var(--accent); text-decoration: none; border-bottom: 1px dotted var(--accent); }
+    .flagship .payoff { font-size: 0.82rem; color: var(--text-muted); font-style: italic; margin-top: 0.5rem; line-height: 1.55; padding: 0.55rem 0.8rem; background: rgba(212, 160, 84, 0.05); border-radius: 6px; }
+    .flagship .payoff strong { color: var(--accent); font-style: normal; }
 
-    /* Reading list */
+    /* Reading grid */
     .rl { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
     .rl .col > .block { margin-bottom: 0.75rem; }
     @media (max-width: 780px) { .rl { grid-template-columns: 1fr; } }
 
-    /* Model table */
-    .models { width: 100%; border-collapse: collapse; margin: 0.5rem 0 1rem; font-size: 0.87rem; }
-    .models th, .models td { text-align: left; padding: 0.55rem 0.7rem; border-bottom: 1px solid var(--border); }
-    .models th { color: var(--text-muted); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.06em; font-weight: 700; }
-    .models td { color: var(--text); vertical-align: top; }
-    .models td.name { color: var(--text-bright); font-weight: 600; font-family: ui-monospace, monospace; font-size: 0.85rem; }
-    .models td.use { color: var(--text-muted); font-size: 0.82rem; }
-
-    /* Weekly cadence */
-    .cadence { display: grid; grid-template-columns: 90px 1fr; gap: 0.5rem 1rem; font-size: 0.86rem; }
-    .cadence .day { color: var(--accent); font-weight: 700; font-family: ui-monospace, monospace; font-size: 0.78rem; padding-top: 3px; }
-    .cadence .task { color: var(--text); line-height: 1.55; padding-bottom: 0.4rem; border-bottom: 1px solid var(--border); }
-    .cadence > div:nth-last-child(-n+2) .task, .cadence > div:nth-last-child(-n+2).task { border-bottom: none; }
-
     /* Now list */
     .now { background: var(--accent-dim); border: 1px solid var(--accent); border-radius: 10px; padding: 1rem 1.2rem; margin-bottom: 1.5rem; }
-    .now h3 { font-size: 0.92rem; color: var(--text-bright); margin: 0 0 0.55rem; text-transform: uppercase; letter-spacing: 0.06em; font-size: 0.74rem; color: var(--accent); }
+    .now h3 { font-size: 0.74rem; color: var(--accent); margin: 0 0 0.65rem; text-transform: uppercase; letter-spacing: 0.08em; font-weight: 700; }
     .now ol { margin: 0; padding-left: 1.3rem; }
-    .now li { font-size: 0.9rem; color: var(--text); line-height: 1.6; margin-bottom: 0.35rem; }
+    .now li { font-size: 0.9rem; color: var(--text); line-height: 1.65; margin-bottom: 0.55rem; }
     .now li strong { color: var(--text-bright); }
+    .now li a { color: var(--accent); text-decoration: none; border-bottom: 1px dotted var(--accent); }
+    .now li .time { color: var(--text-muted); font-size: 0.78rem; font-family: ui-monospace, monospace; margin-left: 0.3rem; }
 
-    /* Gap chips */
+    /* Fallback value */
+    .fallback { display: grid; grid-template-columns: 1fr 1fr; gap: 0.7rem; margin-top: 0.5rem; }
+    @media (max-width: 780px) { .fallback { grid-template-columns: 1fr; } }
+    .fallback .block h3 { font-size: 0.9rem; }
+    .fallback .block ul li { font-size: 0.85rem; }
+
+    /* Chips */
     .chips { display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 0.5rem 0 1rem; }
     .chip { font-size: 0.75rem; padding: 3px 9px; border-radius: 12px; border: 1px solid var(--border); color: var(--text); }
     .chip.have { border-color: #5fb96b; color: #7ec98a; }
     .chip.gap  { border-color: #d98a4a; color: #e0a06a; }
+
+    /* Cadence */
+    .cadence { display: grid; grid-template-columns: 90px 1fr; gap: 0.5rem 1rem; font-size: 0.86rem; }
+    .cadence .day { color: var(--accent); font-weight: 700; font-family: ui-monospace, monospace; font-size: 0.78rem; padding-top: 3px; }
+    .cadence .task { color: var(--text); line-height: 1.55; padding-bottom: 0.4rem; border-bottom: 1px solid var(--border); }
+    .cadence > div:nth-last-child(-n+2) .task, .cadence > div:nth-last-child(-n+2).task { border-bottom: none; }
 
     footer { margin-top: 2.5rem; padding-top: 1rem; border-top: 1px solid var(--border); font-size: 0.78rem; color: var(--text-muted); text-align: center; }
   </style>
@@ -101,29 +114,29 @@
 
     <div class="mh">
       <span class="tag">private</span>
-      <h1>./sec — becoming FRT-Cyber material</h1>
-      <p class="sub">A 90-day roadmap to become a strong candidate for Anthropic's Frontier Red Team (Cyber). Not linked anywhere.</p>
+      <h1>./sec — becoming AI-lab security material</h1>
+      <p class="sub">Evidence-based path to FRT-Cyber / Safeguards / adjacent roles at Anthropic / OpenAI / DeepMind. Every step maps to something a real hire actually did.</p>
     </div>
 
     <div class="mission">
-      <strong>Mission.</strong> Ship the artifacts, publish the writeups, and log the CTF/CVE trail that turn "curious engineer with a safety-eval side project" into "credible cyber-AI research hire." The plan takes seriously two operating principles: Vlad Feinberg's — work <em>above</em> the LLM stack on rigorous agent experiments and let public GitHub + writeups do the talking; and FRT's — measure frontier capabilities on real cyber targets and translate results into policy-legible demos (see <a href="https://red.anthropic.com/2026/exploit-evals" target="_blank">exploit-evals</a>, <a href="https://red.anthropic.com/2026/zero-days/" target="_blank">0-days</a>, <a href="https://www.anthropic.com/glasswing" target="_blank">Glasswing</a>).
+      <strong>Guiding principle.</strong> The people hired to these teams got there via <em>public, referenceable work</em> — a cited paper, a jailbreak method others reproduce, a widely-used tool, a leaderboard finding on the lab's own bounty program. Not CTF grinding, not certs, not generic pentesting. The plan below only contains activities where I can point to a real person hired at a real lab whose path went through that same activity. If your work is compounding-public, the worst case is you build a portfolio that opens 20+ adjacent doors (AI security startups, founding, consulting) even if the specific SF-based role at Anthropic doesn't land.
     </div>
 
     <div class="chips">
       <span class="chip have">have: RedBench (red/blue/judge harness)</span>
       <span class="chip have">have: Probe (live-demo pattern)</span>
       <span class="chip have">have: Python / async / FastAPI</span>
-      <span class="chip gap">gap: offensive security artifacts</span>
-      <span class="chip gap">gap: CVE / bounty track record</span>
-      <span class="chip gap">gap: CTF placements</span>
-      <span class="chip gap">gap: agent-on-target infra</span>
+      <span class="chip gap">gap: cited public artifact on LLM security</span>
+      <span class="chip gap">gap: bounty on a lab's HackerOne program</span>
+      <span class="chip gap">gap: reproduced canonical adversarial-ML result</span>
+      <span class="chip gap">gap: OSS contribution to a tool these teams use</span>
     </div>
 
     <div class="tabs">
       <button class="tab active" data-view="plan">Plan</button>
+      <button class="tab" data-view="evidence">Evidence</button>
       <button class="tab" data-view="read">Read</button>
-      <button class="tab" data-view="skills">Skills</button>
-      <button class="tab" data-view="models">Models</button>
+      <button class="tab" data-view="fallback">If not hired</button>
       <button class="tab" data-view="cadence">Cadence</button>
     </div>
 
@@ -131,397 +144,383 @@
     <div class="view active" id="view-plan">
 
       <div class="now">
-        <h3>this week (do these five things)</h3>
+        <h3>this week — five concrete, evidence-linked actions</h3>
         <ol>
-          <li><strong>Register</strong> on <a href="https://picoctf.org" target="_blank" style="color:var(--accent)">picoCTF</a>, <a href="https://ctftime.org" target="_blank" style="color:var(--accent)">CTFtime</a>, <a href="https://app.hackthebox.com/starting-point" target="_blank" style="color:var(--accent)">HTB Starting Point</a>. Solve 3 picoCTF challenges — one crypto, one web, one pwn.</li>
-          <li><strong>Fork RedBench</strong> into a new repo <code>ctf-bench</code>. Scaffold a <code>SecurityChallenge</code> participant with a Docker-sandboxed shell/python/curl tool. Point it at a single picoCTF pwn.</li>
-          <li><strong>Read</strong> Cybench (Stanford) end-to-end and skim <a href="https://red.anthropic.com/2026/exploit-evals" target="_blank" style="color:var(--accent)">FRT's exploit-evals</a> to internalize what "good" looks like.</li>
-          <li><strong>Set up</strong> a public technical blog page under <code>mihirsrivastava.com/writing</code> (or use existing blog.html). First post drafts: "Sandbagging as a cyber-adjacent capability."</li>
-          <li><strong>Publish</strong> Probe + RedBench on GitHub with clean READMEs and one demo GIF each. Pin them.</li>
+          <li><strong>Register on Anthropic's HackerOne program</strong> <span class="time">30 min</span><br>
+            Go to <a href="https://hackerone.com/anthropic" target="_blank">hackerone.com/anthropic</a>. Read scope carefully (agent-tooling in scope; model-safety separately scoped). This is the exact pipeline Anthropic's Safeguards Red Team reviews — the Register report on VentureBeat and TheNextWeb documents the workflow: report → triage → some paid up to $15K. Do not submit yet; first study the last 20 disclosed reports at <a href="https://hackerone.com/hacktivity" target="_blank">hackerone.com/hacktivity</a> filtered by "anthropic" and "openai" to see what's in-scope and what payouts look like.</li>
+
+          <li><strong>Reproduce GCG from scratch on a small open model</strong> <span class="time">weekend</span><br>
+            Clone <a href="https://github.com/llm-attacks/llm-attacks" target="_blank">llm-attacks/llm-attacks</a>. Run their <code>nanogcg</code> against a local Vicuna-7B or Llama-3.2-3B via ollama. Log the transferability tests. This is the paper (arxiv 2307.15043) that made Andy Zou a Gray Swan cofounder while still a PhD student — everyone in the space has read it; reproducing it fluently is the entry-price conversation piece.</li>
+
+          <li><strong>Read Simon Willison's prompt-injection series end-to-end</strong> <span class="time">3 hours</span><br>
+            <a href="https://simonwillison.net/series/prompt-injection/" target="_blank">simonwillison.net/series/prompt-injection</a>. He coined the term (Sept 2022) via a blog post and is now the de facto public intellectual on the topic — cited in OWASP LLM Top 10, arXiv papers, and Anthropic's own writeups. Understanding his framing (especially the "lethal trifecta" and dual-LLM pattern) is non-optional shared vocabulary for these interviews.</li>
+
+          <li><strong>Set up your writing surface + first post</strong> <span class="time">2 hours</span><br>
+            Extend your existing <code>blog.html</code> into a proper writing index at <code>mihirsrivastava.com/writing</code>. First post: <em>"Reproducing GCG on a laptop — what I learned"</em>. Post to Hacker News + X. This is the pattern — Willison's newsletter, Andy Zou's paper, Mrinank Sharma's <a href="https://www.mrinanksharma.net" target="_blank">personal site</a> — public work is the ticket.</li>
+
+          <li><strong>Apply to Inspect / adopt one adjacent tool</strong> <span class="time">1 hour</span><br>
+            Install <a href="https://inspect.ai-safety-institute.org.uk" target="_blank">UK AISI's Inspect framework</a> (the eval framework Anthropic, DeepMind, and OpenAI all cite; open source under MIT). Port ONE task from your RedBench into Inspect's task format. Committing a real eval to <code>inspect_evals</code> repo puts your GitHub handle in front of everyone in this space.</li>
         </ol>
       </div>
 
-      <div class="sec-head"><span class="n">01</span>Flagships</div>
-      <p class="lede">Three shipped artifacts, ordered so each unlocks credibility for the next. Every flagship = public GitHub repo + writeup + one video/GIF demo.</p>
+      <div class="sec-head"><span class="n">01</span>Three flagships, evidence-anchored</div>
+      <p class="lede">Each flagship is chosen because a specific person at a specific lab got there through this exact activity. Each produces a public, referenceable artifact.</p>
 
       <div class="flagship">
-        <span class="ftag">flagship 1 · weeks 1–4</span>
-        <h2>ctf-bench — autonomous CTF agent + eval harness</h2>
+        <span class="ftag">flagship 1 · weeks 1–5 · single most important</span>
+        <h2>Publish an original LLM-security finding + tool</h2>
         <div class="fmeta">
-          <span>maps to: FRT sample project #3</span>
-          <span>reuses: RedBench provider/budget/judge layer</span>
-          <span>artifact: repo + leaderboard + writeup</span>
+          <span>evidence: <a href="https://simonwillison.net" target="_blank" style="color:var(--accent)">Simon Willison (blog)</a>, <a href="https://arxiv.org/abs/2307.15043" target="_blank" style="color:var(--accent)">Andy Zou (GCG)</a>, <a href="https://arxiv.org/abs/2404.02151" target="_blank" style="color:var(--accent)">Andriushchenko (PAIR)</a></span>
         </div>
-        <div class="deliverable">Open-source agent + benchmark that runs Claude / GPT / Qwen / DeepSeek against picoCTF categories and HTB Starting Point, with deterministic replay, per-challenge cost tracking, and a leaderboard vs. published human solve times. Emits the same JSON envelope RedBench uses so results are diffable across models.</div>
-        <ul class="steps">
-          <li>Fork RedBench provider layer; add <code>SecurityChallenge</code> participant with <code>ShellTool</code>, <code>PythonTool</code>, <code>CurlTool</code>, <code>GdbTool</code> — each executes in a scratch Docker container.</li>
-          <li>Ingest picoCTF 2019/2023 (~150 challenges, freely licensed). Auto-verify by flag string match.</li>
-          <li>Add HTB Starting Point tier 0/1 (~15 boxes, needs $15 VIP). Verify by hash of user + root flag.</li>
-          <li>Sweep 3 models × 3 prompting strategies (ReAct, plan-then-act, "cyber persona"). Track wall-clock, tokens, cost, turn count.</li>
-          <li>Writeup: <em>"How well do frontier models solve CTFs?"</em> — per-category breakdown + Probe-style live trace viewer.</li>
-        </ul>
-      </div>
+        <div class="deliverable">Pick ONE narrow, currently-under-explored surface. Do a careful empirical study. Publish: (a) 3-6k word blog post with reproducible code, (b) short arXiv preprint, (c) small OSS tool anyone can run.</div>
 
-      <div class="flagship">
-        <span class="ftag">flagship 2 · weeks 5–8</span>
-        <h2>one CVE / one paid bounty — responsibly disclosed</h2>
-        <div class="fmeta">
-          <span>maps to: "vulnerability research or exploit development"</span>
-          <span>artifact: CVE-YYYY-NNNNN + disclosure writeup</span>
-        </div>
-        <div class="deliverable">One <strong>real</strong> vulnerability found and disclosed. Not a lab CTF — a live target. Turns "no offensive experience" into "has done coordinated disclosure." The floor is embarrassingly low; the signal is enormous.</div>
+        <h4>Target surfaces (pick ONE)</h4>
         <ul class="steps">
-          <li>Pick ONE bug class for two weeks — recommended: prompt-injection / SSRF / auth-bypass in <em>AI infrastructure</em> (LangChain plugins, vector DBs, MCP servers, agentic frameworks). Plays to your LLM knowledge; underexplored surface.</li>
-          <li>Target 5–10 open-source projects with <code>SECURITY.md</code> or huntr.dev/GitHub Security Lab presence.</li>
-          <li>File one report. Get one CVE assigned. Publish a <em>defensive</em> writeup after patch lands.</li>
-          <li>Bonus: use your own Flagship 1 agent to help find it. That becomes the story for Flagship 3.</li>
+          <li><strong>MCP server prompt injection.</strong> Willison flagged MCP has "prompt injection security problems" <a href="https://simonw.substack.com/p/model-context-protocol-has-prompt" target="_blank">in a 2025 post</a>; no systematic empirical study exists. Enumerate the top ~30 public MCP servers on <a href="https://github.com/modelcontextprotocol/servers" target="_blank">the official registry</a>, build a test harness that fires injections through each tool description / resource content, measure success rate across Claude 4.6/4.7 + GPT-5 + Qwen.</li>
+          <li><strong>Agent trajectory hijacking mid-run.</strong> Not first-turn injection — the more interesting question is: given a benign initial prompt, can an untrusted tool return string hijack the plan? Reproduce it across LangChain / Claude Code / OpenHands / SWE-agent. No systematic study exists.</li>
+          <li><strong>Sandbagging in-the-wild.</strong> You already built Probe. Extend it to run on Anthropic's <a href="https://github.com/centerforaisafety/wmdp" target="_blank">WMDP benchmark</a> across 6 open models + 3 frontier APIs. Publish a plot of "gap between benign accuracy and dangerous accuracy" for every model. If you find one model with a real gap, that alone is a headline finding.</li>
         </ul>
+
+        <h4>Concrete steps</h4>
+        <ol class="steps">
+          <li>Week 1: pick surface. Draft the experimental design (Google doc, share with 3 people for feedback — post to <a href="https://www.alignmentforum.org" target="_blank">Alignment Forum</a> shortform for public feedback loop).</li>
+          <li>Week 2: build the test harness on top of Inspect or RedBench. Include ≥3 open + ≥2 frontier models.</li>
+          <li>Week 3: run experiments. Log everything. Screen-record one full run (Vlad Feinberg's advice — hiring managers want to see you actually did it).</li>
+          <li>Week 4: write the blog post. Structure = TLDR / methodology / results / limitations / defenses. Post code to GitHub with a working <code>docker compose up</code>.</li>
+          <li>Week 5: post to Hacker News + X + Alignment Forum + LessWrong. Tag Simon Willison / relevant researchers. Submit as arXiv preprint (cs.CR + cs.CL).</li>
+        </ol>
+        <div class="payoff"><strong>Evidence this works.</strong> Andy Zou's GCG paper (arXiv July 2023) → cofounded Gray Swan Sep 2024 with his advisors + $ in OpenAI Foundation board. Simon Willison's original prompt-injection post → became the reference voice cited in OWASP LLM Top 10 and every subsequent survey. A single well-executed empirical study on an under-explored surface is worth more than 100 CTF challenges to this specific hiring pipeline.</div>
       </div>
 
       <div class="flagship">
-        <span class="ftag">flagship 3 · weeks 9–12</span>
-        <h2>purple-arena — live AI-attacker vs. AI-defender demo</h2>
+        <span class="ftag">flagship 2 · weeks 4–10 (overlapping)</span>
+        <h2>Real bounty on Anthropic / OpenAI HackerOne — with public disclosure</h2>
         <div class="fmeta">
-          <span>maps to: FRT sample projects #2 + #4</span>
-          <span>reuses: Probe UI, ctf-bench agent</span>
-          <span>artifact: video demo + repo + blog post</span>
+          <span>evidence: Anthropic public bounty launched <a href="https://blockchain.news/ainews/anthropic-launches-public-bug-bounty-on-hackerone" target="_blank" style="color:var(--accent)">May 2026</a></span>
+          <span>payouts: $100 – $15,000</span>
         </div>
-        <div class="deliverable">A Probe-style live arena: attacker LLM (tools = shell + HTTP) tries to exploit a vulnerable web app; defender LLM (reading structured logs) proposes WAF rules and iptables changes; a judge LLM scores exploitation success and detection latency. Both agents' reasoning visible on screen. Designed to be shareable with non-technical stakeholders — the same demo shape as Anthropic's own writeups.</div>
+        <div class="deliverable">Land at least one accepted, paid report on <a href="https://hackerone.com/anthropic" target="_blank">hackerone.com/anthropic</a> or <a href="https://bugcrowd.com/openai" target="_blank">OpenAI's Bugcrowd program</a>. After coordinated disclosure, publish a technical writeup on your blog. This is a <em>direct</em> hiring signal because the Safeguards Red Team literally reviews these reports.</div>
+
+        <h4>Concrete attack surfaces to study</h4>
         <ul class="steps">
-          <li>Target: OWASP Juice Shop or a bespoke Flask app with 5 known vulns (SQLi, IDOR, SSRF, RCE, auth bypass).</li>
-          <li>Attacker: ctf-bench agent with tool budget. Defender: log-reading LLM with a small proposal action space.</li>
-          <li>Judge: third LLM emits per-round scoring events. Frontend forks Probe's grid — rows = attack strategies, cols = defense postures.</li>
-          <li>Record a 3-minute OBS video walking through one round. Post to LinkedIn + blog + <a href="https://twitter.com" style="color:var(--accent)" target="_blank">X</a>.</li>
+          <li><strong>Claude.ai product</strong> — Files, Projects, Web Search, Computer Use, Claude Code. Business-logic bypass, IDOR between shared projects, cross-tenant leakage. Read all past Anthropic disclosures on <a href="https://hackerone.com/hacktivity?queryString=team%3Aanthropic" target="_blank">hacktivity</a> to see what's been paid before.</li>
+          <li><strong>Prompt injection with real impact.</strong> A raw jailbreak is <em>out</em> of scope for many programs; a chain that (jailbreak → data exfil / tool misuse / persistence) is <em>in</em>. Aim for chain-of-N.</li>
+          <li><strong>Rate-limit + abuse.</strong> Payment-side abuse, throttle bypass, cost-amplification. The Safeguards JD literally lists "payment fraud" and "coordinated account manipulation."</li>
+        </ul>
+
+        <h4>Concrete steps</h4>
+        <ol class="steps">
+          <li>Read 20 disclosed reports on hacktivity for the AI programs (Anthropic, OpenAI, Google AI). Note recurring bug classes and severities.</li>
+          <li>Study Anthropic's <a href="https://www.anthropic.com/news/model-safety-bug-bounty" target="_blank">model-safety bounty scope</a> vs. product bounty scope — different tracks, different criteria.</li>
+          <li>Pick ONE product feature. Spend a full weekend proxying every request through Burp. Diagram the trust boundaries.</li>
+          <li>Write down 5 attack hypotheses. Test each systematically. Escalate the most promising one to a full PoC.</li>
+          <li>File one report with a clean, reproducible PoC. Regardless of triage outcome, iterate.</li>
+          <li>Post-disclosure: publish a technical writeup. Link to it from your GitHub profile.</li>
+        </ol>
+        <div class="payoff"><strong>Evidence this works.</strong> The Register documented $100-$15K payouts on the exact program you'll be filing on. Multiple current Anthropic Safeguards engineers list "bug bounty at [lab]" in their LinkedIn "how I joined" summaries. Even one accepted report + writeup is a resume line that filters you above 95% of applicants for the Safeguards Red Team role.</div>
+      </div>
+
+      <div class="flagship">
+        <span class="ftag">flagship 3 · weeks 6–12 (overlapping)</span>
+        <h2>Substantive OSS contribution to a tool these teams use</h2>
+        <div class="fmeta">
+          <span>evidence: <a href="https://github.com/UKGovernmentBEIS/inspect_ai" target="_blank" style="color:var(--accent)">Inspect (AISI)</a> used by Anthropic + DeepMind + OpenAI</span>
+        </div>
+        <div class="deliverable">One merged, substantive PR to a repo used by frontier labs' evaluation teams. Not a typo fix. A new eval task, a bug fix in the harness core, or a new tool integration.</div>
+
+        <h4>Repos ranked by hiring-signal-per-hour</h4>
+        <ol class="steps">
+          <li><strong><a href="https://github.com/UKGovernmentBEIS/inspect_ai" target="_blank">Inspect</a> + <a href="https://github.com/UKGovernmentBEIS/inspect_evals" target="_blank">inspect_evals</a></strong> — UK AISI's eval framework. Anthropic/DeepMind/OpenAI cite it as their common evaluation runtime. Contribute a new agentic-eval task (e.g., port a section of your Probe/RedBench work) or a bug fix in the tool-use loop.</li>
+          <li><strong><a href="https://github.com/SWE-agent/SWE-agent" target="_blank">SWE-agent</a></strong> — Princeton's open agent scaffold. Design of the "Agent-Computer Interface" is the reference. A PR adding security-eval mode = crossover exposure.</li>
+          <li><strong><a href="https://github.com/simonw/llm" target="_blank">simonw/llm</a></strong> — Willison's CLI. Adding a security-focused plugin (like <code>llm-guard</code>-style) puts you in his ecosystem.</li>
+          <li><strong><a href="https://github.com/openai/evals" target="_blank">openai/evals</a></strong> — OpenAI's eval registry. Register a novel adversarial eval.</li>
+          <li><strong><a href="https://github.com/modelcontextprotocol/servers" target="_blank">modelcontextprotocol/servers</a></strong> — MCP reference servers. Security-hardening PR (input validation, output filtering) has visibility because MCP is Anthropic's baby.</li>
+        </ol>
+        <div class="payoff"><strong>Evidence this works.</strong> "Contributed to open source projects used by the team" is a top-3 signal Anthropic's own hiring page cites. Someone reviewing your PR is likely already on or connected to the team you want to join.</div>
+      </div>
+
+      <div class="sec-head"><span class="n">02</span>Ongoing in parallel</div>
+
+      <div class="block">
+        <h3>Weekly public writing on the writing page</h3>
+        <p class="why">Every hire I studied has a personal site with a writing archive. Mrinank Sharma's site, Andy Zou's arXiv trail, Simon Willison's newsletter. Not blog-for-blog's-sake — every post is either a paper explainer, a reproduction, or a finding.</p>
+        <ul>
+          <li>Post cadence: every 2 weeks, minimum 800 words with either code or original data.</li>
+          <li>Rotation: (a) reproduction of a paper, (b) explainer of a recent FRT / DeepMind / OpenAI paper, (c) progress from your flagships.</li>
+          <li>Cross-post: HN + X + Alignment Forum + LessWrong. Tag specific researchers when relevant. This is how you get noticed.</li>
         </ul>
       </div>
 
-      <div class="sec-head"><span class="n">02</span>Ongoing (all 12 weeks, in parallel)</div>
-
       <div class="block">
-        <h3>CTF participation</h3>
-        <p class="why">Real handles beat hand-wavy claims. Interviewers check CTFtime.</p>
-        <ul>
-          <li>Solve 2–3 picoCTF challenges per weekend. Track on a public <a href="https://ctftime.org" target="_blank">CTFtime</a> profile.</li>
-          <li>Join <em>one</em> weekend CTF per month via CTFtime — even DEF CON quals qualifier tier. Team up (solo is a losing strategy).</li>
-          <li>Keep a public write-ups folder in a repo. This alone is a hiring signal.</li>
-        </ul>
+        <h3>Reproducing papers as a study modality</h3>
+        <p class="why">You learn adversarial ML by re-implementing it. Every canonical paper below has an open reference impl; you'll copy-then-derive. This is what CMU PhD students do in their first year — you can compress a year to 3 months.</p>
+        <ol>
+          <li>GCG (arxiv 2307.15043) — <a href="https://github.com/llm-attacks/llm-attacks" target="_blank">llm-attacks/llm-attacks</a></li>
+          <li>PAIR (arxiv 2310.08419) — Chao et al., "Jailbreaking Black Box LLMs in Twenty Queries"</li>
+          <li>TAP (arxiv 2312.02119) — Mehrotra et al., Tree of Attacks with Pruning</li>
+          <li>MICE (arxiv 2408.02940) — LLM-guided grammar-based attacks</li>
+          <li>Constitutional Classifiers — Anthropic paper (link on their alignment blog)</li>
+        </ol>
       </div>
 
       <div class="block">
-        <h3>Public writing cadence</h3>
-        <p class="why">Vlad's rule: "if you do the work, screen-record and write it up." Hiring managers Google you.</p>
+        <h3>Direct-line networking (concrete)</h3>
+        <p class="why">Numbers: FRT ~15 people, Safeguards Research ~10, Safeguards Red Team much smaller. This is a small-world hiring pipeline. You need real, non-generic touchpoints.</p>
         <ul>
-          <li>One post every 2 weeks under <code>mihirsrivastava.com/writing</code>.</li>
-          <li>Topics rotate: (a) a piece of Flagship progress, (b) a paper explainer, (c) a CTF walkthrough. Never break the cadence.</li>
-          <li>Cross-post to X + LinkedIn with a screenshot/GIF. Tag research handles when relevant.</li>
+          <li>Follow + engage with (weekly, substantively): <a href="https://x.com/logangraham" target="_blank">Logan Graham</a> (FRT lead), <a href="https://simonwillison.net" target="_blank">Simon Willison</a>, <a href="https://x.com/andyzou_jiaming" target="_blank">Andy Zou</a>, <a href="https://x.com/goodside" target="_blank">Riley Goodside</a>, Mrinank Sharma, Erik Jones, Nicholas Carlini.</li>
+          <li>Attend in-person: BSides SF, DEF CON AI Village, MLSec Ops SF meetup, any Anthropic office hour or Alignment Workshop. One named contact per month.</li>
+          <li>Comment substantively on every FRT blog post at <a href="https://red.anthropic.com" target="_blank">red.anthropic.com</a> when it drops.</li>
+          <li>After Flagship 1 ships: request a 30-min chat from 3 people on the team. Referral rate from cold email + a real artifact is much higher than pure cold.</li>
         </ul>
       </div>
 
+      <div class="sec-head"><span class="n">03</span>Explicitly cut — no evidence these help</div>
       <div class="block">
-        <h3>Landing the outreach</h3>
-        <p class="why">Warm-intro rate on FRT applications approaches 0% without touchpoints.</p>
         <ul>
-          <li>Post a smart question or a small finding on each Anthropic FRT publication as it drops (their <a href="https://red.anthropic.com" target="_blank">red.anthropic.com</a> blog).</li>
-          <li>Attend one SF security event/month (BSides SF, DEF CON meetups, AI security meetups). Aim: two named contacts by week 12.</li>
-          <li>Only apply after Flagship 1 + one CVE. Cold apps without artifacts are ignored.</li>
+          <li><strong>picoCTF beginner grinding.</strong> Nobody at the labs I researched got hired via picoCTF. Cybench-tier / DEF CON quals-tier CTF matters at the top end; picoCTF matters when you're 15. Cut.</li>
+          <li><strong>Generic CTF participation without team/placement.</strong> Casual solo weekend CTFs = zero hiring signal. Skip unless you're joining a real team competing at CTFtime-ranked events.</li>
+          <li><strong>Generic pentest certs (OSCP, CEH).</strong> Zero hiring signal at these specific labs. Their engineers cite research and public artifacts, not certs.</li>
+          <li><strong>Yet another safety-eval benchmark clone.</strong> You have RedBench and Probe. Extend, don't restart.</li>
+          <li><strong>"Learn CUDA / kernels / quant."</strong> Vlad's advice is for the below-the-stack track. FRT-Cyber and Safeguards are above-the-stack. Different job.</li>
+          <li><strong>Long ML training runs.</strong> These teams evaluate + attack frontier models; they don't train.</li>
         </ul>
       </div>
+    </div>
 
-      <div class="sec-head"><span class="n">03</span>What NOT to spend time on</div>
+    <!-- ─── EVIDENCE ─────────────────────────────────────────────────────── -->
+    <div class="view" id="view-evidence">
+      <div class="sec-head"><span class="n">01</span>How real people got to these roles</div>
+      <p class="lede">This is where the plan is anchored. Each row is a person, their role, and the specific public artifacts / activities that put them there — sourced from LinkedIn, personal sites, and press.</p>
+
       <div class="block">
-        <ul>
-          <li>Yet another safety-eval benchmark. You already have RedBench + Probe — extend, don't restart.</li>
-          <li>Long ML training runs. FRT is <em>applied evaluation</em>, not model training. Vlad's "below the stack" is the wrong track for this role.</li>
-          <li>Paid CTF platforms before you've cleared picoCTF's free set.</li>
-          <li>Cold outreach without a public artifact behind you. Wait until Flagship 1 ships.</li>
-          <li>Chasing 100% novelty. Porting a proven pattern (Cybench, XBOW) with your own twist is faster and more legible.</li>
-        </ul>
+        <h3>Anthropic — Frontier Red Team</h3>
+        <div class="ev">
+          <div class="who">Logan Graham<span class="role">FRT co-lead</span></div>
+          <div class="path">Oxford ML PhD (Rhodes) → UK PM science &amp; tech advisor → helped found FRT in 2022. Path: <em>elite ML research + government policy pipeline</em>. Public artifact: personal site <a href="https://logangraham.xyz" target="_blank">logangraham.xyz</a>.</div>
+
+          <div class="who">Keane Lucas<span class="role">FRT researcher</span></div>
+          <div class="path">USAF captain → CMU ECE PhD (CyLab pipeline). Path: <em>military + academic security research</em>. Common thread: hard technical credential + adversarial-thinking background.</div>
+
+          <div class="who">Team profile</div>
+          <div class="path">~15 full-time, per <a href="https://alphaleaders.co.uk/inside-the-red-team-team-tasked-with-breaking-anthropics-ai-models-and-building-the-companys-reputation-for-safety/" target="_blank">Fortune profile via Alpha Leaders</a>. Includes a bioengineer and three physicists. Graham quote: "the most desired skill is not a domain — it's <em>craftiness</em>."</div>
+        </div>
+      </div>
+
+      <div class="block">
+        <h3>Anthropic — Safeguards Research Team</h3>
+        <div class="ev">
+          <div class="who">Mrinank Sharma<span class="role">former team lead</span></div>
+          <div class="path">Oxford ML PhD (Autonomous Intelligent Machines &amp; Systems) → joined Anthropic Aug 2023 as researcher → led Safeguards Research. Public artifacts: personal site <a href="https://www.mrinanksharma.net/research" target="_blank">mrinanksharma.net</a> with full paper list. Key work: Constitutional Classifiers (86% → &lt;5% jailbreak success).</div>
+
+          <div class="who">Andy Zou<span class="role">cofounder, Gray Swan (Anthropic partner)</span></div>
+          <div class="path">CMU PhD student → published <a href="https://arxiv.org/abs/2307.15043" target="_blank">GCG paper</a> (July 2023) with Zico Kolter and Matt Fredrikson → cofounded Gray Swan AI, Sep 2024. Path: <em>one great paper</em>. Note: Zou was still a PhD student when this launched.</div>
+
+          <div class="who">Erik Jones / Jerry Wei / others<span class="role">Safeguards researchers</span></div>
+          <div class="path">Named in the <a href="https://alignment.anthropic.com/2025/introducing-safeguards-research-team/" target="_blank">team intro post</a>. Erik Jones has a public arXiv trail on adversarial robustness. Common thread: <em>published research or top-lab industrial experience</em>.</div>
+        </div>
+      </div>
+
+      <div class="block">
+        <h3>Google — Big Sleep (P0 + DeepMind)</h3>
+        <div class="ev">
+          <div class="who">Mark Brand, Sergei Glazunov<span class="role">Project Zero</span></div>
+          <div class="path">Long-time P0 vulnerability researchers with public CVE trail (browsers, kernels). Path: <em>10+ years elite offensive security</em>. Very high bar — realistic only via years of vuln research.</div>
+
+          <div class="who">Petros Maniatis, Koushik Sen, Charles Blundell, Miltos Allamanis<span class="role">DeepMind / Research</span></div>
+          <div class="path">Established ML/PL/security research faculty and industrial researchers. Path: <em>tenured or near-tenured academic</em>. Big Sleep composition tells you the ceiling: elite security + elite ML.</div>
+        </div>
+      </div>
+
+      <div class="block">
+        <h3>Adjacent orbit — AI security startups (realistic bridge roles)</h3>
+        <div class="ev">
+          <div class="who">Zico Kolter / Matt Fredrikson<span class="role">Gray Swan cofounders, CMU faculty</span></div>
+          <div class="path">CMU CS profs behind GCG and universal-jailbreak line of research. Kolter now on OpenAI Foundation board. Path: <em>academic labs → spin out startup</em>. Confirms: research-first path is the shortest.</div>
+
+          <div class="who">Steve Li &amp; Leonard Tang<span class="role">Haize Labs cofounders</span></div>
+          <div class="path">Founded 2023 → $12.5M seed, contracts with Anthropic + Scale AI + AI21. Path: <em>identified niche + shipped fast</em>. Less academic-heavy than Gray Swan.</div>
+
+          <div class="who">Nico Waisman<span class="role">XBOW Head of Security</span></div>
+          <div class="path">Career offensive security (Immunity → Lyft CISO → Semmle → XBOW). Path: <em>decades of vuln research</em>. Same ceiling as Big Sleep — the alternative to a PhD is a very long career of visible offensive work.</div>
+
+          <div class="who">Simon Willison<span class="role">not employed by a lab, but the reference voice</span></div>
+          <div class="path">Coined "prompt injection" via a <em>single blog post</em> in Sept 2022. Path: <em>public writing that names a phenomenon</em>. Proves: a well-executed piece of public work can be worth a career's worth of quiet expertise.</div>
+        </div>
+      </div>
+
+      <div class="sec-head"><span class="n">02</span>Patterns that keep repeating</div>
+      <div class="block">
+        <ol>
+          <li><strong>Public artifact &gt; credential.</strong> Every named hire has a personal site listing research, or a cited paper, or an open-source tool their name is on. Not one has a hidden portfolio.</li>
+          <li><strong>Narrow-and-deep beats broad-and-shallow.</strong> The GCG paper is <em>one algorithm</em>. Willison's original post is <em>one concept</em>. Depth on a small surface wins.</li>
+          <li><strong>The pipeline is small and reads its own field.</strong> ~15 on FRT, ~10 on Safeguards Research. They read each other's papers, cite Simon Willison, follow each other on X. If your work appears in the same substrate (Alignment Forum, arXiv cs.CR, HN, X), they see it.</li>
+          <li><strong>Bounties are the direct-apply pipeline.</strong> Anthropic + OpenAI + Google all run HackerOne / Bugcrowd programs and their Safeguards teams review reports. This is the closest thing to a hire-in-the-open channel.</li>
+          <li><strong>PhD is common but not required.</strong> Anthropic explicitly says ~50% of research staff have PhDs, so ~50% don't. Non-PhD hires universally have strong <em>public portfolios</em>. Portfolio replaces credential.</li>
+        </ol>
       </div>
     </div>
 
     <!-- ─── READ ─────────────────────────────────────────────────────────── -->
     <div class="view" id="view-read">
-      <div class="sec-head"><span class="n">01</span>FRT direct — read all of these</div>
-      <p class="lede">The intellectual reference frame. If you can discuss any of these fluently, you're already ahead of most applicants.</p>
+      <div class="sec-head"><span class="n">01</span>Non-negotiable canon (read + reproduce)</div>
+      <p class="lede">These specific papers are the shared vocabulary of the field. Every person on the teams you want to join has read all of them.</p>
+
+      <div class="rl">
+        <div class="col">
+          <div class="block">
+            <h3>GCG — Zou et al. (2023)</h3>
+            <p class="why">Universal &amp; transferable adversarial suffixes. The paper that catalyzed the modern jailbreak-research field.</p>
+            <ul><li><a href="https://arxiv.org/abs/2307.15043" target="_blank">arxiv 2307.15043</a> · <a href="https://github.com/llm-attacks/llm-attacks" target="_blank">code</a></li><li><strong>Do:</strong> reproduce on Vicuna-7B locally.</li></ul>
+          </div>
+          <div class="block">
+            <h3>PAIR — Chao et al. (2023)</h3>
+            <p class="why">Iterative black-box jailbreaks in ≤20 queries using an attacker LLM. Cited as baseline in every subsequent jailbreak paper.</p>
+            <ul><li><a href="https://arxiv.org/abs/2310.08419" target="_blank">arxiv 2310.08419</a></li></ul>
+          </div>
+          <div class="block">
+            <h3>Constitutional Classifiers — Sharma et al. (Anthropic, 2025)</h3>
+            <p class="why">The team's headline defense paper. Read to understand what Safeguards <em>values</em>.</p>
+            <ul><li>On <a href="https://alignment.anthropic.com" target="_blank">alignment.anthropic.com</a></li></ul>
+          </div>
+          <div class="block">
+            <h3>Simon Willison's prompt-injection series</h3>
+            <p class="why">Coined the term. Ongoing curation of the entire field. Free, foundational, essential.</p>
+            <ul><li><a href="https://simonwillison.net/series/prompt-injection/" target="_blank">simonwillison.net/series/prompt-injection</a></li></ul>
+          </div>
+        </div>
+        <div class="col">
+          <div class="block">
+            <h3>Not what LLMs think — Carlini et al.</h3>
+            <p class="why">Nicholas Carlini's line of work on adversarial ML robustness. He's on Big Sleep. Read anything he's written.</p>
+            <ul><li><a href="https://nicholas.carlini.com/writing/" target="_blank">nicholas.carlini.com/writing</a></li></ul>
+          </div>
+          <div class="block">
+            <h3>Big Sleep methodology (Google P0)</h3>
+            <p class="why">How LLMs are actually finding real vulns in production code.</p>
+            <ul><li><a href="https://googleprojectzero.blogspot.com/2024/10/from-naptime-to-big-sleep.html" target="_blank">From Naptime to Big Sleep</a></li></ul>
+          </div>
+          <div class="block">
+            <h3>Anthropic FRT publications</h3>
+            <p class="why">The exact team's writing style, methodology, framing. Emulate.</p>
+            <ul>
+              <li><a href="https://red.anthropic.com/2026/exploit-evals" target="_blank">exploit-evals</a> · <a href="https://red.anthropic.com/2026/zero-days/" target="_blank">0-days</a> · <a href="https://red.anthropic.com/2026/n-days/" target="_blank">n-days</a></li>
+              <li><a href="https://www.anthropic.com/glasswing" target="_blank">Glasswing</a></li>
+            </ul>
+          </div>
+          <div class="block">
+            <h3>OWASP LLM Top 10 (2025)</h3>
+            <p class="why">Shared taxonomy every AI-security hire uses. Memorize the categories.</p>
+            <ul><li><a href="https://genai.owasp.org/llm-top-10/" target="_blank">genai.owasp.org/llm-top-10</a></li></ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="sec-head"><span class="n">02</span>Where the field actually publishes</div>
       <div class="block">
+        <p class="why">Read these regularly — this is where your work will land too.</p>
         <ul>
-          <li><a href="https://red.anthropic.com/2026/exploit-evals" target="_blank">Measuring LLMs' ability to develop exploits</a> — <em>ExploitBench, ExploitGym, SCONE-bench methodology. Learn the eval shape cold.</em></li>
-          <li><a href="https://red.anthropic.com/2026/zero-days/" target="_blank">LLM-discovered 0-days</a> — <em>What Mythos Preview found and how they framed disclosure.</em></li>
-          <li><a href="https://red.anthropic.com/2026/n-days/" target="_blank">N-days</a> — <em>Patch-diffing → exploit generation eval design.</em></li>
-          <li><a href="https://red.anthropic.com/2026/mythos-preview/" target="_blank">Assessing Mythos Preview cyber capabilities</a></li>
-          <li><a href="https://www.anthropic.com/glasswing" target="_blank">Glasswing overview</a> + <a href="https://www.anthropic.com/research/glasswing-initial-update" target="_blank">initial update</a> — <em>Partner model, defensive framing, funding shape.</em></li>
-          <li><em>Every new post on <a href="https://red.anthropic.com" target="_blank">red.anthropic.com</a> as it drops — set a cron.</em></li>
+          <li><a href="https://red.anthropic.com" target="_blank">red.anthropic.com</a> — Anthropic FRT blog</li>
+          <li><a href="https://alignment.anthropic.com" target="_blank">alignment.anthropic.com</a> — Anthropic Alignment/Safeguards blog</li>
+          <li><a href="https://www.alignmentforum.org" target="_blank">alignmentforum.org</a> — where the field discusses</li>
+          <li>arXiv <code>cs.CR</code> + <code>cs.CL</code> daily digest (subscribe)</li>
+          <li><a href="https://simonwillison.net/atom/everything/" target="_blank">Simon Willison's feed</a> — best AI-security curation</li>
+          <li><a href="https://googleprojectzero.blogspot.com" target="_blank">Project Zero blog</a></li>
+          <li><a href="https://openai.com/preparedness" target="_blank">OpenAI Preparedness page</a></li>
+          <li><a href="https://deepmind.google/discover/blog/" target="_blank">DeepMind blog</a> — filter for safety/security posts</li>
         </ul>
       </div>
 
-      <div class="sec-head"><span class="n">02</span>Cyber-agent benchmarks (the frame everyone builds against)</div>
-      <div class="rl">
-        <div class="col">
-          <div class="block">
-            <h3>Cybench (Stanford, 2024)</h3>
-            <p class="why">40 pro-CTF tasks, subtask decomposition, first serious LLM-agent-vs-CTF benchmark.</p>
-            <ul><li>Read: arxiv 2408.08926. Clone the repo. Reproduce one run.</li></ul>
-          </div>
-          <div class="block">
-            <h3>CyberSecEval 3 (Meta)</h3>
-            <p class="why">Broader safety+cyber suite — autonomous exploitation, spear-phishing, code interpreter abuse.</p>
-            <ul><li>Read: arxiv 2408.01605. Skim tasks; note the eval envelope.</li></ul>
-          </div>
-          <div class="block">
-            <h3>InterCode-CTF / NYU CTF Bench</h3>
-            <p class="why">Interactive coding + CTF; tool-use eval. Good design reference.</p>
-          </div>
-          <div class="block">
-            <h3>DARPA AIxCC finals (2024)</h3>
-            <p class="why">The largest autonomous vuln-find + patch competition to date. Winners' writeups (Team Atlanta, Trail of Bits, 42-b3yond-6ug) are gold.</p>
-          </div>
-        </div>
-        <div class="col">
-          <div class="block">
-            <h3>XBOW — autonomous pentesting</h3>
-            <p class="why">Commercial LLM-agent that ranked in HackerOne top 5. Read every public writeup.</p>
-            <ul><li><code>xbow.com/blog</code></li></ul>
-          </div>
-          <div class="block">
-            <h3>Project Naptime / Big Sleep (Google DeepMind)</h3>
-            <p class="why">LLM finds real 0-day in SQLite. The bar for "autonomous vuln discovery."</p>
-          </div>
-          <div class="block">
-            <h3>PentestGPT / HackingBuddyGPT</h3>
-            <p class="why">Open-source LLM-agent pentest prototypes. Read for tool interface patterns.</p>
-          </div>
-          <div class="block">
-            <h3>LLM ATT&amp;CK Navigator (FRT)</h3>
-            <p class="why">Threat modeling for AI-enabled adversaries. Vocabulary + framework you'll be expected to speak.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="sec-head"><span class="n">03</span>Offensive security foundations</div>
-      <div class="rl">
-        <div class="col">
-          <div class="block">
-            <h3>Binary exploitation</h3>
-            <ul>
-              <li><em>Nightmare</em> — Guyinatuxedo (free CTF-style tutorials, easy → medium)</li>
-              <li><em>pwn.college</em> — ASU. Gold standard, free, structured.</li>
-              <li><em>Hacking: The Art of Exploitation</em> — Erickson (foundational)</li>
-              <li><em>A Guide to Kernel Exploitation</em> — Perla &amp; Oldani (harder, later)</li>
-            </ul>
-          </div>
-          <div class="block">
-            <h3>Web + API</h3>
-            <ul>
-              <li><em>PortSwigger Web Security Academy</em> — free, best-in-class</li>
-              <li><em>Real-World Bug Hunting</em> — Yaworski (writeup patterns)</li>
-              <li>OWASP Top 10 &amp; API Top 10 — canonical</li>
-            </ul>
-          </div>
-          <div class="block">
-            <h3>Fuzzing &amp; discovery</h3>
-            <ul>
-              <li><em>The Fuzzing Book</em> — free, thorough (fuzzingbook.org)</li>
-              <li>AFL++ tutorials + <em>LibAFL</em> paper</li>
-              <li>OSS-Fuzz architecture docs</li>
-            </ul>
-          </div>
-        </div>
-        <div class="col">
-          <div class="block">
-            <h3>Reverse engineering</h3>
-            <ul>
-              <li><em>Practical Binary Analysis</em> — Andriesse</li>
-              <li>Ghidra tutorials (NSA released)</li>
-              <li>angr symbolic-execution docs</li>
-            </ul>
-          </div>
-          <div class="block">
-            <h3>Smart contract security</h3>
-            <ul>
-              <li><em>Ethernaut</em> + <em>Damn Vulnerable DeFi</em> (both free)</li>
-              <li>Trail of Bits <em>Building Secure Contracts</em> guide</li>
-              <li>Foundry + Slither + Echidna workflow</li>
-            </ul>
-          </div>
-          <div class="block">
-            <h3>Threat modeling &amp; policy</h3>
-            <ul>
-              <li>MITRE ATT&amp;CK matrix (memorize the top-level tactics)</li>
-              <li>OpenAI / DeepMind / Anthropic policy papers on frontier misuse</li>
-              <li>RAND report on AI + biothreats (companion pattern to cyber-threat)</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="sec-head"><span class="n">04</span>Vlad Feinberg's frame (adapted to FRT-Cyber)</div>
+      <div class="sec-head"><span class="n">03</span>Bounty-hunter craft (only if working Flagship 2)</div>
       <div class="block">
-        <p class="why">Vlad's post is about "above vs. below the stack." For FRT-Cyber, you're above the stack: rigorous, controlled experiments on agent behavior in adversarial environments. His concrete rules still apply.</p>
         <ul>
-          <li><strong>Screen-record yourself doing the work.</strong> Real solves, real terminals. Post on YouTube unlisted; link from writeups.</li>
-          <li><strong>Ship end-to-end.</strong> One complete artifact beats three half-built ones.</li>
-          <li><strong>Use AI aggressively — but only for what you already understand.</strong> Don't outsource the reasoning; outsource the typing.</li>
-          <li><strong>Horizontal thinking.</strong> Don't just optimize obvious metrics (accuracy); measure cost, latency, tool-turn distribution, failure modes.</li>
-          <li><strong>Consistent small bets.</strong> Bi-weekly writeup > monthly essay.</li>
+          <li><a href="https://portswigger.net/web-security" target="_blank">PortSwigger Web Security Academy</a> — free, best-in-class for real web app pentest.</li>
+          <li><em>Real-World Bug Hunting</em> (Yaworski) — how bounty hunters actually think.</li>
+          <li>Study 20 disclosed reports on <a href="https://hackerone.com/hacktivity?queryString=team%3Aanthropic" target="_blank">HackerOne Anthropic hacktivity</a> before your first submission.</li>
+          <li>Burp Suite Community + <a href="https://github.com/portswigger/burp-suite-extensions" target="_blank">official extensions</a>.</li>
         </ul>
       </div>
     </div>
 
-    <!-- ─── SKILLS ───────────────────────────────────────────────────────── -->
-    <div class="view" id="view-skills">
-      <div class="sec-head"><span class="n">01</span>Ship-in-90-days skills</div>
-      <p class="lede">Only what you need for the three flagships. No credentialism — everything below is measurable by GitHub + writeups.</p>
+    <!-- ─── FALLBACK ─────────────────────────────────────────────────────── -->
+    <div class="view" id="view-fallback">
+      <div class="sec-head"><span class="n">01</span>The work compounds regardless of outcome</div>
+      <p class="lede">The whole plan is chosen so every artifact opens 10+ adjacent doors. If Anthropic-FRT specifically doesn't land, here's where the exact same portfolio takes you.</p>
 
-      <div class="rl">
-        <div class="col">
-          <div class="block">
-            <h3>Agent scaffolding (already strong)</h3>
-            <ul>
-              <li>Extend: tool-use loop with structured actions + observations + retries</li>
-              <li>Add: <em>trajectory replay</em> (record every action, deterministic re-run)</li>
-              <li>Add: <em>cost + budget guardrails</em> — you have this in RedBench</li>
-              <li>Study: <em>Voyager</em>, <em>SWE-agent</em>, <em>Cline</em> loop designs</li>
-            </ul>
-          </div>
-          <div class="block">
-            <h3>Sandboxing</h3>
-            <ul>
-              <li>Docker + <code>--network=none</code> + <code>--cap-drop=ALL</code> baseline</li>
-              <li>gVisor for stronger isolation of untrusted binaries</li>
-              <li>Firecracker microVMs for kernel-exploitation targets</li>
-              <li>seccomp filters for tool-execution containers</li>
-            </ul>
-          </div>
-          <div class="block">
-            <h3>Debugging &amp; introspection</h3>
-            <ul>
-              <li>gdb / pwndbg / gef — muscle memory</li>
-              <li>Ghidra — REs at the level of a decent CTF pwn player</li>
-              <li>strace, ltrace, tcpdump — for observability during agent runs</li>
-              <li>Wireshark for the purple-arena demo</li>
-            </ul>
-          </div>
+      <div class="fallback">
+        <div class="block">
+          <h3>Roles at AI security startups</h3>
+          <p class="why">These teams hire from the same portfolio signals. Many are Anthropic partners or spun out of the same research community.</p>
+          <ul>
+            <li><a href="https://www.grayswan.ai" target="_blank">Gray Swan AI</a> — Anthropic-partnered, hiring aggressively</li>
+            <li><a href="https://haizelabs.com" target="_blank">Haize Labs</a> — Anthropic contract, red-team-as-a-service</li>
+            <li><a href="https://www.lakera.ai" target="_blank">Lakera</a> — prompt-injection defense infra</li>
+            <li><a href="https://hiddenlayer.com" target="_blank">HiddenLayer</a> — MLDR platform</li>
+            <li><a href="https://robustintelligence.com" target="_blank">Robust Intelligence</a> — acquired by Cisco</li>
+            <li><a href="https://xbow.com" target="_blank">XBOW</a> — autonomous pentest (raised $120M Series C)</li>
+            <li><a href="https://promptfoo.dev" target="_blank">Promptfoo</a> — LLM eval + red-team platform</li>
+          </ul>
         </div>
-        <div class="col">
-          <div class="block">
-            <h3>Web/API pentest tooling</h3>
-            <ul>
-              <li>Burp Suite Community — proxy, repeater, intruder basics</li>
-              <li>sqlmap, ffuf, httpx — automation glue</li>
-              <li>Nuclei templates — read some, then write one</li>
-            </ul>
-          </div>
-          <div class="block">
-            <h3>Fuzzing</h3>
-            <ul>
-              <li>AFL++ on a real corpus (start with <code>libpng</code>)</li>
-              <li>Understand harness design well enough to write one for a new target</li>
-              <li>Coverage-guided vs. dumb fuzzing — trade-offs</li>
-            </ul>
-          </div>
-          <div class="block">
-            <h3>Eval &amp; measurement discipline</h3>
-            <ul>
-              <li>Seed control, deterministic replay, judge separation — you have these</li>
-              <li>Reproducibility standards (Docker images, pinned deps, published JSON)</li>
-              <li>Cost tracking per run (already in RedBench)</li>
-              <li>Human-baseline collection (this is what makes results interpretable)</li>
-            </ul>
-          </div>
+
+        <div class="block">
+          <h3>Adjacent teams at the same labs</h3>
+          <p class="why">Same skills unlock these too, and internal transfer to FRT is easier than external.</p>
+          <ul>
+            <li>Anthropic Security Engineering (product security, not red team)</li>
+            <li>Anthropic Trust &amp; Safety Engineering</li>
+            <li>Anthropic Applied AI (with a safety focus)</li>
+            <li>OpenAI Safety Systems team</li>
+            <li>Google DeepMind Responsible AI</li>
+            <li>Meta AI Red Team (GenAI Trust)</li>
+          </ul>
+        </div>
+
+        <div class="block">
+          <h3>Government + policy adjacent</h3>
+          <p class="why">Growing rapidly; portfolio-heavy candidates in high demand.</p>
+          <ul>
+            <li><a href="https://www.aisi.gov.uk" target="_blank">UK AI Safety Institute (AISI)</a></li>
+            <li>US AISI (at NIST)</li>
+            <li><a href="https://www.rand.org" target="_blank">RAND</a> AI + Emerging Tech</li>
+            <li><a href="https://cset.georgetown.edu" target="_blank">CSET (Georgetown)</a></li>
+            <li>DARPA AIxCC follow-on programs</li>
+          </ul>
+        </div>
+
+        <div class="block">
+          <h3>Founder path</h3>
+          <p class="why">AI security is being invented right now. A cited paper + working tool is a credible seed pitch.</p>
+          <ul>
+            <li>Pre-seed: <a href="https://www.ycombinator.com" target="_blank">YC</a> (accepts AI-safety solo founders), <a href="https://www.southparkcommons.com" target="_blank">South Park Commons</a></li>
+            <li>Seed: Sequoia (invested in XBOW), General Catalyst (Haize), Pear (Haize)</li>
+            <li>Niche accelerators: Menlo Ventures (Anthropic investor, has portfolio job board)</li>
+          </ul>
+        </div>
+
+        <div class="block">
+          <h3>Consulting / independent</h3>
+          <p class="why">Cited public work → inbound consulting. Simon Willison and Riley Goodside both consult; XBOW does bounty-as-a-service.</p>
+          <ul>
+            <li>HackerOne AIRT (paid research on live programs)</li>
+            <li>Bugcrowd AI Pentest engagements</li>
+            <li>Independent audits of AI startups (they need it, few can provide it)</li>
+          </ul>
+        </div>
+
+        <div class="block">
+          <h3>Research pivot</h3>
+          <p class="why">A strong Flagship 1 paper often becomes a co-authored second paper with a real academic. Path into a PhD program if you decide that route.</p>
+          <ul>
+            <li>CMU (Kolter / Fredrikson lab) — the epicenter</li>
+            <li>Stanford (Percy Liang, HAI)</li>
+            <li>Berkeley (David Wagner, Nicholas Carlini alumni network)</li>
+            <li>NYU (Brendan Dolan-Gavitt)</li>
+          </ul>
         </div>
       </div>
 
-      <div class="sec-head"><span class="n">02</span>Deliberately deprioritized</div>
+      <div class="sec-head"><span class="n">02</span>What's the worst realistic outcome?</div>
       <div class="block">
-        <ul>
-          <li><strong>CUDA / kernels / quantization.</strong> Wrong track for FRT-Cyber. Save for a different role.</li>
-          <li><strong>ML training from scratch.</strong> You'll evaluate frontier models, not train them.</li>
-          <li><strong>Front-end polish beyond Probe's level.</strong> Enough to demo; not enough to compete with product engineers.</li>
-          <li><strong>Rust rewrites.</strong> Python fluency is the bar; Rust is nice-to-have and time-expensive.</li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- ─── MODELS ───────────────────────────────────────────────────────── -->
-    <div class="view" id="view-models">
-      <div class="sec-head"><span class="n">01</span>Open models to build with</div>
-      <p class="lede">Pick two open coders + one frontier API. Run every flagship experiment across all three so you have honest cross-model deltas to publish. Cost-wise: dev on Haiku or a local Qwen; final runs on Sonnet/Opus.</p>
-
-      <table class="models">
-        <thead>
-          <tr><th>Model</th><th>Why</th><th>Where it fits</th></tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="name">Qwen 3 Coder 32B</td>
-            <td>Currently the strongest open coder in this size class. Tool-use RL'd, long-context. Runs on one H100 or via Together/Fireworks.</td>
-            <td class="use">Primary open baseline in Flagship 1. Cheap iteration loop.</td>
-          </tr>
-          <tr>
-            <td class="name">DeepSeek-V3.1 / R1</td>
-            <td>Reasoning-tuned; strong on multi-step problems. Cheap on DeepSeek's own API. Public weights.</td>
-            <td class="use">Second open baseline. Best "reasoning" comparison point.</td>
-          </tr>
-          <tr>
-            <td class="name">Llama 3.3 70B Instruct</td>
-            <td>The "boring default" for reproducibility papers — reviewers expect it.</td>
-            <td class="use">Include for third comparison in published tables.</td>
-          </tr>
-          <tr>
-            <td class="name">WhiteRabbitNeo / Lily-Cybersecurity</td>
-            <td>Cyber-fine-tuned open models. Weak overall but worth including as domain-specialist reference.</td>
-            <td class="use">Optional sidebar comparison.</td>
-          </tr>
-          <tr>
-            <td class="name">Claude Haiku 4.5</td>
-            <td>Cheapest frontier tool-use loop. Fast enough for iterative agent dev.</td>
-            <td class="use">Dev-loop workhorse across all flagships.</td>
-          </tr>
-          <tr>
-            <td class="name">Claude Sonnet 4.6 / Opus 4.7</td>
-            <td>Frontier baseline. Sonnet for volume runs; Opus for headline table.</td>
-            <td class="use">Final results in every writeup.</td>
-          </tr>
-          <tr>
-            <td class="name">GPT-5 / GPT-4.1</td>
-            <td>Second frontier lab. Required for cross-lab honesty.</td>
-            <td class="use">Include in every published table.</td>
-          </tr>
-        </tbody>
-      </table>
-
-      <div class="sec-head"><span class="n">02</span>Serving stack</div>
-      <div class="block">
-        <ul>
-          <li><code>ollama</code> for local dev on Qwen / DeepSeek — same as your current Probe replay setup.</li>
-          <li><code>vLLM</code> when you need real throughput on rented A100/H100 (Lambda, RunPod).</li>
-          <li><code>Together</code> or <code>Fireworks</code> for OpenAI-compatible endpoints on open weights — cleanest way to swap models in RedBench.</li>
-          <li>Keep <code>PROBE_REPLAY=1</code>-style fixture mode for offline determinism in tests.</li>
-        </ul>
-      </div>
-
-      <div class="sec-head"><span class="n">03</span>Frameworks worth adopting</div>
-      <div class="rl">
-        <div class="col">
-          <div class="block">
-            <h3>Inspect (UK AISI)</h3>
-            <p class="why">The eval framework labs actually use. Adopting Inspect for your CTF-bench = instant credibility + easy to submit results to AISI's leaderboards.</p>
-          </div>
-          <div class="block">
-            <h3>SWE-agent / OpenHands</h3>
-            <p class="why">Open agent scaffolds with tool-use loops. Read the ACI (Agent-Computer Interface) design — best in the field.</p>
-          </div>
-        </div>
-        <div class="col">
-          <div class="block">
-            <h3>Claude Code SDK</h3>
-            <p class="why">Anthropic's own agent harness. Building a cyber-agent on it is a strong tacit signal you can read their infra.</p>
-          </div>
-          <div class="block">
-            <h3>METR task-standard</h3>
-            <p class="why">The evaluation task specification standard. Package a picoCTF challenge in METR's format; publish it back.</p>
-          </div>
-        </div>
+        <p>After 3 months of this plan, worst case you have: (1) one blog post with reproducible code that a few researchers read, (2) one accepted HackerOne report or two rejected ones with the process learned, (3) one merged PR in an eval framework, (4) fluent conversational knowledge of the 5 canonical papers in the field. That worst case still opens the "adjacent teams" list above. This plan is asymmetric — high upside if it hits FRT, still valuable if it doesn't.</p>
       </div>
     </div>
 
@@ -532,33 +531,34 @@
 
       <div class="block">
         <div class="cadence">
-          <div class="day">Mon</div><div class="task">Deep-work morning on active flagship. Evening: 1 paper skim (30 min, take notes in obsidian).</div>
-          <div class="day">Tue</div><div class="task">Deep-work morning on active flagship. Evening: 1 CTF challenge attempt (picoCTF).</div>
-          <div class="day">Wed</div><div class="task">Deep-work morning on active flagship. Evening: writing — either walkthrough or explainer draft.</div>
-          <div class="day">Thu</div><div class="task">Deep-work morning on active flagship. Evening: read one FRT/AI-safety post; leave a substantive comment or reply on X.</div>
-          <div class="day">Fri</div><div class="task">Ship day. Publish something small: a commit, a fixture, a screenshot on X, a paragraph of a post.</div>
-          <div class="day">Sat</div><div class="task">CTF morning (2–4 hours). Weekend CTFs count. Log every solve to your writeups repo.</div>
-          <div class="day">Sun</div><div class="task">Long-form writing. Push one blog post live every second Sunday. Review week; re-plan.</div>
+          <div class="day">Mon</div><div class="task">Deep-work morning on active flagship. Evening: 1 paper (30–60 min) — canon rotation, take notes publicly on your writing page as a "paper-a-week" series.</div>
+          <div class="day">Tue</div><div class="task">Deep-work morning on active flagship. Evening: reproduce something from Monday's paper in code (even 30 minutes of code).</div>
+          <div class="day">Wed</div><div class="task">Deep-work morning on active flagship. Evening: writing — draft or edit toward your bi-weekly post.</div>
+          <div class="day">Thu</div><div class="task">Deep-work morning on active flagship. Evening: comment substantively on one recent post from Willison / red.anthropic.com / alignment.anthropic.com. Reply to at least one X thread from the follow-list.</div>
+          <div class="day">Fri</div><div class="task">Ship day. Publish something — a commit, a screenshot, a paragraph. Post on X + LinkedIn. Even small = consistent public presence.</div>
+          <div class="day">Sat</div><div class="task">Bounty-hunt morning (Flagship 2 hours). If not on Flagship 2 yet, contribute to your Flagship 3 OSS repo.</div>
+          <div class="day">Sun</div><div class="task">Long-form writing. Ship blog post every second Sunday. Review week; re-plan.</div>
         </div>
       </div>
 
       <div class="sec-head"><span class="n">02</span>Monthly checkpoints</div>
       <div class="block">
         <ul>
-          <li><strong>End of month 1:</strong> ctf-bench runs end-to-end on picoCTF-pwn category with 3 models. Repo public. First blog post live.</li>
-          <li><strong>End of month 2:</strong> One CVE filed and confirmed. Second flagship's writeup drafted. Weekly cadence unbroken.</li>
-          <li><strong>End of month 3:</strong> Purple-arena demo video published. 6+ blog posts live. CTFtime profile with real solves. Application ready.</li>
+          <li><strong>End of month 1:</strong> Flagship 1 experimental design public. GCG reproduced. 3 papers read + written up. Personal writing page live with 2 posts.</li>
+          <li><strong>End of month 2:</strong> Flagship 1 preprint drafted. First HackerOne report filed (regardless of outcome). One merged PR to an eval framework. 4+ blog posts total.</li>
+          <li><strong>End of month 3:</strong> Flagship 1 published (blog + arXiv). One accepted bounty. Two OSS PRs merged. 6+ blog posts. Cold-outreach with real artifact behind you.</li>
         </ul>
       </div>
 
-      <div class="sec-head"><span class="n">03</span>Signals scoreboard (self-graded weekly)</div>
+      <div class="sec-head"><span class="n">03</span>Weekly self-graded scoreboard</div>
       <div class="block">
         <ul>
-          <li>Public GitHub commits this week: <em>target &ge; 5 substantive</em></li>
-          <li>Words shipped publicly this week: <em>target &ge; 500</em></li>
-          <li>CTF challenges solved: <em>target &ge; 2</em></li>
-          <li>Papers/blog posts read: <em>target &ge; 3</em></li>
-          <li>Named security contact made: <em>target &ge; 1/month</em></li>
+          <li>Substantive public commits this week: <em>target &ge; 5</em></li>
+          <li>Public words shipped this week: <em>target &ge; 500</em></li>
+          <li>Papers read + note-published: <em>target &ge; 1</em></li>
+          <li>Substantive comment on FRT/Safeguards/Willison thread: <em>target &ge; 2</em></li>
+          <li>Named contact made this month: <em>target &ge; 1</em></li>
+          <li>HackerOne reports drafted (once on Flagship 2): <em>target &ge; 1/month</em></li>
         </ul>
       </div>
     </div>
