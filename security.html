@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="Personal roadmap.">
+  <meta name="author" content="Mihir Srivastava">
+  <title>./sec — roadmap</title>
+  <link rel="icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .mh { margin-bottom: 1rem; }
+    .mh h1 { font-size: 1.85rem; margin-bottom: 0.2rem; letter-spacing: -0.01em; }
+    .mh .sub { color: var(--text-muted); font-size: 0.95rem; }
+    .mh .tag { display: inline-block; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.09em; color: var(--accent); background: var(--accent-dim); padding: 3px 8px; border-radius: 4px; margin-right: 6px; }
+    .back-link { display: inline-block; margin-bottom: 1.1rem; font-size: 0.88rem; color: var(--accent); }
+
+    .mission { background: var(--accent-dim); border-left: 3px solid var(--accent); padding: 0.9rem 1.15rem; margin: 1rem 0 1.5rem; border-radius: 0 8px 8px 0; font-size: 0.92rem; line-height: 1.6; }
+    .mission strong { color: var(--text-bright); }
+
+    .tabs { display: flex; gap: 0.4rem; margin-bottom: 1.5rem; border-bottom: 1px solid var(--border); flex-wrap: wrap; }
+    .tab { background: none; border: none; color: var(--text-muted); font-size: 0.9rem; padding: 0.6rem 0.85rem; cursor: pointer; border-bottom: 2px solid transparent; font-family: inherit; }
+    .tab:hover { color: var(--text); }
+    .tab.active { color: var(--accent); border-bottom-color: var(--accent); font-weight: 600; }
+    .view { display: none; }
+    .view.active { display: block; }
+
+    /* Sections */
+    .sec-head { font-size: 1.05rem; color: var(--text-bright); margin: 1.6rem 0 0.6rem; font-weight: 700; letter-spacing: -0.005em; }
+    .sec-head:first-child { margin-top: 0.4rem; }
+    .sec-head .n { color: var(--accent); font-family: ui-monospace, monospace; font-size: 0.85rem; margin-right: 0.5rem; }
+    .lede { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 0.9rem; line-height: 1.6; }
+
+    .block { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 1rem 1.2rem; margin-bottom: 0.9rem; }
+    .block h3 { font-size: 0.95rem; color: var(--text-bright); margin: 0 0 0.55rem; }
+    .block .why { font-size: 0.83rem; color: var(--text-muted); font-style: italic; margin-bottom: 0.6rem; line-height: 1.55; }
+    .block ul { margin: 0; padding-left: 1.15rem; }
+    .block li { font-size: 0.87rem; color: var(--text); line-height: 1.6; margin-bottom: 0.35rem; }
+    .block li code { background: var(--accent-dim); color: var(--accent); padding: 1px 5px; border-radius: 3px; font-size: 0.8em; }
+    .block a { color: var(--accent); text-decoration: none; border-bottom: 1px dotted var(--accent); }
+    .block a:hover { border-bottom-style: solid; }
+
+    /* Flagship cards */
+    .flagship { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 1.1rem 1.3rem; margin-bottom: 1rem; border-left: 3px solid var(--accent); }
+    .flagship .ftag { font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.09em; color: var(--accent); font-weight: 700; }
+    .flagship h2 { font-size: 1.15rem; margin: 0.15rem 0 0.35rem; color: var(--text-bright); }
+    .flagship .fmeta { font-size: 0.78rem; color: var(--text-muted); margin-bottom: 0.7rem; }
+    .flagship .fmeta span { margin-right: 0.9rem; }
+    .flagship .deliverable { font-size: 0.88rem; color: var(--text); line-height: 1.6; margin-bottom: 0.6rem; }
+    .flagship .deliverable strong { color: var(--text-bright); }
+    .flagship .steps { margin: 0.4rem 0; padding-left: 1.15rem; }
+    .flagship .steps li { font-size: 0.86rem; color: var(--text); line-height: 1.6; margin-bottom: 0.3rem; }
+    .flagship .steps li code { background: var(--accent-dim); color: var(--accent); padding: 1px 5px; border-radius: 3px; font-size: 0.85em; }
+
+    /* Reading list */
+    .rl { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+    .rl .col > .block { margin-bottom: 0.75rem; }
+    @media (max-width: 780px) { .rl { grid-template-columns: 1fr; } }
+
+    /* Model table */
+    .models { width: 100%; border-collapse: collapse; margin: 0.5rem 0 1rem; font-size: 0.87rem; }
+    .models th, .models td { text-align: left; padding: 0.55rem 0.7rem; border-bottom: 1px solid var(--border); }
+    .models th { color: var(--text-muted); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.06em; font-weight: 700; }
+    .models td { color: var(--text); vertical-align: top; }
+    .models td.name { color: var(--text-bright); font-weight: 600; font-family: ui-monospace, monospace; font-size: 0.85rem; }
+    .models td.use { color: var(--text-muted); font-size: 0.82rem; }
+
+    /* Weekly cadence */
+    .cadence { display: grid; grid-template-columns: 90px 1fr; gap: 0.5rem 1rem; font-size: 0.86rem; }
+    .cadence .day { color: var(--accent); font-weight: 700; font-family: ui-monospace, monospace; font-size: 0.78rem; padding-top: 3px; }
+    .cadence .task { color: var(--text); line-height: 1.55; padding-bottom: 0.4rem; border-bottom: 1px solid var(--border); }
+    .cadence > div:nth-last-child(-n+2) .task, .cadence > div:nth-last-child(-n+2).task { border-bottom: none; }
+
+    /* Now list */
+    .now { background: var(--accent-dim); border: 1px solid var(--accent); border-radius: 10px; padding: 1rem 1.2rem; margin-bottom: 1.5rem; }
+    .now h3 { font-size: 0.92rem; color: var(--text-bright); margin: 0 0 0.55rem; text-transform: uppercase; letter-spacing: 0.06em; font-size: 0.74rem; color: var(--accent); }
+    .now ol { margin: 0; padding-left: 1.3rem; }
+    .now li { font-size: 0.9rem; color: var(--text); line-height: 1.6; margin-bottom: 0.35rem; }
+    .now li strong { color: var(--text-bright); }
+
+    /* Gap chips */
+    .chips { display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 0.5rem 0 1rem; }
+    .chip { font-size: 0.75rem; padding: 3px 9px; border-radius: 12px; border: 1px solid var(--border); color: var(--text); }
+    .chip.have { border-color: #5fb96b; color: #7ec98a; }
+    .chip.gap  { border-color: #d98a4a; color: #e0a06a; }
+
+    footer { margin-top: 2.5rem; padding-top: 1rem; border-top: 1px solid var(--border); font-size: 0.78rem; color: var(--text-muted); text-align: center; }
+  </style>
+</head>
+<body>
+  <div class="top-bar"></div>
+  <div class="glow" id="glow"></div>
+  <button class="theme-toggle" id="theme-toggle" aria-label="Toggle light/dark mode">
+    <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+    <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+  </button>
+
+  <div class="container">
+    <a href="/" class="back-link">&larr; back</a>
+
+    <div class="mh">
+      <span class="tag">private</span>
+      <h1>./sec — becoming FRT-Cyber material</h1>
+      <p class="sub">A 90-day roadmap to become a strong candidate for Anthropic's Frontier Red Team (Cyber). Not linked anywhere.</p>
+    </div>
+
+    <div class="mission">
+      <strong>Mission.</strong> Ship the artifacts, publish the writeups, and log the CTF/CVE trail that turn "curious engineer with a safety-eval side project" into "credible cyber-AI research hire." The plan takes seriously two operating principles: Vlad Feinberg's — work <em>above</em> the LLM stack on rigorous agent experiments and let public GitHub + writeups do the talking; and FRT's — measure frontier capabilities on real cyber targets and translate results into policy-legible demos (see <a href="https://red.anthropic.com/2026/exploit-evals" target="_blank">exploit-evals</a>, <a href="https://red.anthropic.com/2026/zero-days/" target="_blank">0-days</a>, <a href="https://www.anthropic.com/glasswing" target="_blank">Glasswing</a>).
+    </div>
+
+    <div class="chips">
+      <span class="chip have">have: RedBench (red/blue/judge harness)</span>
+      <span class="chip have">have: Probe (live-demo pattern)</span>
+      <span class="chip have">have: Python / async / FastAPI</span>
+      <span class="chip gap">gap: offensive security artifacts</span>
+      <span class="chip gap">gap: CVE / bounty track record</span>
+      <span class="chip gap">gap: CTF placements</span>
+      <span class="chip gap">gap: agent-on-target infra</span>
+    </div>
+
+    <div class="tabs">
+      <button class="tab active" data-view="plan">Plan</button>
+      <button class="tab" data-view="read">Read</button>
+      <button class="tab" data-view="skills">Skills</button>
+      <button class="tab" data-view="models">Models</button>
+      <button class="tab" data-view="cadence">Cadence</button>
+    </div>
+
+    <!-- ─── PLAN ─────────────────────────────────────────────────────────── -->
+    <div class="view active" id="view-plan">
+
+      <div class="now">
+        <h3>this week (do these five things)</h3>
+        <ol>
+          <li><strong>Register</strong> on <a href="https://picoctf.org" target="_blank" style="color:var(--accent)">picoCTF</a>, <a href="https://ctftime.org" target="_blank" style="color:var(--accent)">CTFtime</a>, <a href="https://app.hackthebox.com/starting-point" target="_blank" style="color:var(--accent)">HTB Starting Point</a>. Solve 3 picoCTF challenges — one crypto, one web, one pwn.</li>
+          <li><strong>Fork RedBench</strong> into a new repo <code>ctf-bench</code>. Scaffold a <code>SecurityChallenge</code> participant with a Docker-sandboxed shell/python/curl tool. Point it at a single picoCTF pwn.</li>
+          <li><strong>Read</strong> Cybench (Stanford) end-to-end and skim <a href="https://red.anthropic.com/2026/exploit-evals" target="_blank" style="color:var(--accent)">FRT's exploit-evals</a> to internalize what "good" looks like.</li>
+          <li><strong>Set up</strong> a public technical blog page under <code>mihirsrivastava.com/writing</code> (or use existing blog.html). First post drafts: "Sandbagging as a cyber-adjacent capability."</li>
+          <li><strong>Publish</strong> Probe + RedBench on GitHub with clean READMEs and one demo GIF each. Pin them.</li>
+        </ol>
+      </div>
+
+      <div class="sec-head"><span class="n">01</span>Flagships</div>
+      <p class="lede">Three shipped artifacts, ordered so each unlocks credibility for the next. Every flagship = public GitHub repo + writeup + one video/GIF demo.</p>
+
+      <div class="flagship">
+        <span class="ftag">flagship 1 · weeks 1–4</span>
+        <h2>ctf-bench — autonomous CTF agent + eval harness</h2>
+        <div class="fmeta">
+          <span>maps to: FRT sample project #3</span>
+          <span>reuses: RedBench provider/budget/judge layer</span>
+          <span>artifact: repo + leaderboard + writeup</span>
+        </div>
+        <div class="deliverable">Open-source agent + benchmark that runs Claude / GPT / Qwen / DeepSeek against picoCTF categories and HTB Starting Point, with deterministic replay, per-challenge cost tracking, and a leaderboard vs. published human solve times. Emits the same JSON envelope RedBench uses so results are diffable across models.</div>
+        <ul class="steps">
+          <li>Fork RedBench provider layer; add <code>SecurityChallenge</code> participant with <code>ShellTool</code>, <code>PythonTool</code>, <code>CurlTool</code>, <code>GdbTool</code> — each executes in a scratch Docker container.</li>
+          <li>Ingest picoCTF 2019/2023 (~150 challenges, freely licensed). Auto-verify by flag string match.</li>
+          <li>Add HTB Starting Point tier 0/1 (~15 boxes, needs $15 VIP). Verify by hash of user + root flag.</li>
+          <li>Sweep 3 models × 3 prompting strategies (ReAct, plan-then-act, "cyber persona"). Track wall-clock, tokens, cost, turn count.</li>
+          <li>Writeup: <em>"How well do frontier models solve CTFs?"</em> — per-category breakdown + Probe-style live trace viewer.</li>
+        </ul>
+      </div>
+
+      <div class="flagship">
+        <span class="ftag">flagship 2 · weeks 5–8</span>
+        <h2>one CVE / one paid bounty — responsibly disclosed</h2>
+        <div class="fmeta">
+          <span>maps to: "vulnerability research or exploit development"</span>
+          <span>artifact: CVE-YYYY-NNNNN + disclosure writeup</span>
+        </div>
+        <div class="deliverable">One <strong>real</strong> vulnerability found and disclosed. Not a lab CTF — a live target. Turns "no offensive experience" into "has done coordinated disclosure." The floor is embarrassingly low; the signal is enormous.</div>
+        <ul class="steps">
+          <li>Pick ONE bug class for two weeks — recommended: prompt-injection / SSRF / auth-bypass in <em>AI infrastructure</em> (LangChain plugins, vector DBs, MCP servers, agentic frameworks). Plays to your LLM knowledge; underexplored surface.</li>
+          <li>Target 5–10 open-source projects with <code>SECURITY.md</code> or huntr.dev/GitHub Security Lab presence.</li>
+          <li>File one report. Get one CVE assigned. Publish a <em>defensive</em> writeup after patch lands.</li>
+          <li>Bonus: use your own Flagship 1 agent to help find it. That becomes the story for Flagship 3.</li>
+        </ul>
+      </div>
+
+      <div class="flagship">
+        <span class="ftag">flagship 3 · weeks 9–12</span>
+        <h2>purple-arena — live AI-attacker vs. AI-defender demo</h2>
+        <div class="fmeta">
+          <span>maps to: FRT sample projects #2 + #4</span>
+          <span>reuses: Probe UI, ctf-bench agent</span>
+          <span>artifact: video demo + repo + blog post</span>
+        </div>
+        <div class="deliverable">A Probe-style live arena: attacker LLM (tools = shell + HTTP) tries to exploit a vulnerable web app; defender LLM (reading structured logs) proposes WAF rules and iptables changes; a judge LLM scores exploitation success and detection latency. Both agents' reasoning visible on screen. Designed to be shareable with non-technical stakeholders — the same demo shape as Anthropic's own writeups.</div>
+        <ul class="steps">
+          <li>Target: OWASP Juice Shop or a bespoke Flask app with 5 known vulns (SQLi, IDOR, SSRF, RCE, auth bypass).</li>
+          <li>Attacker: ctf-bench agent with tool budget. Defender: log-reading LLM with a small proposal action space.</li>
+          <li>Judge: third LLM emits per-round scoring events. Frontend forks Probe's grid — rows = attack strategies, cols = defense postures.</li>
+          <li>Record a 3-minute OBS video walking through one round. Post to LinkedIn + blog + <a href="https://twitter.com" style="color:var(--accent)" target="_blank">X</a>.</li>
+        </ul>
+      </div>
+
+      <div class="sec-head"><span class="n">02</span>Ongoing (all 12 weeks, in parallel)</div>
+
+      <div class="block">
+        <h3>CTF participation</h3>
+        <p class="why">Real handles beat hand-wavy claims. Interviewers check CTFtime.</p>
+        <ul>
+          <li>Solve 2–3 picoCTF challenges per weekend. Track on a public <a href="https://ctftime.org" target="_blank">CTFtime</a> profile.</li>
+          <li>Join <em>one</em> weekend CTF per month via CTFtime — even DEF CON quals qualifier tier. Team up (solo is a losing strategy).</li>
+          <li>Keep a public write-ups folder in a repo. This alone is a hiring signal.</li>
+        </ul>
+      </div>
+
+      <div class="block">
+        <h3>Public writing cadence</h3>
+        <p class="why">Vlad's rule: "if you do the work, screen-record and write it up." Hiring managers Google you.</p>
+        <ul>
+          <li>One post every 2 weeks under <code>mihirsrivastava.com/writing</code>.</li>
+          <li>Topics rotate: (a) a piece of Flagship progress, (b) a paper explainer, (c) a CTF walkthrough. Never break the cadence.</li>
+          <li>Cross-post to X + LinkedIn with a screenshot/GIF. Tag research handles when relevant.</li>
+        </ul>
+      </div>
+
+      <div class="block">
+        <h3>Landing the outreach</h3>
+        <p class="why">Warm-intro rate on FRT applications approaches 0% without touchpoints.</p>
+        <ul>
+          <li>Post a smart question or a small finding on each Anthropic FRT publication as it drops (their <a href="https://red.anthropic.com" target="_blank">red.anthropic.com</a> blog).</li>
+          <li>Attend one SF security event/month (BSides SF, DEF CON meetups, AI security meetups). Aim: two named contacts by week 12.</li>
+          <li>Only apply after Flagship 1 + one CVE. Cold apps without artifacts are ignored.</li>
+        </ul>
+      </div>
+
+      <div class="sec-head"><span class="n">03</span>What NOT to spend time on</div>
+      <div class="block">
+        <ul>
+          <li>Yet another safety-eval benchmark. You already have RedBench + Probe — extend, don't restart.</li>
+          <li>Long ML training runs. FRT is <em>applied evaluation</em>, not model training. Vlad's "below the stack" is the wrong track for this role.</li>
+          <li>Paid CTF platforms before you've cleared picoCTF's free set.</li>
+          <li>Cold outreach without a public artifact behind you. Wait until Flagship 1 ships.</li>
+          <li>Chasing 100% novelty. Porting a proven pattern (Cybench, XBOW) with your own twist is faster and more legible.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ─── READ ─────────────────────────────────────────────────────────── -->
+    <div class="view" id="view-read">
+      <div class="sec-head"><span class="n">01</span>FRT direct — read all of these</div>
+      <p class="lede">The intellectual reference frame. If you can discuss any of these fluently, you're already ahead of most applicants.</p>
+      <div class="block">
+        <ul>
+          <li><a href="https://red.anthropic.com/2026/exploit-evals" target="_blank">Measuring LLMs' ability to develop exploits</a> — <em>ExploitBench, ExploitGym, SCONE-bench methodology. Learn the eval shape cold.</em></li>
+          <li><a href="https://red.anthropic.com/2026/zero-days/" target="_blank">LLM-discovered 0-days</a> — <em>What Mythos Preview found and how they framed disclosure.</em></li>
+          <li><a href="https://red.anthropic.com/2026/n-days/" target="_blank">N-days</a> — <em>Patch-diffing → exploit generation eval design.</em></li>
+          <li><a href="https://red.anthropic.com/2026/mythos-preview/" target="_blank">Assessing Mythos Preview cyber capabilities</a></li>
+          <li><a href="https://www.anthropic.com/glasswing" target="_blank">Glasswing overview</a> + <a href="https://www.anthropic.com/research/glasswing-initial-update" target="_blank">initial update</a> — <em>Partner model, defensive framing, funding shape.</em></li>
+          <li><em>Every new post on <a href="https://red.anthropic.com" target="_blank">red.anthropic.com</a> as it drops — set a cron.</em></li>
+        </ul>
+      </div>
+
+      <div class="sec-head"><span class="n">02</span>Cyber-agent benchmarks (the frame everyone builds against)</div>
+      <div class="rl">
+        <div class="col">
+          <div class="block">
+            <h3>Cybench (Stanford, 2024)</h3>
+            <p class="why">40 pro-CTF tasks, subtask decomposition, first serious LLM-agent-vs-CTF benchmark.</p>
+            <ul><li>Read: arxiv 2408.08926. Clone the repo. Reproduce one run.</li></ul>
+          </div>
+          <div class="block">
+            <h3>CyberSecEval 3 (Meta)</h3>
+            <p class="why">Broader safety+cyber suite — autonomous exploitation, spear-phishing, code interpreter abuse.</p>
+            <ul><li>Read: arxiv 2408.01605. Skim tasks; note the eval envelope.</li></ul>
+          </div>
+          <div class="block">
+            <h3>InterCode-CTF / NYU CTF Bench</h3>
+            <p class="why">Interactive coding + CTF; tool-use eval. Good design reference.</p>
+          </div>
+          <div class="block">
+            <h3>DARPA AIxCC finals (2024)</h3>
+            <p class="why">The largest autonomous vuln-find + patch competition to date. Winners' writeups (Team Atlanta, Trail of Bits, 42-b3yond-6ug) are gold.</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="block">
+            <h3>XBOW — autonomous pentesting</h3>
+            <p class="why">Commercial LLM-agent that ranked in HackerOne top 5. Read every public writeup.</p>
+            <ul><li><code>xbow.com/blog</code></li></ul>
+          </div>
+          <div class="block">
+            <h3>Project Naptime / Big Sleep (Google DeepMind)</h3>
+            <p class="why">LLM finds real 0-day in SQLite. The bar for "autonomous vuln discovery."</p>
+          </div>
+          <div class="block">
+            <h3>PentestGPT / HackingBuddyGPT</h3>
+            <p class="why">Open-source LLM-agent pentest prototypes. Read for tool interface patterns.</p>
+          </div>
+          <div class="block">
+            <h3>LLM ATT&amp;CK Navigator (FRT)</h3>
+            <p class="why">Threat modeling for AI-enabled adversaries. Vocabulary + framework you'll be expected to speak.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="sec-head"><span class="n">03</span>Offensive security foundations</div>
+      <div class="rl">
+        <div class="col">
+          <div class="block">
+            <h3>Binary exploitation</h3>
+            <ul>
+              <li><em>Nightmare</em> — Guyinatuxedo (free CTF-style tutorials, easy → medium)</li>
+              <li><em>pwn.college</em> — ASU. Gold standard, free, structured.</li>
+              <li><em>Hacking: The Art of Exploitation</em> — Erickson (foundational)</li>
+              <li><em>A Guide to Kernel Exploitation</em> — Perla &amp; Oldani (harder, later)</li>
+            </ul>
+          </div>
+          <div class="block">
+            <h3>Web + API</h3>
+            <ul>
+              <li><em>PortSwigger Web Security Academy</em> — free, best-in-class</li>
+              <li><em>Real-World Bug Hunting</em> — Yaworski (writeup patterns)</li>
+              <li>OWASP Top 10 &amp; API Top 10 — canonical</li>
+            </ul>
+          </div>
+          <div class="block">
+            <h3>Fuzzing &amp; discovery</h3>
+            <ul>
+              <li><em>The Fuzzing Book</em> — free, thorough (fuzzingbook.org)</li>
+              <li>AFL++ tutorials + <em>LibAFL</em> paper</li>
+              <li>OSS-Fuzz architecture docs</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col">
+          <div class="block">
+            <h3>Reverse engineering</h3>
+            <ul>
+              <li><em>Practical Binary Analysis</em> — Andriesse</li>
+              <li>Ghidra tutorials (NSA released)</li>
+              <li>angr symbolic-execution docs</li>
+            </ul>
+          </div>
+          <div class="block">
+            <h3>Smart contract security</h3>
+            <ul>
+              <li><em>Ethernaut</em> + <em>Damn Vulnerable DeFi</em> (both free)</li>
+              <li>Trail of Bits <em>Building Secure Contracts</em> guide</li>
+              <li>Foundry + Slither + Echidna workflow</li>
+            </ul>
+          </div>
+          <div class="block">
+            <h3>Threat modeling &amp; policy</h3>
+            <ul>
+              <li>MITRE ATT&amp;CK matrix (memorize the top-level tactics)</li>
+              <li>OpenAI / DeepMind / Anthropic policy papers on frontier misuse</li>
+              <li>RAND report on AI + biothreats (companion pattern to cyber-threat)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="sec-head"><span class="n">04</span>Vlad Feinberg's frame (adapted to FRT-Cyber)</div>
+      <div class="block">
+        <p class="why">Vlad's post is about "above vs. below the stack." For FRT-Cyber, you're above the stack: rigorous, controlled experiments on agent behavior in adversarial environments. His concrete rules still apply.</p>
+        <ul>
+          <li><strong>Screen-record yourself doing the work.</strong> Real solves, real terminals. Post on YouTube unlisted; link from writeups.</li>
+          <li><strong>Ship end-to-end.</strong> One complete artifact beats three half-built ones.</li>
+          <li><strong>Use AI aggressively — but only for what you already understand.</strong> Don't outsource the reasoning; outsource the typing.</li>
+          <li><strong>Horizontal thinking.</strong> Don't just optimize obvious metrics (accuracy); measure cost, latency, tool-turn distribution, failure modes.</li>
+          <li><strong>Consistent small bets.</strong> Bi-weekly writeup > monthly essay.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ─── SKILLS ───────────────────────────────────────────────────────── -->
+    <div class="view" id="view-skills">
+      <div class="sec-head"><span class="n">01</span>Ship-in-90-days skills</div>
+      <p class="lede">Only what you need for the three flagships. No credentialism — everything below is measurable by GitHub + writeups.</p>
+
+      <div class="rl">
+        <div class="col">
+          <div class="block">
+            <h3>Agent scaffolding (already strong)</h3>
+            <ul>
+              <li>Extend: tool-use loop with structured actions + observations + retries</li>
+              <li>Add: <em>trajectory replay</em> (record every action, deterministic re-run)</li>
+              <li>Add: <em>cost + budget guardrails</em> — you have this in RedBench</li>
+              <li>Study: <em>Voyager</em>, <em>SWE-agent</em>, <em>Cline</em> loop designs</li>
+            </ul>
+          </div>
+          <div class="block">
+            <h3>Sandboxing</h3>
+            <ul>
+              <li>Docker + <code>--network=none</code> + <code>--cap-drop=ALL</code> baseline</li>
+              <li>gVisor for stronger isolation of untrusted binaries</li>
+              <li>Firecracker microVMs for kernel-exploitation targets</li>
+              <li>seccomp filters for tool-execution containers</li>
+            </ul>
+          </div>
+          <div class="block">
+            <h3>Debugging &amp; introspection</h3>
+            <ul>
+              <li>gdb / pwndbg / gef — muscle memory</li>
+              <li>Ghidra — REs at the level of a decent CTF pwn player</li>
+              <li>strace, ltrace, tcpdump — for observability during agent runs</li>
+              <li>Wireshark for the purple-arena demo</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col">
+          <div class="block">
+            <h3>Web/API pentest tooling</h3>
+            <ul>
+              <li>Burp Suite Community — proxy, repeater, intruder basics</li>
+              <li>sqlmap, ffuf, httpx — automation glue</li>
+              <li>Nuclei templates — read some, then write one</li>
+            </ul>
+          </div>
+          <div class="block">
+            <h3>Fuzzing</h3>
+            <ul>
+              <li>AFL++ on a real corpus (start with <code>libpng</code>)</li>
+              <li>Understand harness design well enough to write one for a new target</li>
+              <li>Coverage-guided vs. dumb fuzzing — trade-offs</li>
+            </ul>
+          </div>
+          <div class="block">
+            <h3>Eval &amp; measurement discipline</h3>
+            <ul>
+              <li>Seed control, deterministic replay, judge separation — you have these</li>
+              <li>Reproducibility standards (Docker images, pinned deps, published JSON)</li>
+              <li>Cost tracking per run (already in RedBench)</li>
+              <li>Human-baseline collection (this is what makes results interpretable)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="sec-head"><span class="n">02</span>Deliberately deprioritized</div>
+      <div class="block">
+        <ul>
+          <li><strong>CUDA / kernels / quantization.</strong> Wrong track for FRT-Cyber. Save for a different role.</li>
+          <li><strong>ML training from scratch.</strong> You'll evaluate frontier models, not train them.</li>
+          <li><strong>Front-end polish beyond Probe's level.</strong> Enough to demo; not enough to compete with product engineers.</li>
+          <li><strong>Rust rewrites.</strong> Python fluency is the bar; Rust is nice-to-have and time-expensive.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ─── MODELS ───────────────────────────────────────────────────────── -->
+    <div class="view" id="view-models">
+      <div class="sec-head"><span class="n">01</span>Open models to build with</div>
+      <p class="lede">Pick two open coders + one frontier API. Run every flagship experiment across all three so you have honest cross-model deltas to publish. Cost-wise: dev on Haiku or a local Qwen; final runs on Sonnet/Opus.</p>
+
+      <table class="models">
+        <thead>
+          <tr><th>Model</th><th>Why</th><th>Where it fits</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="name">Qwen 3 Coder 32B</td>
+            <td>Currently the strongest open coder in this size class. Tool-use RL'd, long-context. Runs on one H100 or via Together/Fireworks.</td>
+            <td class="use">Primary open baseline in Flagship 1. Cheap iteration loop.</td>
+          </tr>
+          <tr>
+            <td class="name">DeepSeek-V3.1 / R1</td>
+            <td>Reasoning-tuned; strong on multi-step problems. Cheap on DeepSeek's own API. Public weights.</td>
+            <td class="use">Second open baseline. Best "reasoning" comparison point.</td>
+          </tr>
+          <tr>
+            <td class="name">Llama 3.3 70B Instruct</td>
+            <td>The "boring default" for reproducibility papers — reviewers expect it.</td>
+            <td class="use">Include for third comparison in published tables.</td>
+          </tr>
+          <tr>
+            <td class="name">WhiteRabbitNeo / Lily-Cybersecurity</td>
+            <td>Cyber-fine-tuned open models. Weak overall but worth including as domain-specialist reference.</td>
+            <td class="use">Optional sidebar comparison.</td>
+          </tr>
+          <tr>
+            <td class="name">Claude Haiku 4.5</td>
+            <td>Cheapest frontier tool-use loop. Fast enough for iterative agent dev.</td>
+            <td class="use">Dev-loop workhorse across all flagships.</td>
+          </tr>
+          <tr>
+            <td class="name">Claude Sonnet 4.6 / Opus 4.7</td>
+            <td>Frontier baseline. Sonnet for volume runs; Opus for headline table.</td>
+            <td class="use">Final results in every writeup.</td>
+          </tr>
+          <tr>
+            <td class="name">GPT-5 / GPT-4.1</td>
+            <td>Second frontier lab. Required for cross-lab honesty.</td>
+            <td class="use">Include in every published table.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="sec-head"><span class="n">02</span>Serving stack</div>
+      <div class="block">
+        <ul>
+          <li><code>ollama</code> for local dev on Qwen / DeepSeek — same as your current Probe replay setup.</li>
+          <li><code>vLLM</code> when you need real throughput on rented A100/H100 (Lambda, RunPod).</li>
+          <li><code>Together</code> or <code>Fireworks</code> for OpenAI-compatible endpoints on open weights — cleanest way to swap models in RedBench.</li>
+          <li>Keep <code>PROBE_REPLAY=1</code>-style fixture mode for offline determinism in tests.</li>
+        </ul>
+      </div>
+
+      <div class="sec-head"><span class="n">03</span>Frameworks worth adopting</div>
+      <div class="rl">
+        <div class="col">
+          <div class="block">
+            <h3>Inspect (UK AISI)</h3>
+            <p class="why">The eval framework labs actually use. Adopting Inspect for your CTF-bench = instant credibility + easy to submit results to AISI's leaderboards.</p>
+          </div>
+          <div class="block">
+            <h3>SWE-agent / OpenHands</h3>
+            <p class="why">Open agent scaffolds with tool-use loops. Read the ACI (Agent-Computer Interface) design — best in the field.</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="block">
+            <h3>Claude Code SDK</h3>
+            <p class="why">Anthropic's own agent harness. Building a cyber-agent on it is a strong tacit signal you can read their infra.</p>
+          </div>
+          <div class="block">
+            <h3>METR task-standard</h3>
+            <p class="why">The evaluation task specification standard. Package a picoCTF challenge in METR's format; publish it back.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ─── CADENCE ──────────────────────────────────────────────────────── -->
+    <div class="view" id="view-cadence">
+      <div class="sec-head"><span class="n">01</span>Weekly rhythm</div>
+      <p class="lede">Non-negotiable. Adjust content, not cadence.</p>
+
+      <div class="block">
+        <div class="cadence">
+          <div class="day">Mon</div><div class="task">Deep-work morning on active flagship. Evening: 1 paper skim (30 min, take notes in obsidian).</div>
+          <div class="day">Tue</div><div class="task">Deep-work morning on active flagship. Evening: 1 CTF challenge attempt (picoCTF).</div>
+          <div class="day">Wed</div><div class="task">Deep-work morning on active flagship. Evening: writing — either walkthrough or explainer draft.</div>
+          <div class="day">Thu</div><div class="task">Deep-work morning on active flagship. Evening: read one FRT/AI-safety post; leave a substantive comment or reply on X.</div>
+          <div class="day">Fri</div><div class="task">Ship day. Publish something small: a commit, a fixture, a screenshot on X, a paragraph of a post.</div>
+          <div class="day">Sat</div><div class="task">CTF morning (2–4 hours). Weekend CTFs count. Log every solve to your writeups repo.</div>
+          <div class="day">Sun</div><div class="task">Long-form writing. Push one blog post live every second Sunday. Review week; re-plan.</div>
+        </div>
+      </div>
+
+      <div class="sec-head"><span class="n">02</span>Monthly checkpoints</div>
+      <div class="block">
+        <ul>
+          <li><strong>End of month 1:</strong> ctf-bench runs end-to-end on picoCTF-pwn category with 3 models. Repo public. First blog post live.</li>
+          <li><strong>End of month 2:</strong> One CVE filed and confirmed. Second flagship's writeup drafted. Weekly cadence unbroken.</li>
+          <li><strong>End of month 3:</strong> Purple-arena demo video published. 6+ blog posts live. CTFtime profile with real solves. Application ready.</li>
+        </ul>
+      </div>
+
+      <div class="sec-head"><span class="n">03</span>Signals scoreboard (self-graded weekly)</div>
+      <div class="block">
+        <ul>
+          <li>Public GitHub commits this week: <em>target &ge; 5 substantive</em></li>
+          <li>Words shipped publicly this week: <em>target &ge; 500</em></li>
+          <li>CTF challenges solved: <em>target &ge; 2</em></li>
+          <li>Papers/blog posts read: <em>target &ge; 3</em></li>
+          <li>Named security contact made: <em>target &ge; 1/month</em></li>
+        </ul>
+      </div>
+    </div>
+
+    <footer>
+      <span>private roadmap · not indexed · &copy; 2026 Mihir Srivastava</span>
+    </footer>
+  </div>
+
+  <script>
+    const toggle=document.getElementById('theme-toggle'),root=document.documentElement;
+    const setTheme=m=>{root.setAttribute('data-theme',m);localStorage.setItem('theme',m);};
+    setTheme(localStorage.getItem('theme')||'dark');
+    toggle.addEventListener('click',()=>setTheme(root.getAttribute('data-theme')==='dark'?'light':'dark'));
+    const glow=document.getElementById('glow');let mx=0,my=0,gx=0,gy=0,an=false;
+    const lerp=(a,b,t)=>a+(b-a)*t;
+    function animate(){gx=lerp(gx,mx,.08);gy=lerp(gy,my,.08);const dk=root.getAttribute('data-theme')==='dark';glow.style.background=`radial-gradient(600px circle at ${gx}px ${gy}px, ${dk?'rgba(212,160,84,0.06)':'rgba(212,160,84,0.045)'}, transparent 60%)`;requestAnimationFrame(animate);}
+    document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;if(!an){an=true;animate();}});
+    if('ontouchstart' in window)glow.style.background='radial-gradient(600px circle at 50% 20%, rgba(212,160,84,0.04), transparent 60%)';
+
+    document.querySelectorAll('.tab').forEach(t=>t.addEventListener('click',()=>{
+      document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));
+      document.querySelectorAll('.view').forEach(x=>x.classList.remove('active'));
+      t.classList.add('active');
+      document.getElementById('view-'+t.dataset.view).classList.add('active');
+      window.scrollTo({top:0,behavior:'smooth'});
+    }));
+  </script>
+</body>
+</html>
