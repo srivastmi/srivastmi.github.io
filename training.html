@@ -19,6 +19,12 @@
     .thread-chip { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.78rem; color: var(--text); background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 0.3rem 0.7rem; }
     .thread-dot { width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0; }
 
+    /* Quick-nav to detail pages */
+    .pagenav { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; margin: 0.25rem 0 1.1rem; }
+    .pagenav .lbl { font-size: 0.78rem; color: var(--text-muted); }
+    .pagenav a { font-size: 0.8rem; color: var(--accent); background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 0.3rem 0.8rem; text-decoration: none; transition: border-color .15s; }
+    .pagenav a:hover { border-color: var(--accent); }
+
     /* Tabs */
     .tabs { display: flex; gap: 0.4rem; margin-bottom: 1.5rem; border-bottom: 1px solid var(--border); flex-wrap: wrap; }
     .tab { background: none; border: none; color: var(--text-muted); font-size: 0.9rem; padding: 0.6rem 0.85rem; cursor: pointer; border-bottom: 2px solid transparent; font-family: inherit; }
@@ -110,6 +116,13 @@
     <div class="mh">
       <h1>Training System</h1>
       <p class="sub" id="mh-sub">One system, many goals &mdash; periodized so they support each other.</p>
+    </div>
+
+    <div class="pagenav">
+      <span class="lbl">Detailed plans:</span>
+      <a href="/tri">Napa 70.3 &rarr;</a>
+      <a href="/dunk">Dunk &rarr;</a>
+      <a href="/sf2026">Marathon &rsquo;26 &rarr;</a>
     </div>
 
     <div class="threads" id="threads"></div>
