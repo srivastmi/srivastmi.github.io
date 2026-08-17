@@ -41,6 +41,17 @@
     .wk-meta { font-size: 0.78rem; color: var(--text-muted); margin-bottom: 0.5rem; }
     .wk-focus { font-size: 0.83rem; color: var(--text); font-style: italic; margin-bottom: 0.6rem; }
 
+    /* Week stepper */
+    .wk-nav { display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; margin-bottom: 1rem; }
+    .wk-btn { background: var(--surface); border: 1px solid var(--border); color: var(--accent); font-family: inherit; font-size: 0.83rem; padding: 0.4rem 0.8rem; border-radius: 8px; cursor: pointer; transition: border-color .15s; }
+    .wk-btn:hover:not(:disabled) { border-color: var(--accent); }
+    .wk-btn:disabled { color: var(--text-muted); opacity: 0.4; cursor: default; }
+    .wk-nav-mid { display: flex; flex-direction: column; align-items: center; gap: 0.15rem; }
+    .wk-nav-title { font-size: 0.85rem; font-weight: 700; color: var(--text-bright); }
+    .wk-nav-cur { font-size: 0.7rem; color: var(--accent); text-transform: uppercase; letter-spacing: 0.05em; }
+    .wk-jump { background: none; border: none; color: var(--text-muted); font-size: 0.72rem; cursor: pointer; text-decoration: underline; font-family: inherit; padding: 0; }
+    .wk-jump:hover { color: var(--accent); }
+
     .day { display: grid; grid-template-columns: 42px 1fr; gap: 0.5rem; padding: 0.45rem 0; border-top: 1px solid var(--border); }
     .day:first-of-type { border-top: none; }
     .day .dow { font-size: 0.76rem; font-weight: 700; color: var(--text-muted); padding-top: 0.1rem; }
@@ -169,11 +180,29 @@
         return h;
       };
 
-      // This Week
-      let wh='';
-      if(upcoming){const dstart=Math.ceil((weekStart(cur)-TODAY)/864e5);wh=`<div class="countdown" style="margin-bottom:1rem">Build starts in <strong>${dstart} days</strong> (${new Date(cur.monday+'T12:00:00').toLocaleDateString('en-US',{month:'long',day:'numeric'})}). You're in marathon recovery until then — here's Week 1:</div>`;}
-      wh+=renderWeek(cur,true);
-      document.getElementById('week-root').innerHTML=wh;
+      // This Week — steppable (prev/next through past & future weeks)
+      const curIdx=data.weeks.indexOf(cur);
+      let viewIdx=curIdx;
+      const weekRoot=document.getElementById('week-root');
+      function renderThisWeek(){
+        const w=data.weeks[viewIdx];
+        const isCur=(viewIdx===curIdx);
+        let h=`<div class="wk-nav">`+
+          `<button class="wk-btn" id="wk-prev"${viewIdx===0?' disabled':''}>&larr; Prev</button>`+
+          `<div class="wk-nav-mid"><span class="wk-nav-title">Week ${w.n} of ${data.weeks.length}</span>`+
+          ((isCur&&!upcoming)?`<span class="wk-nav-cur">this week</span>`:`<button class="wk-jump" id="wk-jump">Jump to ${upcoming?'Week 1':'current week'}</button>`)+
+          `</div>`+
+          `<button class="wk-btn" id="wk-next"${viewIdx===data.weeks.length-1?' disabled':''}>Next &rarr;</button>`+
+          `</div>`;
+        if(upcoming&&isCur){const dstart=Math.ceil((weekStart(cur)-TODAY)/864e5);h+=`<div class="countdown" style="margin-bottom:1rem">Build starts in <strong>${dstart} days</strong>. You're in marathon recovery until then — here's Week 1:</div>`;}
+        h+=renderWeek(w,isCur&&!upcoming);
+        weekRoot.innerHTML=h;
+        const pb=document.getElementById('wk-prev'),nb=document.getElementById('wk-next'),jb=document.getElementById('wk-jump');
+        pb.onclick=()=>{if(viewIdx>0){viewIdx--;renderThisWeek();}};
+        nb.onclick=()=>{if(viewIdx<data.weeks.length-1){viewIdx++;renderThisWeek();}};
+        if(jb)jb.onclick=()=>{viewIdx=curIdx;renderThisWeek();};
+      }
+      renderThisWeek();
 
       // Full Plan
       document.getElementById('full-root').innerHTML=data.weeks.map(w=>renderWeek(w,w.n===cur.n)).join('');
