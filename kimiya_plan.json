@@ -1,0 +1,1025 @@
+{
+  "meta": {
+    "athlete": "Kimiya",
+    "race": "Napa Valley 70.3",
+    "date": "2026-10-24",
+    "distances": {
+      "swim": "1.2 mi",
+      "bike": "56 mi",
+      "run": "13.1 mi"
+    },
+    "start_monday": "2026-08-24",
+    "weekly_hours": "4.75–8 hrs · 5 days + 2 optional",
+    "goal": "Cross the line strong, smiling, and in one piece. Not a time goal — a feel-good goal.",
+    "baseline": "Swim is already at race distance. The bike is the biggest gap by far. The run has real fitness underneath it but very little recent volume and no half in years — so it gets built deliberately too, with run/walk from week one.",
+    "race_effort": "Swim easy Z2 · Bike steady Z2 all day, never once feel heroic · Run Z2 with a walk-every-aid-station plan from mile 1.",
+    "zones": [
+      {
+        "z": "Z1",
+        "name": "Float",
+        "feel": "So easy it feels like cheating. That's the point."
+      },
+      {
+        "z": "Z2",
+        "name": "All-day",
+        "feel": "Full sentences. Your race pace in all three sports."
+      },
+      {
+        "z": "Z3",
+        "name": "Tempo",
+        "feel": "Comfortably hard — short sentences only."
+      },
+      {
+        "z": "Z4",
+        "name": "Threshold",
+        "feel": "Hard. A few words. Used sparingly here."
+      }
+    ]
+  },
+  "benchmarks": [
+    {
+      "sport": "swim",
+      "label": "Longest recent swim",
+      "value": "2,075 yd",
+      "note": "@ 1:59/100yd · race swim is 2,112 yd — you are already there 🦋"
+    },
+    {
+      "sport": "run",
+      "label": "Longest recent run",
+      "value": "7.7 mi",
+      "note": "@ 9:31/mi on Aug 20 — but only ~7.7 mi/wk across 2 runs, and no half marathon in years. Real fitness, thin recent volume. We build it carefully."
+    },
+    {
+      "sport": "bike",
+      "label": "Bike, last 4 weeks",
+      "value": "9.8 mi/wk",
+      "note": "~1h07/wk · this is the gap, and this plan is built around closing it"
+    },
+    {
+      "sport": "brick",
+      "label": "Current total load",
+      "value": "~3.5 hrs/wk",
+      "note": "5 activities/wk · we build to ~7.75 peak, gently"
+    }
+  ],
+  "weeks": [
+    {
+      "n": 1,
+      "block": "On-Ramp",
+      "monday": "2026-08-24",
+      "stepback": false,
+      "hours": "~4.75",
+      "focus": "Meet the bike, and add a third short run. Nothing hard this week — we're establishing rhythm, not fitness.",
+      "days": [
+        {
+          "d": "Mon",
+          "sessions": [
+            {
+              "sport": "rest",
+              "title": "Rest",
+              "detail": "Optional 20 min walk or stretch",
+              "effort": "—",
+              "dur": "—"
+            }
+          ]
+        },
+        {
+          "d": "Tue",
+          "sessions": [
+            {
+              "sport": "bike",
+              "title": "Bike — easy spin",
+              "detail": "45 min flat & easy. Only job: cadence 85–90, stay relaxed in the shoulders.",
+              "effort": "Z2",
+              "dur": "45 min"
+            }
+          ]
+        },
+        {
+          "d": "Wed",
+          "sessions": [
+            {
+              "sport": "swim",
+              "title": "Swim — technique",
+              "detail": "1,800 yd: 400 warmup, 6×100 drill/swim, 600 steady, 200 easy",
+              "effort": "Z1–2",
+              "dur": "45 min"
+            },
+            {
+              "sport": "run",
+              "title": "Run — short & easy",
+              "detail": "20 min very easy off the swim. This is a frequency run — three short runs a week build more durability than one big one.",
+              "effort": "Z1–2",
+              "dur": "20 min"
+            }
+          ]
+        },
+        {
+          "d": "Thu",
+          "sessions": [
+            {
+              "sport": "run",
+              "title": "Run — easy",
+              "detail": "40 min conversational. Slower than you think.",
+              "effort": "Z2",
+              "dur": "40 min"
+            }
+          ]
+        },
+        {
+          "d": "Fri",
+          "sessions": [
+            {
+              "sport": "strength",
+              "title": "Optional — strength",
+              "detail": "Glutes + core: bridges, split squats, side planks, bird dogs",
+              "effort": "—",
+              "dur": "30 min"
+            }
+          ]
+        },
+        {
+          "d": "Sat",
+          "sessions": [
+            {
+              "sport": "bike",
+              "title": "Long ride",
+              "detail": "16 mi steady. Bring water + a snack. Stop whenever you want.",
+              "effort": "Z2",
+              "dur": "~1:15"
+            },
+            {
+              "sport": "brick",
+              "title": "Brick jog",
+              "detail": "10 min straight off the bike, easy, walk whenever you like. Legs will feel weird — that's the lesson.",
+              "effort": "Z2",
+              "dur": "10 min"
+            }
+          ]
+        },
+        {
+          "d": "Sun",
+          "sessions": [
+            {
+              "sport": "run",
+              "title": "Long run — run/walk",
+              "detail": "5 mi as run 9 min / walk 1 min. Shorter than your Aug 20 run on purpose. From the very first mile — this is the habit we're building.",
+              "effort": "Z2",
+              "dur": "~50 min"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": 2,
+      "block": "Base",
+      "monday": "2026-08-31",
+      "stepback": false,
+      "hours": "~5.5",
+      "focus": "First real bike intervals, and the long ride grows. Run stays exactly as easy as last week.",
+      "days": [
+        {
+          "d": "Mon",
+          "sessions": [
+            {
+              "sport": "rest",
+              "title": "Rest",
+              "detail": "Optional 1,200 yd easy float",
+              "effort": "Z1",
+              "dur": "—"
+            }
+          ]
+        },
+        {
+          "d": "Tue",
+          "sessions": [
+            {
+              "sport": "bike",
+              "title": "Bike — intervals",
+              "detail": "50 min: 15 min warmup, 4×5 min Z3 w/ 3 min easy between, spin down",
+              "effort": "Z3",
+              "dur": "50 min"
+            }
+          ]
+        },
+        {
+          "d": "Wed",
+          "sessions": [
+            {
+              "sport": "swim",
+              "title": "Swim — endurance",
+              "detail": "2,000 yd: 400 wu, 6×200 steady @ 20s rest, 400 cd",
+              "effort": "Z2",
+              "dur": "45 min"
+            },
+            {
+              "sport": "run",
+              "title": "Run — short & easy",
+              "detail": "20 min very easy",
+              "effort": "Z1–2",
+              "dur": "20 min"
+            }
+          ]
+        },
+        {
+          "d": "Thu",
+          "sessions": [
+            {
+              "sport": "run",
+              "title": "Run — easy + strides",
+              "detail": "40 min easy, finish with 4×20s relaxed strides. No tempo — all the hard work lives on the bike.",
+              "effort": "Z2",
+              "dur": "40 min"
+            }
+          ]
+        },
+        {
+          "d": "Fri",
+          "sessions": [
+            {
+              "sport": "strength",
+              "title": "Optional — strength",
+              "detail": "Same circuit as W1, add a set",
+              "effort": "—",
+              "dur": "30 min"
+            }
+          ]
+        },
+        {
+          "d": "Sat",
+          "sessions": [
+            {
+              "sport": "bike",
+              "title": "Long ride",
+              "detail": "22 mi steady. Eat something at mile 12 whether or not you're hungry.",
+              "effort": "Z2",
+              "dur": "~1:45"
+            },
+            {
+              "sport": "brick",
+              "title": "Brick jog",
+              "detail": "12 min off the bike, run 9 min / walk 1 min",
+              "effort": "Z2",
+              "dur": "12 min"
+            }
+          ]
+        },
+        {
+          "d": "Sun",
+          "sessions": [
+            {
+              "sport": "run",
+              "title": "Long run — run/walk",
+              "detail": "6 mi as run 9 min / walk 1 min",
+              "effort": "Z2",
+              "dur": "~1:00"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": 3,
+      "block": "Base",
+      "monday": "2026-09-07",
+      "stepback": false,
+      "hours": "~6.5",
+      "focus": "Swim the full race distance in one go — just to prove to yourself it's already yours.",
+      "days": [
+        {
+          "d": "Mon",
+          "sessions": [
+            {
+              "sport": "rest",
+              "title": "Rest",
+              "detail": "Optional easy swim or walk",
+              "effort": "Z1",
+              "dur": "—"
+            }
+          ]
+        },
+        {
+          "d": "Tue",
+          "sessions": [
+            {
+              "sport": "bike",
+              "title": "Bike — intervals",
+              "detail": "55 min: 3×8 min Z3 w/ 4 min easy. Push a slightly bigger gear.",
+              "effort": "Z3",
+              "dur": "55 min"
+            }
+          ]
+        },
+        {
+          "d": "Wed",
+          "sessions": [
+            {
+              "sport": "swim",
+              "title": "Swim — race distance",
+              "detail": "2,200 yd: 300 wu, then 1,500 CONTINUOUS at easy race effort, 4×100 easy",
+              "effort": "Z2",
+              "dur": "50 min"
+            },
+            {
+              "sport": "run",
+              "title": "Run — short & easy",
+              "detail": "25 min very easy",
+              "effort": "Z1–2",
+              "dur": "25 min"
+            }
+          ]
+        },
+        {
+          "d": "Thu",
+          "sessions": [
+            {
+              "sport": "run",
+              "title": "Run — easy + strides",
+              "detail": "45 min easy + 6×20s relaxed strides",
+              "effort": "Z2",
+              "dur": "45 min"
+            }
+          ]
+        },
+        {
+          "d": "Fri",
+          "sessions": [
+            {
+              "sport": "strength",
+              "title": "Optional — strength",
+              "detail": "Glutes, core, calves",
+              "effort": "—",
+              "dur": "30 min"
+            }
+          ]
+        },
+        {
+          "d": "Sat",
+          "sessions": [
+            {
+              "sport": "bike",
+              "title": "Long ride",
+              "detail": "28 mi. Fueling practice: 200–250 cal/hr + a bottle/hr, on a timer.",
+              "effort": "Z2",
+              "dur": "~2:10"
+            },
+            {
+              "sport": "brick",
+              "title": "Brick jog",
+              "detail": "15 min off the bike, run 9 min / walk 1 min",
+              "effort": "Z2",
+              "dur": "15 min"
+            }
+          ]
+        },
+        {
+          "d": "Sun",
+          "sessions": [
+            {
+              "sport": "run",
+              "title": "Long run — run/walk",
+              "detail": "7 mi as run 9 min / walk 1 min",
+              "effort": "Z2",
+              "dur": "~1:10"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": 4,
+      "block": "Step-Back",
+      "monday": "2026-09-14",
+      "stepback": true,
+      "hours": "~4.5",
+      "focus": "Recovery week. Everything shrinks. This is where the last three weeks actually turn into fitness.",
+      "days": [
+        {
+          "d": "Mon",
+          "sessions": [
+            {
+              "sport": "rest",
+              "title": "Rest",
+              "detail": "Full day off. Genuinely.",
+              "effort": "—",
+              "dur": "—"
+            }
+          ]
+        },
+        {
+          "d": "Tue",
+          "sessions": [
+            {
+              "sport": "bike",
+              "title": "Bike — easy",
+              "detail": "40 min flat, no intervals, high cadence",
+              "effort": "Z2",
+              "dur": "40 min"
+            }
+          ]
+        },
+        {
+          "d": "Wed",
+          "sessions": [
+            {
+              "sport": "swim",
+              "title": "Swim — OPEN WATER",
+              "detail": "1,200–1,500 yd in a lake/bay. Wetsuit on. Practice sighting every 6 strokes.",
+              "effort": "Z2",
+              "dur": "35 min"
+            },
+            {
+              "sport": "run",
+              "title": "Run — short & easy",
+              "detail": "20 min very easy",
+              "effort": "Z1–2",
+              "dur": "20 min"
+            }
+          ]
+        },
+        {
+          "d": "Thu",
+          "sessions": [
+            {
+              "sport": "run",
+              "title": "Run — easy",
+              "detail": "35 min very relaxed",
+              "effort": "Z2",
+              "dur": "35 min"
+            }
+          ]
+        },
+        {
+          "d": "Fri",
+          "sessions": [
+            {
+              "sport": "rest",
+              "title": "Rest",
+              "detail": "Optional mobility / foam roll",
+              "effort": "—",
+              "dur": "—"
+            }
+          ]
+        },
+        {
+          "d": "Sat",
+          "sessions": [
+            {
+              "sport": "bike",
+              "title": "Ride — easy",
+              "detail": "18 mi conversational. No pressure.",
+              "effort": "Z2",
+              "dur": "~1:25"
+            }
+          ]
+        },
+        {
+          "d": "Sun",
+          "sessions": [
+            {
+              "sport": "run",
+              "title": "Run — easy",
+              "detail": "5 mi easy, walk breaks whenever you want them",
+              "effort": "Z2",
+              "dur": "~50 min"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": 5,
+      "block": "Build",
+      "monday": "2026-09-21",
+      "stepback": false,
+      "hours": "~7.25",
+      "focus": "The big-ride block begins. From here the Saturday ride is the most important session of your week.",
+      "days": [
+        {
+          "d": "Mon",
+          "sessions": [
+            {
+              "sport": "swim",
+              "title": "Optional — easy swim",
+              "detail": "1,500 yd easy, all technique",
+              "effort": "Z1",
+              "dur": "30 min"
+            }
+          ]
+        },
+        {
+          "d": "Tue",
+          "sessions": [
+            {
+              "sport": "bike",
+              "title": "Bike — intervals",
+              "detail": "60 min: 3×10 min Z3 w/ 5 min easy",
+              "effort": "Z3",
+              "dur": "60 min"
+            }
+          ]
+        },
+        {
+          "d": "Wed",
+          "sessions": [
+            {
+              "sport": "swim",
+              "title": "Swim — endurance",
+              "detail": "2,400 yd: 400 wu, 2×800 steady @ 45s rest, 400 cd",
+              "effort": "Z2",
+              "dur": "55 min"
+            },
+            {
+              "sport": "run",
+              "title": "Run — short & easy",
+              "detail": "25 min very easy",
+              "effort": "Z1–2",
+              "dur": "25 min"
+            }
+          ]
+        },
+        {
+          "d": "Thu",
+          "sessions": [
+            {
+              "sport": "run",
+              "title": "Run — easy + strides",
+              "detail": "45 min easy + 6×20s strides",
+              "effort": "Z2",
+              "dur": "45 min"
+            }
+          ]
+        },
+        {
+          "d": "Fri",
+          "sessions": [
+            {
+              "sport": "strength",
+              "title": "Optional — strength",
+              "detail": "Keep it light — the weekend matters more",
+              "effort": "—",
+              "dur": "30 min"
+            }
+          ]
+        },
+        {
+          "d": "Sat",
+          "sessions": [
+            {
+              "sport": "bike",
+              "title": "Long ride",
+              "detail": "34 mi. Rolling terrain if you can find it. Fuel on a timer.",
+              "effort": "Z2",
+              "dur": "~2:40"
+            },
+            {
+              "sport": "brick",
+              "title": "Brick jog",
+              "detail": "15 min off the bike, run 9 min / walk 1 min",
+              "effort": "Z2",
+              "dur": "15 min"
+            }
+          ]
+        },
+        {
+          "d": "Sun",
+          "sessions": [
+            {
+              "sport": "run",
+              "title": "Long run — run/walk",
+              "detail": "8 mi as run 9 min / walk 1 min",
+              "effort": "Z2",
+              "dur": "~1:20"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": 6,
+      "block": "Build",
+      "monday": "2026-09-28",
+      "stepback": false,
+      "hours": "~8",
+      "focus": "Longest ride and longest run of the plan, back to back. Full race-day nutrition rehearsal on Saturday.",
+      "days": [
+        {
+          "d": "Mon",
+          "sessions": [
+            {
+              "sport": "swim",
+              "title": "Optional — easy swim",
+              "detail": "1,500 yd easy",
+              "effort": "Z1",
+              "dur": "30 min"
+            }
+          ]
+        },
+        {
+          "d": "Tue",
+          "sessions": [
+            {
+              "sport": "bike",
+              "title": "Bike — sustained",
+              "detail": "60 min: 2×15 min Z3 w/ 6 min easy. Race-effort rehearsal.",
+              "effort": "Z3",
+              "dur": "60 min"
+            }
+          ]
+        },
+        {
+          "d": "Wed",
+          "sessions": [
+            {
+              "sport": "swim",
+              "title": "Swim — steady",
+              "detail": "2,200 yd mixed sets",
+              "effort": "Z2",
+              "dur": "50 min"
+            },
+            {
+              "sport": "run",
+              "title": "Run — short & easy",
+              "detail": "25 min very easy",
+              "effort": "Z1–2",
+              "dur": "25 min"
+            }
+          ]
+        },
+        {
+          "d": "Thu",
+          "sessions": [
+            {
+              "sport": "run",
+              "title": "Run — easy + strides",
+              "detail": "45 min easy + 6×20s strides",
+              "effort": "Z2",
+              "dur": "45 min"
+            }
+          ]
+        },
+        {
+          "d": "Fri",
+          "sessions": [
+            {
+              "sport": "rest",
+              "title": "Rest",
+              "detail": "Optional light mobility only — save it for tomorrow",
+              "effort": "—",
+              "dur": "—"
+            }
+          ]
+        },
+        {
+          "d": "Sat",
+          "sessions": [
+            {
+              "sport": "bike",
+              "title": "Long ride",
+              "detail": "42 mi. Exact race nutrition, exact bottles, exact kit. Nothing new on race day starts here.",
+              "effort": "Z2",
+              "dur": "~3:15"
+            },
+            {
+              "sport": "brick",
+              "title": "Brick run",
+              "detail": "20 min off the bike, run 9 min / walk 1 min",
+              "effort": "Z2",
+              "dur": "20 min"
+            }
+          ]
+        },
+        {
+          "d": "Sun",
+          "sessions": [
+            {
+              "sport": "run",
+              "title": "Long run — run/walk",
+              "detail": "9 mi as run 9 min / walk 1 min — longest of the plan, and that is genuinely enough.",
+              "effort": "Z2",
+              "dur": "~1:30"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": 7,
+      "block": "Peak",
+      "monday": "2026-10-05",
+      "stepback": false,
+      "hours": "~7.5",
+      "focus": "Dress rehearsal week. Saturday is the closest thing to race day you'll do. Run volume drops so the bike can peak.",
+      "days": [
+        {
+          "d": "Mon",
+          "sessions": [
+            {
+              "sport": "swim",
+              "title": "Optional — easy swim",
+              "detail": "1,500 yd easy",
+              "effort": "Z1",
+              "dur": "30 min"
+            }
+          ]
+        },
+        {
+          "d": "Tue",
+          "sessions": [
+            {
+              "sport": "bike",
+              "title": "Bike — primer",
+              "detail": "55 min easy w/ 4×3 min at race effort",
+              "effort": "Z2–3",
+              "dur": "55 min"
+            }
+          ]
+        },
+        {
+          "d": "Wed",
+          "sessions": [
+            {
+              "sport": "swim",
+              "title": "Swim — OPEN WATER dress rehearsal",
+              "detail": "2,000+ yd continuous in the wetsuit. Full race sim: goggles, sighting, exit and jog to T1.",
+              "effort": "Z2",
+              "dur": "50 min"
+            }
+          ]
+        },
+        {
+          "d": "Thu",
+          "sessions": [
+            {
+              "sport": "run",
+              "title": "Run — easy",
+              "detail": "40 min easy",
+              "effort": "Z2",
+              "dur": "40 min"
+            }
+          ]
+        },
+        {
+          "d": "Fri",
+          "sessions": [
+            {
+              "sport": "rest",
+              "title": "Rest",
+              "detail": "Full day off. Tomorrow is the big one.",
+              "effort": "—",
+              "dur": "—"
+            }
+          ]
+        },
+        {
+          "d": "Sat",
+          "sessions": [
+            {
+              "sport": "bike",
+              "title": "DRESS REHEARSAL ride",
+              "detail": "48–50 mi at exact race effort. Race kit, race bottles, race food, race pacing.",
+              "effort": "Z2",
+              "dur": "~3:50"
+            },
+            {
+              "sport": "brick",
+              "title": "Brick run",
+              "detail": "25 min off the bike, run 9 min / walk 1 min. This is the confidence session — it matters more than any long run.",
+              "effort": "Z2",
+              "dur": "25 min"
+            }
+          ]
+        },
+        {
+          "d": "Sun",
+          "sessions": [
+            {
+              "sport": "run",
+              "title": "Recovery run",
+              "detail": "5 mi very easy — or full rest if yesterday emptied you. Rest is the right call if you're unsure.",
+              "effort": "Z1–2",
+              "dur": "~50 min"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": 8,
+      "block": "Taper",
+      "monday": "2026-10-12",
+      "stepback": true,
+      "hours": "~5.75",
+      "focus": "Volume drops ~35%, intensity stays a touch. You should start feeling twitchy and over-rested. Good.",
+      "days": [
+        {
+          "d": "Mon",
+          "sessions": [
+            {
+              "sport": "rest",
+              "title": "Rest",
+              "detail": "Full day off",
+              "effort": "—",
+              "dur": "—"
+            }
+          ]
+        },
+        {
+          "d": "Tue",
+          "sessions": [
+            {
+              "sport": "bike",
+              "title": "Bike — sharpener",
+              "detail": "45 min w/ 3×5 min at race effort",
+              "effort": "Z2–3",
+              "dur": "45 min"
+            }
+          ]
+        },
+        {
+          "d": "Wed",
+          "sessions": [
+            {
+              "sport": "swim",
+              "title": "Swim — relaxed",
+              "detail": "1,800 yd w/ 4×200 at race effort",
+              "effort": "Z2",
+              "dur": "45 min"
+            },
+            {
+              "sport": "run",
+              "title": "Run — short & easy",
+              "detail": "20 min very easy",
+              "effort": "Z1–2",
+              "dur": "20 min"
+            }
+          ]
+        },
+        {
+          "d": "Thu",
+          "sessions": [
+            {
+              "sport": "run",
+              "title": "Run — easy + strides",
+              "detail": "35 min easy + 4×20s strides",
+              "effort": "Z2",
+              "dur": "35 min"
+            }
+          ]
+        },
+        {
+          "d": "Fri",
+          "sessions": [
+            {
+              "sport": "rest",
+              "title": "Rest",
+              "detail": "Off",
+              "effort": "—",
+              "dur": "—"
+            }
+          ]
+        },
+        {
+          "d": "Sat",
+          "sessions": [
+            {
+              "sport": "bike",
+              "title": "Ride — steady",
+              "detail": "28 mi comfortable. Last meaningful ride.",
+              "effort": "Z2",
+              "dur": "~2:10"
+            },
+            {
+              "sport": "brick",
+              "title": "Brick jog",
+              "detail": "10 min easy off the bike",
+              "effort": "Z2",
+              "dur": "10 min"
+            }
+          ]
+        },
+        {
+          "d": "Sun",
+          "sessions": [
+            {
+              "sport": "run",
+              "title": "Long run — run/walk",
+              "detail": "6 mi as run 9 min / walk 1 min",
+              "effort": "Z2",
+              "dur": "~1:00"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": 9,
+      "block": "Race Week",
+      "monday": "2026-10-19",
+      "stepback": true,
+      "hours": "~1.5",
+      "focus": "Short, sharp, and mostly rest. You cannot gain fitness this week — you can only spend it. Sleep and eat.",
+      "days": [
+        {
+          "d": "Mon",
+          "sessions": [
+            {
+              "sport": "swim",
+              "title": "Swim — feel the water",
+              "detail": "1,200 yd easy, a few 50s at race effort",
+              "effort": "Z1–2",
+              "dur": "30 min"
+            }
+          ]
+        },
+        {
+          "d": "Tue",
+          "sessions": [
+            {
+              "sport": "bike",
+              "title": "Bike — opener",
+              "detail": "30 min easy w/ 3×90s at race effort",
+              "effort": "Z2",
+              "dur": "30 min"
+            }
+          ]
+        },
+        {
+          "d": "Wed",
+          "sessions": [
+            {
+              "sport": "run",
+              "title": "Run — opener",
+              "detail": "25 min easy + 4×20s strides",
+              "effort": "Z2",
+              "dur": "25 min"
+            }
+          ]
+        },
+        {
+          "d": "Thu",
+          "sessions": [
+            {
+              "sport": "skill",
+              "title": "Gear day",
+              "detail": "Bike safety check, tires, spare tube. Lay out and photograph both transition setups. 800 yd easy swim optional.",
+              "effort": "—",
+              "dur": "—"
+            }
+          ]
+        },
+        {
+          "d": "Fri",
+          "sessions": [
+            {
+              "sport": "rest",
+              "title": "Rest · travel · check-in",
+              "detail": "10 min spin or a short walk. Big carb-forward lunch, lighter dinner. Hydrate all day. Bed early.",
+              "effort": "Z1",
+              "dur": "10 min"
+            }
+          ]
+        },
+        {
+          "d": "Sat",
+          "sessions": [
+            {
+              "sport": "race",
+              "title": "🦋 RACE DAY — Napa Valley 70.3",
+              "detail": "1.2 mi swim · 56 mi bike · 13.1 mi run. Smile at every aid station. You built this.",
+              "effort": "Z2",
+              "dur": "All day"
+            }
+          ]
+        },
+        {
+          "d": "Sun",
+          "sessions": [
+            {
+              "sport": "rest",
+              "title": "Celebrate",
+              "detail": "Eat everything. Nap. Be insufferable about it.",
+              "effort": "—",
+              "dur": "—"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "guide": {
+    "start_here": "This plan has one organizing idea: your swim is already done, so almost every new hour of training goes into the bike — with the run rebuilt carefully alongside it rather than assumed. That's why Saturday is sacred. Five days are mandatory (Tue, Wed, Thu, Sat, Sun) and the listed weekly hours count only those; Monday and Friday are genuinely optional extras. If a week gets messy, protect the Saturday long ride first, the Sunday long run second, and let anything else go.",
+    "bike": "The bike is 56 of the 70.3 miles and it's where the race is won or lost for a first-timer. You're going from ~10 mi/week to a 50-mile rehearsal ride in seven weeks, which is a real jump — so we grow the long ride by about 6 miles a week and cut it hard on step-back weeks. Three things matter more than fitness: (1) Contact points. Saddle soreness ends more first 70.3s than legs do — get properly fitted shorts, use chamois cream from week one, and if anything goes numb, stop and adjust the fit. (2) Cadence. Spin 85–90 rpm in an easy gear rather than grinding — it saves your legs for the run. (3) Never ride hard. On race day the bike should feel almost boring. Boring bike, good run.",
+    "swim": "Genuinely: you're already there. 2,075 yd at 1:59/100 is race distance at race pace. So the pool work here is maintenance, not building — one or two swims a week is plenty. What actually needs work is open water. Pool-fit swimmers get rattled by cold, chop, no lane line, and dozens of arms. That's why Week 4 and Week 7 both put you in a lake in a wetsuit: practice sighting every 6–8 strokes, practice starting slow and settling, and practice the dizzy jog out of the water into T1. Do those two sessions and the swim will be the easiest leg of your day.",
+    "run": "You have real running fitness — 7.7 miles at 9:31/mi proves it — but you haven't raced a half in years and your last four weeks averaged about 7.7 miles across two runs. Real fitness, thin recent volume. So the run gets built deliberately, and three choices make that safe. (1) Frequency over distance: we go from two runs a week to three, but the longest run in Week 1 is FIVE miles — shorter than the one you just did. More often, less far, is how durability actually gets built, and it's what protects your knees and shins while bike volume is climbing at the same time. (2) Run/walk from day one: every long run is run 9 minutes / walk 1 minute starting in Week 1 — not as a fallback when you're tired, as the method. It's exactly what you'll do on race day, so we rehearse it for nine weeks instead of improvising it at mile 3. (3) Almost no run intensity: there are no tempo runs in this plan at all. Every hard interval lives on the bike, which is non-impact and is where you actually need the fitness. Runs are easy, plus a few relaxed strides. The long run peaks at 9 miles in Week 6 and that is genuinely enough — you do not need to run 13 in training to run/walk 13 on race day, and the Week 7 brick off a 50-mile ride will teach you more about race day than any standalone long run could.",
+    "bricks": "A brick is a run immediately off the bike. The first 8–10 minutes your legs feel like someone else's — heavy, wobbly, oddly slow. That feeling is completely normal and it passes. The only way to stop being surprised by it is to have felt it six times before race day, which is exactly what the Saturday brick jogs are for. Keep them short and easy; they're a nervous-system rehearsal, not a workout.",
+    "fuel": "Anything over about 90 minutes needs calories going in. Target 200–250 cal/hr and roughly one bottle of fluid per hour on the bike, taken on a timer — not when you feel like it, because by then it's late. Practice the exact products on the Week 3, 5, 6 and 7 long rides so race day contains zero new foods. On the run, take something at most aid stations and drink even when you don't want to. The #1 cause of a miserable back half is under-fueling on the bike.",
+    "gear": "Before Week 6, have these sorted: a bike that fits and has been tuned, a spare tube + tire lever + a way to inflate it (and one practice run at changing a flat), a wetsuit you've actually swum in, tri shorts or shorts you've ridden 3+ hours in, chamois cream, sunglasses, and race-day nutrition you've tested. Nothing new on race day — not shoes, not gels, not a shirt.",
+    "strength": "Friday's optional session is knee and hip insurance, not bodybuilding. 30 minutes: glute bridges, Bulgarian split squats, step-downs, calf raises, side planks, bird dogs. Two rounds. It's the first thing to drop when the week gets busy — but if you can keep it, your hips will thank you around mile 40 of the bike.",
+    "race_day_math": "Rough, honest estimate at your current fitness: swim ~50–55 min · T1 ~8 min · bike 56 mi at 13 mph ~4:20 · T2 ~5 min · run 13.1 as run/walk at ~13:00/mi ~2:50. Total around 8:00–8:15. If the bike comes up to 15 mph over the next nine weeks — very possible from this starting point — that drops to roughly 7:30. IMPORTANT: check the official race bike cutoff and overall cutoff against these numbers before you commit. If the margin looks thin, the Olympic distance on the same day is a fantastic race and not a downgrade.",
+    "race_day_pacing": "Swim: start at the back or the side, go out embarrassingly easy for 200 yards, then settle. Bike: hold an effort you could hold for another hour after you finish. If you're passing lots of people in the first 20 miles, you're going too hard. Eat and drink on schedule. Run: run 9 / walk 1 from the very first mile. Walk every aid station, drink something at each one, and let yourself be slow. Slow and steady finishes strong — fast and clever finishes at the medical tent.",
+    "listening": "Back off, without guilt, if you get: resting heart rate up 7+ beats for two mornings, sleep going sideways, a joint pain that changes how you move (as opposed to general muscle soreness), or a genuine loss of enthusiasm for training. Pay extra attention to shins, knees and Achilles in the first three weeks — that's when run frequency is climbing fastest and it's the most likely place for something to grumble. The fix is almost always one or two easy days, not pushing through. Missing one session costs nothing. Missing three weeks to an injury costs the race.",
+    "adjusting": "Life happens — move days around freely, with two rules. Keep the long ride and long run on separate days, and never stack two hard days back-to-back. If you miss the Saturday ride, do it Sunday and shift the long run to Monday rather than skipping it. If you miss a whole week, don't try to catch up — repeat the week you missed and pull one week off the end of the build. The plan bends. That's what it's for."
+  }
+}
