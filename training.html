@@ -95,6 +95,12 @@
     .status-northstar { background: rgba(229,181,60,0.18); color: #e5b53c; }
 
     .nut-principles li { margin-bottom: 0.4rem; }
+    .mm-table { width: 100%; border-collapse: collapse; font-size: 0.84rem; margin-top: 0.3rem; }
+    .mm-table th, .mm-table td { text-align: left; padding: 0.5rem 0.5rem; border-bottom: 1px solid var(--border); vertical-align: top; }
+    .mm-table th { color: var(--text-muted); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.05em; }
+    .mm-table td { color: var(--text); line-height: 1.4; }
+    .mm-table .mm-sets { color: var(--accent); font-weight: 600; white-space: nowrap; }
+    .mm-note { font-size: 0.74rem; color: var(--text-muted); margin-top: 0.15rem; }
     .loading { color: var(--text-muted); font-size: 0.9rem; padding: 1rem 0; }
 
     @media screen and (max-width: 680px) {
@@ -131,6 +137,7 @@
       <button class="tab active" data-view="current">Current Phase</button>
       <button class="tab" data-view="roadmap">Roadmap</button>
       <button class="tab" data-view="plan">Full Plan</button>
+      <button class="tab" data-view="strength">Strength</button>
       <button class="tab" data-view="nutrition">Nutrition</button>
       <button class="tab" data-view="goals">Goals</button>
     </div>
@@ -138,6 +145,7 @@
     <div class="view active" id="view-current"><div id="current-root"><div class="loading">Loading current phase&hellip;</div></div></div>
     <div class="view" id="view-roadmap"><div id="roadmap-root"><div class="loading">Loading roadmap&hellip;</div></div></div>
     <div class="view" id="view-plan"><div id="plan-root"><div class="loading">Loading plan&hellip;</div></div></div>
+    <div class="view" id="view-strength"><div id="strength-root"><div class="loading">Loading strength&hellip;</div></div></div>
     <div class="view" id="view-nutrition"><div id="nutrition-root"><div class="loading">Loading nutrition&hellip;</div></div></div>
     <div class="view" id="view-goals"><div id="goals-root"><div class="loading">Loading goals&hellip;</div></div></div>
 
@@ -234,14 +242,34 @@
         document.getElementById('plan-root').innerHTML=h;
       })();
 
+      // ---- STRENGTH (muscle maintenance) ----
+      (function(){
+        const mm=data.muscle_maintenance; if(!mm){document.getElementById('strength-root').innerHTML='';return;}
+        let h=`<div class="block"><h3>Not losing muscle during endurance builds</h3><p class="kv">${esc(mm.intro)}</p></div>`;
+        h+=`<div class="block"><h3>The rules</h3><ul>${mm.rules.map(r=>`<li style="font-size:0.87rem;line-height:1.55;margin-bottom:0.35rem">${esc(r)}</li>`).join('')}</ul></div>`;
+        // Movement table
+        h+=`<div class="block"><h3>Cover every movement (2×/week each)</h3><table class="mm-table"><tr><th>Pattern</th><th>Do</th><th>Sets</th></tr>`+
+          mm.movements.map(m=>`<tr><td><strong>${esc(m.pattern)}</strong>${m.note?`<div class="mm-note">${esc(m.note)}</div>`:''}</td><td>${esc(m.primary)}${m.alt?`<div class="mm-note">alt: ${esc(m.alt)}</div>`:''}</td><td class="mm-sets">${esc(m.sets)}</td></tr>`).join('')+
+          `</table></div>`;
+        // Sample split
+        if(mm.sample_split){
+          const s=mm.sample_split;
+          h+=`<div class="block"><h3>Ready-to-use maintenance split</h3><p class="kv" style="margin-bottom:0.7rem">${esc(s.note)}</p>`;
+          [s.day_a,s.day_b].forEach(d=>{h+=`<div style="margin-bottom:0.85rem"><div style="font-weight:700;color:var(--text-bright);font-size:0.87rem;margin-bottom:0.3rem">${esc(d.name)}</div><ul style="margin:0;padding-left:1.15rem">${d.lifts.map(l=>`<li style="font-size:0.85rem;line-height:1.5">${esc(l)}</li>`).join('')}</ul></div>`;});
+          h+=`</div>`;
+        }
+        // Per-phase templates (moved here from Nutrition)
+        if(data.strength_templates){
+          h+=`<div class="block"><h3>What "gym" means each phase</h3><p class="kv" style="margin-bottom:0.7rem">${esc(data.strength_templates.note)}</p>`+
+            data.strength_templates.splits.map(sp=>`<div style="margin-bottom:0.85rem"><div style="font-weight:700;color:var(--text-bright);font-size:0.87rem">${esc(sp.name)}</div><div style="font-size:0.76rem;color:var(--text-muted);margin-bottom:0.3rem">${esc(sp.when)}</div><ul style="margin:0;padding-left:1.15rem">${sp.lifts.map(l=>`<li style="font-size:0.85rem;line-height:1.5">${esc(l)}</li>`).join('')}</ul></div>`).join('')+
+            `</div>`;
+        }
+        document.getElementById('strength-root').innerHTML=h;
+      })();
+
       // ---- NUTRITION ----
       (function(){
         let h=`<div class="block nut-principles"><h3>Core Principles</h3><ul>${(data.nutrition_principles||[]).map(p=>`<li>${esc(p)}</li>`).join('')}</ul></div>`;
-        if(data.strength_templates){
-          h+=`<div class="block"><h3>Strength templates — what "gym" means each phase</h3><p class="kv" style="margin-bottom:0.7rem">${esc(data.strength_templates.note)}</p>`+
-            data.strength_templates.splits.map(s=>`<div style="margin-bottom:0.85rem"><div style="font-weight:700;color:var(--text-bright);font-size:0.87rem">${esc(s.name)}</div><div style="font-size:0.76rem;color:var(--text-muted);margin-bottom:0.3rem">${esc(s.when)}</div><ul style="margin:0;padding-left:1.15rem">${s.lifts.map(l=>`<li style="font-size:0.85rem;line-height:1.5">${esc(l)}</li>`).join('')}</ul></div>`).join('')+
-            `</div>`;
-        }
         h+=`<div class="block"><h3>Durability — the permanent pillar</h3><ul>${(data.durability||[]).map(p=>`<li>${esc(p)}</li>`).join('')}</ul></div>`;
         h+='<h3 style="margin:1.5rem 0 0.5rem;color:var(--text-bright);font-size:0.95rem">Per-phase fueling</h3>';
         (data.phases||[]).forEach(ph=>{

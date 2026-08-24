@@ -944,5 +944,115 @@
         ]
       }
     ]
+  },
+  "muscle_maintenance": {
+    "intro": "During endurance-heavy phases (tri/IM builds), the goal shifts from building to NOT LOSING muscle. Research is clear: you keep strength on remarkably little — as little as 1 hard set per muscle 2×/week maintains it, IF the load stays heavy. So maintenance is about intensity (keep lifting heavy), not volume. Hit every movement pattern below 2×/week and you won't lose a thing.",
+    "rules": [
+      "Keep the load HEAVY (~80–85%, 4–6 reps). Light-and-fluffy is what loses muscle — heavy-but-brief preserves it.",
+      "2×/week per muscle is enough to maintain. You don't need more during a build.",
+      "Cover all 6 patterns: squat, hinge, horizontal push, vertical push, horizontal pull, vertical pull — plus single-leg + core.",
+      "Leave 1–2 reps in reserve. Maintenance ≠ grinding to failure; that just adds fatigue that steals from your endurance sessions.",
+      "Protein ~0.8–1 g/lb is half the battle — you can't hold muscle underfed.",
+      "It's fine to superset opposing movements (push/pull) to save time on a busy build."
+    ],
+    "movements": [
+      {
+        "pattern": "Squat (quads, glutes)",
+        "primary": "Back squat or goblet squat",
+        "sets": "3×5 heavy",
+        "alt": "Front squat, leg press",
+        "note": "Also fuels the bike + jump power."
+      },
+      {
+        "pattern": "Hinge (hamstrings, glutes, back)",
+        "primary": "Romanian deadlift or trap-bar deadlift",
+        "sets": "3×5–6",
+        "alt": "Good morning, hip thrust",
+        "note": "Posterior chain = knee protection + running power."
+      },
+      {
+        "pattern": "Single-leg (balance, glute med, knee)",
+        "primary": "Bulgarian split squat",
+        "sets": "3×8/leg",
+        "alt": "Walking lunge, step-up, pistol progressions",
+        "note": "Your #1 knee-durability lift. Never skip."
+      },
+      {
+        "pattern": "Horizontal push (chest, triceps, front delt)",
+        "primary": "Bench press or dip",
+        "sets": "3×6–8",
+        "alt": "Push-up (weighted), DB press",
+        "note": ""
+      },
+      {
+        "pattern": "Vertical push (shoulders, triceps)",
+        "primary": "Overhead press",
+        "sets": "3×6",
+        "alt": "Handstand push-up (ties to skills), DB shoulder press",
+        "note": ""
+      },
+      {
+        "pattern": "Horizontal pull (mid-back, rear delt)",
+        "primary": "Barbell or DB row",
+        "sets": "3×8–10",
+        "alt": "Chest-supported row, inverted row",
+        "note": "Balances all the pushing + swim posture."
+      },
+      {
+        "pattern": "Vertical pull (lats, biceps)",
+        "primary": "Weighted pull-up",
+        "sets": "3–4×5",
+        "alt": "Lat pulldown, chin-up",
+        "note": "Doubles as your muscle-up / lever base."
+      },
+      {
+        "pattern": "Calves (ankle stiffness)",
+        "primary": "Standing calf raise",
+        "sets": "3×12",
+        "alt": "Seated calf raise, pogo hops",
+        "note": "Ankle stiffness = free vertical + run economy."
+      },
+      {
+        "pattern": "Core / anti-extension",
+        "primary": "Hanging leg raise + plank/hollow hold",
+        "sets": "3×10 / 3×30s",
+        "alt": "Ab wheel, Pallof press",
+        "note": "Holds form late in long races."
+      },
+      {
+        "pattern": "Knee staples (PFPS insurance)",
+        "primary": "Eccentric step-downs",
+        "sets": "3×8/leg (3–4s lowering)",
+        "alt": "Spanish squat, terminal knee extension",
+        "note": "Permanent — stays in every single phase."
+      }
+    ],
+    "sample_split": {
+      "note": "The 2×/week maintenance split during endurance builds. ~40–45 min each, heavy-but-brief.",
+      "day_a": {
+        "name": "Day A — Lower + Pull",
+        "lifts": [
+          "Back squat 3×5",
+          "Romanian deadlift 3×5",
+          "Bulgarian split squat 3×8/leg",
+          "Weighted pull-up 3×5",
+          "Barbell row 3×10",
+          "Eccentric step-downs 3×8/leg (knee)",
+          "Calf raise 3×12"
+        ]
+      },
+      "day_b": {
+        "name": "Day B — Push + Core + Skills",
+        "lifts": [
+          "Overhead press 3×6",
+          "Bench press or dip 3×8",
+          "Single-leg RDL or step-up 3×8/leg",
+          "Handstand / lever skill work 10–15 min",
+          "Hanging leg raise 3×10",
+          "Plank / hollow hold 3×30s",
+          "Eccentric step-downs 3×8/leg (knee)"
+        ]
+      }
+    }
   }
 }

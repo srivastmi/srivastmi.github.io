@@ -211,6 +211,12 @@
       const g=data.guide||{};
       const order=['bricks','swim','bike','fuel','strength','knee'];
       let gh=order.filter(k=>g[k]).map(k=>`<div class="guide-sec"><h3>${k}</h3><p>${esc(g[k])}</p></div>`).join('');
+      if(data.tempo_rotation){
+        const tr=data.tempo_rotation;
+        gh+=`<div class="guide-sec"><h3>Tempo rotation — rotate one per week</h3><p style="margin-bottom:0.7rem">${esc(tr.note)}</p>`+
+          tr.workouts.map(w=>`<div style="margin-bottom:0.6rem;padding-bottom:0.6rem;border-bottom:1px solid var(--border)"><div style="font-weight:700;color:var(--text-bright);font-size:0.86rem">${esc(w.name)}</div><div style="font-size:0.83rem;color:var(--text);margin:0.15rem 0">${esc(w.structure)}</div><div style="font-size:0.78rem;color:var(--accent)">${esc(w.builds)}</div></div>`).join('')+
+          `</div>`;
+      }
       if(data.gym){
         gh+=`<div class="guide-sec"><h3>Gym — example split</h3><p style="margin-bottom:0.7rem">${esc(data.gym.note)}</p>`+
           data.gym.sessions.map(s=>`<div style="margin-bottom:0.8rem"><div style="font-weight:700;color:var(--text-bright);font-size:0.86rem;margin-bottom:0.3rem">${esc(s.name)}</div><ul style="margin:0;padding-left:1.1rem">${s.lifts.map(l=>`<li style="font-size:0.84rem;color:var(--text);line-height:1.5">${esc(l)}</li>`).join('')}</ul></div>`).join('')+

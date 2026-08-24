@@ -1291,5 +1291,40 @@
         ]
       }
     ]
+  },
+  "tempo_rotation": {
+    "note": "You have one quality run per week — rotate through these instead of always running the same tempo. Cruise intervals and VO2 are the two that make you FASTER (threshold + top-end); the rest build durability. Warm up 12–15 min, keep them flat, and don't run the hard ones on legs trashed by the long ride.",
+    "workouts": [
+      {
+        "name": "Cruise intervals",
+        "structure": "4×5 min @ Z4 (threshold), 90s jog between",
+        "builds": "Most time at threshold — top pick for getting faster"
+      },
+      {
+        "name": "Classic tempo",
+        "structure": "20–30 min continuous @ Z3",
+        "builds": "Threshold endurance + mental toughness"
+      },
+      {
+        "name": "VO2 intervals",
+        "structure": "5–6×3 min @ Z5 (hard), 2–3 min jog",
+        "builds": "Raises your ceiling — the real speed driver"
+      },
+      {
+        "name": "Progression run",
+        "structure": "6 mi: start Z2 → last 2 mi @ Z4",
+        "builds": "Control + a strong finish (great race skill)"
+      },
+      {
+        "name": "Fartlek",
+        "structure": "8×(1 min hard / 1 min easy) inside an easy run",
+        "builds": "Unstructured speed — good when legs feel flat"
+      },
+      {
+        "name": "Mile time trial",
+        "structure": "15-min warmup → 1 mi all-out, even pace → cooldown",
+        "builds": "A real speed benchmark to re-test over time (only on fresh legs)"
+      }
+    ]
   }
 }
