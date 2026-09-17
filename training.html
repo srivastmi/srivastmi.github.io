@@ -227,6 +227,18 @@
             data.marathon_ladder.map(m=>`<div class="ladder-row${m.done?' done':''}"><span class="lt">${esc(m.time)}</span><span class="lp">${esc(m.pace)}</span><span class="lw">${esc(m.when)}</span></div>`).join('')+
             `</div></div>`;
         }
+        if(data.benchmarks){
+          const b=data.benchmarks;
+          h+=`<div class="block"><h3>Benchmarks</h3><p class="kv" style="margin-bottom:0.7rem">${esc(b.intro)}</p><div class="ladder">`+
+            b.current.map(m=>`<div class="ladder-row"><span class="lt">${esc(m.metric)}: ${esc(m.value)}</span><span class="lw">${esc(m.when)}</span></div>${m.note?`<div style="font-size:0.76rem;color:var(--text-muted);margin:-0.2rem 0 0.5rem 0.2rem">${esc(m.note)}</div>`:''}`).join('')+
+            `</div>`;
+          if(b.bq_ladder){
+            h+=`<div style="margin-top:0.6rem"><div style="font-weight:700;color:var(--text-bright);font-size:0.87rem;margin-bottom:0.3rem">BQ speed ladder</div><p class="kv" style="margin-bottom:0.5rem;font-size:0.83rem">${esc(b.bq_ladder.note)}</p><div class="ladder">`+
+              b.bq_ladder.steps.map(s=>`<div class="ladder-row"><span class="lt">${esc(s.stage)}</span><span class="lp">${esc(s.target)}</span><span class="lw">${esc(s.predicts)}</span></div>`).join('')+
+              `</div></div>`;
+          }
+          h+=`</div>`;
+        }
         document.getElementById('roadmap-root').innerHTML=h;
       })();
 

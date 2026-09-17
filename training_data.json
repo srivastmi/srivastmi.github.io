@@ -3,7 +3,8 @@
     "athlete": "Mihir Srivastava",
     "updated": "2026-07-27",
     "bodyweight_lb": 170,
-    "tagline": "One system, many goals — periodized so they support each other instead of colliding."
+    "tagline": "One system, many goals — periodized so they support each other instead of colliding.",
+    "age": 24
   },
   "threads": [
     {
@@ -1053,6 +1054,59 @@
           "Eccentric step-downs 3×8/leg (knee)"
         ]
       }
+    }
+  },
+  "benchmarks": {
+    "intro": "Fitness markers to track over time. The mile is the speed key to the BQ — build it up, then extend the endurance down (5K → 10K → half → full).",
+    "current": [
+      {
+        "metric": "Mile (all-out)",
+        "value": "5:36",
+        "when": "Sep 2026",
+        "note": "In-training, no pacer, dodging people + tired legs — true fresh mile ~5:25–5:30."
+      },
+      {
+        "metric": "Marathon",
+        "value": "3:53:24",
+        "when": "Jul 2026",
+        "note": "Conservative comeback race; fitness now is sharper than this implies."
+      },
+      {
+        "metric": "Est. threshold",
+        "value": "~7:00/mi",
+        "when": "Sep 2026",
+        "note": "Garmin LT read 6:54; low-7:00s is the honest zone."
+      }
+    ],
+    "bq_ladder": {
+      "note": "Speed ceiling first (mile), then extend the endurance down. A ~5:10 mile is the speed reservoir a 2:55 marathon needs — necessary but not sufficient; the high-mileage build (knee permitting) converts it.",
+      "steps": [
+        {
+          "stage": "Mile",
+          "target": "~5:10",
+          "predicts": "the speed to support a 2:55"
+        },
+        {
+          "stage": "5K",
+          "target": "~18:00",
+          "predicts": "VO2 / speed-endurance"
+        },
+        {
+          "stage": "10K",
+          "target": "~37:30",
+          "predicts": "threshold extended"
+        },
+        {
+          "stage": "Half",
+          "target": "~1:23",
+          "predicts": "endurance nearly there"
+        },
+        {
+          "stage": "Marathon",
+          "target": "2:55 (BQ)",
+          "predicts": "the summit — gated on the knee holding 55–70 mpw"
+        }
+      ]
     }
   }
 }
