@@ -145,50 +145,7 @@
       <a href="https://github.com/srivastmi">github.com/srivastmi</a>
     </div>
     <div class="summary">
-      Software engineer with a background in cybersecurity R&D and AI safety. Currently building open-source tooling for LLM adversarial evaluation and sandbagging detection grounded in published AI safety research.
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="section-title">Experience</div>
-
-    <div class="entry">
-      <div class="entry-header">
-        <span class="entry-title">Amazon</span>
-        <span class="entry-date">March 2025 &ndash; Present</span>
-      </div>
-      <div class="entry-subtitle">Software Development Engineer &mdash; San Francisco, CA</div>
-      <ul>
-        <li>Built core agent systems for a new voice-AI companion for seniors that runs wellness check-ins and delivers personalized sports, weather, and news updates by voice</li>
-        <li>Owned the agenda-creation engine that assembles each call's conversational plan and the long-term memory system that persists user context across sessions for continuous companionship</li>
-        <li>Architected bi-directional SMS integration into the patient portal with audit logging maintaining a fully HIPAA-compliant trail</li>
-        <li>Engineered data migration pipeline for 190,000+ patient records ensuring HIPAA compliance through Role-Based Access Control, automated anonymization, and audit-ready data lineage tracking</li>
-        <li>Designed secure cloud-native data flows on AWS S3 and FHIR servers; performed threat modeling and input validation to eliminate supply chain vulnerabilities</li>
-      </ul>
-    </div>
-
-    <div class="entry">
-      <div class="entry-header">
-        <span class="entry-title">Intellikgraph</span>
-        <span class="entry-date">August 2024 &ndash; March 2025</span>
-      </div>
-      <div class="entry-subtitle">Software Engineer &mdash; Milpitas, CA</div>
-      <ul>
-        <li>Architected security-first AI agents for DoD contracts; designed threat models, access controls, and security boundaries for autonomous decision-making systems</li>
-        <li>Authored technical proposals defining agent architecture, data access policies, and adversarial robustness requirements that secured contract funding from the DoD</li>
-      </ul>
-    </div>
-
-    <div class="entry">
-      <div class="entry-header">
-        <span class="entry-title">Sandia National Laboratories</span>
-        <span class="entry-date">June 2023 &ndash; April 2024</span>
-      </div>
-      <div class="entry-subtitle">Cybersecurity R&D Intern &mdash; Albuquerque, NM</div>
-      <ul>
-        <li>Engineered automated malware detection scanning 15,000+ enterprise inboxes using YARA rules, encoding protocols, and reverse engineering via Ghidra</li>
-        <li>Built LSTM-based classifiers for electromagnetic signal identification from oscilloscope/SDR data; automated forensic collection pipelines in Python deployed across the national laboratory enterprise network</li>
-      </ul>
+      Software engineer with cybersecurity R&D experience (malware reverse-engineering at a national lab), now focused on LLM red-teaming and adversarial evaluation. Builds open-source tooling for jailbreak attacks, sandbagging detection, and capability elicitation grounded in published research.
     </div>
   </div>
 
@@ -201,9 +158,20 @@
         <span class="entry-date"><a href="https://github.com/srivastmi/redbench" style="color:#555;text-decoration:none;">github.com/srivastmi/redbench</a></span>
       </div>
       <ul>
-        <li>Implemented sandbagging detection with 4 metrics calibrated to published results on WMDP and MMLU benchmarks</li>
+        <li>Implemented sandbagging detection (4 metrics) reproducing van der Weij et al. (ICLR 2025) and Tice et al. (NeurIPS 2025), calibrated to their published results on WMDP and MMLU</li>
         <li>Designed behavioral elicitation as an API-compatible adaptation of weight-perturbation detection &mdash; 7 prompt-based conditions probing for hidden capability without model weight access, validated against ground-truth induced sandbagging</li>
         <li>Built adversarial red-teaming across 12 harm categories and 7 attack strategies with a two-stage composite judge (keyword + LLM evaluation)</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">GCG Adversarial-Suffix Reproduction &mdash; LLM Jailbreak Study</span>
+        <span class="entry-date">2026</span>
+      </div>
+      <ul>
+        <li>Reproduced the GCG gradient-based jailbreak (Zou et al., 2023) end-to-end on Qwen2.5-1.5B; optimized adversarial suffixes flipped 4/4 attacked behaviors from refusal to compliance</li>
+        <li>Quantified the evaluation gap that inflates reported jailbreak rates: the standard refusal-prefix heuristic over-reported success 2&times; vs. an LLM judge (4/4 vs. 2/4 genuine), and a one-character Unicode bug inflated cross-model transfer (reported 3/12, actually 0/12) &mdash; showing the evaluator, not the attack, is where jailbreak benchmarks fail</li>
       </ul>
     </div>
 
@@ -229,13 +197,44 @@
       </ul>
     </div>
 
+  </div>
+
+  <div class="section">
+    <div class="section-title">Experience</div>
+
     <div class="entry">
       <div class="entry-header">
-        <span class="entry-title">Credi &mdash; iOS App</span>
-        <span class="entry-date"><a href="https://apps.apple.com" style="color:#555;text-decoration:none;">App Store</a></span>
+        <span class="entry-title">Amazon</span>
+        <span class="entry-date">March 2025 &ndash; Present</span>
       </div>
+      <div class="entry-subtitle">Software Development Engineer &mdash; San Francisco, CA</div>
       <ul>
-        <li>Built and shipped a location-aware credit card optimization app to the App Store with real-time merchant classification and reward rankings</li>
+        <li>Built core LLM agent systems for a production voice-AI companion for seniors (wellness check-ins, personalized updates) &mdash; owning the per-call planning/agenda engine and the long-term memory subsystem that persists user context across sessions</li>
+        <li>Engineered HIPAA-compliant data infrastructure: migrated 190,000+ patient records with role-based access control, automated anonymization, and audit-ready lineage; threat-modeled AWS S3 + FHIR data flows and bi-directional SMS integration</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">Intellikgraph</span>
+        <span class="entry-date">August 2024 &ndash; March 2025</span>
+      </div>
+      <div class="entry-subtitle">Software Engineer &mdash; Milpitas, CA</div>
+      <ul>
+        <li>Designed threat models and trust boundaries for autonomous LLM agents under a DoD contract, specifying adversarial-robustness requirements against prompt injection and tool-abuse</li>
+        <li>Authored the technical proposals defining agent architecture, data-access policy, and adversarial-robustness requirements that secured DoD contract funding</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">Sandia National Laboratories</span>
+        <span class="entry-date">June 2023 &ndash; April 2024</span>
+      </div>
+      <div class="entry-subtitle">Cybersecurity R&D Intern &mdash; Albuquerque, NM</div>
+      <ul>
+        <li>Reverse-engineered malware samples in Ghidra and authored YARA detection logic deployed across 15,000+ enterprise inboxes &mdash; hands-on binary analysis and malware-internals work</li>
+        <li>Built LSTM-based classifiers for electromagnetic signal identification from oscilloscope/SDR data; automated forensic collection pipelines in Python deployed across the national laboratory enterprise network</li>
       </ul>
     </div>
   </div>
