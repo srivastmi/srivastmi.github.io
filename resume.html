@@ -6,7 +6,7 @@
   <title>Mihir Srivastava — Resume</title>
   <style>
     @page {
-      margin: 0.4in 0.5in;
+      margin: 0.35in 0.5in;
       size: letter;
     }
 
@@ -19,11 +19,11 @@
     body {
       font-family: 'Times New Roman', 'Georgia', serif;
       font-size: 10pt;
-      line-height: 1.25;
+      line-height: 1.15;
       color: #1a1a1a;
       max-width: 7.5in;
       margin: 0 auto;
-      padding: 0.4in 0.5in;
+      padding: 0.35in 0.5in;
     }
 
     .header {
@@ -58,7 +58,7 @@
     }
 
     .section {
-      margin-top: 6px;
+      margin-top: 4px;
     }
 
     .section-title {
@@ -68,11 +68,11 @@
       letter-spacing: 1px;
       border-bottom: 0.75px solid #999;
       padding-bottom: 1px;
-      margin-bottom: 3px;
+      margin-bottom: 2px;
     }
 
     .entry {
-      margin-bottom: 4px;
+      margin-bottom: 3px;
     }
 
     .entry-header {
@@ -141,8 +141,8 @@
       U.S. Citizen &nbsp;|&nbsp; 650-954-0202 &nbsp;|&nbsp;
       <a href="mailto:mihirsrivastava@ucla.edu">mihirsrivastava@ucla.edu</a> &nbsp;|&nbsp;
       <a href="https://mihirsrivastava.com">mihirsrivastava.com</a> &nbsp;|&nbsp;
-      <a href="https://linkedin.com/in/mihir-srivastava-/">LinkedIn</a> &nbsp;|&nbsp;
-      <a href="https://github.com/srivastmi">GitHub</a>
+      <a href="https://linkedin.com/in/mihir-srivastava-/">linkedin.com/in/mihir-srivastava-</a> &nbsp;|&nbsp;
+      <a href="https://github.com/srivastmi">github.com/srivastmi</a>
     </div>
     <div class="summary">
       Software engineer with a background in cybersecurity R&D and AI safety. Currently building open-source tooling for LLM adversarial evaluation and sandbagging detection grounded in published AI safety research.
@@ -159,8 +159,10 @@
       </div>
       <div class="entry-subtitle">Software Development Engineer &mdash; San Francisco, CA</div>
       <ul>
-        <li>Engineered data migration pipeline for 190,000+ patient records ensuring HIPAA compliance through Role-Based Access Control, automated anonymization, and audit-ready data lineage tracking</li>
+        <li>Built core agent systems for a new voice-AI companion for seniors that runs wellness check-ins and delivers personalized sports, weather, and news updates by voice</li>
+        <li>Owned the agenda-creation engine that assembles each call's conversational plan and the long-term memory system that persists user context across sessions for continuous companionship</li>
         <li>Architected bi-directional SMS integration into the patient portal with audit logging maintaining a fully HIPAA-compliant trail</li>
+        <li>Engineered data migration pipeline for 190,000+ patient records ensuring HIPAA compliance through Role-Based Access Control, automated anonymization, and audit-ready data lineage tracking</li>
         <li>Designed secure cloud-native data flows on AWS S3 and FHIR servers; performed threat modeling and input validation to eliminate supply chain vulnerabilities</li>
       </ul>
     </div>
@@ -185,8 +187,7 @@
       <div class="entry-subtitle">Cybersecurity R&D Intern &mdash; Albuquerque, NM</div>
       <ul>
         <li>Engineered automated malware detection scanning 15,000+ enterprise inboxes using YARA rules, encoding protocols, and reverse engineering via Ghidra</li>
-        <li>Built LSTM-based classifiers for electromagnetic signal identification from oscilloscope/SDR data; automated forensic collection pipelines in Python</li>
-        <li>Developed file-scanning optimizations and encoding detection for endpoint security tooling deployed across the national laboratory enterprise network</li>
+        <li>Built LSTM-based classifiers for electromagnetic signal identification from oscilloscope/SDR data; automated forensic collection pipelines in Python deployed across the national laboratory enterprise network</li>
       </ul>
     </div>
   </div>
@@ -201,9 +202,19 @@
       </div>
       <ul>
         <li>Implemented sandbagging detection with 4 metrics calibrated to published results on WMDP and MMLU benchmarks</li>
-        <li>Designed behavioral elicitation as an API-compatible adaptation of weight-perturbation detection &mdash; 7 prompt-based conditions probing for hidden capability without model weight access</li>
-        <li>Validated against ground-truth induced sandbagging using exact induction prompts from published codebases; correctly classifies instructed, calibrated, and goal-conflict variants</li>
+        <li>Designed behavioral elicitation as an API-compatible adaptation of weight-perturbation detection &mdash; 7 prompt-based conditions probing for hidden capability without model weight access, validated against ground-truth induced sandbagging</li>
         <li>Built adversarial red-teaming across 12 harm categories and 7 attack strategies with a two-stage composite judge (keyword + LLM evaluation)</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">PropHunt &mdash; LLM-Powered Property-Based Bug Finder</span>
+        <span class="entry-date"><a href="https://github.com/srivastmi/prophunt" style="color:#555;text-decoration:none;">github.com/srivastmi/prophunt</a></span>
+      </div>
+      <ul>
+        <li>Built a language-agnostic automated bug finder that uses LLMs to propose invariants, generate fuzz tests, execute them in isolated subprocesses, and self-reflect on failures to filter false positives (Python, JS/TS, Go, Rust)</li>
+        <li>Inspired by Anthropic Frontier Red Team research on finding real bugs in NumPy and pandas using Claude and property-based testing</li>
       </ul>
     </div>
 
@@ -214,8 +225,7 @@
       </div>
       <div class="entry-subtitle">Research Assistant</div>
       <ul>
-        <li>Built ML classifiers detecting depression indicators from acoustic features in twin speech data; developed NLP and signal processing pipelines for genetic vs. environmental factor analysis</li>
-        <li>Processed and analyzed large-scale audio corpora using feature extraction (MFCCs, pitch, jitter) and statistical modeling in Python and R</li>
+        <li>Built ML classifiers detecting depression indicators from acoustic features (MFCCs, pitch, jitter) in twin speech data; developed NLP and signal-processing pipelines for genetic vs. environmental analysis in Python/R</li>
       </ul>
     </div>
 
@@ -225,7 +235,7 @@
         <span class="entry-date"><a href="https://apps.apple.com" style="color:#555;text-decoration:none;">App Store</a></span>
       </div>
       <ul>
-        <li>Built and shipped a location-aware credit card optimization app to the App Store with real-time merchant classification, reward category rankings, and home screen widgets</li>
+        <li>Built and shipped a location-aware credit card optimization app to the App Store with real-time merchant classification and reward rankings</li>
       </ul>
     </div>
   </div>
@@ -260,7 +270,7 @@
       <span class="label">Security</span>
       <span>Penetration testing, reverse engineering (Ghidra), malware analysis, YARA, threat modeling, adversarial red-teaming</span>
       <span class="label">AI / ML</span>
-      <span>LLM evaluation, sandbagging detection, prompt injection, NLP, LSTM/RNN, PyTorch, reinforcement learning</span>
+      <span>LLM evaluation, sandbagging detection, prompt injection, voice agents, agent memory systems, NLP, LSTM/RNN, PyTorch, reinforcement learning</span>
       <span class="label">Engineering</span>
       <span>Python, TypeScript, Kotlin, AWS, SQL, async systems, Docker, REST APIs, FHIR</span>
     </div>
