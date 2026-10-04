@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mihir Srivastava — Resume</title>
+  <style>
+    @page {
+      margin: 0.35in 0.5in;
+      size: letter;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Times New Roman', 'Georgia', serif;
+      font-size: 10pt;
+      line-height: 1.15;
+      color: #1a1a1a;
+      max-width: 7.5in;
+      margin: 0 auto;
+      padding: 0.35in 0.5in;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 2px;
+      border-bottom: 1.5px solid #1a1a1a;
+      padding-bottom: 2px;
+    }
+
+    .header h1 {
+      font-size: 15pt;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      margin-bottom: 2px;
+    }
+
+    .header .contact {
+      font-size: 9pt;
+      color: #333;
+    }
+
+    .header .contact a {
+      color: #333;
+      text-decoration: none;
+    }
+
+    .header .summary {
+      font-size: 9pt;
+      color: #444;
+      margin-top: 2px;
+      font-style: italic;
+    }
+
+    .section {
+      margin-top: 4px;
+    }
+
+    .section-title {
+      font-size: 10pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border-bottom: 0.75px solid #999;
+      padding-bottom: 1px;
+      margin-bottom: 2px;
+    }
+
+    .entry {
+      margin-bottom: 3px;
+    }
+
+    .entry-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+
+    .entry-title {
+      font-weight: 700;
+      font-size: 10pt;
+    }
+
+    .entry-date {
+      font-size: 9pt;
+      color: #555;
+      white-space: nowrap;
+    }
+
+    .entry-subtitle {
+      font-style: italic;
+      font-size: 9.5pt;
+      color: #333;
+      margin-bottom: 1px;
+    }
+
+    .entry ul {
+      margin-left: 14px;
+      margin-top: 0px;
+    }
+
+    .entry li {
+      margin-bottom: 0px;
+      font-size: 10pt;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 90px 1fr;
+      row-gap: 0px;
+      font-size: 9.5pt;
+    }
+
+    .skills-grid .label {
+      font-weight: 700;
+      color: #333;
+    }
+
+    .compact-entry {
+      margin-bottom: 1px;
+    }
+
+    @media print {
+      body {
+        padding: 0;
+        max-width: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1>Mihir Srivastava</h1>
+    <div class="contact">
+      U.S. Citizen &nbsp;|&nbsp; 650-954-0202 &nbsp;|&nbsp;
+      <a href="mailto:mihirsrivastava@ucla.edu">mihirsrivastava@ucla.edu</a> &nbsp;|&nbsp;
+      <a href="https://mihirsrivastava.com">mihirsrivastava.com</a> &nbsp;|&nbsp;
+      <a href="https://linkedin.com/in/mihir-srivastava-/">linkedin.com/in/mihir-srivastava-</a> &nbsp;|&nbsp;
+      <a href="https://github.com/srivastmi">github.com/srivastmi</a>
+    </div>
+    <div class="summary">
+      Software engineer who ships production systems end to end &mdash; LLM-powered agent products, data infrastructure at scale, and full-stack features &mdash; across AI/ML, cloud (AWS), and security-critical domains. Currently building production AI products at Amazon.
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Experience</div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">Amazon</span>
+        <span class="entry-date">March 2025 &ndash; Present</span>
+      </div>
+      <div class="entry-subtitle">Software Development Engineer &mdash; San Francisco, CA</div>
+      <ul>
+        <li>Built core LLM agent systems for a production voice-AI product for seniors &mdash; a per-call planning/agenda engine and a long-term memory subsystem that persists user context across sessions &mdash; owning the orchestration layer end to end</li>
+        <li>Engineered data infrastructure migrating 190,000+ patient records with role-based access control, automated anonymization, and audit-ready lineage across AWS S3 and FHIR</li>
+        <li>Shipped bi-directional SMS integration into the patient portal with full audit logging and HIPAA-compliant data handling</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">Intellikgraph</span>
+        <span class="entry-date">August 2024 &ndash; March 2025</span>
+      </div>
+      <div class="entry-subtitle">Software Engineer &mdash; Milpitas, CA</div>
+      <ul>
+        <li>Built autonomous LLM agents for DoD contracts; designed the agent architecture, access controls, and data-access policy</li>
+        <li>Authored the technical proposals (architecture, data policy) that secured DoD contract funding</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">Sandia National Laboratories</span>
+        <span class="entry-date">June 2023 &ndash; April 2024</span>
+      </div>
+      <div class="entry-subtitle">Cybersecurity R&D Intern &mdash; Albuquerque, NM</div>
+      <ul>
+        <li>Built an automated malware-detection pipeline scanning 15,000+ enterprise inboxes (YARA rules, reverse engineering in Ghidra), deployed across the lab enterprise network</li>
+        <li>Built LSTM classifiers for signal identification from oscilloscope/SDR data and automated forensic data pipelines in Python</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Projects</div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">RedBench &mdash; LLM Evaluation Toolkit</span>
+        <span class="entry-date">2026 &nbsp;&middot;&nbsp; <a href="https://github.com/srivastmi/redbench" style="color:#555;text-decoration:none;">github.com/srivastmi/redbench</a></span>
+      </div>
+      <ul>
+        <li>Built an open-source LLM evaluation toolkit: sandbagging detection (4 metrics reproducing published benchmarks) and an adversarial test harness (12 categories, 7 strategies) with a two-stage keyword + LLM judge</li>
+        <li>Designed an API-compatible capability-elicitation module (7 conditions) that probes model behavior without weight access</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">GCG Jailbreak Reproduction &mdash; Adversarial-Attack Harness</span>
+        <span class="entry-date">2026</span>
+      </div>
+      <ul>
+        <li>Built a reproducible experiment harness for the GCG adversarial-suffix attack (Zou et al., 2023) on Qwen2.5-1.5B &mdash; batched gradient optimization, cross-model transfer testing, and an automated LLM-judge scoring pipeline</li>
+        <li>Found and fixed a scoring bug where a heuristic over-reported attack success by 2x, then documented the methodology gap</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">PropHunt &mdash; Automated Property-Based Bug Finder</span>
+        <span class="entry-date"><a href="https://github.com/srivastmi/prophunt" style="color:#555;text-decoration:none;">github.com/srivastmi/prophunt</a></span>
+      </div>
+      <ul>
+        <li>Built a language-agnostic bug finder that uses LLMs to propose invariants, generate fuzz tests, run them in isolated subprocesses, and self-reflect to filter false positives</li>
+        <li>Supports Python (Hypothesis), JS/TS (fast-check), Go, and Rust through an adapter pattern with auto-detection from file extensions</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">Credi &mdash; iOS App</span>
+        <span class="entry-date"><a href="https://apps.apple.com" style="color:#555;text-decoration:none;">App Store</a></span>
+      </div>
+      <ul>
+        <li>Built and shipped a location-aware credit-card optimization app to the App Store with real-time merchant classification, reward rankings, and home-screen widgets</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">UCLA SPAPL &mdash; Speech Processing Lab</span>
+        <span class="entry-date">2022 &ndash; 2024</span>
+      </div>
+      <ul>
+        <li>Built ML classifiers detecting depression indicators from acoustic features (MFCCs, pitch, jitter) in twin speech data; developed NLP and signal-processing pipelines in Python/R</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Education</div>
+    <div class="compact-entry">
+      <div class="entry-header">
+        <span class="entry-title">University of California, Los Angeles (UCLA)</span>
+        <span class="entry-date">June 2024</span>
+      </div>
+      <div class="entry-subtitle">B.A. Computer Science and Linguistics</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Leadership</div>
+    <div class="compact-entry">
+      <div class="entry-header">
+        <span class="entry-title">Association for Computing Machinery, UCLA &mdash; Officer / School Lead</span>
+        <span class="entry-date">2023 &ndash; 2024</span>
+      </div>
+      <ul style="margin-top:0px;margin-left:14px;">
+        <li>Led a team of instructors delivering a Python curriculum to 120+ students across underprivileged Los Angeles school districts</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Skills</div>
+    <div class="skills-grid">
+      <span class="label">Languages</span>
+      <span>Python, TypeScript, Kotlin, SQL</span>
+      <span class="label">AI / ML</span>
+      <span>LLM agents &amp; orchestration, LLM evaluation, prompt engineering, NLP, PyTorch, Hugging Face</span>
+      <span class="label">Cloud &amp; Infra</span>
+      <span>AWS (S3), Docker, REST APIs, Git, Linux, FHIR, CI/CD</span>
+    </div>
+  </div>
+
+</body>
+</html>
