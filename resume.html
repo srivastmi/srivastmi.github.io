@@ -145,7 +145,7 @@
       <a href="https://github.com/srivastmi">github.com/srivastmi</a>
     </div>
     <div class="summary">
-      Software engineer with cybersecurity R&D experience (malware reverse-engineering at a national lab), now focused on LLM red-teaming and adversarial evaluation. Builds open-source tooling for jailbreak attacks, sandbagging detection, and capability elicitation grounded in published research.
+      Software engineer with cybersecurity R&D experience (malware reverse-engineering at a national lab), now focused on large language model (LLM) red-teaming and adversarial evaluation. Builds open-source tooling for jailbreak attacks, prompt injection, sandbagging detection, and capability elicitation, grounded in published research.
     </div>
   </div>
 
@@ -155,12 +155,12 @@
     <div class="entry">
       <div class="entry-header">
         <span class="entry-title">RedBench &mdash; LLM Safety Evaluation Toolkit</span>
-        <span class="entry-date"><a href="https://github.com/srivastmi/redbench" style="color:#555;text-decoration:none;">github.com/srivastmi/redbench</a></span>
+        <span class="entry-date">2026 &nbsp;&middot;&nbsp; <a href="https://github.com/srivastmi/redbench" style="color:#555;text-decoration:none;">github.com/srivastmi/redbench</a></span>
       </div>
       <ul>
         <li>Implemented sandbagging detection (4 metrics) reproducing van der Weij et al. (ICLR 2025) and Tice et al. (NeurIPS 2025), calibrated to their published results on WMDP and MMLU</li>
-        <li>Designed behavioral elicitation as an API-compatible adaptation of weight-perturbation detection &mdash; 7 prompt-based conditions probing for hidden capability without model weight access, validated against ground-truth induced sandbagging</li>
-        <li>Built adversarial red-teaming across 12 harm categories and 7 attack strategies with a two-stage composite judge (keyword + LLM evaluation)</li>
+        <li>Designed behavioral elicitation as an API-compatible adaptation of weight-perturbation detection &mdash; 7 prompt-based conditions probing for hidden capability without weight access, validated on ground-truth sandbagging</li>
+        <li>Built adversarial red-teaming: 12 harm categories, 7 attack strategies, scored by a two-stage keyword + LLM judge</li>
       </ul>
     </div>
 
@@ -171,7 +171,7 @@
       </div>
       <ul>
         <li>Reproduced the GCG gradient-based jailbreak (Zou et al., 2023) end-to-end on Qwen2.5-1.5B; optimized adversarial suffixes flipped 4/4 attacked behaviors from refusal to compliance</li>
-        <li>Quantified the evaluation gap that inflates reported jailbreak rates: the standard refusal-prefix heuristic over-reported success 2&times; vs. an LLM judge (4/4 vs. 2/4 genuine), and a one-character Unicode bug inflated cross-model transfer (reported 3/12, actually 0/12) &mdash; showing the evaluator, not the attack, is where jailbreak benchmarks fail</li>
+        <li>Quantified an evaluation gap that inflates reported jailbreak rates: a refusal-prefix heuristic over-reported success 2x vs. an LLM judge (4/4 vs. 2/4 genuine), and a one-character Unicode bug inflated cross-model transfer (reported 3/12, actual 0/12) &mdash; isolating the evaluator, not the attack, as the dominant source of measured error</li>
       </ul>
     </div>
 
@@ -181,19 +181,8 @@
         <span class="entry-date"><a href="https://github.com/srivastmi/prophunt" style="color:#555;text-decoration:none;">github.com/srivastmi/prophunt</a></span>
       </div>
       <ul>
-        <li>Built a language-agnostic automated bug finder that uses LLMs to propose invariants, generate fuzz tests, execute them in isolated subprocesses, and self-reflect on failures to filter false positives (Python, JS/TS, Go, Rust)</li>
-        <li>Inspired by Anthropic Frontier Red Team research on finding real bugs in NumPy and pandas using Claude and property-based testing</li>
-      </ul>
-    </div>
-
-    <div class="entry">
-      <div class="entry-header">
-        <span class="entry-title">UCLA SPAPL &mdash; Speech Processing and Auditory Perception Lab</span>
-        <span class="entry-date">2022 &ndash; 2024</span>
-      </div>
-      <div class="entry-subtitle">Research Assistant</div>
-      <ul>
-        <li>Built ML classifiers detecting depression indicators from acoustic features (MFCCs, pitch, jitter) in twin speech data; developed NLP and signal-processing pipelines for genetic vs. environmental analysis in Python/R</li>
+        <li>Built a language-agnostic automated bug finder that uses LLMs to propose invariants, generate fuzz tests, run them in isolated subprocesses, and self-reflect to filter false positives (Python, JS/TS, Go, Rust)</li>
+        <li>Inspired by Anthropic Frontier Red Team research that finds real bugs in NumPy and pandas with Claude and property-based testing</li>
       </ul>
     </div>
 
@@ -209,7 +198,7 @@
       </div>
       <div class="entry-subtitle">Software Development Engineer &mdash; San Francisco, CA</div>
       <ul>
-        <li>Built core LLM agent systems for a production voice-AI companion for seniors (wellness check-ins, personalized updates) &mdash; owning the per-call planning/agenda engine and the long-term memory subsystem that persists user context across sessions</li>
+        <li>Built core LLM agent systems for a production voice-AI companion for seniors (wellness check-ins, personalized updates) &mdash; owning the planning/agenda engine and the long-term memory subsystem that persists user context across sessions</li>
         <li>Engineered HIPAA-compliant data infrastructure: migrated 190,000+ patient records with role-based access control, automated anonymization, and audit-ready lineage; threat-modeled AWS S3 + FHIR data flows and bi-directional SMS integration</li>
       </ul>
     </div>
@@ -222,7 +211,7 @@
       <div class="entry-subtitle">Software Engineer &mdash; Milpitas, CA</div>
       <ul>
         <li>Designed threat models and trust boundaries for autonomous LLM agents under a DoD contract, specifying adversarial-robustness requirements against prompt injection and tool-abuse</li>
-        <li>Authored the technical proposals defining agent architecture, data-access policy, and adversarial-robustness requirements that secured DoD contract funding</li>
+        <li>Authored the technical proposals (agent architecture, data-access policy) that secured DoD contract funding</li>
       </ul>
     </div>
 
@@ -233,7 +222,7 @@
       </div>
       <div class="entry-subtitle">Cybersecurity R&D Intern &mdash; Albuquerque, NM</div>
       <ul>
-        <li>Reverse-engineered malware samples in Ghidra and authored YARA detection logic deployed across 15,000+ enterprise inboxes &mdash; hands-on binary analysis and malware-internals work</li>
+        <li>Reverse-engineered malware samples in Ghidra, performing binary analysis of malware internals, and authored YARA detection logic deployed across 15,000+ enterprise inboxes</li>
         <li>Built LSTM-based classifiers for electromagnetic signal identification from oscilloscope/SDR data; automated forensic collection pipelines in Python deployed across the national laboratory enterprise network</li>
       </ul>
     </div>
@@ -258,7 +247,7 @@
         <span class="entry-date">2023 &ndash; 2024</span>
       </div>
       <ul style="margin-top:0px;margin-left:14px;">
-        <li>Led team of instructors delivering Python curriculum to 120+ students across underprivileged school districts in the greater Los Angeles area</li>
+        <li>Led a team of instructors delivering a Python curriculum to 120+ students across underprivileged Los Angeles school districts</li>
       </ul>
     </div>
   </div>
@@ -267,11 +256,11 @@
     <div class="section-title">Skills</div>
     <div class="skills-grid">
       <span class="label">Security</span>
-      <span>Penetration testing, reverse engineering (Ghidra), malware analysis, YARA, threat modeling, adversarial red-teaming</span>
+      <span>Offensive security, red teaming, reverse engineering (Ghidra), binary analysis, malware analysis, YARA, threat modeling, penetration testing</span>
       <span class="label">AI / ML</span>
-      <span>LLM evaluation, sandbagging detection, prompt injection, voice agents, agent memory systems, NLP, LSTM/RNN, PyTorch, reinforcement learning</span>
+      <span>LLM red-teaming, jailbreak attacks, prompt injection, adversarial ML, model evaluation (evals), sandbagging detection, capability elicitation, LLM-as-a-judge, agent orchestration, NLP, PyTorch</span>
       <span class="label">Engineering</span>
-      <span>Python, TypeScript, Kotlin, AWS, SQL, async systems, Docker, REST APIs, FHIR</span>
+      <span>Python, TypeScript, Kotlin, AWS, SQL, Docker, REST APIs, Hugging Face Transformers, Git, Linux, FHIR</span>
     </div>
   </div>
 
