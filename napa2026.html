@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mihir's first half Ironman — Napa Valley 70.3, 2026. Splits, placing, and race debrief.">
+  <meta name="author" content="Mihir Srivastava">
+  <title>Napa Valley 70.3 — 6:29:06 — Mihir Srivastava</title>
+  <link rel="icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .mh { margin-bottom: 1.5rem; }
+    .mh h1 { font-size: 2rem; margin-bottom: 0.25rem; }
+    .mh .sub { color: var(--text-muted); font-size: 1rem; }
+    .mh .based { color: var(--text-muted); font-size: 0.82rem; margin-top: 0.4rem; line-height: 1.5; }
+    .back-link { display: inline-block; margin-bottom: 1.25rem; font-size: 0.88rem; color: var(--accent); }
+
+    /* Race result banner */
+    .result-banner { background: var(--accent-dim); border: 1px solid var(--accent); border-radius: 12px; padding: 1.4rem 1.5rem; margin: 0 0 1.5rem; }
+    .result-banner .rb-tag { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.1em; color: #e5b53c; font-weight: 700; }
+    .result-banner h2 { font-size: 1.9rem; margin: 0.25rem 0 0.15rem; color: var(--text-bright); }
+    .result-banner .rb-sub { color: var(--text-muted); font-size: 0.92rem; margin-bottom: 1rem; }
+    .rb-stats { display: grid; grid-template-columns: repeat(4,1fr); gap: 0.75rem; margin-bottom: 1rem; }
+    .rb-stat { text-align: center; background: var(--surface); border: 1px solid var(--border); border-radius: 9px; padding: 0.7rem 0.5rem; }
+    .rb-stat .v { font-size: 1.25rem; font-weight: 700; color: var(--text-bright); }
+    .rb-stat .l { font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-muted); margin-top: 0.15rem; }
+    .rb-note { font-size: 0.9rem; color: var(--text-muted); line-height: 1.55; }
+    .rb-note strong { color: var(--text-bright); }
+    @media (max-width: 560px) { .rb-stats { grid-template-columns: repeat(2,1fr); } }
+
+    /* Splits */
+    .split-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; margin-top: 0.6rem; }
+    .split-table th, .split-table td { padding: 0.55rem 0.7rem; text-align: left; border-bottom: 1px solid var(--border); }
+    .split-table th { color: var(--text-muted); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.05em; }
+    .split-table td.leg { font-weight: 600; color: var(--text-bright); }
+    .split-table td .d { color: var(--text-muted); font-size: 0.78rem; font-weight: 400; }
+    .split-table td.t { color: var(--text); font-variant-numeric: tabular-nums; }
+    .split-table .place { color: var(--accent); font-weight: 600; font-size: 0.84rem; }
+    .split-table tr.swim td.leg { color: #6fa8c7; }
+    .split-table tr.bike td.leg { color: #d4a054; }
+    .split-table tr.run td.leg  { color: #5fb96b; }
+    .split-table tr.tr td { color: var(--text-muted); font-size: 0.84rem; }
+    .split-table tr.total td { border-top: 2px solid var(--accent); border-bottom: none; font-weight: 700; color: var(--text-bright); padding-top: 0.7rem; }
+
+    .info-section { margin: 2rem 0; }
+    .info-section h2 { margin-bottom: 0.7rem; font-size: 1.15rem; }
+    .info-section p, .info-section li { font-size: 0.9rem; color: var(--text); line-height: 1.6; }
+    .info-section ul { padding-left: 1.2rem; }
+    .info-section li { margin-bottom: 0.35rem; }
+    .info-section li strong { color: var(--text-bright); }
+
+    .leg-card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 1rem 1.2rem; margin-bottom: 0.7rem; }
+    .leg-card.swim { border-left: 3px solid #6fa8c7; }
+    .leg-card.bike { border-left: 3px solid #d4a054; }
+    .leg-card.run  { border-left: 3px solid #5fb96b; }
+    .leg-card h4 { color: var(--text-bright); font-size: 0.98rem; margin-bottom: 0.3rem; }
+    .leg-card h4 .meta { color: var(--text-muted); font-size: 0.8rem; font-weight: 400; margin-left: 0.4rem; }
+    .leg-card p { margin: 0; }
+
+    .takeaway { background: var(--accent-dim); border: 1px solid var(--accent); border-radius: 10px; padding: 1.1rem 1.3rem; margin-top: 1rem; }
+    .takeaway h4 { color: var(--text-bright); font-size: 0.95rem; margin-bottom: 0.5rem; }
+    .takeaway p { font-size: 0.9rem; color: var(--text); line-height: 1.6; margin: 0; }
+    .takeaway strong { color: var(--accent); }
+
+    @media screen and (max-width: 680px) {
+      .split-table th, .split-table td { padding: 0.5rem 0.4rem; font-size: 0.82rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="top-bar"></div>
+  <div class="glow" id="glow"></div>
+  <button class="theme-toggle" id="theme-toggle" aria-label="Toggle light/dark mode">
+    <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+    <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+  </button>
+
+  <div class="container">
+    <a href="/" class="back-link">&larr; Back</a>
+    <div class="mh">
+      <h1>Napa Valley 70.3</h1>
+      <p class="sub">Saturday, October 24, 2026 &mdash; completed 🏁 &nbsp;<span style="font-size:0.85rem;">first half Ironman</span></p>
+      <p class="based">First-ever race at this distance. An 11-week build stacked straight onto a July marathon &mdash; through a knee comeback, a bike crash, a throat bug, and an arm/elbow overuse injury &mdash; to a <strong>top-5 age-group finish</strong>.</p>
+    </div>
+
+    <div class="result-banner">
+      <div class="rb-tag">Race Result &mdash; 70.3 Debut</div>
+      <h2>6:29:06</h2>
+      <div class="rb-sub">5th in age group &middot; 15th overall &middot; first time racing a half Ironman.</div>
+      <div class="rb-stats">
+        <div class="rb-stat"><div class="v">6:29:06</div><div class="l">Finish</div></div>
+        <div class="rb-stat"><div class="v">5th</div><div class="l">Age Group</div></div>
+        <div class="rb-stat"><div class="v">15th</div><div class="l">Overall</div></div>
+        <div class="rb-stat"><div class="v">70.3 mi</div><div class="l">Distance</div></div>
+      </div>
+      <div class="rb-note">Came out of the water <strong>5th in the entire race</strong> (2nd in age group) &mdash; the swim was the weapon. Rode a hilly bike leg of <strong>3,724 ft of climbing</strong>, then ran all 13.1 home with the quads seizing and calves cramping late. The engine never quit &mdash; <strong>cardio stayed strong the whole run</strong>; the legs, not the lungs, were the limiter. A first 70.3 finished top-5 in the field.</div>
+    </div>
+
+    <section class="info-section">
+      <h2>Splits</h2>
+      <table class="split-table">
+        <thead><tr><th>Leg</th><th>Time</th><th>Speed / Pace</th><th>Place</th></tr></thead>
+        <tbody>
+          <tr class="swim"><td class="leg">Swim <span class="d">1.2 mi</span></td><td class="t">38:42</td><td>2:00 / 100m</td><td class="place">2nd AG</td></tr>
+          <tr class="tr"><td>T1</td><td>4:30</td><td>&mdash;</td><td>&mdash;</td></tr>
+          <tr class="bike"><td class="leg">Bike <span class="d">56 mi</span></td><td class="t">3:27:07</td><td>16.2 mph &middot; 3,724 ft</td><td class="place">7th AG</td></tr>
+          <tr class="tr"><td>T2</td><td>4:36</td><td>&mdash;</td><td>&mdash;</td></tr>
+          <tr class="run"><td class="leg">Run <span class="d">13.1 mi</span></td><td class="t">2:14:10</td><td>10:14 / mi &middot; 948 ft</td><td class="place">6th AG</td></tr>
+          <tr class="total"><td>Total</td><td>6:29:06</td><td>5th AG &middot; 15th overall</td><td class="place">🏅</td></tr>
+        </tbody>
+      </table>
+      <p class="based" style="color:var(--text-muted);font-size:0.8rem;margin-top:0.6rem;">Swim timing chip didn't record on Garmin; swim split from official results. Bike &amp; run data from Strava (avg HR 149 / 151).</p>
+    </section>
+
+    <section class="info-section">
+      <h2>How It Went</h2>
+
+      <div class="leg-card swim">
+        <h4>🏊 Swim <span class="meta">38:42 · 2:00/100m · 2nd age group</span></h4>
+        <p>Elite for the field &mdash; exited the water 5th out of <em>everyone</em>. Controlled, strong, and a massive early buffer. This is the standout leg and the biggest asset to build on.</p>
+      </div>
+
+      <div class="leg-card bike">
+        <h4>🚴 Bike <span class="meta">3:27:07 · 16.2 mph · 3,724 ft climbing</span></h4>
+        <p>A genuinely hilly course &mdash; nearly 3,700 ft of climbing explains the speed. Ridden a touch hot: <strong style="color:var(--text-bright)">avg HR 149</strong> vs the ~135 Z2 race-effort target. That extra 10&ndash;15 bpm over three and a half hours is what pre-fatigued the legs for the run.</p>
+      </div>
+
+      <div class="leg-card run">
+        <h4>🏃 Run <span class="meta">2:14:10 · 10:14/mi · 948 ft</span></h4>
+        <p>Cardio was never the problem &mdash; HR sat at a sustainable 151 and breathing was fine the whole way. The limiter was purely muscular: <strong style="color:var(--text-bright)">quads seizing and calves cramping</strong> from the hot, hilly bike plus under-dosed sodium (~200 mg/hr). Ran every step of it home anyway &mdash; no walking it in.</p>
+      </div>
+
+      <div class="takeaway">
+        <h4>The unlock for next time</h4>
+        <p>An engine that can run a <strong>3:53 marathon</strong> and a swim that places top-5 in the field &mdash; the race was left on the bike, not the body. Ride <strong>10&ndash;15 bpm easier</strong>, take in <strong>500&ndash;700 mg sodium/hr</strong>, and that run turns from 10:14 survival into ~9:00&ndash;9:30 cruising &mdash; worth roughly <strong>15&ndash;20 minutes</strong> faster overall. A controllable fix, not a fitness gap.</p>
+      </div>
+    </section>
+
+    <section class="info-section">
+      <p class="based" style="font-size:0.85rem;">Next up: regain upper-body strength, chase the dunk, sharpen short-distance speed &mdash; then build toward a full Ironman. See the <a href="/training" style="color:var(--accent);">training system</a>.</p>
+    </section>
+
+    <footer><span>&copy; 2026</span></footer>
+  </div>
+
+  <script>
+    // Theme + glow
+    const toggle=document.getElementById('theme-toggle'),root=document.documentElement;
+    const setTheme=m=>{root.setAttribute('data-theme',m);localStorage.setItem('theme',m);};
+    setTheme(localStorage.getItem('theme')||'dark');
+    toggle.addEventListener('click',()=>setTheme(root.getAttribute('data-theme')==='dark'?'light':'dark'));
+    const glow=document.getElementById('glow');let mx=0,my=0,gx=0,gy=0,an=false;
+    const lerp=(a,b,t)=>a+(b-a)*t;
+    function animate(){gx=lerp(gx,mx,.08);gy=lerp(gy,my,.08);const dk=root.getAttribute('data-theme')==='dark';glow.style.background=`radial-gradient(600px circle at ${gx}px ${gy}px, ${dk?'rgba(212,160,84,0.06)':'rgba(212,160,84,0.045)'}, transparent 60%)`;requestAnimationFrame(animate);}
+    document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;if(!an){an=true;animate();}});
+    if('ontouchstart' in window)glow.style.background='radial-gradient(600px circle at 50% 20%, rgba(212,160,84,0.04), transparent 60%)';
+  </script>
+</body>
+</html>
