@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Mihir's dunk program — vertical jump build with knee-safe plyometrics.">
+  <meta name="description" content="Mihir's dunk block — 10-week post-Napa power, speed & lean plan. Day-by-day.">
   <meta name="author" content="Mihir Srivastava">
-  <title>Dunk Program — Mihir Srivastava</title>
+  <title>Dunk Block — Mihir Srivastava</title>
   <link rel="icon" href="images/favicon.ico">
   <link rel="stylesheet" href="style.css">
   <style>
@@ -14,13 +14,16 @@
     .mh .sub { color: var(--text-muted); font-size: 0.95rem; }
     .back-link { display: inline-block; margin-bottom: 1.1rem; font-size: 0.88rem; color: var(--accent); }
 
-    .stats { display: grid; grid-template-columns: repeat(4,1fr); gap: 0.7rem; margin: 1rem 0 1.25rem; }
-    .st { text-align: center; background: var(--surface); border: 1px solid var(--border); border-radius: 9px; padding: 0.7rem 0.4rem; }
-    .st .v { font-size: 1.1rem; font-weight: 700; color: var(--text-bright); }
-    .st .l { font-size: 0.66rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); margin-top: 0.15rem; }
+    .race-stats { display: grid; grid-template-columns: repeat(4,1fr); gap: 0.7rem; margin: 1rem 0 1.25rem; }
+    .rs { text-align: center; background: var(--surface); border: 1px solid var(--border); border-radius: 9px; padding: 0.7rem 0.4rem; }
+    .rs .v { font-size: 1.05rem; font-weight: 700; color: var(--text-bright); }
+    .rs .l { font-size: 0.66rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); margin-top: 0.15rem; }
 
-    .countdown { background: var(--accent-dim); border: 1px solid var(--accent); border-radius: 10px; padding: 0.7rem 1.1rem; margin-bottom: 1rem; font-size: 0.9rem; color: var(--text-bright); text-align: center; }
-    .driver { font-size: 0.85rem; color: var(--text-muted); font-style: italic; line-height: 1.5; margin-bottom: 1.25rem; }
+    .countdown { background: var(--accent-dim); border: 1px solid var(--accent); border-radius: 10px; padding: 0.7rem 1.1rem; margin-bottom: 1.25rem; font-size: 0.9rem; color: var(--text-bright); text-align: center; }
+
+    .zones { display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 0.5rem 0 1.25rem; }
+    .zone-chip { font-size: 0.74rem; color: var(--text); background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: 0.25rem 0.6rem; }
+    .zone-chip b { color: var(--accent); }
 
     .tabs { display: flex; gap: 0.4rem; margin-bottom: 1.5rem; border-bottom: 1px solid var(--border); flex-wrap: wrap; }
     .tab { background: none; border: none; color: var(--text-muted); font-size: 0.9rem; padding: 0.6rem 0.85rem; cursor: pointer; border-bottom: 2px solid transparent; font-family: inherit; }
@@ -29,23 +32,26 @@
     .view { display: none; }
     .view.active { display: block; }
 
-    .phase-head { background: var(--accent-dim); border: 1px solid var(--accent); border-radius: 12px; padding: 1.2rem 1.4rem; margin-bottom: 1rem; }
-    .phase-head.dim { background: var(--surface); border-color: var(--border); }
-    .phase-head .ptag { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.09em; color: var(--accent); font-weight: 700; }
-    .phase-head h2 { font-size: 1.3rem; margin: 0.2rem 0 0.15rem; color: var(--text-bright); }
-    .phase-head .pdates { font-size: 0.8rem; color: var(--text-muted); }
-    .phase-head .ptagline { font-size: 0.9rem; color: var(--text); margin-top: 0.5rem; line-height: 1.5; }
-    .phase-head .ppriority { font-size: 0.83rem; color: var(--accent); margin-top: 0.45rem; font-weight: 600; }
+    .wk-card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 1rem 1.2rem; margin-bottom: 0.8rem; }
+    .wk-card.current { border-color: var(--accent); }
+    .wk-card.race { border-color: #e5b53c; background: var(--accent-dim); }
+    .wk-head { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 0.3rem; margin-bottom: 0.15rem; }
+    .wk-head h3 { font-size: 1rem; color: var(--text-bright); margin: 0; }
+    .wk-block { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent); font-weight: 700; }
+    .wk-meta { font-size: 0.78rem; color: var(--text-muted); margin-bottom: 0.5rem; }
+    .wk-focus { font-size: 0.83rem; color: var(--text); font-style: italic; margin-bottom: 0.6rem; }
 
-    .block { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 1rem 1.2rem; margin-bottom: 0.9rem; }
-    .block h3 { font-size: 0.92rem; color: var(--text-bright); margin: 0 0 0.55rem; }
-    .block ul { margin: 0; padding-left: 1.15rem; }
-    .block li { font-size: 0.87rem; color: var(--text); line-height: 1.55; margin-bottom: 0.35rem; }
-    .kv { font-size: 0.87rem; color: var(--text); line-height: 1.55; }
-    .kv strong { color: var(--text-bright); }
-    .note-line { font-size: 0.82rem; color: var(--text-muted); font-style: italic; margin-top: 0.5rem; line-height: 1.5; }
+    .wk-nav { display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; margin-bottom: 1rem; }
+    .wk-btn { background: var(--surface); border: 1px solid var(--border); color: var(--accent); font-family: inherit; font-size: 0.83rem; padding: 0.4rem 0.8rem; border-radius: 8px; cursor: pointer; transition: border-color .15s; }
+    .wk-btn:hover:not(:disabled) { border-color: var(--accent); }
+    .wk-btn:disabled { color: var(--text-muted); opacity: 0.4; cursor: default; }
+    .wk-nav-mid { display: flex; flex-direction: column; align-items: center; gap: 0.15rem; }
+    .wk-nav-title { font-size: 0.85rem; font-weight: 700; color: var(--text-bright); }
+    .wk-nav-cur { font-size: 0.7rem; color: var(--accent); text-transform: uppercase; letter-spacing: 0.05em; }
+    .wk-jump { background: none; border: none; color: var(--text-muted); font-size: 0.72rem; cursor: pointer; text-decoration: underline; font-family: inherit; padding: 0; }
+    .wk-jump:hover { color: var(--accent); }
 
-    .day { display: grid; grid-template-columns: 52px 1fr; gap: 0.5rem; padding: 0.45rem 0; border-top: 1px solid var(--border); }
+    .day { display: grid; grid-template-columns: 42px 1fr; gap: 0.5rem; padding: 0.45rem 0; border-top: 1px solid var(--border); }
     .day:first-of-type { border-top: none; }
     .day .dow { font-size: 0.76rem; font-weight: 700; color: var(--text-muted); padding-top: 0.1rem; }
     .sess { display: flex; flex-direction: column; gap: 0.3rem; }
@@ -53,14 +59,21 @@
     .s-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; position: relative; top: 5px; }
     .s-title { color: var(--text-bright); font-weight: 600; }
     .s-detail { color: var(--text); }
-    .s-tag { font-size: 0.68rem; color: var(--accent); font-weight: 700; margin-left: auto; white-space: nowrap; }
+    .s-tag { font-size: 0.7rem; color: var(--text-muted); background: var(--border); border-radius: 4px; padding: 0 6px; margin-left: auto; white-space: nowrap; }
+    .s-eff { font-size: 0.7rem; color: var(--accent); font-weight: 700; }
 
     .sport-legend { display: flex; flex-wrap: wrap; gap: 0.7rem; font-size: 0.74rem; color: var(--text-muted); margin: 0.3rem 0 1.1rem; }
     .sport-legend span { display: inline-flex; align-items: center; gap: 0.35rem; }
     .sport-legend .d { width: 9px; height: 9px; border-radius: 50%; }
+
+    .guide-sec { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 1rem 1.2rem; margin-bottom: 0.8rem; }
+    .guide-sec h3 { font-size: 0.92rem; color: var(--text-bright); margin: 0 0 0.4rem; text-transform: capitalize; }
+    .guide-sec p { font-size: 0.87rem; color: var(--text); line-height: 1.55; margin: 0; }
+    .guide-sec ul, .guide-sec ol { margin: 0; padding-left: 1.2rem; }
+    .guide-sec li { font-size: 0.85rem; color: var(--text); line-height: 1.5; margin-bottom: 0.25rem; }
     .loading { color: var(--text-muted); font-size: 0.9rem; padding: 1rem 0; }
 
-    @media screen and (max-width: 680px) { .stats { grid-template-columns: repeat(2,1fr); } }
+    @media screen and (max-width: 680px) { .race-stats { grid-template-columns: repeat(2,1fr); } }
   </style>
 </head>
 <body>
@@ -74,21 +87,21 @@
   <div class="container">
     <a href="/training" class="back-link">&larr; Training system</a>
     <div class="mh">
-      <h1>Dunk Program</h1>
-      <p class="sub" id="sub">&nbsp;</p>
+      <h1 id="goal-name">Dunk Block</h1>
+      <p class="sub" id="goal-sub">&nbsp;</p>
     </div>
 
     <div class="countdown" id="countdown">&nbsp;</div>
-    <div class="stats" id="stats"></div>
-    <div class="driver" id="driver"></div>
+    <div class="race-stats" id="goal-stats"></div>
+    <div class="zones" id="threads"></div>
 
     <div class="tabs">
-      <button class="tab active" data-view="phase">This Phase</button>
-      <button class="tab" data-view="full">Full Program</button>
+      <button class="tab active" data-view="week">This Week</button>
+      <button class="tab" data-view="full">Full Plan</button>
       <button class="tab" data-view="guide">Guide</button>
     </div>
 
-    <div class="view active" id="view-phase"><div id="phase-root"><div class="loading">Loading&hellip;</div></div></div>
+    <div class="view active" id="view-week"><div id="week-root"><div class="loading">Loading&hellip;</div></div></div>
     <div class="view" id="view-full">
       <div class="sport-legend" id="sport-legend"></div>
       <div id="full-root"><div class="loading">Loading&hellip;</div></div>
@@ -118,76 +131,102 @@
 
     const TODAY=new Date();
     const esc=s=>(s==null?'':String(s)).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
-    const SPORT={ strength:{c:'#d98a4a',l:'Strength'}, plyo:{c:'#e5b53c',l:'Plyo'}, jump:{c:'#d4a054',l:'Jump/Power'}, court:{c:'#6fa8c7',l:'Court'}, mobility:{c:'#5fb96b',l:'Mobility'}, rest:{c:'#8a8a8a',l:'Rest'} };
-    const fmtD=s=>new Date(s+'T12:00:00').toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'});
+    const SPORT={ lower:{c:'#d98a4a',l:'Lower / Strength'}, upper:{c:'#b490c7',l:'Upper'}, plyo:{c:'#e5879f',l:'Plyo'}, jump:{c:'#d4a054',l:'Jump / Power'}, run:{c:'#5fb96b',l:'Run'}, court:{c:'#6fa8c7',l:'Court'}, mobility:{c:'#8a9b6f',l:'Mobility'}, rest:{c:'#8a8a8a',l:'Rest'} };
 
     fetch('dunk_plan.json').then(r=>r.json()).then(data=>{
       const m=data.meta;
-      document.getElementById('sub').textContent='Goal: '+m.goal+' by '+new Date(m.deadline+'T12:00:00').toLocaleDateString('en-US',{month:'long',day:'numeric',year:'numeric'});
-      const days=Math.ceil((new Date(m.deadline+'T23:59:59')-TODAY)/864e5);
-      document.getElementById('countdown').innerHTML=`<strong>${days} days</strong> to the deadline · Gap: ${esc(m.gap)}`;
-      document.getElementById('stats').innerHTML=
-        `<div class="st"><div class="v">${esc(m.current)}</div><div class="l">Now</div></div>`+
-        `<div class="st"><div class="v">+6–8&quot;</div><div class="l">Vertical needed</div></div>`+
-        `<div class="st"><div class="v">${esc(m.height)}</div><div class="l">Height</div></div>`+
-        `<div class="st"><div class="v">${esc(m.weight)}</div><div class="l">Weight</div></div>`;
-      document.getElementById('driver').textContent=m.drivers+' '+(m.note||'');
+      document.getElementById('goal-sub').textContent=(m.block||'')+' · no bike/swim this block';
+      const deadline=new Date(m.deadline+'T23:59:00');
+
+      // Countdown to deadline
+      const days=Math.ceil((deadline-TODAY)/864e5);
+      document.getElementById('countdown').innerHTML=days>0?`<strong>${days} days</strong> to the Dec 31 deadline · ${esc(m.deadline_note)}`:'Deadline passed 🏀';
+
+      // Goal stats
+      document.getElementById('goal-stats').innerHTML=
+        `<div class="rs"><div class="v">10-ft rim</div><div class="l">Goal: Dunk</div></div>`+
+        `<div class="rs"><div class="v">${esc(m.current)}</div><div class="l">Current</div></div>`+
+        `<div class="rs"><div class="v">${esc(m.gap).replace(' running vertical to control a ball over a 10-ft rim','')}</div><div class="l">Gap</div></div>`+
+        `<div class="rs"><div class="v">Dec 31</div><div class="l">Deadline</div></div>`;
+
+      // Threads (instead of HR zones)
+      document.getElementById('threads').innerHTML=(m.threads||[]).map(t=>`<span class="zone-chip"><b>&bull;</b> ${esc(t)}</span>`).join('');
+
+      // Sport legend
       document.getElementById('sport-legend').innerHTML=Object.keys(SPORT).map(k=>`<span><span class="d" style="background:${SPORT[k].c}"></span>${SPORT[k].l}</span>`).join('');
 
-      const renderWeek=ph=>`<div class="block"><h3>Weekly Template</h3>${ph.week.map(d=>{
-        return `<div class="day"><div class="dow">${esc(d.d)}</div><div class="sess">${d.sessions.map(s=>{
-          const sp=SPORT[s.sport]||{c:'#888'};
-          return `<div class="s-row"><span class="s-dot" style="background:${sp.c}"></span><span><span class="s-title">${esc(s.title)}</span>${s.detail?` — <span class="s-detail">${esc(s.detail)}</span>`:''}</span>${s.tag?`<span class="s-tag">${esc(s.tag)}</span>`:''}</div>`;
-        }).join('')}</div></div>`;
-      }).join('')}</div>`;
+      // Current week detection
+      const weekStart=w=>new Date(w.monday+'T00:00:00');
+      const weekEnd=w=>{const d=new Date(w.monday+'T00:00:00');d.setDate(d.getDate()+7);return d;};
+      let cur=data.weeks.find(w=>TODAY>=weekStart(w)&&TODAY<weekEnd(w));
+      let upcoming=false;
+      if(!cur){ if(TODAY<weekStart(data.weeks[0])){cur=data.weeks[0];upcoming=true;} else {cur=data.weeks[data.weeks.length-1];} }
 
-      const renderBody=ph=>{
-        let h=`<div class="block"><h3>Focus</h3><ul>${ph.focus.map(f=>`<li>${esc(f)}</li>`).join('')}</ul></div>`;
-        h+=renderWeek(ph);
-        h+=`<div class="block"><h3>Nutrition</h3><div class="kv"><strong>Mindset:</strong> ${esc(ph.nutrition.mindset)}</div><ul style="margin-top:0.5rem">${ph.nutrition.macros.map(x=>`<li>${esc(x)}</li>`).join('')}</ul></div>`;
-        if(ph.notes)h+=`<div class="note-line">${esc(ph.notes)}</div>`;
+      const lastN=data.weeks[data.weeks.length-1].n;
+      const renderWeek=(w,isCur)=>{
+        const cls='wk-card'+(w.n===lastN?' race':'')+(isCur?' current':'');
+        let h=`<div class="${cls}"><div class="wk-head"><h3>Week ${w.n} — ${esc(w.block)}${isCur&&!upcoming?' · this week':''}</h3><span class="wk-block">${esc(w.tag||'')}${w.stepback?' · step-back':''}</span></div>`;
+        const mon=new Date(w.monday+'T12:00:00');
+        h+=`<div class="wk-meta">Week of ${mon.toLocaleDateString('en-US',{month:'short',day:'numeric'})}</div>`;
+        if(w.focus)h+=`<div class="wk-focus">${esc(w.focus)}</div>`;
+        w.days.forEach(d=>{
+          h+=`<div class="day"><div class="dow">${esc(d.d)}</div><div class="sess">`;
+          d.sessions.forEach(s=>{
+            const sp=SPORT[s.sport]||{c:'#888'};
+            h+=`<div class="s-row"><span class="s-dot" style="background:${sp.c}"></span><span><span class="s-title">${esc(s.title)}</span>${s.detail?` — <span class="s-detail">${esc(s.detail)}</span>`:''} ${s.effort&&s.effort!=='—'?`<span class="s-eff">${esc(s.effort)}</span>`:''}</span>${s.dur&&s.dur!=='—'?`<span class="s-tag">${esc(s.dur)}</span>`:''}</div>`;
+          });
+          h+=`</div></div>`;
+        });
+        h+=`</div>`;
         return h;
       };
 
-      // Current phase
-      let cur=data.phases.find(p=>{const s=new Date(p.start+'T00:00:00'),e=new Date(p.end+'T23:59:59');return TODAY>=s&&TODAY<=e;});
-      let upcoming=false;
-      if(!cur){ if(TODAY<new Date(data.phases[0].start+'T00:00:00')){cur=data.phases[0];upcoming=true;} else {cur=data.phases[data.phases.length-1];} }
+      const curIdx=data.weeks.indexOf(cur);
+      let viewIdx=curIdx;
+      const weekRoot=document.getElementById('week-root');
+      function renderThisWeek(){
+        const w=data.weeks[viewIdx];
+        const isCur=(viewIdx===curIdx);
+        let h=`<div class="wk-nav">`+
+          `<button class="wk-btn" id="wk-prev"${viewIdx===0?' disabled':''}>&larr; Prev</button>`+
+          `<div class="wk-nav-mid"><span class="wk-nav-title">Week ${w.n} of ${data.weeks.length}</span>`+
+          ((isCur&&!upcoming)?`<span class="wk-nav-cur">this week</span>`:`<button class="wk-jump" id="wk-jump">Jump to ${upcoming?'Week 1':'current week'}</button>`)+
+          `</div>`+
+          `<button class="wk-btn" id="wk-next"${viewIdx===data.weeks.length-1?' disabled':''}>Next &rarr;</button>`+
+          `</div>`;
+        h+=renderWeek(w,isCur&&!upcoming);
+        weekRoot.innerHTML=h;
+        const pb=document.getElementById('wk-prev'),nb=document.getElementById('wk-next'),jb=document.getElementById('wk-jump');
+        pb.onclick=()=>{if(viewIdx>0){viewIdx--;renderThisWeek();}};
+        nb.onclick=()=>{if(viewIdx<data.weeks.length-1){viewIdx++;renderThisWeek();}};
+        if(jb)jb.onclick=()=>{viewIdx=curIdx;renderThisWeek();};
+      }
+      renderThisWeek();
 
-      let ph='';
-      if(upcoming){const ds=Math.ceil((new Date(cur.start+'T00:00:00')-TODAY)/864e5);ph=`<div class="countdown" style="margin-bottom:1rem">Base work starts in <strong>${ds} days</strong> (${fmtD(cur.start)}), alongside the 70.3 build. You're in marathon recovery until then — here's what's coming:</div>`;}
-      ph+=`<div class="phase-head"><div class="ptag">${upcoming?'Up next':'Current phase'}</div><h2>${esc(cur.name)}</h2><div class="pdates">${fmtD(cur.start)} → ${fmtD(cur.end)}</div><div class="ptagline">${esc(cur.tagline)}</div><div class="ppriority">Priority: ${esc(cur.priority)}</div></div>`;
-      ph+=renderBody(cur);
-      document.getElementById('phase-root').innerHTML=ph;
-
-      // Full program
-      let fh='';
-      data.phases.forEach(p=>{
-        const isCur=p.id===cur.id&&!upcoming;
-        fh+=`<div class="phase-head${isCur?'':' dim'}"><div class="ptag">${fmtD(p.start)} → ${fmtD(p.end)}${isCur?' · now':''}</div><h2>${esc(p.name)}</h2><div class="ptagline">${esc(p.tagline)}</div><div class="ppriority">Priority: ${esc(p.priority)}</div></div>`;
-        fh+=renderBody(p);
-        fh+='<div style="height:1.4rem"></div>';
-      });
-      document.getElementById('full-root').innerHTML=fh;
+      // Full Plan
+      document.getElementById('full-root').innerHTML=data.weeks.map(w=>renderWeek(w,w.n===cur.n)).join('');
 
       // Guide
       const g=data.guide||{};
-      let gh='';
-      gh+=`<div class="block"><h3>The four drivers of vertical</h3><p class="kv">${esc(g.vertical)}</p></div>`;
-      gh+=`<div class="block"><h3>Knee-safe plyometric ladder</h3><ul>${(data.progression||[]).map(p=>`<li>${esc(p)}</li>`).join('')}</ul></div>`;
-      gh+=`<div class="block"><h3>Jump technique — free inches</h3><ul>${(data.technique||[]).map(p=>`<li>${esc(p)}</li>`).join('')}</ul></div>`;
+      const order=['cardio','speed','upper','vertical','ballcontrol','knee','nutrition'];
+      let gh=order.filter(k=>g[k]).map(k=>`<div class="guide-sec"><h3>${k==='ballcontrol'?'Ball control':k}</h3><p>${esc(g[k])}</p></div>`).join('');
+      if(data.progression){
+        gh+=`<div class="guide-sec"><h3>Knee-safe plyo ladder</h3><ol>${data.progression.map(p=>`<li>${esc(p)}</li>`).join('')}</ol></div>`;
+      }
+      if(data.technique){
+        gh+=`<div class="guide-sec"><h3>Jump technique</h3><ul>${data.technique.map(p=>`<li>${esc(p)}</li>`).join('')}</ul></div>`;
+      }
+      if(data.testing){
+        gh+=`<div class="guide-sec"><h3>Testing your vertical</h3><ul>${data.testing.map(p=>`<li>${esc(p)}</li>`).join('')}</ul></div>`;
+      }
       if(data.gym){
-        gh+=`<div class="block"><h3>Gym — example splits</h3><p class="kv" style="margin-bottom:0.7rem">${esc(data.gym.note)}</p>`+
-          data.gym.sessions.map(s=>`<div style="margin-bottom:0.8rem"><div style="font-weight:700;color:var(--text-bright);font-size:0.86rem;margin-bottom:0.3rem">${esc(s.name)}</div><ul style="margin:0;padding-left:1.15rem">${s.lifts.map(l=>`<li style="font-size:0.85rem;line-height:1.5">${esc(l)}</li>`).join('')}</ul></div>`).join('')+
+        gh+=`<div class="guide-sec"><h3>Gym — example splits</h3><p style="margin-bottom:0.7rem">${esc(data.gym.note)}</p>`+
+          data.gym.sessions.map(s=>`<div style="margin-bottom:0.8rem"><div style="font-weight:700;color:var(--text-bright);font-size:0.86rem;margin-bottom:0.3rem">${esc(s.name)}</div><ul style="margin:0;padding-left:1.1rem">${s.lifts.map(l=>`<li style="font-size:0.84rem;color:var(--text);line-height:1.5">${esc(l)}</li>`).join('')}</ul></div>`).join('')+
           `</div>`;
       }
-      gh+=`<div class="block"><h3>Testing &amp; tracking</h3><ul>${(data.testing||[]).map(p=>`<li>${esc(p)}</li>`).join('')}</ul></div>`;
-      gh+=`<div class="block"><h3>Ball control</h3><p class="kv">${esc(g.ballcontrol)}</p></div>`;
-      gh+=`<div class="block"><h3>The knee — most important here</h3><p class="kv">${esc(g.knee)}</p></div>`;
-      gh+=`<div class="block"><h3>Nutrition</h3><p class="kv">${esc(g.nutrition)}</p></div>`;
       document.getElementById('guide-root').innerHTML=gh;
 
-    }).catch(e=>{document.getElementById('phase-root').innerHTML='<div class="loading">Could not load program.</div>';console.error(e);});
+    }).catch(e=>{document.getElementById('week-root').innerHTML='<div class="loading">Could not load plan.</div>';console.error(e);});
   </script>
 </body>
 </html>

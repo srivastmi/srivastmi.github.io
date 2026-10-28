@@ -1,197 +1,279 @@
 {
   "meta": {
     "goal": "Dunk a basketball",
+    "block": "Block 1 — Power, Speed & Lean (post-Napa off-season)",
     "deadline": "2026-12-31",
+    "deadline_note": "Hard cutoff Dec 31 — or whenever you hit it first.",
     "current": "Graze the rim",
     "gap": "~+6–8\" running vertical to control a ball over a 10-ft rim",
     "height": "5'11\"",
-    "weight": "~170 lb",
-    "drivers": "Vertical = max strength × reactive (elastic) power × jump technique × power-to-weight. We build all four.",
-    "note": "Marathon training likely suppressed your vertical — expect some to return 'for free' as endurance fatigue clears and you train power."
+    "weight": "~163 lb",
+    "drivers": "Vertical = max strength × reactive power × jump technique × power-to-weight. This block trains all four — plus mile/5K speed and an upper-body rebuild, all with no endurance interference.",
+    "threads": [
+      "Dunk — lower-body power",
+      "Mile / 5K speed",
+      "Upper-body rebuild",
+      "Lean recomp"
+    ],
+    "note": "The off-season after Napa: endurance volume drops, which frees recovery for power + muscle. Running alone covers the cardio base — no bike or swim this block.",
+    "cardio": "2–3 runs/week (~15–20 mi) fully maintains your aerobic base — and one is your speed session, so cardio and the mile/5K goal are the same runs.",
+    "trip": "India & Vietnam Nov 15 – Dec 6: equipment-light (bodyweight power + upper + running) and a planned diet break — eat the food."
   },
-  "phases": [
+  "weeks": [
     {
-      "id": "base",
-      "name": "Vertical Base",
-      "start": "2026-08-11",
-      "end": "2026-10-24",
-      "priority": "Build the strength base — concurrent with the 70.3, done FRESH",
-      "tagline": "Foundational max strength + knee-safe plyo, woven into the tri block. Low volume, high quality, fresh legs.",
-      "focus": [
-        "Build max lower-body strength (squat + hinge) — the foundation under every vertical.",
-        "Start plyometrics at the BOTTOM of the ladder — tendon prep first (PFPS-safe).",
-        "Drill jump technique: approach, penultimate step, arm swing — free inches most people leave on the table.",
-        "Ankle/hip mobility + single-leg strength for landing control and force transfer."
-      ],
-      "week": [
-        {
-          "d": "Mon",
-          "sessions": [
-            {
-              "sport": "strength",
-              "title": "Max strength — lower",
-              "detail": "Back squat 4×5 heavy · RDL 3×6 · Bulgarian split squat · calf raises",
-              "tag": "fresh"
-            },
-            {
-              "sport": "plyo",
-              "title": "Low plyo",
-              "detail": "Pogo + ankle hops 3×20 — build tendon stiffness",
-              "tag": ""
-            }
-          ]
-        },
-        {
-          "d": "Wed",
-          "sessions": [
-            {
-              "sport": "mobility",
-              "title": "Mobility + skills",
-              "detail": "Ankle/hip mobility + handstand (see /tri for endurance)",
-              "tag": ""
-            }
-          ]
-        },
-        {
-          "d": "Fri",
-          "sessions": [
-            {
-              "sport": "jump",
-              "title": "Jump technique + power",
-              "detail": "Box jumps (land soft) · broad jumps · approach-step drills · arm-swing timing",
-              "tag": ""
-            },
-            {
-              "sport": "plyo",
-              "title": "Low plyo",
-              "detail": "Ankle hops, line hops",
-              "tag": ""
-            }
-          ]
-        },
-        {
-          "d": "Daily",
-          "sessions": [
-            {
-              "sport": "mobility",
-              "title": "Ankle/hip mobility",
-              "detail": "5–10 min — plus keep the knee staples (step-downs)",
-              "tag": ""
-            }
-          ]
-        }
-      ],
-      "nutrition": {
-        "mindset": "Fuel the strength work — maintenance/slow recomp, high protein. No cut yet (that's Phase B).",
-        "macros": [
-          "Protein ~150–170g",
-          "Carbs to fuel training",
-          "Eat at ~maintenance"
-        ]
-      },
-      "notes": "These slot into the /tri week (Mon power, Fri plyo). Progress plyo only when the knee is quiet — quality over quantity, land soft, full recovery between reps."
+      "n": 1,
+      "block": "Recovery",
+      "monday": "2026-10-26",
+      "stepback": true,
+      "tag": "post-70.3",
+      "focus": "Absorb the race. Easy movement only — no jumping, no hard lifting. Reintroduce light lifting late week.",
+      "days": [
+        { "d": "Mon", "sessions": [ { "sport": "rest", "title": "Rest / walk", "detail": "Full rest, or an easy 20-min walk + mobility", "effort": "—", "dur": "—" } ] },
+        { "d": "Tue", "sessions": [ { "sport": "run", "title": "Shakeout jog", "detail": "15–20 min very easy — only if the legs feel good", "effort": "Z1", "dur": "20 min" } ] },
+        { "d": "Wed", "sessions": [ { "sport": "mobility", "title": "Mobility + knee staples", "detail": "Ankle/hip mobility + eccentric step-downs 3×8/leg", "effort": "—", "dur": "15 min" } ] },
+        { "d": "Thu", "sessions": [ { "sport": "run", "title": "Easy run", "detail": "Relaxed, conversational", "effort": "Z2", "dur": "25–30 min" } ] },
+        { "d": "Fri", "sessions": [ { "sport": "lower", "title": "Light lower — re-entry", "detail": "Goblet squat 3×8 light · RDL 3×8 light · calf raise 3×12 · step-downs. No jumping yet.", "effort": "light", "dur": "35 min" } ] },
+        { "d": "Sat", "sessions": [ { "sport": "run", "title": "Easy run + strides", "detail": "30 min Z2 + 4×20s relaxed strides", "effort": "Z2", "dur": "35 min" } ] },
+        { "d": "Sun", "sessions": [ { "sport": "rest", "title": "Rest", "detail": "", "effort": "—", "dur": "—" } ] }
+      ]
     },
     {
-      "id": "peak",
-      "name": "Dunk Peak + Cut",
-      "start": "2026-10-25",
-      "end": "2026-12-31",
-      "priority": "Peak the vertical + win the bet by Dec 31",
-      "tagline": "Endurance drops to maintenance — full explosive focus. Reactive plyo, jump-specific practice, CNS freshness, and the cut for power-to-weight.",
-      "focus": [
-        "Reactive/elastic plyo (depth jumps, bounds) — ONLY once the knee is bulletproof.",
-        "Jump-specific practice: approach dunk attempts, rim touches, ball control.",
-        "Maintain heavy max strength at low volume — keep the force base sharp.",
-        "Cut ~0.5 lb/wk — every pound lost is essentially free vertical."
-      ],
-      "week": [
-        {
-          "d": "Mon",
-          "sessions": [
-            {
-              "sport": "strength",
-              "title": "Max strength — lower",
-              "detail": "Heavy squat / trap-bar 4×3, low volume",
-              "tag": "heavy"
-            }
-          ]
-        },
-        {
-          "d": "Tue",
-          "sessions": [
-            {
-              "sport": "plyo",
-              "title": "Reactive plyo",
-              "detail": "Depth jumps · bounds · approach jumps (knee-ready) + jump technique",
-              "tag": "fresh CNS"
-            }
-          ]
-        },
-        {
-          "d": "Wed",
-          "sessions": [
-            {
-              "sport": "mobility",
-              "title": "Maintain + mobility",
-              "detail": "Easy aerobic + calisthenics + mobility",
-              "tag": ""
-            }
-          ]
-        },
-        {
-          "d": "Thu",
-          "sessions": [
-            {
-              "sport": "jump",
-              "title": "Power",
-              "detail": "Trap-bar jumps · single-leg power · loaded jumps",
-              "tag": ""
-            }
-          ]
-        },
-        {
-          "d": "Fri",
-          "sessions": [
-            {
-              "sport": "rest",
-              "title": "Rest / mobility",
-              "detail": "",
-              "tag": ""
-            }
-          ]
-        },
-        {
-          "d": "Sat",
-          "sessions": [
-            {
-              "sport": "court",
-              "title": "Court practice",
-              "detail": "Approach dunk attempts · rim touches · ball control",
-              "tag": ""
-            }
-          ]
-        },
-        {
-          "d": "Sun",
-          "sessions": [
-            {
-              "sport": "rest",
-              "title": "Rest",
-              "detail": "",
-              "tag": ""
-            }
-          ]
-        }
-      ],
-      "nutrition": {
-        "mindset": "The ONLY hard-cut window in the whole plan. ~0.5 lb/wk, no faster. High protein to hold power. This lean-out also reveals the abs.",
-        "macros": [
-          "Protein ~170g (1g/lb — protects power)",
-          "Carbs moderate, timed around training",
-          "Deficit ~300–400 kcal, gentle"
-        ]
-      },
-      "notes": "Palming is a separate skill — a slightly under-inflated ball or a two-hand dunk counts. Clarify with your friend what wins the bet."
+      "n": 2,
+      "block": "Strength & Power",
+      "monday": "2026-11-02",
+      "stepback": false,
+      "tag": "build 1 · home",
+      "focus": "Build the strength base + start the plyo ladder at the bottom. Upper rebuild begins. Start the gentle cut. Test your vertical this week (baseline).",
+      "days": [
+        { "d": "Mon", "sessions": [
+          { "sport": "plyo", "title": "Plyo — foundation (fresh)", "detail": "Pogo hops 3×20 · ankle hops · line hops — tendon stiffness", "effort": "fresh", "dur": "10 min" },
+          { "sport": "lower", "title": "Lower strength A", "detail": "Back squat 4×5 heavy · RDL 3×8 · Bulgarian split squat 3×8/leg · calf raise 3×12 · step-downs 3×8/leg", "effort": "heavy", "dur": "50 min" }
+        ] },
+        { "d": "Tue", "sessions": [
+          { "sport": "upper", "title": "Upper — push", "detail": "Bench/DB press 4×6–8 · OHP 3×8 · incline DB 3×10 · dips 3×AMRAP · lateral raise 3×15 · triceps 3×12", "effort": "—", "dur": "45 min" },
+          { "sport": "run", "title": "Easy run", "detail": "Cardio base", "effort": "Z2", "dur": "25–30 min" }
+        ] },
+        { "d": "Wed", "sessions": [
+          { "sport": "run", "title": "Speed — short reps", "detail": "15-min w/u + drills → 6×200m @ mile effort, full recovery → c/d", "effort": "hard", "dur": "45 min" }
+        ] },
+        { "d": "Thu", "sessions": [
+          { "sport": "upper", "title": "Upper — pull", "detail": "Pull-up/weighted 4×6 · barbell row 4×8 · face pulls 3×15 · curls 3×12 · rear delts 3×15", "effort": "—", "dur": "45 min" },
+          { "sport": "mobility", "title": "Mobility", "detail": "Ankle/hip 10 min (+ optional 20-min easy jog)", "effort": "—", "dur": "10 min" }
+        ] },
+        { "d": "Fri", "sessions": [
+          { "sport": "plyo", "title": "Plyo — stage 2–3 (fresh)", "detail": "Box jumps (step down) 4×3 · broad jumps 3×4 — land soft", "effort": "fresh", "dur": "12 min" },
+          { "sport": "lower", "title": "Lower strength B", "detail": "Trap-bar deadlift 4×4 · reverse lunge 3×8/leg · Nordic/ham curl 3×6 · calf raise 3×15 · step-downs 3×8/leg", "effort": "heavy", "dur": "50 min" }
+        ] },
+        { "d": "Sat", "sessions": [
+          { "sport": "run", "title": "Easy run", "detail": "Aerobic base", "effort": "Z2", "dur": "30–40 min" },
+          { "sport": "court", "title": "Court + vertical test", "detail": "Baseline test: standing reach + max touch (1- & 2-foot). Then approach footwork + jump reps at the rim.", "effort": "—", "dur": "45 min" }
+        ] },
+        { "d": "Sun", "sessions": [ { "sport": "rest", "title": "Rest / mobility", "detail": "", "effort": "—", "dur": "—" } ] }
+      ]
+    },
+    {
+      "n": 3,
+      "block": "Strength & Power",
+      "monday": "2026-11-09",
+      "stepback": false,
+      "tag": "build 2 · last home week",
+      "focus": "Progress the loads and the plyo ladder. Last full gym week before the trip — pack bands, plan bodyweight work.",
+      "days": [
+        { "d": "Mon", "sessions": [
+          { "sport": "plyo", "title": "Plyo — foundation+ (fresh)", "detail": "Pogos 3×25 · line hops · low box step-off landings (stick it)", "effort": "fresh", "dur": "12 min" },
+          { "sport": "lower", "title": "Lower strength A", "detail": "Back squat 4×5 (add load) · RDL 3×8 · Bulgarian split squat 3×8/leg · calf raise 3×12 · step-downs", "effort": "heavy", "dur": "50 min" }
+        ] },
+        { "d": "Tue", "sessions": [
+          { "sport": "upper", "title": "Upper — push", "detail": "Add a set or load vs last week · press / OHP / incline / dips / laterals / triceps", "effort": "—", "dur": "45 min" },
+          { "sport": "run", "title": "Easy run", "detail": "", "effort": "Z2", "dur": "25–30 min" }
+        ] },
+        { "d": "Wed", "sessions": [
+          { "sport": "run", "title": "Speed — longer reps", "detail": "w/u + drills → 5×300m @ mile–5K effort, 2–3 min rest → c/d", "effort": "hard", "dur": "48 min" }
+        ] },
+        { "d": "Thu", "sessions": [
+          { "sport": "upper", "title": "Upper — pull", "detail": "Pull-up / row / face pulls / curls / rear delts", "effort": "—", "dur": "45 min" },
+          { "sport": "mobility", "title": "Mobility", "detail": "Ankle/hip + optional easy jog", "effort": "—", "dur": "10 min" }
+        ] },
+        { "d": "Fri", "sessions": [
+          { "sport": "plyo", "title": "Plyo — stage 3 (fresh)", "detail": "Box jumps 4×3 · broad jumps 3×4 · short bounds 2×15m", "effort": "fresh", "dur": "12 min" },
+          { "sport": "lower", "title": "Lower strength B", "detail": "Trap-bar deadlift 4×4 (add load) · reverse lunge · Nordic · calf raise · step-downs", "effort": "heavy", "dur": "50 min" }
+        ] },
+        { "d": "Sat", "sessions": [
+          { "sport": "run", "title": "Easy run", "detail": "", "effort": "Z2", "dur": "30–40 min" },
+          { "sport": "court", "title": "Court practice", "detail": "Approach reps · rim touches · ball control", "effort": "—", "dur": "40 min" }
+        ] },
+        { "d": "Sun", "sessions": [ { "sport": "rest", "title": "Rest · travel Nov 15", "detail": "Trip begins — switch to the equipment-light template", "effort": "—", "dur": "—" } ] }
+      ]
+    },
+    {
+      "n": 4,
+      "block": "Trip — Equipment-Light",
+      "monday": "2026-11-16",
+      "stepback": false,
+      "tag": "India / Vietnam · diet break",
+      "focus": "Hold power + upper with bodyweight, keep running speed, maintain the aerobic base. Eat at maintenance — enjoy the food. Flexible around travel.",
+      "days": [
+        { "d": "Mon", "sessions": [
+          { "sport": "jump", "title": "Bodyweight power (fresh)", "detail": "Squat jumps 4×5 · broad jumps 3×4 · single-leg hops 3×6/leg", "effort": "fresh", "dur": "20 min" },
+          { "sport": "upper", "title": "Bodyweight upper", "detail": "Push-up variations 4×12–20 · pike/handstand push-ups 3×8 · dips 3×AMRAP · rows (bar/table) 3×10", "effort": "—", "dur": "25 min" }
+        ] },
+        { "d": "Tue", "sessions": [
+          { "sport": "run", "title": "Speed — hill sprints", "detail": "8–10×10–15s hill sprints, full recovery (no track needed)", "effort": "hard", "dur": "35 min" }
+        ] },
+        { "d": "Wed", "sessions": [
+          { "sport": "mobility", "title": "Mobility + core", "detail": "Ankle/hip mobility + core + optional easy 20–30 min jog · keep step-downs", "effort": "—", "dur": "20 min" }
+        ] },
+        { "d": "Thu", "sessions": [
+          { "sport": "jump", "title": "Bodyweight power (fresh)", "detail": "Tuck jumps 3×6 · depth drops off a step, land soft 3×5 (if knee happy) · pogos 3×20", "effort": "fresh", "dur": "20 min" },
+          { "sport": "upper", "title": "Bodyweight upper", "detail": "Pull-ups 4×AMRAP (if bar) · push-ups 3×max · pike push-ups 3×8 · handstand holds", "effort": "—", "dur": "25 min" }
+        ] },
+        { "d": "Fri", "sessions": [
+          { "sport": "run", "title": "Easy run", "detail": "Cardio base", "effort": "Z2", "dur": "30–40 min" }
+        ] },
+        { "d": "Sat", "sessions": [
+          { "sport": "court", "title": "Court / active", "detail": "Basketball if available (approach + rim touches), otherwise active exploring — keep moving", "effort": "—", "dur": "—" }
+        ] },
+        { "d": "Sun", "sessions": [ { "sport": "rest", "title": "Rest · enjoy", "detail": "Maintenance eating — the planned diet break", "effort": "—", "dur": "—" } ] }
+      ]
+    },
+    {
+      "n": 5,
+      "block": "Trip — Equipment-Light",
+      "monday": "2026-11-23",
+      "stepback": false,
+      "tag": "India / Vietnam · diet break",
+      "focus": "Same equipment-light template. Stay consistent but flexible — a missed day on the road is fine. Power + upper + running.",
+      "days": [
+        { "d": "Mon", "sessions": [
+          { "sport": "jump", "title": "Bodyweight power (fresh)", "detail": "Squat jumps 4×5 · broad jumps 3×4 · single-leg hops 3×6/leg", "effort": "fresh", "dur": "20 min" },
+          { "sport": "upper", "title": "Bodyweight upper", "detail": "Push-ups · pike/handstand push-ups · dips · rows", "effort": "—", "dur": "25 min" }
+        ] },
+        { "d": "Tue", "sessions": [ { "sport": "run", "title": "Speed — fartlek", "detail": "Inside an easy run: 8×(1 min hard / 1 min easy)", "effort": "hard", "dur": "35 min" } ] },
+        { "d": "Wed", "sessions": [ { "sport": "mobility", "title": "Mobility + core", "detail": "Mobility + core + optional easy jog · step-downs", "effort": "—", "dur": "20 min" } ] },
+        { "d": "Thu", "sessions": [
+          { "sport": "jump", "title": "Bodyweight power (fresh)", "detail": "Tuck jumps · depth drops (land soft) · pogos", "effort": "fresh", "dur": "20 min" },
+          { "sport": "upper", "title": "Bodyweight upper", "detail": "Pull-ups · push-ups · pike push-ups · handstand holds", "effort": "—", "dur": "25 min" }
+        ] },
+        { "d": "Fri", "sessions": [ { "sport": "run", "title": "Easy run", "detail": "", "effort": "Z2", "dur": "30–40 min" } ] },
+        { "d": "Sat", "sessions": [ { "sport": "court", "title": "Court / active", "detail": "Keep moving — basketball if available", "effort": "—", "dur": "—" } ] },
+        { "d": "Sun", "sessions": [ { "sport": "rest", "title": "Rest · enjoy", "detail": "Maintenance", "effort": "—", "dur": "—" } ] }
+      ]
+    },
+    {
+      "n": 6,
+      "block": "Trip — Equipment-Light",
+      "monday": "2026-11-30",
+      "stepback": false,
+      "tag": "trip ends Dec 6 · diet break",
+      "focus": "Last trip week. Keep power + upper + running ticking. Come home ready to resume heavy work and start the cut again.",
+      "days": [
+        { "d": "Mon", "sessions": [
+          { "sport": "jump", "title": "Bodyweight power (fresh)", "detail": "Squat jumps · broad jumps · single-leg hops", "effort": "fresh", "dur": "20 min" },
+          { "sport": "upper", "title": "Bodyweight upper", "detail": "Push-ups · pike push-ups · dips · rows", "effort": "—", "dur": "25 min" }
+        ] },
+        { "d": "Tue", "sessions": [ { "sport": "run", "title": "Speed — hill sprints", "detail": "8–10×10–15s, full recovery", "effort": "hard", "dur": "35 min" } ] },
+        { "d": "Wed", "sessions": [ { "sport": "mobility", "title": "Mobility + core", "detail": "Mobility + optional easy jog · step-downs", "effort": "—", "dur": "20 min" } ] },
+        { "d": "Thu", "sessions": [
+          { "sport": "jump", "title": "Bodyweight power (fresh)", "detail": "Tuck jumps · depth drops (land soft) · pogos", "effort": "fresh", "dur": "20 min" },
+          { "sport": "upper", "title": "Bodyweight upper", "detail": "Pull-ups · push-ups · handstand holds", "effort": "—", "dur": "25 min" }
+        ] },
+        { "d": "Fri", "sessions": [ { "sport": "run", "title": "Easy run", "detail": "", "effort": "Z2", "dur": "30–40 min" } ] },
+        { "d": "Sat", "sessions": [ { "sport": "court", "title": "Court / active", "detail": "Keep moving", "effort": "—", "dur": "—" } ] },
+        { "d": "Sun", "sessions": [ { "sport": "rest", "title": "Rest · home Dec 6", "detail": "Back home — resume heavy lifting + the cut next week", "effort": "—", "dur": "—" } ] }
+      ]
+    },
+    {
+      "n": 7,
+      "block": "Dunk Peak",
+      "monday": "2026-12-07",
+      "stepback": false,
+      "tag": "peak · resume cut",
+      "focus": "Stop building, start expressing. Reactive plyo FRESH, heavy-but-brief strength, real rim attempts. Resume the cut (~0.5 lb/wk) — lighter = higher. Re-test vertical.",
+      "days": [
+        { "d": "Mon", "sessions": [
+          { "sport": "lower", "title": "Max strength — brief", "detail": "Heavy squat OR trap-bar 4×3 (~85–90%), low volume · step-downs 3×8/leg", "effort": "heavy", "dur": "35 min" }
+        ] },
+        { "d": "Tue", "sessions": [
+          { "sport": "plyo", "title": "Reactive plyo (fresh CNS)", "detail": "Depth jumps 4×3 (knee bulletproof first) · approach 1-foot jumps to a target 5×3 · broad jumps 3×4", "effort": "fresh", "dur": "30 min" },
+          { "sport": "court", "title": "Rim attempts", "detail": "Practice the real dunk movement — approach + reach + finish", "effort": "—", "dur": "20 min" }
+        ] },
+        { "d": "Wed", "sessions": [
+          { "sport": "upper", "title": "Upper — maintenance", "detail": "Brief: pull-up 3×6 · OHP 3×6 · row 3×8", "effort": "—", "dur": "25 min" },
+          { "sport": "mobility", "title": "Mobility + easy jog", "detail": "Optional 20–30 min easy jog", "effort": "Z2", "dur": "20 min" }
+        ] },
+        { "d": "Thu", "sessions": [
+          { "sport": "jump", "title": "Power day (fresh)", "detail": "Trap-bar jumps 5×3 · single-leg box jumps 3×4/leg · bounds 3×20m", "effort": "fresh", "dur": "30 min" }
+        ] },
+        { "d": "Fri", "sessions": [ { "sport": "rest", "title": "Rest / mobility", "detail": "Freshness is king in the peak", "effort": "—", "dur": "—" } ] },
+        { "d": "Sat", "sessions": [
+          { "sport": "court", "title": "Dunk practice", "detail": "Approach reps · rim attempts · ball control at the rim", "effort": "—", "dur": "45 min" },
+          { "sport": "run", "title": "Short speed", "detail": "Strides or 4–5×150m — keep legs sharp, not tired", "effort": "hard", "dur": "25 min" }
+        ] },
+        { "d": "Sun", "sessions": [ { "sport": "rest", "title": "Rest", "detail": "", "effort": "—", "dur": "—" } ] }
+      ]
+    },
+    {
+      "n": 8,
+      "block": "Dunk Peak",
+      "monday": "2026-12-14",
+      "stepback": false,
+      "tag": "peak",
+      "focus": "Keep expressing power on fresh legs. Lots of real rim attempts. Hold strength heavy-but-brief, keep the gentle cut.",
+      "days": [
+        { "d": "Mon", "sessions": [ { "sport": "lower", "title": "Max strength — brief", "detail": "Heavy squat/trap-bar 4×3, low volume · step-downs", "effort": "heavy", "dur": "35 min" } ] },
+        { "d": "Tue", "sessions": [
+          { "sport": "plyo", "title": "Reactive plyo (fresh)", "detail": "Depth jumps 4×3 · approach jumps to target 5×3 · pogos", "effort": "fresh", "dur": "30 min" },
+          { "sport": "court", "title": "Rim attempts", "detail": "Full approach, max intent", "effort": "—", "dur": "20 min" }
+        ] },
+        { "d": "Wed", "sessions": [
+          { "sport": "upper", "title": "Upper — maintenance", "detail": "Pull-up 3×6 · OHP 3×6 · row 3×8", "effort": "—", "dur": "25 min" },
+          { "sport": "mobility", "title": "Mobility + easy jog", "detail": "Optional easy 20–30 min", "effort": "Z2", "dur": "20 min" }
+        ] },
+        { "d": "Thu", "sessions": [ { "sport": "jump", "title": "Power day (fresh)", "detail": "Trap-bar jumps 5×3 · single-leg box jumps · bounds", "effort": "fresh", "dur": "30 min" } ] },
+        { "d": "Fri", "sessions": [ { "sport": "rest", "title": "Rest / mobility", "detail": "", "effort": "—", "dur": "—" } ] },
+        { "d": "Sat", "sessions": [
+          { "sport": "court", "title": "Dunk practice", "detail": "Approach reps · rim attempts · ball control", "effort": "—", "dur": "45 min" },
+          { "sport": "run", "title": "Short speed", "detail": "Strides / short reps — stay sharp", "effort": "hard", "dur": "25 min" }
+        ] },
+        { "d": "Sun", "sessions": [ { "sport": "rest", "title": "Rest", "detail": "", "effort": "—", "dur": "—" } ] }
+      ]
+    },
+    {
+      "n": 9,
+      "block": "Dunk Peak",
+      "monday": "2026-12-21",
+      "stepback": false,
+      "tag": "peak",
+      "focus": "Sharpest window — fully rested CNS, leanest bodyweight. Prioritize max-intent attempts. Pull back volume if legs feel flat; freshness wins.",
+      "days": [
+        { "d": "Mon", "sessions": [ { "sport": "lower", "title": "Max strength — brief", "detail": "Heavy squat/trap-bar 3×3 (potentiation only) · step-downs", "effort": "heavy", "dur": "30 min" } ] },
+        { "d": "Tue", "sessions": [
+          { "sport": "plyo", "title": "Reactive plyo (fresh)", "detail": "Depth jumps 3×3 · approach jumps to target 5×3 — quality over quantity", "effort": "fresh", "dur": "25 min" },
+          { "sport": "court", "title": "Rim attempts", "detail": "Full approach, max intent", "effort": "—", "dur": "20 min" }
+        ] },
+        { "d": "Wed", "sessions": [ { "sport": "mobility", "title": "Mobility + easy jog", "detail": "Keep it light — prioritize freshness", "effort": "Z2", "dur": "20 min" } ] },
+        { "d": "Thu", "sessions": [ { "sport": "jump", "title": "Power — primer", "detail": "Trap-bar jumps 4×3 · a few max approach jumps — then stop fresh", "effort": "fresh", "dur": "25 min" } ] },
+        { "d": "Fri", "sessions": [ { "sport": "rest", "title": "Rest / mobility", "detail": "", "effort": "—", "dur": "—" } ] },
+        { "d": "Sat", "sessions": [ { "sport": "court", "title": "Dunk practice — go for it", "detail": "Warm, fresh, full approach — real attempts at the rim", "effort": "—", "dur": "45 min" } ] },
+        { "d": "Sun", "sessions": [ { "sport": "rest", "title": "Rest", "detail": "", "effort": "—", "dur": "—" } ] }
+      ]
+    },
+    {
+      "n": 10,
+      "block": "Dunk Peak",
+      "monday": "2026-12-28",
+      "stepback": false,
+      "tag": "🏀 deadline week · Dec 31",
+      "focus": "Deadline Dec 31. Fully fresh — minimal fatigue, max intent. Re-test vertical vs baseline. Warm up well, full approach, keep attempting. Go get it.",
+      "days": [
+        { "d": "Mon", "sessions": [ { "sport": "jump", "title": "Light primer (fresh)", "detail": "A few trap-bar jumps + 3–4 max approach jumps, then stop — prime, don't fatigue", "effort": "fresh", "dur": "20 min" } ] },
+        { "d": "Tue", "sessions": [ { "sport": "mobility", "title": "Mobility + strides", "detail": "Easy movement + 4×20s strides — stay loose", "effort": "easy", "dur": "20 min" } ] },
+        { "d": "Wed", "sessions": [ { "sport": "rest", "title": "Rest", "detail": "Fresh legs for tomorrow", "effort": "—", "dur": "—" } ] },
+        { "d": "Thu", "sessions": [ { "sport": "court", "title": "🏀 DUNK ATTEMPT — Dec 31", "detail": "Warm up fully. Re-test reach + max touch. Full approach, max intent, keep going until you get it.", "effort": "max", "dur": "—" } ] },
+        { "d": "Fri", "sessions": [ { "sport": "rest", "title": "Rest", "detail": "Hit it? Celebrate. Not yet? Keep attempting — deadline is soft.", "effort": "—", "dur": "—" } ] },
+        { "d": "Sat", "sessions": [ { "sport": "court", "title": "Attempts / consolidate", "detail": "If hit: keep touching rim to retain the skill. If not: more fresh attempts.", "effort": "—", "dur": "—" } ] },
+        { "d": "Sun", "sessions": [ { "sport": "rest", "title": "Rest → Block 2", "detail": "Next: Marathon PR build. Ease running volume up.", "effort": "—", "dur": "—" } ] }
+      ]
     }
   ],
   "progression": [
@@ -217,61 +299,89 @@
     "Re-test the 1st of each month — watch the gap to 126\" shrink."
   ],
   "guide": {
-    "vertical": "Your vertical is built from four things: raw max strength (heavy squats), reactive/elastic power (plyometrics — how fast you apply that strength), jump technique (approach + arm swing), and power-to-weight (getting lean). Phase A builds strength + technique + tendon base; Phase B peaks the reactive power and cuts the weight. Both matter — most people only train one.",
+    "cardio": "You don't want to lose your aerobic base, but you don't need the bike or swim to keep it. 2–3 runs a week (~15–20 mi) fully maintains the engine coming off a 70.3 — and one of those is your mile/5K speed session, so cardio maintenance and getting faster are literally the same runs. Your swim is your strength (2nd AG at Napa) — it detrains slowly and comes back fast, and the bike rebuilds quickly in the IM block. Park both guilt-free this block.",
+    "speed": "The quality run each week is your mile/5K driver — rotate it: short reps (6×200m @ mile effort) and longer reps (5×300m @ mile–5K) for top-end; hill sprints and fartlek when legs are flat or you're travelling; a 1-mile time trial every 3–4 weeks as a benchmark (fresh legs only). Warm up 12–15 min and keep the hard running off legs that are trashed from lifting or plyo.",
+    "upper": "The off-season is the ideal window to rebuild upper body — endurance volume is low, so you have the recovery to build. Because you're regaining lost muscle (not building new), it comes back fast even in a slight deficit. Two push + two pull exposures a week (Tue/Thu at home; bodyweight on the trip) with progressive load. On the trip, bodyweight holds it well — push-up variations, dips, pull-ups, pike/handstand push-ups keep real volume; you only pause heavy barbell work.",
+    "vertical": "Your vertical is built from four things: raw max strength (heavy squats), reactive/elastic power (plyometrics — how fast you apply that strength), jump technique (approach + arm swing), and power-to-weight (getting lean). The base phase builds strength + technique + tendon base; the peak phase expresses reactive power and cuts the weight. Jumps and plyo are always done FRESH — never after heavy lifts or hard runs.",
     "ballcontrol": "Getting your hand high enough is half the battle; controlling the ball over the rim is the other half. Palming a full basketball depends on hand size — if you can't, use a slightly under-inflated ball, a smaller ball, or a two-hand dunk. Decide with your friend what counts for the bet, and practice the actual finish, not just rim touches.",
-    "knee": "This is the goal where your PFPS history matters most — plyometrics are the exact eccentric-impact load that flared the knee. Follow the progression ladder strictly, keep the eccentric step-downs in as insurance, and never skip stages. If the knee objects, plyo comes out before anything else. A dunk isn't worth re-breaking the knee that's carrying every other goal.",
-    "nutrition": "Get lean in Phase B (Nov–Dec) — a gentle ~0.5 lb/wk cut. Power-to-weight is one of the fastest ways to add relative vertical, and the same lean-out reveals the abs (goal #3). Keep protein high (~1 g/lb) so you hold the muscle and power while the fat comes off."
+    "knee": "This is the goal where your PFPS history matters most — plyometrics are the exact eccentric-impact load that flared the knee. Follow the progression ladder strictly, keep the eccentric step-downs in daily as insurance, and never skip stages. If the knee objects, plyo comes out before anything else. A dunk isn't worth re-breaking the knee that carries every other goal.",
+    "nutrition": "Get lean with a gentle ~0.5 lb/wk cut (~300–500 kcal deficit) — power-to-weight is one of the fastest ways to add relative vertical, and the same lean-out reveals the abs (goal #3). Keep protein high (~1 g/lb, ~150–160g) so you hold muscle and power. Cycle it: fuel training days closer to maintenance, take the deficit on easy/rest days. The trip (Nov 15–Dec 6) is a planned diet break — eat at maintenance and enjoy it, then resume the cut Dec 7. Let performance govern: if lifts or jumps drop, ease the deficit."
   },
   "gym": {
-    "note": "Phase A (base): 2× full split — heavy strength + skills. Phase B (peak): 3–4× power-focused — max strength, reactive plyo, and a power day, plus one short upper maintenance session.",
+    "note": "Base phase (home): 4 lifting days — Lower A (Mon), Upper Push (Tue), Upper Pull (Thu), Lower B (Fri) — plus plyo on the lower days, fresh. Trip: bodyweight power + upper. Peak phase: heavy-but-brief lower + reactive plyo + a power day + light upper maintenance, all on fresh legs.",
     "sessions": [
       {
-        "name": "Phase A · Lower / strength (Mon)",
+        "name": "Base · Lower A (Mon) — plyo first, fresh",
         "lifts": [
+          "Pogo / ankle / line hops — 10 min (tendon prep)",
           "Back squat — 4×5 (heavy)",
-          "Romanian deadlift — 3×6",
+          "Romanian deadlift — 3×8",
           "Bulgarian split squat — 3×8/leg",
           "Standing calf raise — 3×12",
-          "Eccentric step-downs (knee insurance) — 3×8/leg",
-          "Hanging leg raise — 3×10"
+          "Eccentric step-downs (knee insurance) — 3×8/leg"
         ]
       },
       {
-        "name": "Phase A · Upper / skills (Fri)",
+        "name": "Base · Upper Push (Tue)",
         "lifts": [
-          "Weighted pull-up — 4×5",
-          "Overhead press — 3×6",
-          "Dip or bench press — 3×8",
-          "Barbell row — 3×10",
-          "Calisthenics skill work (handstand / back-front lever / planche lean) — 10–15 min",
-          "Hollow-body holds — 3×20s"
+          "Bench or DB press — 4×6–8",
+          "Overhead press — 3×8",
+          "Incline DB press — 3×10",
+          "Dips — 3×AMRAP",
+          "Lateral raises — 3×15",
+          "Triceps — 3×12"
         ]
       },
       {
-        "name": "Phase B · Max strength (lower)",
+        "name": "Base · Upper Pull (Thu)",
         "lifts": [
-          "Back squat OR trap-bar deadlift — 4×3 (heavy, ~85–90%)",
-          "Bulgarian split squat — 3×6/leg",
+          "Weighted pull-up — 4×6",
+          "Barbell / DB row — 4×8",
+          "Face pulls — 3×15",
+          "Biceps curls — 3×12",
+          "Rear-delt raises — 3×15"
+        ]
+      },
+      {
+        "name": "Base · Lower B (Fri) — plyo first, fresh",
+        "lifts": [
+          "Box jumps 4×3 + broad jumps 3×4 (land soft)",
+          "Trap-bar deadlift — 4×4",
+          "Reverse lunge — 3×8/leg",
           "Nordic / hamstring curl — 3×6",
+          "Standing calf raise — 3×15",
+          "Eccentric step-downs — 3×8/leg"
+        ]
+      },
+      {
+        "name": "Trip · Bodyweight power + upper",
+        "lifts": [
+          "Squat jumps 4×5 · broad jumps 3×4 · single-leg hops 3×6/leg",
+          "Tuck jumps · depth drops off a step (land soft) · pogos",
+          "Push-up variations — 4×12–20",
+          "Pike / handstand push-ups — 3×8",
+          "Dips — 3×AMRAP",
+          "Pull-ups (if bar) — 4×AMRAP · rows (bar/table) — 3×10"
+        ]
+      },
+      {
+        "name": "Peak · Lower (heavy-brief) + Power",
+        "lifts": [
+          "Heavy squat OR trap-bar — 4×3 (~85–90%), low volume",
+          "Trap-bar jumps — 5×3",
+          "Single-leg box jumps — 3×4/leg",
+          "Bounds — 3×20m",
           "Standing calf raise — 4×10"
         ]
       },
       {
-        "name": "Phase B · Reactive plyo (fresh)",
+        "name": "Peak · Reactive plyo (fresh CNS)",
         "lifts": [
           "Depth jumps — 4×3 (knee must be bulletproof first)",
           "Approach (1-foot) jumps to a target — 5×3",
           "Broad jumps — 3×4",
-          "Pogo series — 3×20"
-        ]
-      },
-      {
-        "name": "Phase B · Power day",
-        "lifts": [
-          "Trap-bar jump — 5×3",
-          "Single-leg box jump — 3×4/leg",
-          "Bounds — 3×20m",
-          "Quick upper maintenance: pull-up / OHP / row — 3×6"
+          "Pogo series — 3×20",
+          "Then: full-approach rim attempts"
         ]
       }
     ]

@@ -1,1112 +1,1117 @@
 {
-  "meta": {
-    "athlete": "Mihir Srivastava",
-    "updated": "2026-07-27",
-    "bodyweight_lb": 170,
-    "tagline": "One system, many goals — periodized so they support each other instead of colliding.",
-    "age": 24
+ "meta": {
+  "athlete": "Mihir Srivastava",
+  "updated": "2026-10-27",
+  "bodyweight_lb": 163,
+  "tagline": "One system, many goals \u2014 periodized so they support each other instead of colliding.",
+  "age": 24
+ },
+ "threads": [
+  {
+   "id": "endurance",
+   "label": "Endurance",
+   "color": "#d4a054",
+   "desc": "70.3 \u2192 full Ironman \u2192 marathon speed \u2192 the 2:55 BQ north star."
   },
-  "threads": [
-    {
-      "id": "endurance",
-      "label": "Endurance",
-      "color": "#d4a054",
-      "desc": "70.3 → full Ironman → marathon speed → the 2:55 BQ north star."
-    },
-    {
-      "id": "power",
-      "label": "Power",
-      "color": "#d98a4a",
-      "desc": "Explosive lower-body work — the dunk, and the strength base under everything."
-    },
-    {
-      "id": "skills",
-      "label": "Skills",
-      "color": "#6fa8c7",
-      "desc": "Upper-body calisthenics — handstand, planche, front/back lever, clean muscle-up."
-    },
-    {
-      "id": "durability",
-      "label": "Durability",
-      "color": "#5fb96b",
-      "desc": "The permanent injury-prevention pillar. Never toggles off. Protects the knee above all."
-    },
-    {
-      "id": "nutrition",
-      "label": "Nutrition",
-      "color": "#b490c7",
-      "desc": "Fuel-to-perform, timed cut, and the rule: maintain leanness, never under-fuel."
-    },
-    {
-      "id": "rest",
-      "label": "Rest",
-      "color": "#8a8a8a",
-      "desc": "Recovery is training. One full rest day, always."
-    }
-  ],
-  "phases": [
-    {
-      "id": "recovery",
-      "name": "Marathon Recovery",
-      "start": "2026-07-27",
-      "end": "2026-08-10",
-      "priority": "Recover fully — no hard training",
-      "tagline": "Two weeks of genuine recovery after 26.2. Rebuild, don't rebuild fitness yet.",
-      "focus": [
-        "Let the marathon damage fully heal — walking, easy movement, mobility.",
-        "Start easy swimming: zero-impact AND it opens the triathlon's first discipline.",
-        "Keep the knee quiet; reintroduce eccentric step-downs by week 2 if pain-free."
-      ],
-      "week": [
-        {
-          "d": "Mon",
-          "items": [
-            {
-              "thread": "rest",
-              "label": "Rest / walk",
-              "detail": "Full rest or an easy walk"
-            }
-          ]
-        },
-        {
-          "d": "Tue",
-          "items": [
-            {
-              "thread": "endurance",
-              "label": "Easy swim",
-              "detail": "20–30 min technique, relaxed"
-            },
-            {
-              "thread": "durability",
-              "label": "Mobility",
-              "detail": "Hips, ankles, gentle"
-            }
-          ]
-        },
-        {
-          "d": "Wed",
-          "items": [
-            {
-              "thread": "endurance",
-              "label": "Easy spin / walk",
-              "detail": "30–40 min, conversational"
-            }
-          ]
-        },
-        {
-          "d": "Thu",
-          "items": [
-            {
-              "thread": "endurance",
-              "label": "Easy swim",
-              "detail": "20–30 min"
-            },
-            {
-              "thread": "skills",
-              "label": "Handstand practice",
-              "detail": "10 min wall / balance"
-            }
-          ]
-        },
-        {
-          "d": "Fri",
-          "items": [
-            {
-              "thread": "rest",
-              "label": "Rest / mobility",
-              "detail": ""
-            }
-          ]
-        },
-        {
-          "d": "Sat",
-          "items": [
-            {
-              "thread": "endurance",
-              "label": "Easy spin",
-              "detail": "30–45 min easy"
-            }
-          ]
-        },
-        {
-          "d": "Sun",
-          "items": [
-            {
-              "thread": "rest",
-              "label": "Rest",
-              "detail": "Optional easy walk"
-            }
-          ]
-        }
-      ],
-      "lifting": "Minimal — mobility and light bodyweight only. No loading yet.",
-      "nutrition": {
-        "mindset": "Recovery fueling. Eat at maintenance, protein high to rebuild. No deficit — this is repair time.",
-        "macros": [
-          "Protein ~150–170g (high, for repair)",
-          "Carbs to appetite — replenish glycogen",
-          "No calorie cut"
-        ]
-      },
-      "notes": "First running should feel easy and short (~2–3 mi) only once legs feel normal — likely end of week 2."
-    },
-    {
-      "id": "tri-build",
-      "name": "Triathlon Build + Power Base",
-      "start": "2026-08-11",
-      "end": "2026-10-24",
-      "priority": "Napa 70.3 (Oct 24) — the hard deadline",
-      "tagline": "Reduced running frees recovery for the gym — build swim + bike, and start the dunk base concurrently.",
-      "focus": [
-        "Swim + bike are the build; run drops to 2–3×/wk (already locked) — which protects the knee.",
-        "Grow the long bike toward 56 mi; hold swim to a comfortable 2,000 m.",
-        "Strength is PRIMARY here — build the power base for the dunk while endurance running is low.",
-        "Introduce calisthenics: handstand daily, lever/planche progressions in the gym."
-      ],
-      "week": [
-        {
-          "d": "Mon",
-          "items": [
-            {
-              "thread": "power",
-              "label": "Power / strength",
-              "detail": "Squats + low jumps — done FRESH"
-            },
-            {
-              "thread": "endurance",
-              "label": "Easy technique swim",
-              "detail": ""
-            }
-          ]
-        },
-        {
-          "d": "Tue",
-          "items": [
-            {
-              "thread": "endurance",
-              "label": "Bike intervals + brick",
-              "detail": "Short run off the bike"
-            }
-          ]
-        },
-        {
-          "d": "Wed",
-          "items": [
-            {
-              "thread": "endurance",
-              "label": "Swim endurance",
-              "detail": "Build distance"
-            },
-            {
-              "thread": "skills",
-              "label": "Upper + levers",
-              "detail": "Back/front lever progressions"
-            }
-          ]
-        },
-        {
-          "d": "Thu",
-          "items": [
-            {
-              "thread": "endurance",
-              "label": "Quality run",
-              "detail": "Tempo / threshold — the one hard run"
-            }
-          ]
-        },
-        {
-          "d": "Fri",
-          "items": [
-            {
-              "thread": "power",
-              "label": "Power / plyo",
-              "detail": "Progressive — knee-careful"
-            },
-            {
-              "thread": "skills",
-              "label": "Handstand",
-              "detail": ""
-            }
-          ]
-        },
-        {
-          "d": "Sat",
-          "items": [
-            {
-              "thread": "endurance",
-              "label": "Long bike",
-              "detail": "The anchor — grow toward 56 mi"
-            }
-          ]
-        },
-        {
-          "d": "Sun",
-          "items": [
-            {
-              "thread": "endurance",
-              "label": "Long run / brick",
-              "detail": "Then rest"
-            },
-            {
-              "thread": "rest",
-              "label": "Rest to follow",
-              "detail": ""
-            }
-          ]
-        }
-      ],
-      "lifting": "PRIMARY — build. 2–3×/wk progressive: max strength + power (this IS the dunk base). Add straight-arm calisthenics.",
-      "nutrition": {
-        "mindset": "Fuel to perform, slow recomp at maintenance. Don't hard-cut — the build comes first. Abs emerge slowly from reduced running + lifting.",
-        "macros": [
-          "Protein ~150–170g",
-          "Carbs cycled: higher on long-bike/run days, moderate otherwise",
-          "Fats moderate (~60–70g)",
-          "Eat at ~maintenance"
-        ]
-      },
-      "notes": "Bricks (bike→run) in the last ~6 weeks. Power work always before endurance on doubled days. Knee vetoes plyos before it vetoes runs."
-    },
-    {
-      "id": "dunk-cut",
-      "name": "Dunk Peak + Lean Cut",
-      "start": "2026-10-25",
-      "end": "2026-12-31",
-      "priority": "Win the dunk bet by Dec 31 + reveal abs",
-      "tagline": "Endurance drops to maintenance — full explosive focus, and the cut that both sharpens the dunk and shows the abs.",
-      "focus": [
-        "Slash endurance to maintenance (2–3 short sessions) so power can peak.",
-        "Max strength + progressive plyometrics + jump technique + CNS freshness.",
-        "The cut lives HERE — lean = better power-to-weight = higher vertical AND visible abs.",
-        "Calisthenics push: planche & lever progress fastest as you get lean."
-      ],
-      "week": [
-        {
-          "d": "Mon",
-          "items": [
-            {
-              "thread": "power",
-              "label": "Max strength",
-              "detail": "Squats / trap-bar deads, heavy"
-            }
-          ]
-        },
-        {
-          "d": "Tue",
-          "items": [
-            {
-              "thread": "power",
-              "label": "Plyometrics + jump tech",
-              "detail": "Vertical focus"
-            },
-            {
-              "thread": "endurance",
-              "label": "Short easy run",
-              "detail": "Maintain aerobic"
-            }
-          ]
-        },
-        {
-          "d": "Wed",
-          "items": [
-            {
-              "thread": "skills",
-              "label": "Calisthenics skills",
-              "detail": "Planche / lever + core"
-            }
-          ]
-        },
-        {
-          "d": "Thu",
-          "items": [
-            {
-              "thread": "power",
-              "label": "Explosive / jumps",
-              "detail": "Fresh CNS"
-            }
-          ]
-        },
-        {
-          "d": "Fri",
-          "items": [
-            {
-              "thread": "endurance",
-              "label": "Easy swim / bike",
-              "detail": "Maintain"
-            },
-            {
-              "thread": "skills",
-              "label": "Handstand",
-              "detail": ""
-            }
-          ]
-        },
-        {
-          "d": "Sat",
-          "items": [
-            {
-              "thread": "power",
-              "label": "Jump / court practice",
-              "detail": "Dunk attempts, ball control"
-            }
-          ]
-        },
-        {
-          "d": "Sun",
-          "items": [
-            {
-              "thread": "rest",
-              "label": "Rest",
-              "detail": ""
-            }
-          ]
-        }
-      ],
-      "lifting": "PRIMARY — power/max strength. This is the dunk engine.",
-      "nutrition": {
-        "mindset": "Modest cut — ~0.5 lb/wk, no faster. High protein to hold muscle & power. This is the ONLY hard-cut window in the whole plan.",
-        "macros": [
-          "Protein ~170g (1g/lb — high, protects power)",
-          "Carbs moderate, timed around training",
-          "Fats ~50–60g",
-          "Deficit ~300–400 kcal, gentle"
-        ]
-      },
-      "notes": "Palming the ball is a separate skill — a slightly under-inflated ball or two-hand dunk counts. Marathon fatigue clearing should return 'free' vertical. Knee: plyos progress by feel, eccentric tolerance first."
-    },
-    {
-      "id": "run-base",
-      "name": "Run Base + Spring Marathon",
-      "start": "2027-01-01",
-      "end": "2027-04-30",
-      "priority": "Sub-3:29 marathon (feeds the Ironman) + hold the gains",
-      "tagline": "Running becomes the focus — a healthy build toward the original sub-3:30, which doubles as run development for the IM.",
-      "focus": [
-        "Rebuild run volume gradually (knee-gated) with threshold + long runs.",
-        "Race a spring marathon at sub-3:29 (7:59 pace) — the original goal, done healthy.",
-        "Maintain strength (1–2×) and calisthenics; keep the dunk from fading.",
-        "Swim/bike drop to light maintenance until the IM block."
-      ],
-      "week": [
-        {
-          "d": "Mon",
-          "items": [
-            {
-              "thread": "durability",
-              "label": "Strength (maintain)",
-              "detail": "Heavy-but-brief + knee staples"
-            }
-          ]
-        },
-        {
-          "d": "Tue",
-          "items": [
-            {
-              "thread": "endurance",
-              "label": "Threshold run",
-              "detail": "Tempo / LT intervals"
-            }
-          ]
-        },
-        {
-          "d": "Wed",
-          "items": [
-            {
-              "thread": "endurance",
-              "label": "Easy run",
-              "detail": ""
-            },
-            {
-              "thread": "skills",
-              "label": "Calisthenics",
-              "detail": "Maintain skills"
-            }
-          ]
-        },
-        {
-          "d": "Thu",
-          "items": [
-            {
-              "thread": "endurance",
-              "label": "Easy + strides",
-              "detail": ""
-            }
-          ]
-        },
-        {
-          "d": "Fri",
-          "items": [
-            {
-              "thread": "endurance",
-              "label": "Medium-long run",
-              "detail": ""
-            },
-            {
-              "thread": "durability",
-              "label": "Prehab",
-              "detail": ""
-            }
-          ]
-        },
-        {
-          "d": "Sat",
-          "items": [
-            {
-              "thread": "endurance",
-              "label": "Long run",
-              "detail": "Build toward 18–20 mi"
-            }
-          ]
-        },
-        {
-          "d": "Sun",
-          "items": [
-            {
-              "thread": "rest",
-              "label": "Rest / easy spin",
-              "detail": ""
-            }
-          ]
-        }
-      ],
-      "lifting": "Maintenance — 1–2×/wk, heavy-but-brief. Injury prevention + preserve power. Never zero.",
-      "nutrition": {
-        "mindset": "Fuel to perform. Maintain the leanness you built in the dunk block — eat to maintenance, don't try to get leaner during the build.",
-        "macros": [
-          "Protein ~150g",
-          "Carbs high on quality/long days",
-          "Fats moderate",
-          "No deficit during the marathon build"
-        ]
-      },
-      "notes": "The marathon can be a peak-and-taper race OR a hard tune-up within the bigger endurance year — your call closer to the date."
-    },
-    {
-      "id": "ironman",
-      "name": "Full Ironman Build",
-      "start": "2027-05-01",
-      "end": "2027-10-17",
-      "priority": "Full Ironman (fall 2027)",
-      "tagline": "The big one. Bike volume ramps hard; embedded tempo keeps you fast as a bonus. Bike-heavy = knee-friendly.",
-      "focus": [
-        "Swim 3× + bike 4–5× (big volume) + run 3–4× with tempo embedded.",
-        "Long-run cap ~18–20 mi (race run is off the bike) — gentler on the knee than a pure marathon build.",
-        "Strength + calisthenics to maintenance; keep the durability pillar strong.",
-        "Fuel like it's a job — the risk here is under-fueling, not over."
-      ],
-      "week": [
-        {
-          "d": "Mon",
-          "items": [
-            {
-              "thread": "endurance",
-              "label": "Swim + easy run",
-              "detail": ""
-            },
-            {
-              "thread": "durability",
-              "label": "Strength (maintain)",
-              "detail": ""
-            }
-          ]
-        },
-        {
-          "d": "Tue",
-          "items": [
-            {
-              "thread": "endurance",
-              "label": "Bike intervals",
-              "detail": ""
-            }
-          ]
-        },
-        {
-          "d": "Wed",
-          "items": [
-            {
-              "thread": "endurance",
-              "label": "Threshold run + swim",
-              "detail": "Speed as a bonus"
-            },
-            {
-              "thread": "skills",
-              "label": "Calisthenics (maintain)",
-              "detail": ""
-            }
-          ]
-        },
-        {
-          "d": "Thu",
-          "items": [
-            {
-              "thread": "endurance",
-              "label": "Endurance bike",
-              "detail": ""
-            }
-          ]
-        },
-        {
-          "d": "Fri",
-          "items": [
-            {
-              "thread": "endurance",
-              "label": "Swim + easy run",
-              "detail": ""
-            },
-            {
-              "thread": "durability",
-              "label": "Prehab",
-              "detail": ""
-            }
-          ]
-        },
-        {
-          "d": "Sat",
-          "items": [
-            {
-              "thread": "endurance",
-              "label": "LONG bike + brick run",
-              "detail": "The anchor — big volume"
-            }
-          ]
-        },
-        {
-          "d": "Sun",
-          "items": [
-            {
-              "thread": "endurance",
-              "label": "Long run",
-              "detail": "Capped ~18–20 mi"
-            }
-          ]
-        }
-      ],
-      "lifting": "Maintenance — 1–2×/wk. Preserve muscle & power against the volume; it's catabolic otherwise.",
-      "nutrition": {
-        "mindset": "Fuel to perform — maintain leanness, NEVER under-fuel. Getting leaner here = RED-S risk (health, not just physique). High energy flux keeps you lean AND fueled.",
-        "macros": [
-          "Protein ~150–170g (endurance is catabolic)",
-          "Carbs HIGH — huge training demand",
-          "Fats moderate",
-          "Eat at high maintenance; accept softer abs at rest = fuel, not fat"
-        ]
-      },
-      "notes": "IM entry ~$700–900, peak 12–18 hrs/wk. Sub-5 mile is parked to 2028 — it can't coexist with this volume."
-    },
-    {
-      "id": "speed-year",
-      "name": "Speed Year & Beyond",
-      "start": "2027-10-18",
-      "end": "2028-12-31",
-      "priority": "Sub-5:00 mile + start the BQ ladder",
-      "tagline": "Low-fatigue speed focus for the mile, then begin laddering the marathon toward the 2:55 north star.",
-      "focus": [
-        "Dedicated track/speed block for the sub-5:00 mile — needs fresh legs, low volume.",
-        "Then begin the marathon ladder: 3:29 → 3:15 → 3:05, only as the knee proves it holds mileage.",
-        "Maintain the dunk, tri fitness, and calisthenics as background threads.",
-        "Calisthenics can push again here (lower endurance fatigue)."
-      ],
-      "week": [
-        {
-          "d": "Mon",
-          "items": [
-            {
-              "thread": "endurance",
-              "label": "Track intervals",
-              "detail": "VO2 / mile pace"
-            }
-          ]
-        },
-        {
-          "d": "Tue",
-          "items": [
-            {
-              "thread": "durability",
-              "label": "Strength",
-              "detail": ""
-            },
-            {
-              "thread": "skills",
-              "label": "Calisthenics",
-              "detail": "Push levers/planche"
-            }
-          ]
-        },
-        {
-          "d": "Wed",
-          "items": [
-            {
-              "thread": "endurance",
-              "label": "Easy run",
-              "detail": ""
-            }
-          ]
-        },
-        {
-          "d": "Thu",
-          "items": [
-            {
-              "thread": "endurance",
-              "label": "Speed / strides",
-              "detail": ""
-            }
-          ]
-        },
-        {
-          "d": "Fri",
-          "items": [
-            {
-              "thread": "rest",
-              "label": "Rest / easy",
-              "detail": ""
-            }
-          ]
-        },
-        {
-          "d": "Sat",
-          "items": [
-            {
-              "thread": "endurance",
-              "label": "Long run or mile TT",
-              "detail": ""
-            }
-          ]
-        },
-        {
-          "d": "Sun",
-          "items": [
-            {
-              "thread": "rest",
-              "label": "Rest",
-              "detail": ""
-            }
-          ]
-        }
-      ],
-      "lifting": "Build/maintain — supports speed (power) and calisthenics. 2×/wk.",
-      "nutrition": {
-        "mindset": "Fuel to perform; lean maintenance. Speed work rewards being light but well-fueled.",
-        "macros": [
-          "Protein ~150g",
-          "Carbs around quality sessions",
-          "Lean maintenance"
-        ]
-      },
-      "notes": "Sub-5 mile VDOT roughly predicts a ~2:55–3:00 marathon with endurance — it's the speed key to the BQ."
-    }
-  ],
-  "goals": [
-    {
-      "name": "Napa Valley 70.3",
-      "thread": "endurance",
-      "target": "Finish strong, comfortable time",
-      "timeline": "Oct 24, 2026",
-      "status": "active",
-      "note": "Run leg locked by the marathon. Build swim + bike.",
-      "link": "/tri"
-    },
-    {
-      "name": "Dunk a basketball",
-      "thread": "power",
-      "target": "Control a ball over the rim",
-      "timeline": "End of 2026 (bet)",
-      "status": "active",
-      "note": "Need ~+6–8\" vertical from current rim-graze. Peaks in the post-tri power block.",
-      "link": "/dunk"
-    },
-    {
-      "name": "Lean + visible abs",
-      "thread": "nutrition",
-      "target": "Lean, strength maintained",
-      "timeline": "Cut in the dunk block",
-      "status": "active",
-      "note": "Serves the dunk AND calisthenics (strength-to-weight). Maintain thereafter."
-    },
-    {
-      "name": "Full Ironman",
-      "thread": "endurance",
-      "target": "Complete 140.6",
-      "timeline": "Fall 2027",
-      "status": "confirmed",
-      "note": "Natural step up from the 70.3. Race chosen at a Dec/Jan checkpoint: IRONMAN Texas (Apr 2027) if ready, else IRONMAN California (Oct 2027, local & flat). Bike-heavy = knee-friendly."
-    },
-    {
-      "name": "Sub-3:29 marathon",
-      "thread": "endurance",
-      "target": "7:59/mi or faster",
-      "timeline": "Spring 2027",
-      "status": "queued",
-      "note": "The original sub-3:30, done healthy. Feeds the Ironman build."
-    },
-    {
-      "name": "Sub-5:00 mile",
-      "thread": "endurance",
-      "target": "4:59 or faster",
-      "timeline": "2028",
-      "status": "queued",
-      "note": "Parked out of 2027 (can't coexist with IM volume). The speed key to the BQ."
-    },
-    {
-      "name": "Boston Qualifier — 2:55",
-      "thread": "endurance",
-      "target": "6:40/mi for 26.2",
-      "timeline": "North star ~2029–30",
-      "status": "northstar",
-      "note": "The summit. Gated on the knee holding high mileage + running becoming the priority."
-    },
-    {
-      "name": "Handstand (solid freestanding)",
-      "thread": "skills",
-      "target": "Held, controlled",
-      "timeline": "Months — start now",
-      "status": "active",
-      "note": "Daily short practice; fits any phase."
-    },
-    {
-      "name": "Clean muscle-up",
-      "thread": "skills",
-      "target": "Smooth, no kip",
-      "timeline": "Weeks–months",
-      "status": "active",
-      "note": "Quickest win — technique + pull power."
-    },
-    {
-      "name": "Back lever",
-      "thread": "skills",
-      "target": "Full hold",
-      "timeline": "~2–6 months",
-      "status": "queued",
-      "note": "Usually the first straight-arm lever."
-    },
-    {
-      "name": "Front lever",
-      "thread": "skills",
-      "target": "Full hold",
-      "timeline": "~6–18 months",
-      "status": "queued",
-      "note": "Leanness helps a lot."
-    },
-    {
-      "name": "Planche",
-      "thread": "skills",
-      "target": "Straddle → full",
-      "timeline": "Multi-year project",
-      "status": "northstar",
-      "note": "The long haul — tendons set the pace. Patience."
-    }
-  ],
-  "roadmap": [
-    {
-      "period": "2026 · H2",
-      "title": "Triathlon + Dunk",
-      "items": [
-        "Recover from marathon (Jul–Aug)",
-        "Tri build + power base → Napa 70.3 (Oct 24)",
-        "Dunk peak + lean cut (Nov–Dec)"
-      ]
-    },
-    {
-      "period": "2027",
-      "title": "The Endurance Year",
-      "items": [
-        "Run base → sub-3:29 marathon (spring)",
-        "Full Ironman build → race (fall)",
-        "Sub-5 mile parked to 2028"
-      ]
-    },
-    {
-      "period": "2028",
-      "title": "Speed Year",
-      "items": [
-        "Dedicated mile block → sub-5:00",
-        "Begin the marathon ladder (3:29 → 3:15)"
-      ]
-    },
-    {
-      "period": "2029–2030",
-      "title": "North Star",
-      "items": [
-        "Ladder the marathon: 3:15 → 3:05 → 2:55",
-        "Boston Qualifier — if the knee holds volume"
-      ]
-    },
-    {
-      "period": "Always",
-      "title": "Constant Threads",
-      "items": [
-        "Durability: knee staples + prehab, every phase",
-        "Calisthenics: handstand → levers → planche",
-        "Nutrition: fuel to perform, cut only in the dunk block"
-      ]
-    }
-  ],
-  "marathon_ladder": [
-    {
-      "time": "3:53:24",
-      "pace": "8:54/mi",
-      "when": "Now (Jul 2026)",
-      "done": true
-    },
-    {
-      "time": "sub-3:29",
-      "pace": "7:59/mi",
-      "when": "Spring 2027",
-      "done": false
-    },
-    {
-      "time": "~3:15",
-      "pace": "7:26/mi",
-      "when": "2028",
-      "done": false
-    },
-    {
-      "time": "~3:05",
-      "pace": "7:03/mi",
-      "when": "2029",
-      "done": false
-    },
-    {
-      "time": "2:55",
-      "pace": "6:40/mi",
-      "when": "North star ~2029–30",
-      "done": false
-    }
-  ],
-  "durability": [
-    "Prehab strength 2×/wk, always — posterior chain, single-leg, glute med/hips, calves, core.",
-    "Knee staples forever: eccentric step-downs, quad/VMO, glute strength (PFPS insurance).",
-    "Load management: gradual progression, stepback weeks every 3–4 wks, no big jumps (remember the 37-mi tandem).",
-    "Early-warning discipline: back off at 'awareness', don't wait for pain.",
-    "Wrist/shoulder prep before planche & lever work — tendons adapt slower than muscle.",
-    "Cross-training bias (swim/bike) spreads load off the joints — structural knee protection.",
-    "Sleep + recovery are training. One full rest day, always."
-  ],
-  "nutrition_principles": [
-    "Protein is the constant: ~0.8–1 g/lb (~150–170g) in every phase.",
-    "Carbs are the lever: high to fuel endurance/power builds, moderate & timed during the cut.",
-    "Cut ONLY in the dunk block (late 2026). Everywhere else: fuel to perform or maintain.",
-    "The endurance-athlete danger is UNDER-fueling (RED-S), not overeating. Fuel enough.",
-    "High energy flux (eat a lot, burn a lot) keeps you lean AND recovered — that's the goal.",
-    "Get lean before the Ironman year, then maintain by eating-to-fuel — never cut mid-build.",
-    "Leanness serves the dunk AND calisthenics (strength-to-weight). One lever, several goals."
-  ],
-  "strength_templates": {
-    "note": "Whenever a plan says 'strength' or 'gym', this is what it means for that phase. Lifting never drops to zero — it toggles between build and maintenance.",
-    "splits": [
-      {
-        "name": "Build split — Lower / Power",
-        "when": "Tri build & dunk base · 2×/wk",
-        "lifts": [
-          "Back squat — 4×5 (heavy)",
-          "Romanian deadlift — 3×6",
-          "Bulgarian split squat — 3×8/leg",
-          "Standing calf raise — 3×12",
-          "Eccentric step-downs (knee insurance) — 3×8/leg",
-          "Hanging leg raise — 3×10"
-        ]
-      },
-      {
-        "name": "Build split — Upper / Skills",
-        "when": "Tri build & dunk base · 2×/wk",
-        "lifts": [
-          "Weighted pull-up — 4×5",
-          "Overhead press — 3×6",
-          "Dip or bench press — 3×8",
-          "Barbell row — 3×10",
-          "Calisthenics skill work (handstand / back-front lever / planche lean) — 10–15 min",
-          "Hollow-body holds — 3×20s"
-        ]
-      },
-      {
-        "name": "Dunk peak — power emphasis",
-        "when": "Nov–Dec · 3–4×/wk",
-        "lifts": [
-          "Back squat OR trap-bar deadlift — 4×3 (heavy, ~85–90%)",
-          "Bulgarian split squat — 3×6/leg",
-          "Nordic / hamstring curl — 3×6",
-          "Standing calf raise — 4×10",
-          "—",
-          "Depth jumps — 4×3 (knee must be bulletproof first)",
-          "Approach (1-foot) jumps to a target — 5×3",
-          "Broad jumps — 3×4",
-          "Pogo series — 3×20"
-        ]
-      },
-      {
-        "name": "Endurance maintenance — full body",
-        "when": "IM & marathon builds · 1–2×/wk (heavy-but-brief)",
-        "lifts": [
-          "Back squat — 3×5",
-          "Trap-bar deadlift — 3×5",
-          "Weighted pull-up — 3×6",
-          "Overhead press — 3×6",
-          "Single-leg + glute-med (knee) — 2×10/leg",
-          "Core — planks / hollow holds"
-        ]
-      }
-    ]
+  {
+   "id": "power",
+   "label": "Power",
+   "color": "#d98a4a",
+   "desc": "Explosive lower-body work \u2014 the dunk, and the strength base under everything."
   },
-  "muscle_maintenance": {
-    "intro": "During endurance-heavy phases (tri/IM builds), the goal shifts from building to NOT LOSING muscle. Research is clear: you keep strength on remarkably little — as little as 1 hard set per muscle 2×/week maintains it, IF the load stays heavy. So maintenance is about intensity (keep lifting heavy), not volume. Hit every movement pattern below 2×/week and you won't lose a thing.",
-    "rules": [
-      "Keep the load HEAVY (~80–85%, 4–6 reps). Light-and-fluffy is what loses muscle — heavy-but-brief preserves it.",
-      "2×/week per muscle is enough to maintain. You don't need more during a build.",
-      "Cover all 6 patterns: squat, hinge, horizontal push, vertical push, horizontal pull, vertical pull — plus single-leg + core.",
-      "Leave 1–2 reps in reserve. Maintenance ≠ grinding to failure; that just adds fatigue that steals from your endurance sessions.",
-      "Protein ~0.8–1 g/lb is half the battle — you can't hold muscle underfed.",
-      "It's fine to superset opposing movements (push/pull) to save time on a busy build."
-    ],
-    "movements": [
-      {
-        "pattern": "Squat (quads, glutes)",
-        "primary": "Back squat or goblet squat",
-        "sets": "3×5 heavy",
-        "alt": "Front squat, leg press",
-        "note": "Also fuels the bike + jump power."
-      },
-      {
-        "pattern": "Hinge (hamstrings, glutes, back)",
-        "primary": "Romanian deadlift or trap-bar deadlift",
-        "sets": "3×5–6",
-        "alt": "Good morning, hip thrust",
-        "note": "Posterior chain = knee protection + running power."
-      },
-      {
-        "pattern": "Single-leg (balance, glute med, knee)",
-        "primary": "Bulgarian split squat",
-        "sets": "3×8/leg",
-        "alt": "Walking lunge, step-up, pistol progressions",
-        "note": "Your #1 knee-durability lift. Never skip."
-      },
-      {
-        "pattern": "Horizontal push (chest, triceps, front delt)",
-        "primary": "Bench press or dip",
-        "sets": "3×6–8",
-        "alt": "Push-up (weighted), DB press",
-        "note": ""
-      },
-      {
-        "pattern": "Vertical push (shoulders, triceps)",
-        "primary": "Overhead press",
-        "sets": "3×6",
-        "alt": "Handstand push-up (ties to skills), DB shoulder press",
-        "note": ""
-      },
-      {
-        "pattern": "Horizontal pull (mid-back, rear delt)",
-        "primary": "Barbell or DB row",
-        "sets": "3×8–10",
-        "alt": "Chest-supported row, inverted row",
-        "note": "Balances all the pushing + swim posture."
-      },
-      {
-        "pattern": "Vertical pull (lats, biceps)",
-        "primary": "Weighted pull-up",
-        "sets": "3–4×5",
-        "alt": "Lat pulldown, chin-up",
-        "note": "Doubles as your muscle-up / lever base."
-      },
-      {
-        "pattern": "Calves (ankle stiffness)",
-        "primary": "Standing calf raise",
-        "sets": "3×12",
-        "alt": "Seated calf raise, pogo hops",
-        "note": "Ankle stiffness = free vertical + run economy."
-      },
-      {
-        "pattern": "Core / anti-extension",
-        "primary": "Hanging leg raise + plank/hollow hold",
-        "sets": "3×10 / 3×30s",
-        "alt": "Ab wheel, Pallof press",
-        "note": "Holds form late in long races."
-      },
-      {
-        "pattern": "Knee staples (PFPS insurance)",
-        "primary": "Eccentric step-downs",
-        "sets": "3×8/leg (3–4s lowering)",
-        "alt": "Spanish squat, terminal knee extension",
-        "note": "Permanent — stays in every single phase."
-      }
-    ],
-    "sample_split": {
-      "note": "The 2×/week maintenance split during endurance builds. ~40–45 min each, heavy-but-brief.",
-      "day_a": {
-        "name": "Day A — Lower + Pull",
-        "lifts": [
-          "Back squat 3×5",
-          "Romanian deadlift 3×5",
-          "Bulgarian split squat 3×8/leg",
-          "Weighted pull-up 3×5",
-          "Barbell row 3×10",
-          "Eccentric step-downs 3×8/leg (knee)",
-          "Calf raise 3×12"
-        ]
-      },
-      "day_b": {
-        "name": "Day B — Push + Core + Skills",
-        "lifts": [
-          "Overhead press 3×6",
-          "Bench press or dip 3×8",
-          "Single-leg RDL or step-up 3×8/leg",
-          "Handstand / lever skill work 10–15 min",
-          "Hanging leg raise 3×10",
-          "Plank / hollow hold 3×30s",
-          "Eccentric step-downs 3×8/leg (knee)"
-        ]
-      }
-    }
+  {
+   "id": "skills",
+   "label": "Skills",
+   "color": "#6fa8c7",
+   "desc": "Upper-body calisthenics \u2014 handstand, planche, front/back lever, clean muscle-up."
   },
-  "benchmarks": {
-    "intro": "Fitness markers to track over time. The mile is the speed key to the BQ — build it up, then extend the endurance down (5K → 10K → half → full).",
-    "current": [
-      {
-        "metric": "Mile (all-out)",
-        "value": "5:36",
-        "when": "Sep 2026",
-        "note": "In-training, no pacer, dodging people + tired legs — true fresh mile ~5:25–5:30."
-      },
-      {
-        "metric": "Marathon",
-        "value": "3:53:24",
-        "when": "Jul 2026",
-        "note": "Conservative comeback race; fitness now is sharper than this implies."
-      },
-      {
-        "metric": "Est. threshold",
-        "value": "~7:00/mi",
-        "when": "Sep 2026",
-        "note": "Garmin LT read 6:54; low-7:00s is the honest zone."
-      }
-    ],
-    "bq_ladder": {
-      "note": "Speed ceiling first (mile), then extend the endurance down. A ~5:10 mile is the speed reservoir a 2:55 marathon needs — necessary but not sufficient; the high-mileage build (knee permitting) converts it.",
-      "steps": [
-        {
-          "stage": "Mile",
-          "target": "~5:10",
-          "predicts": "the speed to support a 2:55"
-        },
-        {
-          "stage": "5K",
-          "target": "~18:00",
-          "predicts": "VO2 / speed-endurance"
-        },
-        {
-          "stage": "10K",
-          "target": "~37:30",
-          "predicts": "threshold extended"
-        },
-        {
-          "stage": "Half",
-          "target": "~1:23",
-          "predicts": "endurance nearly there"
-        },
-        {
-          "stage": "Marathon",
-          "target": "2:55 (BQ)",
-          "predicts": "the summit — gated on the knee holding 55–70 mpw"
-        }
-      ]
-    }
+  {
+   "id": "durability",
+   "label": "Durability",
+   "color": "#5fb96b",
+   "desc": "The permanent injury-prevention pillar. Never toggles off. Protects the knee above all."
+  },
+  {
+   "id": "nutrition",
+   "label": "Nutrition",
+   "color": "#b490c7",
+   "desc": "Fuel-to-perform, timed cut, and the rule: maintain leanness, never under-fuel."
+  },
+  {
+   "id": "rest",
+   "label": "Rest",
+   "color": "#8a8a8a",
+   "desc": "Recovery is training. One full rest day, always."
   }
+ ],
+ "phases": [
+  {
+   "id": "recovery",
+   "name": "Marathon Recovery",
+   "start": "2026-07-27",
+   "end": "2026-08-10",
+   "priority": "Recover fully \u2014 no hard training",
+   "tagline": "Two weeks of genuine recovery after 26.2. Rebuild, don't rebuild fitness yet.",
+   "focus": [
+    "Let the marathon damage fully heal \u2014 walking, easy movement, mobility.",
+    "Start easy swimming: zero-impact AND it opens the triathlon's first discipline.",
+    "Keep the knee quiet; reintroduce eccentric step-downs by week 2 if pain-free."
+   ],
+   "week": [
+    {
+     "d": "Mon",
+     "items": [
+      {
+       "thread": "rest",
+       "label": "Rest / walk",
+       "detail": "Full rest or an easy walk"
+      }
+     ]
+    },
+    {
+     "d": "Tue",
+     "items": [
+      {
+       "thread": "endurance",
+       "label": "Easy swim",
+       "detail": "20\u201330 min technique, relaxed"
+      },
+      {
+       "thread": "durability",
+       "label": "Mobility",
+       "detail": "Hips, ankles, gentle"
+      }
+     ]
+    },
+    {
+     "d": "Wed",
+     "items": [
+      {
+       "thread": "endurance",
+       "label": "Easy spin / walk",
+       "detail": "30\u201340 min, conversational"
+      }
+     ]
+    },
+    {
+     "d": "Thu",
+     "items": [
+      {
+       "thread": "endurance",
+       "label": "Easy swim",
+       "detail": "20\u201330 min"
+      },
+      {
+       "thread": "skills",
+       "label": "Handstand practice",
+       "detail": "10 min wall / balance"
+      }
+     ]
+    },
+    {
+     "d": "Fri",
+     "items": [
+      {
+       "thread": "rest",
+       "label": "Rest / mobility",
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "d": "Sat",
+     "items": [
+      {
+       "thread": "endurance",
+       "label": "Easy spin",
+       "detail": "30\u201345 min easy"
+      }
+     ]
+    },
+    {
+     "d": "Sun",
+     "items": [
+      {
+       "thread": "rest",
+       "label": "Rest",
+       "detail": "Optional easy walk"
+      }
+     ]
+    }
+   ],
+   "lifting": "Minimal \u2014 mobility and light bodyweight only. No loading yet.",
+   "nutrition": {
+    "mindset": "Recovery fueling. Eat at maintenance, protein high to rebuild. No deficit \u2014 this is repair time.",
+    "macros": [
+     "Protein ~150\u2013170g (high, for repair)",
+     "Carbs to appetite \u2014 replenish glycogen",
+     "No calorie cut"
+    ]
+   },
+   "notes": "First running should feel easy and short (~2\u20133 mi) only once legs feel normal \u2014 likely end of week 2."
+  },
+  {
+   "id": "tri-build",
+   "name": "Triathlon Build + Power Base",
+   "start": "2026-08-11",
+   "end": "2026-10-24",
+   "priority": "\u2705 Napa 70.3 done \u2014 6:29:06, 5th in age group (Oct 24)",
+   "tagline": "Reduced running frees recovery for the gym \u2014 build swim + bike, and start the dunk base concurrently.",
+   "focus": [
+    "Swim + bike are the build; run drops to 2\u20133\u00d7/wk (already locked) \u2014 which protects the knee.",
+    "Grow the long bike toward 56 mi; hold swim to a comfortable 2,000 m.",
+    "Strength is PRIMARY here \u2014 build the power base for the dunk while endurance running is low.",
+    "Introduce calisthenics: handstand daily, lever/planche progressions in the gym."
+   ],
+   "week": [
+    {
+     "d": "Mon",
+     "items": [
+      {
+       "thread": "power",
+       "label": "Power / strength",
+       "detail": "Squats + low jumps \u2014 done FRESH"
+      },
+      {
+       "thread": "endurance",
+       "label": "Easy technique swim",
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "d": "Tue",
+     "items": [
+      {
+       "thread": "endurance",
+       "label": "Bike intervals + brick",
+       "detail": "Short run off the bike"
+      }
+     ]
+    },
+    {
+     "d": "Wed",
+     "items": [
+      {
+       "thread": "endurance",
+       "label": "Swim endurance",
+       "detail": "Build distance"
+      },
+      {
+       "thread": "skills",
+       "label": "Upper + levers",
+       "detail": "Back/front lever progressions"
+      }
+     ]
+    },
+    {
+     "d": "Thu",
+     "items": [
+      {
+       "thread": "endurance",
+       "label": "Quality run",
+       "detail": "Tempo / threshold \u2014 the one hard run"
+      }
+     ]
+    },
+    {
+     "d": "Fri",
+     "items": [
+      {
+       "thread": "power",
+       "label": "Power / plyo",
+       "detail": "Progressive \u2014 knee-careful"
+      },
+      {
+       "thread": "skills",
+       "label": "Handstand",
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "d": "Sat",
+     "items": [
+      {
+       "thread": "endurance",
+       "label": "Long bike",
+       "detail": "The anchor \u2014 grow toward 56 mi"
+      }
+     ]
+    },
+    {
+     "d": "Sun",
+     "items": [
+      {
+       "thread": "endurance",
+       "label": "Long run / brick",
+       "detail": "Then rest"
+      },
+      {
+       "thread": "rest",
+       "label": "Rest to follow",
+       "detail": ""
+      }
+     ]
+    }
+   ],
+   "lifting": "PRIMARY \u2014 build. 2\u20133\u00d7/wk progressive: max strength + power (this IS the dunk base). Add straight-arm calisthenics.",
+   "nutrition": {
+    "mindset": "Fuel to perform, slow recomp at maintenance. Don't hard-cut \u2014 the build comes first. Abs emerge slowly from reduced running + lifting.",
+    "macros": [
+     "Protein ~150\u2013170g",
+     "Carbs cycled: higher on long-bike/run days, moderate otherwise",
+     "Fats moderate (~60\u201370g)",
+     "Eat at ~maintenance"
+    ]
+   },
+   "notes": "Bricks (bike\u2192run) in the last ~6 weeks. Power work always before endurance on doubled days. Knee vetoes plyos before it vetoes runs."
+  },
+  {
+   "id": "dunk-cut",
+   "name": "Block 1 \u2014 Power, Speed & Lean",
+   "start": "2026-10-25",
+   "end": "2026-12-31",
+   "priority": "Dunk by Dec 31 \u00b7 rebuild upper body \u00b7 get lean \u00b7 mile/5K speed",
+   "tagline": "Post-Napa off-season: endurance volume drops, freeing recovery for power + muscle. Four threads that reinforce each other \u2014 dunk (lower power), mile/5K speed, upper-body rebuild, and a lean recomp. Running alone covers the cardio base (no bike/swim this block).",
+   "focus": [
+    "Dunk: max strength \u2192 reactive plyo \u2192 jump technique, peaked in December on fresh legs.",
+    "Upper-body rebuild: 2 push + 2 pull/week \u2014 the off-season is the ideal window (and it comes back fast).",
+    "Mile/5K speed: one quality run/week (reps, hills, fartlek) \u2014 which also maintains the aerobic base.",
+    "Lean recomp: gentle ~0.5 lb/wk cut, high protein \u2014 better power-to-weight AND visible abs."
+   ],
+   "week": [
+    {
+     "d": "Mon",
+     "items": [
+      {
+       "thread": "power",
+       "label": "Lower strength + plyo",
+       "detail": "Squat heavy + foundation plyo (fresh)"
+      }
+     ]
+    },
+    {
+     "d": "Tue",
+     "items": [
+      {
+       "thread": "power",
+       "label": "Upper \u2014 push",
+       "detail": "Rebuild: press/dips/shoulders"
+      },
+      {
+       "thread": "endurance",
+       "label": "Easy run",
+       "detail": "Cardio base"
+      }
+     ]
+    },
+    {
+     "d": "Wed",
+     "items": [
+      {
+       "thread": "endurance",
+       "label": "Speed run",
+       "detail": "Mile/5K reps \u2014 the one hard run"
+      }
+     ]
+    },
+    {
+     "d": "Thu",
+     "items": [
+      {
+       "thread": "power",
+       "label": "Upper \u2014 pull",
+       "detail": "Pull-ups/rows + arms"
+      },
+      {
+       "thread": "skills",
+       "label": "Mobility / handstand",
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "d": "Fri",
+     "items": [
+      {
+       "thread": "power",
+       "label": "Lower strength + plyo",
+       "detail": "Trap-bar + jumps (fresh)"
+      }
+     ]
+    },
+    {
+     "d": "Sat",
+     "items": [
+      {
+       "thread": "endurance",
+       "label": "Easy run",
+       "detail": "Aerobic base"
+      },
+      {
+       "thread": "power",
+       "label": "Court / jump practice",
+       "detail": "Approach + rim attempts"
+      }
+     ]
+    },
+    {
+     "d": "Sun",
+     "items": [
+      {
+       "thread": "rest",
+       "label": "Rest",
+       "detail": ""
+      }
+     ]
+    }
+   ],
+   "lifting": "PRIMARY \u2014 power + hypertrophy. Lower strength + plyo (fresh) 2\u00d7; upper push + pull 2\u00d7 (the rebuild). Peak phase shifts to heavy-but-brief + reactive plyo.",
+   "nutrition": {
+    "mindset": "Gentle cut (~0.5 lb/wk) \u2014 the only real cut window. High protein holds muscle & power; regaining upper body in a slight deficit works. The India/Vietnam trip (Nov 15\u2013Dec 6) is a planned diet break \u2014 eat at maintenance.",
+    "macros": [
+     "Protein ~150\u2013160g (1g/lb \u2014 protects power & muscle)",
+     "Carbs cycled: fuel lifting/speed days, deficit on easy/rest days",
+     "Fats ~50\u201360g",
+     "Deficit ~300\u2013500 kcal; diet break on the trip"
+    ]
+   },
+   "notes": "Trip Nov 15\u2013Dec 6 = equipment-light (bodyweight power + upper + running). Jumps/plyo always FRESH, never after heavy lifts or hard runs. Knee staples (step-downs) stay in daily \u2014 plyo gets vetoed before anything else. Full day-by-day plan at /dunk."
+  },
+  {
+   "id": "run-base",
+   "name": "Block 2 \u2014 Marathon PR Build",
+   "start": "2027-01-01",
+   "end": "2027-05-15",
+   "priority": "A big marathon PR at a spring race \u2014 sub-3:40, stretch sub-3:30",
+   "tagline": "Take the speed built in Block 1 and extend it to 26.2. Upper body drops to maintenance, mileage ramps. The 3:53 was a knee-comeback race off minimal training \u2014 with a real build and that 5:36 mile, a big PR is on the table. This marathon fitness also becomes the launchpad for the Ironman run.",
+   "focus": [
+    "Rebuild running volume + long run from the Block 1 base.",
+    "Marathon-pace + threshold work; carry the mile/5K top-end speed into endurance.",
+    "Pick a late-April/May 2027 marathon \u2014 clean recovery before the IM build.",
+    "Strength drops to 2\u00d7 maintenance; keep the knee staples."
+   ],
+   "week": [
+    {
+     "d": "Mon",
+     "items": [
+      {
+       "thread": "durability",
+       "label": "Strength (maintain)",
+       "detail": "Heavy-but-brief + knee staples"
+      }
+     ]
+    },
+    {
+     "d": "Tue",
+     "items": [
+      {
+       "thread": "endurance",
+       "label": "Threshold run",
+       "detail": "Tempo / LT intervals"
+      }
+     ]
+    },
+    {
+     "d": "Wed",
+     "items": [
+      {
+       "thread": "endurance",
+       "label": "Easy run",
+       "detail": ""
+      },
+      {
+       "thread": "skills",
+       "label": "Calisthenics",
+       "detail": "Maintain skills"
+      }
+     ]
+    },
+    {
+     "d": "Thu",
+     "items": [
+      {
+       "thread": "endurance",
+       "label": "Easy + strides",
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "d": "Fri",
+     "items": [
+      {
+       "thread": "endurance",
+       "label": "Medium-long run",
+       "detail": ""
+      },
+      {
+       "thread": "durability",
+       "label": "Prehab",
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "d": "Sat",
+     "items": [
+      {
+       "thread": "endurance",
+       "label": "Long run",
+       "detail": "Build toward 18\u201320 mi"
+      }
+     ]
+    },
+    {
+     "d": "Sun",
+     "items": [
+      {
+       "thread": "rest",
+       "label": "Rest / easy spin",
+       "detail": ""
+      }
+     ]
+    }
+   ],
+   "lifting": "Maintenance \u2014 1\u20132\u00d7/wk, heavy-but-brief. Injury prevention + preserve power. Never zero.",
+   "nutrition": {
+    "mindset": "Fuel the mileage \u2014 eat at maintenance, carb-cycle around long runs & quality. No cutting; performance first.",
+    "macros": [
+     "Protein ~150g",
+     "Carbs high on quality/long days",
+     "Fats moderate",
+     "No deficit during the marathon build"
+    ]
+   },
+   "notes": "The marathon can be a peak-and-taper race OR a hard tune-up within the bigger endurance year \u2014 your call closer to the date."
+  },
+  {
+   "id": "ironman",
+   "name": "Block 3 \u2014 Ironman California Build",
+   "start": "2027-05-16",
+   "end": "2027-10-31",
+   "priority": "IRONMAN California (Oct 2027) \u2014 flat, fast, local",
+   "tagline": "Long-course endurance \u2014 bike-heavy (knee-friendly). The spring marathon fitness carries the IM run. Apply the two Napa lessons: pace the bike by HR (not ego) and take \u2265500 mg sodium/hr.",
+   "focus": [
+    "Rebuild swim + bike (both detrain slowly / return fast); long bike is the anchor.",
+    "Brick work; dial in pacing by HR and a sodium-adequate fuel plan.",
+    "Run volume stays moderate off the marathon base \u2014 protects the knee.",
+    "IRONMAN California late Oct 2027 (Texas Apr 2027 sold out)."
+   ],
+   "week": [
+    {
+     "d": "Mon",
+     "items": [
+      {
+       "thread": "endurance",
+       "label": "Swim + easy run",
+       "detail": ""
+      },
+      {
+       "thread": "durability",
+       "label": "Strength (maintain)",
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "d": "Tue",
+     "items": [
+      {
+       "thread": "endurance",
+       "label": "Bike intervals",
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "d": "Wed",
+     "items": [
+      {
+       "thread": "endurance",
+       "label": "Threshold run + swim",
+       "detail": "Speed as a bonus"
+      },
+      {
+       "thread": "skills",
+       "label": "Calisthenics (maintain)",
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "d": "Thu",
+     "items": [
+      {
+       "thread": "endurance",
+       "label": "Endurance bike",
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "d": "Fri",
+     "items": [
+      {
+       "thread": "endurance",
+       "label": "Swim + easy run",
+       "detail": ""
+      },
+      {
+       "thread": "durability",
+       "label": "Prehab",
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "d": "Sat",
+     "items": [
+      {
+       "thread": "endurance",
+       "label": "LONG bike + brick run",
+       "detail": "The anchor \u2014 big volume"
+      }
+     ]
+    },
+    {
+     "d": "Sun",
+     "items": [
+      {
+       "thread": "endurance",
+       "label": "Long run",
+       "detail": "Capped ~18\u201320 mi"
+      }
+     ]
+    }
+   ],
+   "lifting": "Maintenance \u2014 1\u20132\u00d7/wk. Preserve muscle & power against the volume; it's catabolic otherwise.",
+   "nutrition": {
+    "mindset": "Fuel to perform \u2014 maintain leanness, NEVER under-fuel. Getting leaner here = RED-S risk (health, not just physique). High energy flux keeps you lean AND fueled.",
+    "macros": [
+     "Protein ~150\u2013170g (endurance is catabolic)",
+     "Carbs HIGH \u2014 huge training demand",
+     "Fats moderate",
+     "Eat at high maintenance; accept softer abs at rest = fuel, not fat"
+    ]
+   },
+   "notes": "IM entry ~$700\u2013900, peak 12\u201318 hrs/wk. Sub-5 mile is parked to 2028 \u2014 it can't coexist with this volume."
+  },
+  {
+   "id": "speed-year",
+   "name": "Speed Year & Beyond",
+   "start": "2027-11-01",
+   "end": "2028-12-31",
+   "priority": "Sub-5:00 mile + start the BQ ladder",
+   "tagline": "Low-fatigue speed focus for the mile, then begin laddering the marathon toward the 2:55 north star.",
+   "focus": [
+    "Dedicated track/speed block for the sub-5:00 mile \u2014 needs fresh legs, low volume.",
+    "Then begin the marathon ladder: 3:29 \u2192 3:15 \u2192 3:05, only as the knee proves it holds mileage.",
+    "Maintain the dunk, tri fitness, and calisthenics as background threads.",
+    "Calisthenics can push again here (lower endurance fatigue)."
+   ],
+   "week": [
+    {
+     "d": "Mon",
+     "items": [
+      {
+       "thread": "endurance",
+       "label": "Track intervals",
+       "detail": "VO2 / mile pace"
+      }
+     ]
+    },
+    {
+     "d": "Tue",
+     "items": [
+      {
+       "thread": "durability",
+       "label": "Strength",
+       "detail": ""
+      },
+      {
+       "thread": "skills",
+       "label": "Calisthenics",
+       "detail": "Push levers/planche"
+      }
+     ]
+    },
+    {
+     "d": "Wed",
+     "items": [
+      {
+       "thread": "endurance",
+       "label": "Easy run",
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "d": "Thu",
+     "items": [
+      {
+       "thread": "endurance",
+       "label": "Speed / strides",
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "d": "Fri",
+     "items": [
+      {
+       "thread": "rest",
+       "label": "Rest / easy",
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "d": "Sat",
+     "items": [
+      {
+       "thread": "endurance",
+       "label": "Long run or mile TT",
+       "detail": ""
+      }
+     ]
+    },
+    {
+     "d": "Sun",
+     "items": [
+      {
+       "thread": "rest",
+       "label": "Rest",
+       "detail": ""
+      }
+     ]
+    }
+   ],
+   "lifting": "Build/maintain \u2014 supports speed (power) and calisthenics. 2\u00d7/wk.",
+   "nutrition": {
+    "mindset": "Fuel to perform; lean maintenance. Speed work rewards being light but well-fueled.",
+    "macros": [
+     "Protein ~150g",
+     "Carbs around quality sessions",
+     "Lean maintenance"
+    ]
+   },
+   "notes": "Sub-5 mile VDOT roughly predicts a ~2:55\u20133:00 marathon with endurance \u2014 it's the speed key to the BQ."
+  }
+ ],
+ "goals": [
+  {
+   "name": "Napa Valley 70.3",
+   "thread": "endurance",
+   "target": "6:29:06 \u00b7 5th in age group",
+   "timeline": "Oct 24, 2026 \u2014 done",
+   "status": "done",
+   "note": "\u2705 Finished 6:29:06, 5th AG / 15th overall. Swim 2nd AG (came out 5th overall). See the result page.",
+   "link": "/napa2026"
+  },
+  {
+   "name": "Dunk a basketball",
+   "thread": "power",
+   "target": "Control a ball over the rim",
+   "timeline": "End of 2026 (bet)",
+   "status": "active",
+   "note": "Need ~+6\u20138\" vertical from current rim-graze. Peaks in the post-tri power block.",
+   "link": "/dunk"
+  },
+  {
+   "name": "Lean + visible abs",
+   "thread": "nutrition",
+   "target": "Lean, strength maintained",
+   "timeline": "Cut in the dunk block",
+   "status": "active",
+   "note": "Serves the dunk AND calisthenics (strength-to-weight). Maintain thereafter."
+  },
+  {
+   "name": "Full Ironman",
+   "thread": "endurance",
+   "target": "Complete 140.6",
+   "timeline": "Oct 2027",
+   "status": "confirmed",
+   "note": "Leaning IRONMAN California (Oct 2027) \u2014 flat, fast, local. IRONMAN Texas (Apr 2027) is sold out. Decision locked at the Dec/Jan checkpoint. Bike-heavy = knee-friendly."
+  },
+  {
+   "name": "Sub-3:29 marathon",
+   "thread": "endurance",
+   "target": "7:59/mi or faster",
+   "timeline": "Spring 2027 (Block 2)",
+   "status": "queued",
+   "note": "The marathon PR build. Off the 3:53 comeback + a 5:36 mile, sub-3:40 is very reachable, sub-3:30 a stretch. Feeds the Ironman."
+  },
+  {
+   "name": "Sub-5:00 mile",
+   "thread": "endurance",
+   "target": "4:59 or faster",
+   "timeline": "2028",
+   "status": "queued",
+   "note": "Parked out of 2027 (can't coexist with IM volume). The speed key to the BQ."
+  },
+  {
+   "name": "Boston Qualifier \u2014 2:55",
+   "thread": "endurance",
+   "target": "6:40/mi for 26.2",
+   "timeline": "North star ~2029\u201330",
+   "status": "northstar",
+   "note": "The summit. Gated on the knee holding high mileage + running becoming the priority."
+  },
+  {
+   "name": "Handstand (solid freestanding)",
+   "thread": "skills",
+   "target": "Held, controlled",
+   "timeline": "Months \u2014 start now",
+   "status": "active",
+   "note": "Daily short practice; fits any phase."
+  },
+  {
+   "name": "Clean muscle-up",
+   "thread": "skills",
+   "target": "Smooth, no kip",
+   "timeline": "Weeks\u2013months",
+   "status": "active",
+   "note": "Quickest win \u2014 technique + pull power."
+  },
+  {
+   "name": "Back lever",
+   "thread": "skills",
+   "target": "Full hold",
+   "timeline": "~2\u20136 months",
+   "status": "queued",
+   "note": "Usually the first straight-arm lever."
+  },
+  {
+   "name": "Front lever",
+   "thread": "skills",
+   "target": "Full hold",
+   "timeline": "~6\u201318 months",
+   "status": "queued",
+   "note": "Leanness helps a lot."
+  },
+  {
+   "name": "Planche",
+   "thread": "skills",
+   "target": "Straddle \u2192 full",
+   "timeline": "Multi-year project",
+   "status": "northstar",
+   "note": "The long haul \u2014 tendons set the pace. Patience."
+  }
+ ],
+ "roadmap": [
+  {
+   "period": "2026 \u00b7 H2",
+   "title": "Triathlon + Dunk",
+   "items": [
+    "\u2705 Napa 70.3 \u2014 6:29:06, 5th AG (Oct 24)",
+    "Block 1: dunk + mile/5K speed + upper rebuild + lean (Nov\u2013Dec)"
+   ]
+  },
+  {
+   "period": "2027",
+   "title": "The Endurance Year",
+   "items": [
+    "Block 2: Marathon PR (spring) \u2014 sub-3:40, stretch sub-3:30",
+    "Block 3: Ironman California build \u2192 race (Oct)",
+    "Sub-5 mile parked to 2028"
+   ]
+  },
+  {
+   "period": "2028",
+   "title": "Speed Year",
+   "items": [
+    "Dedicated mile block \u2192 sub-5:00",
+    "Begin the marathon ladder (3:29 \u2192 3:15)"
+   ]
+  },
+  {
+   "period": "2029\u20132030",
+   "title": "North Star",
+   "items": [
+    "Ladder the marathon: 3:15 \u2192 3:05 \u2192 2:55",
+    "Boston Qualifier \u2014 if the knee holds volume"
+   ]
+  },
+  {
+   "period": "Always",
+   "title": "Constant Threads",
+   "items": [
+    "Durability: knee staples + prehab, every phase",
+    "Calisthenics: handstand \u2192 levers \u2192 planche",
+    "Race lessons: pace the bike by HR, sodium \u2265500 mg/hr",
+    "Nutrition: fuel to perform, cut only in the dunk block"
+   ]
+  }
+ ],
+ "marathon_ladder": [
+  {
+   "time": "3:53:24",
+   "pace": "8:54/mi",
+   "when": "Now (Jul 2026)",
+   "done": true
+  },
+  {
+   "time": "sub-3:29",
+   "pace": "7:59/mi",
+   "when": "Spring 2027",
+   "done": false
+  },
+  {
+   "time": "~3:15",
+   "pace": "7:26/mi",
+   "when": "2028",
+   "done": false
+  },
+  {
+   "time": "~3:05",
+   "pace": "7:03/mi",
+   "when": "2029",
+   "done": false
+  },
+  {
+   "time": "2:55",
+   "pace": "6:40/mi",
+   "when": "North star ~2029\u201330",
+   "done": false
+  }
+ ],
+ "durability": [
+  "Prehab strength 2\u00d7/wk, always \u2014 posterior chain, single-leg, glute med/hips, calves, core.",
+  "Knee staples forever: eccentric step-downs, quad/VMO, glute strength (PFPS insurance).",
+  "Load management: gradual progression, stepback weeks every 3\u20134 wks, no big jumps (remember the 37-mi tandem).",
+  "Early-warning discipline: back off at 'awareness', don't wait for pain.",
+  "Wrist/shoulder prep before planche & lever work \u2014 tendons adapt slower than muscle.",
+  "Cross-training bias (swim/bike) spreads load off the joints \u2014 structural knee protection.",
+  "Sleep + recovery are training. One full rest day, always."
+ ],
+ "nutrition_principles": [
+  "Protein is the constant: ~0.8\u20131 g/lb (~150\u2013170g) in every phase.",
+  "Carbs are the lever: high to fuel endurance/power builds, moderate & timed during the cut.",
+  "Cut ONLY in the dunk block (late 2026). Everywhere else: fuel to perform or maintain.",
+  "The endurance-athlete danger is UNDER-fueling (RED-S), not overeating. Fuel enough.",
+  "High energy flux (eat a lot, burn a lot) keeps you lean AND recovered \u2014 that's the goal.",
+  "Get lean before the Ironman year, then maintain by eating-to-fuel \u2014 never cut mid-build.",
+  "Leanness serves the dunk AND calisthenics (strength-to-weight). One lever, several goals."
+ ],
+ "strength_templates": {
+  "note": "Whenever a plan says 'strength' or 'gym', this is what it means for that phase. Lifting never drops to zero \u2014 it toggles between build and maintenance.",
+  "splits": [
+   {
+    "name": "Build split \u2014 Lower / Power",
+    "when": "Tri build & dunk base \u00b7 2\u00d7/wk",
+    "lifts": [
+     "Back squat \u2014 4\u00d75 (heavy)",
+     "Romanian deadlift \u2014 3\u00d76",
+     "Bulgarian split squat \u2014 3\u00d78/leg",
+     "Standing calf raise \u2014 3\u00d712",
+     "Eccentric step-downs (knee insurance) \u2014 3\u00d78/leg",
+     "Hanging leg raise \u2014 3\u00d710"
+    ]
+   },
+   {
+    "name": "Build split \u2014 Upper / Skills",
+    "when": "Tri build & dunk base \u00b7 2\u00d7/wk",
+    "lifts": [
+     "Weighted pull-up \u2014 4\u00d75",
+     "Overhead press \u2014 3\u00d76",
+     "Dip or bench press \u2014 3\u00d78",
+     "Barbell row \u2014 3\u00d710",
+     "Calisthenics skill work (handstand / back-front lever / planche lean) \u2014 10\u201315 min",
+     "Hollow-body holds \u2014 3\u00d720s"
+    ]
+   },
+   {
+    "name": "Dunk peak \u2014 power emphasis",
+    "when": "Nov\u2013Dec \u00b7 3\u20134\u00d7/wk",
+    "lifts": [
+     "Back squat OR trap-bar deadlift \u2014 4\u00d73 (heavy, ~85\u201390%)",
+     "Bulgarian split squat \u2014 3\u00d76/leg",
+     "Nordic / hamstring curl \u2014 3\u00d76",
+     "Standing calf raise \u2014 4\u00d710",
+     "\u2014",
+     "Depth jumps \u2014 4\u00d73 (knee must be bulletproof first)",
+     "Approach (1-foot) jumps to a target \u2014 5\u00d73",
+     "Broad jumps \u2014 3\u00d74",
+     "Pogo series \u2014 3\u00d720"
+    ]
+   },
+   {
+    "name": "Endurance maintenance \u2014 full body",
+    "when": "IM & marathon builds \u00b7 1\u20132\u00d7/wk (heavy-but-brief)",
+    "lifts": [
+     "Back squat \u2014 3\u00d75",
+     "Trap-bar deadlift \u2014 3\u00d75",
+     "Weighted pull-up \u2014 3\u00d76",
+     "Overhead press \u2014 3\u00d76",
+     "Single-leg + glute-med (knee) \u2014 2\u00d710/leg",
+     "Core \u2014 planks / hollow holds"
+    ]
+   }
+  ]
+ },
+ "muscle_maintenance": {
+  "intro": "During endurance-heavy phases (tri/IM builds), the goal shifts from building to NOT LOSING muscle. Research is clear: you keep strength on remarkably little \u2014 as little as 1 hard set per muscle 2\u00d7/week maintains it, IF the load stays heavy. So maintenance is about intensity (keep lifting heavy), not volume. Hit every movement pattern below 2\u00d7/week and you won't lose a thing.",
+  "rules": [
+   "Keep the load HEAVY (~80\u201385%, 4\u20136 reps). Light-and-fluffy is what loses muscle \u2014 heavy-but-brief preserves it.",
+   "2\u00d7/week per muscle is enough to maintain. You don't need more during a build.",
+   "Cover all 6 patterns: squat, hinge, horizontal push, vertical push, horizontal pull, vertical pull \u2014 plus single-leg + core.",
+   "Leave 1\u20132 reps in reserve. Maintenance \u2260 grinding to failure; that just adds fatigue that steals from your endurance sessions.",
+   "Protein ~0.8\u20131 g/lb is half the battle \u2014 you can't hold muscle underfed.",
+   "It's fine to superset opposing movements (push/pull) to save time on a busy build."
+  ],
+  "movements": [
+   {
+    "pattern": "Squat (quads, glutes)",
+    "primary": "Back squat or goblet squat",
+    "sets": "3\u00d75 heavy",
+    "alt": "Front squat, leg press",
+    "note": "Also fuels the bike + jump power."
+   },
+   {
+    "pattern": "Hinge (hamstrings, glutes, back)",
+    "primary": "Romanian deadlift or trap-bar deadlift",
+    "sets": "3\u00d75\u20136",
+    "alt": "Good morning, hip thrust",
+    "note": "Posterior chain = knee protection + running power."
+   },
+   {
+    "pattern": "Single-leg (balance, glute med, knee)",
+    "primary": "Bulgarian split squat",
+    "sets": "3\u00d78/leg",
+    "alt": "Walking lunge, step-up, pistol progressions",
+    "note": "Your #1 knee-durability lift. Never skip."
+   },
+   {
+    "pattern": "Horizontal push (chest, triceps, front delt)",
+    "primary": "Bench press or dip",
+    "sets": "3\u00d76\u20138",
+    "alt": "Push-up (weighted), DB press",
+    "note": ""
+   },
+   {
+    "pattern": "Vertical push (shoulders, triceps)",
+    "primary": "Overhead press",
+    "sets": "3\u00d76",
+    "alt": "Handstand push-up (ties to skills), DB shoulder press",
+    "note": ""
+   },
+   {
+    "pattern": "Horizontal pull (mid-back, rear delt)",
+    "primary": "Barbell or DB row",
+    "sets": "3\u00d78\u201310",
+    "alt": "Chest-supported row, inverted row",
+    "note": "Balances all the pushing + swim posture."
+   },
+   {
+    "pattern": "Vertical pull (lats, biceps)",
+    "primary": "Weighted pull-up",
+    "sets": "3\u20134\u00d75",
+    "alt": "Lat pulldown, chin-up",
+    "note": "Doubles as your muscle-up / lever base."
+   },
+   {
+    "pattern": "Calves (ankle stiffness)",
+    "primary": "Standing calf raise",
+    "sets": "3\u00d712",
+    "alt": "Seated calf raise, pogo hops",
+    "note": "Ankle stiffness = free vertical + run economy."
+   },
+   {
+    "pattern": "Core / anti-extension",
+    "primary": "Hanging leg raise + plank/hollow hold",
+    "sets": "3\u00d710 / 3\u00d730s",
+    "alt": "Ab wheel, Pallof press",
+    "note": "Holds form late in long races."
+   },
+   {
+    "pattern": "Knee staples (PFPS insurance)",
+    "primary": "Eccentric step-downs",
+    "sets": "3\u00d78/leg (3\u20134s lowering)",
+    "alt": "Spanish squat, terminal knee extension",
+    "note": "Permanent \u2014 stays in every single phase."
+   }
+  ],
+  "sample_split": {
+   "note": "The 2\u00d7/week maintenance split during endurance builds. ~40\u201345 min each, heavy-but-brief.",
+   "day_a": {
+    "name": "Day A \u2014 Lower + Pull",
+    "lifts": [
+     "Back squat 3\u00d75",
+     "Romanian deadlift 3\u00d75",
+     "Bulgarian split squat 3\u00d78/leg",
+     "Weighted pull-up 3\u00d75",
+     "Barbell row 3\u00d710",
+     "Eccentric step-downs 3\u00d78/leg (knee)",
+     "Calf raise 3\u00d712"
+    ]
+   },
+   "day_b": {
+    "name": "Day B \u2014 Push + Core + Skills",
+    "lifts": [
+     "Overhead press 3\u00d76",
+     "Bench press or dip 3\u00d78",
+     "Single-leg RDL or step-up 3\u00d78/leg",
+     "Handstand / lever skill work 10\u201315 min",
+     "Hanging leg raise 3\u00d710",
+     "Plank / hollow hold 3\u00d730s",
+     "Eccentric step-downs 3\u00d78/leg (knee)"
+    ]
+   }
+  }
+ },
+ "benchmarks": {
+  "intro": "Fitness markers to track over time. The mile is the speed key to the BQ \u2014 build it up, then extend the endurance down (5K \u2192 10K \u2192 half \u2192 full).",
+  "current": [
+   {
+    "metric": "Mile (all-out)",
+    "value": "5:36",
+    "when": "Sep 2026",
+    "note": "In-training, no pacer, dodging people + tired legs \u2014 true fresh mile ~5:25\u20135:30."
+   },
+   {
+    "metric": "Marathon",
+    "value": "3:53:24",
+    "when": "Jul 2026",
+    "note": "Conservative comeback race; fitness now is sharper than this implies."
+   },
+   {
+    "metric": "Est. threshold",
+    "value": "~7:00/mi",
+    "when": "Sep 2026",
+    "note": "Garmin LT read 6:54; low-7:00s is the honest zone."
+   }
+  ],
+  "bq_ladder": {
+   "note": "Speed ceiling first (mile), then extend the endurance down. A ~5:10 mile is the speed reservoir a 2:55 marathon needs \u2014 necessary but not sufficient; the high-mileage build (knee permitting) converts it.",
+   "steps": [
+    {
+     "stage": "Mile",
+     "target": "~5:10",
+     "predicts": "the speed to support a 2:55"
+    },
+    {
+     "stage": "5K",
+     "target": "~18:00",
+     "predicts": "VO2 / speed-endurance"
+    },
+    {
+     "stage": "10K",
+     "target": "~37:30",
+     "predicts": "threshold extended"
+    },
+    {
+     "stage": "Half",
+     "target": "~1:23",
+     "predicts": "endurance nearly there"
+    },
+    {
+     "stage": "Marathon",
+     "target": "2:55 (BQ)",
+     "predicts": "the summit \u2014 gated on the knee holding 55\u201370 mpw"
+    }
+   ]
+  }
+ }
 }
